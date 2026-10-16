@@ -9,7 +9,16 @@
 <meta name="theme-color" content="#1E2A57">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500;700&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Noto+Serif+Kannada:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&family=Alegreya+Sans+SC:wght@500;700&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Noto+Serif+Kannada:wght@500&display=swap" rel="stylesheet">
+<script>
+/* Motion gates: content is visible by default; hidden start-states exist only when the
+   reveal can run, with a 1.5 s safety reveal if IntersectionObserver never reports. */
+(function(){var d=document.documentElement;d.classList.add('js','anim','fbw');
+  if('IntersectionObserver' in window){d.classList.add('mo');
+    setTimeout(function(){if(!window.__rvOK)d.classList.remove('mo')},1500);}
+  setTimeout(function(){d.classList.add('fb-on')},1200);
+})();
+</script>
 <style>
 :root{
   --paper:#F4ECDC; --paper-2:#EBE0C9; --paper-3:#E2D4B8; --card:#FBF6EC;
@@ -21,13 +30,21 @@
   --serif:"Libre Caslon Text",Georgia,"Times New Roman",serif;
   --sc:"Alegreya Sans SC","Alegreya Sans",system-ui,sans-serif;
   --wrap:1180px;
+  /* motion: premium, unhurried. one signature curve + three durations */
+  --e-out:cubic-bezier(.16,1,.3,1);
+  --e-std:cubic-bezier(.4,0,.2,1);
+  --e-back:cubic-bezier(.34,1.56,.64,1);
+  --t1:.18s; --t2:.4s; --t3:.9s;
+  --rv:26px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.72 var(--serif);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
   background:radial-gradient(ellipse at 20% 0%,rgba(255,255,255,.55),transparent 55%),radial-gradient(ellipse at 100% 100%,rgba(166,58,34,.05),transparent 50%)}
+/* ambient paper grain */
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:2;opacity:.16;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .28 0 0 0 0 .2 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 body>*{position:relative;z-index:1}
 img{display:block;max-width:100%}
 a{color:inherit}
@@ -38,57 +55,114 @@ p{margin:0 0 1em}
 .skip{position:absolute;left:-999px;top:0;background:var(--indigo);color:#fff;padding:10px 14px;z-index:100}
 .skip:focus{left:12px;top:12px}
 :focus-visible{outline:2px solid var(--verm);outline-offset:3px}
+[id]{scroll-margin-top:76px}
 
-/* concept notice */
-.notice{background:var(--indigo-2);color:#E9E2D2;font-size:13.5px;line-height:1.5}
-.notice .wrap{display:flex;align-items:center;gap:14px;padding-top:9px;padding-bottom:9px}
-.notice p{margin:0;flex:1}
-.notice b{color:var(--saffron);font-family:var(--sc);font-weight:700;letter-spacing:.12em;text-transform:lowercase;margin-right:6px}
-.notice button{flex:none;background:none;border:1px solid rgba(255,255,255,.28);color:#E9E2D2;border-radius:999px;min-width:44px;min-height:36px;font:500 13px var(--sc);letter-spacing:.1em;cursor:pointer;padding:0 14px}
-.notice button:hover{background:rgba(255,255,255,.08)}
-.notice.gone{display:none}
+/* scroll progress */
+.progress{position:fixed!important;left:0;right:0;top:0;height:3px;z-index:85!important;background:linear-gradient(90deg,var(--verm),var(--saffron));transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+
+/* ---------- Farman bar (concept notice) ---------- */
+.fb{font-family:"Alegreya Sans",system-ui,sans-serif;color:#ececef;z-index:75!important}
+.fb-in{position:relative;background:#141518;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;align-items:start}
+.fb-mark{grid-row:span 2;width:34px;height:34px;border-radius:10px;background:#fff;color:#141518;display:grid;place-items:center;font:700 17px/1 "Alegreya Sans",sans-serif}
+.fb p{font-size:14px;line-height:1.45;color:#c9cad1;padding-right:34px;margin:0}
+.fb p b{color:#fff;font-weight:700}
+.fb-act{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.fb-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 14px;border-radius:10px;font:500 15px/1 "Alegreya Sans",sans-serif;text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.22);transition:transform var(--t1) var(--e-std),background var(--t2),border-color var(--t2)}
+.fb-btn:hover{border-color:#fff;transform:translateY(-2px)}
+.fb-btn:active{transform:scale(.97)}
+.fb-btn.pri{background:#fff;color:#141518;border-color:#fff;font-weight:700}
+.fb-btn.pri:hover{background:#f6eedd}
+.fb-btn .arr{transition:transform var(--t2) var(--e-back)}
+.fb-btn:hover .arr{transform:translateX(3px)}
+.fb-x{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;background:none;color:#a5a7b0;border-radius:10px;cursor:pointer;display:grid;place-items:center;transition:color var(--t1),background var(--t1)}
+.fb-x:hover{color:#fff;background:rgba(255,255,255,.08)}
+.fb{transition:opacity .55s var(--e-out),transform .55s var(--e-out)}
+.fbw .fb{opacity:0;transform:translateY(-10px);pointer-events:none}
+.fbw.fb-on .fb{opacity:1;transform:none;pointer-events:auto}
+.fbw.fb-on .fb.off{opacity:0;transform:translateY(-10px);pointer-events:none;transition-duration:.24s;transition-timing-function:cubic-bezier(.3,0,1,1)}
+@media (min-width:861px){
+  .fb{position:fixed!important;right:16px;bottom:16px;width:540px}
+  .fb-in{border-radius:14px;padding:14px 16px;box-shadow:0 24px 60px -18px rgba(0,0,0,.55)}
+  .fbw .fb,.fbw.fb-on .fb.off{transform:translateY(12px)}
+}
+@media (max-width:860px){
+  .fb-in{padding:12px 16px}
+  .fb-act{grid-column:1 / -1}
+  .fb-btn{flex:1 1 auto}
+}
+
+/* condensed sticky header (appears once the masthead nav scrolls away) */
+.minihead{position:fixed!important;left:0;right:0;top:0;z-index:60!important;background:rgba(244,236,220,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);box-shadow:0 10px 30px -24px rgba(30,42,87,.6);transform:translateY(-105%);visibility:hidden;transition:transform .5s var(--e-out),visibility 0s .5s,opacity .3s}
+.minihead.show{transform:none;visibility:visible;transition:transform .5s var(--e-out),visibility 0s,opacity .3s}
+.mh{display:flex;align-items:center;gap:22px;height:62px}
+.mh-name{font-family:var(--display);color:var(--indigo);font-size:24px;text-decoration:none;white-space:nowrap;line-height:1;display:inline-flex;align-items:center;min-height:44px}
+.mh-name em{font-family:var(--serif);color:var(--verm);font-size:.68em;margin-left:6px}
+.mh nav{display:flex;margin-left:auto}
+.mh nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font:500 15px var(--sc);letter-spacing:.14em;text-transform:lowercase;text-decoration:none;color:var(--ink);transition:color var(--t1)}
+.mh nav a:hover,.mh nav a.on{color:var(--verm)}
+.mh-tel{font-family:var(--sc);letter-spacing:.1em;font-size:15px;color:var(--indigo);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color var(--t1)}
+.mh-tel:hover{color:var(--verm)}
+.mh .btn{min-height:44px;padding:0 20px}
 
 /* masthead */
 .mast{padding:22px 0 0;text-align:center}
 .topline{display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:15px;color:var(--mute);border-bottom:1px solid var(--rule);padding-bottom:12px}
-.topline a{text-decoration:none;color:var(--indigo)}
+.topline a{text-decoration:none;color:var(--indigo);display:inline-flex;align-items:center;min-height:44px;transition:color var(--t1)}
 .topline a:hover{color:var(--verm)}
 .topline .mid{color:var(--verm)}
-.kn{font-family:"Noto Serif Kannada",serif;font-weight:500;color:var(--verm);font-size:19px;letter-spacing:.06em;margin:30px 0 4px;line-height:1.5}
+.kn{font-family:"Noto Serif Kannada",serif;font-weight:500;color:var(--verm);font-size:19px;letter-spacing:.06em;margin:26px 0 4px;line-height:1.5}
 .title{font-family:var(--display);color:var(--indigo);font-size:clamp(52px,9.2vw,126px);line-height:.95;letter-spacing:-.01em}
+.title .ln{display:block;overflow:hidden;padding:0 .04em .06em}
+.title .ln>span{display:inline-block}
 .title em{font-family:var(--serif);font-style:italic;font-size:.52em;color:var(--verm);display:block;letter-spacing:.01em;margin-top:.1em}
-.orn{display:block;margin:20px auto 0;width:min(460px,86%);height:auto;color:var(--indigo)}
-.strap{margin:14px auto 0;font-size:16px;color:var(--mute);font-style:italic;max-width:640px}
+.orn{display:block;margin:20px auto 0;width:min(460px,86%);height:auto;color:var(--indigo);overflow:visible}
+.orn .flame{transform-box:fill-box;transform-origin:50% 100%}
+.strap{margin:14px auto 0;font-size:16.5px;color:var(--mute);font-style:italic;max-width:640px}
+.mast-cta{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:22px}
+.proof{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:6px 14px;margin:16px 0 0;font-size:15px;color:var(--mute)}
+.proof b{font-family:var(--display);font-weight:400;font-size:24px;color:var(--indigo);line-height:1;font-variant-numeric:tabular-nums}
+.proof .sep{width:4px;height:4px;border-radius:50%;background:var(--rule-2)}
+.proof a{color:var(--mute);text-decoration:none;border-bottom:1px dotted var(--rule-2);transition:color var(--t1)}
+.proof a:hover{color:var(--verm)}
 .nav{margin-top:26px;border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);box-shadow:0 -4px 0 -3px var(--ink)}
 .nav ul{list-style:none;margin:0 auto;padding:0;display:flex;justify-content:center;flex-wrap:wrap}
 .nav li+li{border-left:1px solid var(--rule)}
-.nav a{display:flex;align-items:center;min-height:48px;padding:0 24px;text-decoration:none;font-family:var(--sc);font-weight:500;font-size:16px;letter-spacing:.14em;text-transform:lowercase;color:var(--ink);transition:color .2s}
+.nav a{position:relative;display:flex;align-items:center;min-height:48px;padding:0 24px;text-decoration:none;font-family:var(--sc);font-weight:500;font-size:16px;letter-spacing:.14em;text-transform:lowercase;color:var(--ink);transition:color var(--t1)}
+.nav a::after{content:"";position:absolute;left:24px;right:24px;bottom:9px;height:1px;background:currentColor;transform:scaleX(0);transition:transform var(--t2) var(--e-out)}
 .nav a:hover{color:var(--verm)}
+.nav a:hover::after{transform:scaleX(1)}
 .nav a.book{color:var(--verm);font-weight:700}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font:700 15px var(--sc);letter-spacing:.14em;text-transform:lowercase;text-decoration:none;cursor:pointer;border:1.5px solid var(--indigo);transition:background .2s,color .2s,border-color .2s}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font:700 15px var(--sc);letter-spacing:.14em;text-transform:lowercase;text-decoration:none;cursor:pointer;border:1.5px solid var(--indigo);transition:background var(--t1),color var(--t1),border-color var(--t1),transform var(--t1) var(--e-std),box-shadow var(--t2) var(--e-std);-webkit-tap-highlight-color:transparent}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px -14px rgba(30,42,87,.6)}
+.btn:active{transform:translateY(0) scale(.97);transition-duration:80ms;box-shadow:none}
 .btn.solid{background:var(--indigo);color:var(--cream)}
 .btn.solid:hover{background:var(--verm);border-color:var(--verm)}
 .btn.line{background:transparent;color:var(--indigo)}
 .btn.line:hover{background:var(--indigo);color:var(--cream)}
 .btn svg{width:16px;height:16px;flex:none}
+.btn .arr{transition:transform var(--t2) var(--e-back)}
+.btn:hover .arr{transform:translateX(4px)}
+.pulse::after{content:"";position:absolute;inset:-5px;border-radius:inherit;border:1.5px solid var(--verm);opacity:0;pointer-events:none}
+.anim .pulse::after{animation:ring 3.4s var(--e-std) 2.4s infinite}
+@keyframes ring{0%{opacity:.7;transform:scale(.97)}60%,100%{opacity:0;transform:scale(1.12,1.38)}}
 
 /* arch frames */
-.arch{position:relative;padding:9px;border:1px solid var(--rule-2);border-radius:999px 999px 6px 6px;background:var(--card)}
+.arch{position:relative;padding:9px;border:1px solid var(--rule-2);border-radius:999px 999px 6px 6px;background:var(--card);transition:border-color var(--t2),box-shadow var(--t2) var(--e-std)}
+.arch:hover{border-color:var(--verm);box-shadow:0 22px 40px -30px rgba(30,42,87,.55)}
 .arch .in{position:relative;overflow:hidden;border-radius:999px 999px 2px 2px;background:var(--paper-3);height:100%}
-.arch img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
-.arch:hover img{transform:scale(1.03)}
+.arch img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--e-out)}
+.arch:hover img{transform:scale(1.05)}
 .tag{position:absolute;left:10px;bottom:10px;z-index:2;background:rgba(22,32,74,.82);color:#F3ECDD;font:500 11.5px/1 var(--sc);letter-spacing:.14em;text-transform:lowercase;padding:6px 9px;border-radius:3px;white-space:nowrap}
 figure{margin:0}
 figcaption{font-size:14px;font-style:italic;color:var(--mute);margin-top:12px;line-height:1.5}
 figcaption .sc{font-style:normal;color:var(--verm);font-size:13px;margin-right:6px}
 
 /* section heads */
-section{scroll-margin-top:12px}
 .sec{padding:110px 0}
 .label{display:flex;align-items:center;gap:14px;font-family:var(--sc);font-weight:700;font-size:14px;letter-spacing:.2em;text-transform:lowercase;color:var(--verm)}
-.label:after{content:"";flex:1;height:1px;background:var(--rule)}
+.label:after{content:"";flex:1;height:1px;background:var(--rule);transform-origin:left;transition:transform 1.2s var(--e-out) .15s}
 .label .num{font-family:var(--display);font-size:20px;letter-spacing:0;text-transform:none;color:var(--indigo)}
 .h2{font-family:var(--display);font-size:clamp(38px,5vw,66px);line-height:1.04;color:var(--indigo);margin:22px 0 0;letter-spacing:-.005em}
 .h2 em{font-family:var(--serif);font-style:italic;color:var(--verm);font-size:.86em}
@@ -102,17 +176,20 @@ section{scroll-margin-top:12px}
 .cover h2 em{font-family:var(--serif);font-style:italic;color:var(--verm);font-size:.88em}
 .cover p.deck{font-size:18.5px;color:var(--mute);margin-bottom:30px}
 .cover .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.direct{font-size:14.5px;color:var(--mute);font-style:italic;margin:16px 0 0}
 .cover .hero-arch{aspect-ratio:4/5.3}
 .glance{border-top:3px double var(--ink);padding-top:6px}
 .glance h3{font-family:var(--sc);font-weight:700;font-size:13.5px;letter-spacing:.2em;text-transform:lowercase;color:var(--mute);padding:6px 0 10px;border-bottom:1px solid var(--rule)}
 .glance dl{margin:0}
-.glance .row{padding:16px 0;border-bottom:1px solid var(--rule)}
-.glance dt{font-family:var(--display);font-size:40px;line-height:1;color:var(--indigo)}
+.glance .row{padding:16px 0;border-bottom:1px solid var(--rule);transition:background var(--t2)}
+.glance .row:hover{background:linear-gradient(90deg,rgba(166,58,34,.06),transparent)}
+.glance dt{font-family:var(--display);font-size:40px;line-height:1;color:var(--indigo);font-variant-numeric:tabular-nums}
 .glance dt small{font-size:.5em;color:var(--verm);margin-left:2px}
 .glance dd{margin:6px 0 0;font-size:15px;color:var(--mute);line-height:1.45}
 .stars{display:inline-block;position:relative;width:86px;height:15px;vertical-align:middle;margin-left:8px;top:-4px}
 .stars svg{position:absolute;inset:0;width:86px;height:15px}
 .stars .sf{position:absolute;inset:0;overflow:hidden;width:96%}
+.proof .stars{margin:0;top:0}
 
 /* letter */
 .letter{background:var(--paper-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
@@ -124,6 +201,8 @@ section{scroll-margin-top:12px}
 .cols{column-count:2;column-gap:52px;column-rule:1px solid var(--rule)}
 .cols p{text-align:left}
 .cols p.first::first-letter{float:left;font-family:var(--display);font-size:5.2em;line-height:.8;margin:.08em .1em 0 0;color:var(--verm)}
+.cols a{color:var(--indigo);text-decoration-color:var(--rule-2);text-underline-offset:3px;transition:color var(--t1)}
+.cols a:hover{color:var(--verm)}
 .sign{break-inside:avoid;margin-top:8px}
 .sign .who{font-style:italic;font-size:21px;color:var(--indigo)}
 .sign .where{font-family:var(--sc);letter-spacing:.16em;font-size:13.5px;color:var(--mute);text-transform:lowercase}
@@ -133,8 +212,10 @@ section{scroll-margin-top:12px}
 
 /* rooms */
 .rooms{list-style:none;margin:56px 0 0;padding:0;border-top:3px double var(--ink)}
-.room{display:grid;grid-template-columns:110px 230px 1fr 270px;gap:40px;padding:40px 0;border-bottom:1px solid var(--rule);align-items:center}
-.room .no{font-family:var(--display);font-size:64px;line-height:1;color:var(--verm);align-self:start}
+.room{display:grid;grid-template-columns:110px 230px 1fr 270px;gap:40px;padding:40px 0;border-bottom:1px solid var(--rule);align-items:center;transition:background var(--t2)}
+.room:hover{background:linear-gradient(90deg,transparent,rgba(255,255,255,.35) 30%,transparent)}
+.room .no{font-family:var(--display);font-size:64px;line-height:1;color:var(--verm);align-self:start;transition:transform var(--t2) var(--e-back)}
+.room:hover .no{transform:translateY(-4px)}
 .room .no small{display:block;font-family:var(--sc);font-size:13px;letter-spacing:.2em;color:var(--mute);margin-bottom:6px}
 .room .arch{aspect-ratio:4/5}
 .room h3{font-family:var(--display);font-size:38px;color:var(--indigo);line-height:1.1}
@@ -155,6 +236,13 @@ section{scroll-margin-top:12px}
 .ticks li span:last-child{font-family:var(--sc);letter-spacing:.12em;text-transform:lowercase;font-size:13.5px;color:var(--mute);text-align:right}
 .ticks li.yes span:last-child{color:#2F6B3F;font-weight:700}
 
+/* inline CTA band */
+.band{margin-top:64px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:18px 30px;padding:24px 28px;border:1px solid var(--rule-2);border-radius:999px 999px 999px 999px;background:var(--card);position:relative}
+.band .seal{width:58px;height:58px;border-radius:50%;border:1px solid var(--verm);display:grid;place-items:center;color:var(--verm);font-family:var(--display);font-size:24px;line-height:1}
+.band p{margin:0;font-size:18px;color:var(--mute)}
+.band p b{font-family:var(--display);font-weight:400;color:var(--indigo);font-size:21px}
+.band .acts{display:flex;flex-wrap:wrap;gap:10px}
+
 /* around */
 .around{background:var(--card);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .around .grid{display:grid;grid-template-columns:.95fr 1.2fr;gap:72px;margin-top:48px;align-items:start}
@@ -164,30 +252,35 @@ section{scroll-margin-top:12px}
 .dist{margin:34px 0 0;border-top:3px double var(--ink)}
 .dist h3{font-family:var(--sc);font-weight:700;font-size:13.5px;letter-spacing:.2em;text-transform:lowercase;color:var(--mute);padding:12px 0;border-bottom:1px solid var(--rule)}
 .dist ol{list-style:none;margin:0;padding:0}
-.dist li{padding:12px 0 11px;border-bottom:1px solid var(--rule)}
+.dist li{padding:12px 0 11px;border-bottom:1px solid var(--rule);transition:background var(--t2)}
+.dist li:hover{background:linear-gradient(90deg,rgba(166,58,34,.05),transparent)}
 .dist .line{display:flex;align-items:baseline;gap:10px;font-size:17px}
 .dist .line:after{content:"";order:2;flex:1;border-bottom:1px dotted var(--rule-2);transform:translateY(-5px)}
-.dist .km{order:3;font-family:var(--display);font-size:22px;color:var(--indigo);white-space:nowrap}
+.dist .km{order:3;font-family:var(--display);font-size:22px;color:var(--indigo);white-space:nowrap;font-variant-numeric:tabular-nums}
 .dist .km small{font-family:var(--sc);font-size:13px;letter-spacing:.1em;color:var(--mute);margin-left:3px}
-.bar{height:3px;background:var(--paper-3);margin-top:8px;position:relative;border-radius:2px}
-.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--verm);border-radius:2px}
+.bar{height:3px;background:var(--paper-3);margin-top:8px;position:relative;border-radius:2px;overflow:hidden}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--verm);border-radius:2px;transform-origin:left;transition:transform 1.1s var(--e-out);transition-delay:calc(var(--i,0)*90ms + .3s)}
 .bar.far i{width:100%;background:repeating-linear-gradient(90deg,var(--verm) 0 14px,transparent 14px 20px)}
 .dist .note{font-size:14px;color:var(--mute);font-style:italic;margin-top:12px}
 .vs{margin-top:46px}
 .vs .frame{position:relative;border:1px solid var(--rule-2);padding:9px;background:var(--card);border-radius:6px}
 .vs .frame .in{position:relative;overflow:hidden;border-radius:2px;aspect-ratio:16/8}
-.vs img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.vs img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;transition:transform 1.4s var(--e-out)}
+.vs .frame:hover img{transform:scale(1.04)}
 
 /* guests */
 .guests{background:var(--indigo);color:var(--cream);position:relative;overflow:hidden}
-.guests:before,.guests:after{content:"";position:absolute;left:0;right:0;height:26px;opacity:.55;
+.guests:before,.guests:after{content:"";position:absolute;left:-52px;right:-52px;height:26px;opacity:.55;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='26' viewBox='0 0 52 26'%3E%3Cg fill='none' stroke='%23EFA27E' stroke-width='1.2'%3E%3Cpath d='M13 3 L23 13 L13 23 L3 13 Z'/%3E%3Cpath d='M39 3 L49 13 L39 23 L29 13 Z'/%3E%3C/g%3E%3Cg fill='%23EFA27E'%3E%3Ccircle cx='13' cy='13' r='2'/%3E%3Ccircle cx='39' cy='13' r='2'/%3E%3Ccircle cx='26' cy='13' r='1.3'/%3E%3Ccircle cx='0' cy='13' r='1.3'/%3E%3Ccircle cx='52' cy='13' r='1.3'/%3E%3C/g%3E%3C/svg%3E");background-repeat:repeat-x;background-position:center}
 .guests:before{top:18px}.guests:after{bottom:18px}
+.anim .guests:before{animation:drift 16s linear infinite}
+.anim .guests:after{animation:drift 16s linear infinite reverse}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(52px)}}
 .guests .wrap{text-align:center;padding-top:120px;padding-bottom:120px}
 .guests .label{justify-content:center;color:var(--saffron)}
 .guests .label:after{display:none}
 .guests .label .num{color:var(--cream)}
-.score{font-family:var(--display);font-size:clamp(120px,17vw,220px);line-height:.9;margin-top:22px;color:var(--cream)}
+.score{font-family:var(--display);font-size:clamp(120px,17vw,220px);line-height:.9;margin-top:22px;color:var(--cream);font-variant-numeric:tabular-nums}
 .score sup{font-size:.22em;vertical-align:top;position:relative;top:.35em;color:var(--saffron);margin-left:.08em;font-family:var(--serif);font-style:italic}
 .bigstars{display:block;margin:14px auto 0;position:relative;width:230px;height:40px}
 .bigstars svg{position:absolute;inset:0;width:230px;height:40px}
@@ -196,11 +289,14 @@ section{scroll-margin-top:12px}
 .guests .from b{font-style:normal;font-family:var(--sc);letter-spacing:.14em;text-transform:lowercase;color:var(--saffron)}
 .guests .checked{font-size:13.5px;color:#B9B6C9;margin-top:6px;font-family:var(--sc);letter-spacing:.14em;text-transform:lowercase}
 .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:56px auto 0;max-width:1000px;text-align:left}
-.q{border:1px dashed rgba(239,162,126,.5);border-radius:999px 999px 8px 8px;padding:64px 26px 26px;position:relative;min-height:220px;background:rgba(255,255,255,.03)}
+.q{border:1px dashed rgba(239,162,126,.5);border-radius:999px 999px 8px 8px;padding:64px 26px 26px;position:relative;min-height:220px;background:rgba(255,255,255,.03);transition:background var(--t2),border-color var(--t2),transform var(--t2) var(--e-std)}
+.q:hover{background:rgba(255,255,255,.06);border-color:var(--saffron);transform:translateY(-4px)}
 .q:before{content:"\201C";position:absolute;top:8px;left:50%;transform:translateX(-50%);font-family:var(--display);font-size:72px;line-height:1;color:var(--saffron)}
 .q p{font-style:italic;color:#DCD6C7;font-size:16px;margin:0 0 12px;text-align:center}
 .q span{display:block;text-align:center;font-family:var(--sc);letter-spacing:.14em;text-transform:lowercase;font-size:13px;color:#B9B6C9}
 .guests .ctas{margin-top:46px;display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.guests .btn.solid{background:var(--cream);color:var(--indigo);border-color:var(--cream)}
+.guests .btn.solid:hover{background:var(--saffron);border-color:var(--saffron);color:var(--indigo-2)}
 .guests .btn.line{color:var(--cream);border-color:rgba(246,238,221,.55)}
 .guests .btn.line:hover{background:var(--cream);color:var(--indigo)}
 
@@ -213,32 +309,72 @@ section{scroll-margin-top:12px}
 .sheet .head .s{font-family:var(--sc);font-size:13.5px;letter-spacing:.18em;text-transform:lowercase;color:var(--mute)}
 .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px}
 .fgrid .full{grid-column:1/-1}
-.field label{display:block;font-family:var(--sc);font-weight:700;font-size:13.5px;letter-spacing:.16em;text-transform:lowercase;color:var(--ink);margin-bottom:4px}
+.field label,.flabel{display:block;font-family:var(--sc);font-weight:700;font-size:13.5px;letter-spacing:.16em;text-transform:lowercase;color:var(--ink);margin-bottom:4px}
 .field label i{font-family:var(--serif);font-weight:400;letter-spacing:0;text-transform:none;color:var(--verm)}
-.field input,.field select,.field textarea{width:100%;min-height:48px;font:17px var(--serif);color:var(--ink);background:transparent;border:0;border-bottom:1.5px solid var(--rule-2);border-radius:0;padding:8px 2px;transition:border-color .2s;-webkit-appearance:none;appearance:none}
-.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231E2A57' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;padding-right:24px}
+.field input,.field select,.field textarea{width:100%;min-height:48px;font:17px var(--serif);color:var(--ink);background:transparent;border:0;border-bottom:1.5px solid var(--rule-2);border-radius:0;padding:8px 2px;transition:border-color var(--t1),background var(--t1);-webkit-appearance:none;appearance:none}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231E2A57' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;padding-right:24px;cursor:pointer}
 .field textarea{min-height:96px;resize:vertical;line-height:1.5}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:var(--verm);background:rgba(166,58,34,.04)}
-.field.err input{border-bottom-color:var(--verm)}
+.field input:hover,.field select:hover,.field textarea:hover{border-bottom-color:var(--indigo)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:var(--verm);background:rgba(166,58,34,.05)}
+.field.err input{border-bottom-color:var(--verm);background:rgba(166,58,34,.06)}
+.field.ok input{border-bottom-color:#2F6B3F}
 .ferr{display:none;font-size:13.5px;color:var(--verm);margin-top:4px;font-style:italic}
-.field.err .ferr{display:block}
+.field.err .ferr{display:block;animation:rise .3s var(--e-out)}
+.field.flash select{animation:flash 1.5s var(--e-std)}
+@keyframes flash{0%,40%{background-color:rgba(239,162,126,.35);border-bottom-color:var(--verm)}100%{background-color:transparent}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chip{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--rule-2);background:transparent;font:500 15px var(--sc);letter-spacing:.12em;text-transform:lowercase;color:var(--indigo);cursor:pointer;transition:background var(--t1),color var(--t1),border-color var(--t1),transform var(--t1) var(--e-std)}
+.chip:hover{border-color:var(--verm);color:var(--verm)}
+.chip:active{transform:scale(.94)}
+.chip[aria-pressed="true"]{background:var(--indigo);border-color:var(--indigo);color:var(--cream);animation:pop .36s var(--e-back)}
+@keyframes pop{0%{transform:scale(.9)}60%{transform:scale(1.06)}100%{transform:scale(1)}}
+.nights{min-height:1.5em;margin:6px 0 0;font-size:14.5px;font-style:italic;color:var(--verm)}
+.nights:not(:empty){animation:rise .3s var(--e-out)}
+.stepper{display:flex;align-items:center;gap:6px;border-bottom:1.5px solid var(--rule-2);min-height:48px}
+.stepper button{width:44px;height:44px;flex:none;border-radius:50%;border:1px solid var(--rule-2);background:transparent;color:var(--indigo);font:400 22px/1 var(--serif);cursor:pointer;display:grid;place-items:center;transition:background var(--t1),color var(--t1),transform var(--t1) var(--e-std)}
+.stepper button:hover{background:var(--indigo);color:var(--cream)}
+.stepper button:active{transform:scale(.9)}
+.stepper input{border:0!important;text-align:center;font:400 24px var(--display)!important;color:var(--indigo)!important;background:transparent!important;-moz-appearance:textfield;min-height:44px!important;padding:0!important}
+.stepper input::-webkit-inner-spin-button,.stepper input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.stepper input.bump{animation:pop .3s var(--e-back)}
 .actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:26px}
 .actions .btn{min-width:220px}
-.status{font-size:14.5px;color:var(--mute);font-style:italic;margin:0;flex:1;min-width:200px}
-.status.ok{color:#2F6B3F}
+.status{font-size:14.5px;color:var(--verm);font-style:italic;margin:0;flex:1;min-width:200px}
+.status:not(:empty){animation:rise .3s var(--e-out)}
+.shake{animation:shake .38s ease-in-out}
+@keyframes shake{0%,100%{transform:none}20%{transform:translateX(-7px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(2px)}}
 .fine{font-size:13.5px;color:var(--mute);margin:18px 0 0;line-height:1.5}
-.desk{border-top:3px double var(--ink);position:sticky;top:24px}
+.fine a{color:var(--indigo)}
+/* success */
+.okp{text-align:center;padding:10px 0 4px}
+.okp[hidden]{display:none}
+.okp:focus{outline:none}
+.okp .chk{width:84px;height:84px;margin:0 auto 16px;display:block;animation:popIn .55s var(--e-back) both}
+.okp .chk circle{fill:rgba(239,162,126,.18);stroke:var(--verm);stroke-width:1.6;stroke-dasharray:152;stroke-dashoffset:152;animation:stroke .7s var(--e-std) .1s forwards}
+.okp .chk path{fill:none;stroke:var(--indigo);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:40;stroke-dashoffset:40;animation:stroke .4s var(--e-out) .65s forwards}
+@keyframes stroke{to{stroke-dashoffset:0}}
+@keyframes popIn{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:none}}
+.okp h3{font-family:var(--display);font-size:32px;color:var(--indigo);animation:rise .6s var(--e-out) .35s both}
+.okp p{color:var(--mute);margin:10px auto 0;max-width:460px;animation:rise .6s var(--e-out) .45s both}
+.okp .sum{margin:18px auto 0;max-width:420px;border-top:3px double var(--ink);text-align:left;animation:rise .6s var(--e-out) .5s both}
+.okp .sum div{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--rule);font-size:15.5px}
+.okp .sum b{font-family:var(--sc);font-weight:500;letter-spacing:.14em;text-transform:lowercase}
+.okp .acts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:20px;animation:rise .6s var(--e-out) .55s both}
+.okp .again{font-size:14px}
+.desk{border-top:3px double var(--ink);position:sticky;top:84px}
 .desk .blk{padding:20px 0;border-bottom:1px solid var(--rule)}
 .desk .k{font-family:var(--sc);font-weight:700;font-size:13.5px;letter-spacing:.18em;text-transform:lowercase;color:var(--verm);margin-bottom:6px}
 .desk address{font-style:normal;font-size:18px;line-height:1.55}
-.desk .big{font-family:var(--display);font-size:30px;color:var(--indigo);text-decoration:none;display:inline-flex;min-height:44px;align-items:center}
+.desk .big{font-family:var(--display);font-size:30px;color:var(--indigo);text-decoration:none;display:inline-flex;min-height:44px;align-items:center;transition:color var(--t1)}
 .desk .big:hover{color:var(--verm)}
-.desk .mail{font-size:18px;color:var(--indigo);text-decoration:none;word-break:break-all;display:inline-flex;min-height:44px;align-items:center}
+.desk .mail{font-size:18px;color:var(--indigo);text-decoration:none;word-break:break-all;display:inline-flex;min-height:44px;align-items:center;transition:color var(--t1)}
 .desk .mail:hover{color:var(--verm)}
 .desk .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-.desk .links a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--rule-2);border-radius:999px;text-decoration:none;font-family:var(--sc);font-size:14px;letter-spacing:.12em;text-transform:lowercase;color:var(--indigo)}
-.desk .links a:hover{border-color:var(--verm);color:var(--verm)}
+.desk .links a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--rule-2);border-radius:999px;text-decoration:none;font-family:var(--sc);font-size:14px;letter-spacing:.12em;text-transform:lowercase;color:var(--indigo);transition:color var(--t1),border-color var(--t1),transform var(--t1) var(--e-std)}
+.desk .links a:hover{border-color:var(--verm);color:var(--verm);transform:translateY(-2px)}
 .desk .coords{font-size:14px;color:var(--mute);font-style:italic;margin-top:8px}
+.desk .trust{font-size:15px;color:var(--mute);font-style:italic}
+.desk .trust b{font-family:var(--display);font-style:normal;font-weight:400;font-size:26px;color:var(--indigo);margin-right:4px}
 
 /* footer */
 footer{background:var(--indigo-2);color:#D9D3C4;text-align:center;padding:70px 0 40px}
@@ -247,9 +383,56 @@ footer .fname em{font-family:var(--serif);font-style:italic;color:var(--saffron)
 footer .orn{color:var(--saffron);width:min(320px,80%);margin-top:16px}
 footer .faddr{margin-top:18px;font-size:15.5px}
 footer .flinks{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 8px;margin-top:10px}
-footer .flinks a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;text-decoration:none;color:var(--saffron);font-family:var(--sc);letter-spacing:.14em;text-transform:lowercase;font-size:15px}
+footer .flinks a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;text-decoration:none;color:var(--saffron);font-family:var(--sc);letter-spacing:.14em;text-transform:lowercase;font-size:15px;transition:color var(--t1)}
 footer .flinks a:hover{color:var(--cream)}
+.hire{margin:46px auto 0;max-width:760px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px 22px;align-items:center;text-align:left;background:#141518;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px 24px;font-family:"Alegreya Sans",system-ui,sans-serif}
+.hire .fb-mark{grid-row:auto;width:46px;height:46px;font-size:22px;border-radius:12px}
+.hire h2{font:700 22px/1.2 "Alegreya Sans",sans-serif;color:#fff}
+.hire p{margin:4px 0 0;font-size:15.5px;color:#c9cad1;line-height:1.45}
+.hire .fb-act{margin:0}
 footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9;line-height:1.6;border-top:1px solid rgba(255,255,255,.12);padding-top:22px}
+
+/* ---------- reveals: hidden start-states only under .mo ---------- */
+@keyframes rise{from{opacity:0;transform:translateY(var(--rv))}to{opacity:1;transform:none}}
+.mo [data-rv]:not(.in){opacity:0;transform:translateY(var(--rv))}
+.mo [data-rv="scale"]:not(.in){transform:scale(.95)}
+.mo [data-rv="door"]:not(.in){opacity:1;transform:none;clip-path:inset(100% 0 0 0)}
+.mo [data-rv="door"].in:not(.done){clip-path:inset(0 0 0 0)}
+.mo [data-rv="wipe-x"]:not(.in){opacity:1;transform:none;clip-path:inset(0 100% 0 0)}
+.mo [data-rv="wipe-x"].in:not(.done){clip-path:inset(0 0 0 0)}
+.mo [data-rv]:not(.done){transition:opacity var(--t3) var(--e-out),transform var(--t3) var(--e-out),clip-path 1.3s var(--e-out);transition-delay:var(--d,0s)}
+.mo [data-stg]:not(.in)>*{opacity:0;transform:translateY(var(--rv))}
+.mo [data-stg="scale"]:not(.in)>*{transform:scale(.94)}
+.mo [data-stg]:not(.done)>*{transition:opacity .8s var(--e-out),transform .8s var(--e-out);transition-delay:calc(var(--i,0)*80ms + var(--d,0s))}
+.mo [data-rv]:not(.in) .label:after,.mo [data-stg]:not(.in) .label:after{transform:scaleX(0)}
+.mo [data-stg]:not(.in) .bar i{transform:scaleX(0)}
+.mo .bigstars .sf{clip-path:inset(0 0 0 0);transition:clip-path 1.4s var(--e-out) .5s}
+.mo [data-stg]:not(.in) .bigstars .sf{clip-path:inset(0 100% 0 0)}
+
+/* ---------- hero entrance + signature ---------- */
+@keyframes lineUp{from{transform:translateY(105%)}to{transform:none}}
+@keyframes drawIn{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes door{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.1) translate(-1.5%,-1%)}}
+@keyframes flicker{0%,100%{transform:scale(1,1)}25%{transform:scale(.92,1.08)}50%{transform:scale(1.05,.94)}75%{transform:scale(.96,1.04)}}
+.orn .dr{stroke-dasharray:1;stroke-dashoffset:0}
+.anim .mast .topline{animation:rise .7s var(--e-out) .05s backwards}
+.anim .mast .kn{animation:rise .8s var(--e-out) .12s backwards}
+.anim .mast .title .ln:nth-child(1)>span{animation:lineUp 1s var(--e-out) .2s backwards}
+.anim .mast .title .ln:nth-child(2)>span{animation:lineUp 1s var(--e-out) .29s backwards}
+.anim .mast .orn .dr{animation:drawIn 1.3s var(--e-std) .45s backwards}
+.anim .mast .orn .dr.r{animation-delay:.7s}
+.anim .mast .orn .dots{animation:fadeIn .6s var(--e-std) 1.35s backwards}
+.anim .mast .orn .flame{animation:fadeIn .5s var(--e-std) 1.3s backwards,flicker 1.9s ease-in-out 1.8s infinite}
+.anim .mast .orn .flame+.flame{animation-delay:1.3s,2.25s}
+.anim .mast .strap{animation:rise .8s var(--e-out) .38s backwards}
+.anim .mast .mast-cta{animation:rise .8s var(--e-out) .46s backwards}
+.anim .mast .proof{animation:rise .8s var(--e-out) .54s backwards}
+.anim .mast .nav{animation:fadeIn .8s var(--e-std) .62s backwards}
+.anim .cover .hero-arch .in{animation:door 1.5s var(--e-out) .5s backwards}
+.anim .cover .hero-arch img{animation:kb 20s ease-in-out 2s infinite alternate}
+.anim .cover .hero-arch:hover img{animation-play-state:paused}
 
 /* mobile action bar */
 .mbar{display:none}
@@ -262,6 +445,8 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
   .room .no{font-size:52px}
   .room .spec-wrap{grid-column:3}
   .room .no + .arch{grid-row:span 2;align-self:start}
+  .mh nav{display:none}
+  .mh-tel{margin-left:auto}
 }
 @media (max-width:860px){
   .wrap{padding:0 20px}
@@ -269,6 +454,7 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
   .topline{font-size:13.5px}
   .topline .mid{display:none}
   .nav a{padding:0 14px;font-size:15px}
+  .nav a::after{left:14px;right:14px}
   .cover{padding:40px 0 20px}
   .cover .grid{grid-template-columns:1fr;gap:36px}
   .cover .hero-arch{max-width:440px;width:100%;margin:0 auto;aspect-ratio:4/4.8}
@@ -277,7 +463,6 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
   .letter .side{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:end}
   .letter .side .pull{margin-top:0;font-size:22px}
   .cols{column-count:1}
-  .cols p{text-align:left}
   .room{grid-template-columns:132px 1fr;gap:14px 20px;padding:30px 0}
   .room .no{grid-column:2;grid-row:1;font-size:30px;display:flex;align-items:baseline;gap:8px;align-self:end}
   .room .no small{display:inline;font-size:12px;margin:0}
@@ -289,6 +474,9 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
   .room .tag{font-size:9.5px;padding:5px 6px;left:6px;bottom:6px;letter-spacing:.1em}
   .every{grid-template-columns:1fr 1fr;gap:20px}
   .every .txt{grid-column:1/-1}
+  .band{grid-template-columns:auto minmax(0,1fr);border-radius:28px;padding:22px}
+  .band .acts{grid-column:1/-1}
+  .band .acts .btn{flex:1 1 auto}
   .around .grid{grid-template-columns:1fr;gap:40px}
   .around .tall{max-width:420px;width:100%;margin:0 auto;aspect-ratio:3/3.8}
   .quotes{grid-template-columns:1fr;max-width:420px}
@@ -298,8 +486,16 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
   .fgrid{grid-template-columns:1fr}
   .actions .btn{width:100%}
   .guests .wrap{padding-top:96px;padding-bottom:96px}
-  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--card);border-top:1px solid var(--rule-2);box-shadow:0 -10px 30px -18px rgba(30,42,87,.5);padding:8px 10px calc(8px + env(safe-area-inset-bottom));gap:8px}
-  .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:999px;text-decoration:none;font:700 15px var(--sc);letter-spacing:.14em;text-transform:lowercase}
+  .hire{grid-template-columns:auto minmax(0,1fr)}
+  .hire .fb-act{grid-column:1/-1}
+  .hire .fb-btn{flex:1 1 auto}
+  .mh{height:56px}
+  .mh-tel,.mh .btn{display:none}
+  .mh-name{margin:0 auto;font-size:22px}
+  .mbar{display:grid;grid-template-columns:1fr 1.3fr;position:fixed!important;left:0;right:0;bottom:0;z-index:50!important;background:var(--card);border-top:1px solid var(--rule-2);box-shadow:0 -10px 30px -18px rgba(30,42,87,.5);padding:8px 10px calc(8px + env(safe-area-inset-bottom));gap:8px;transition:transform .4s var(--e-std),opacity .3s}
+  .mbar.away{transform:translateY(110%);opacity:0;pointer-events:none}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:999px;text-decoration:none;font:700 15px var(--sc);letter-spacing:.14em;text-transform:lowercase;transition:transform var(--t1) var(--e-std),background var(--t1)}
+  .mbar a:active{transform:scale(.97)}
   .mbar a svg{width:17px;height:17px}
   .mbar .call{border:1.5px solid var(--indigo);color:var(--indigo)}
   .mbar .bk{background:var(--indigo);color:var(--cream)}
@@ -308,15 +504,19 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
 @media (max-width:480px){
   body{font-size:16.5px}
   .wrap{padding:0 16px}
-  .topline{justify-content:center;flex-wrap:wrap;gap:4px 14px}
-  .kn{margin-top:22px}
-  .nav ul{display:grid;grid-template-columns:1fr 1fr}
-  .nav li{border-left:0!important;border-bottom:1px solid var(--rule)}
-  .nav li:nth-child(odd){border-right:1px solid var(--rule)}
-  .nav li:last-child{grid-column:1/-1;border-bottom:0;border-right:0}
-  .nav a{justify-content:center;padding:0 6px;font-size:14px;letter-spacing:.1em}
-  .nav li:nth-last-child(2){border-bottom:1px solid var(--rule)}
-  .notice .wrap{align-items:flex-start}
+  .topline{justify-content:center;flex-wrap:wrap;gap:0 14px;padding-bottom:4px}
+  .kn{margin-top:14px}
+  .orn{margin-top:14px}
+  .strap{font-size:16px}
+  .mast-cta{margin-top:18px}
+  .mast-cta .btn{flex:1 1 auto;padding:0 18px}
+  .proof{font-size:14px;gap:4px 10px}
+  .proof .sep{display:none}
+  .nav{margin-top:20px}
+  .nav ul{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .nav ul::-webkit-scrollbar{display:none}
+  .nav li{flex:none}
+  .nav a{padding:0 14px;font-size:14.5px;letter-spacing:.1em}
   .glance dt{font-size:34px}
   .letter .side{grid-template-columns:1fr}
   .letter .side .arch{max-width:300px;width:100%;margin:0 auto}
@@ -324,20 +524,52 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
   .dist .line{font-size:16px}
   .score{font-size:128px}
   .bigstars{width:200px;height:35px}.bigstars svg{width:200px;height:35px}
+  .band .seal{width:48px;height:48px;font-size:20px}
+  .band p{font-size:16.5px}
+}
+/* Reduced motion: keep fades, colour/press feedback, counters, line draws and small moves;
+   drop Ken Burns, looping flicker/drift/pulse, smooth scroll and large travel */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  :root{--rv:8px}
+  .anim .mast .title .ln>span{animation-name:rise!important}
+  .anim .cover .hero-arch img,.anim .guests:before,.anim .guests:after,.anim .pulse::after{animation:none}
+  .anim .mast .orn .flame{animation:fadeIn .5s var(--e-std) 1.3s backwards}
+  .minihead{transform:none;opacity:0;transition:opacity .3s,visibility 0s .3s}
+  .minihead.show{opacity:1;transition:opacity .3s,visibility 0s}
+  .mbar.away{transform:none}
+  .arch:hover img,.vs .frame:hover img{transform:scale(1.02)}
 }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
-<aside class="notice" id="notice" role="note" aria-label="Concept preview notice">
-  <div class="wrap">
-    <p><b>Concept preview</b>Made for Shivaganga Comforts by Farman, an independent web developer, from public information. Not Shivaganga Comforts's official website. Photos are samples.</p>
-    <button type="button" id="noticeClose" aria-label="Hide this notice">hide</button>
+<aside class="fb" id="fb" aria-label="About this concept preview">
+  <div class="fb-in">
+    <span class="fb-mark" aria-hidden="true">F</span>
+    <p><b>Concept preview</b> made for Shivaganga Comforts by Farman, an independent web developer. Not Shivaganga Comforts's official website; photos are samples.</p>
+    <div class="fb-act">
+      <a class="fb-btn pri" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="fb-btn" href="mailto:farman.builds@gmail.com?subject=Website%20for%20Shivaganga%20Comforts">Email Farman</a>
+    </div>
+    <button class="fb-x" type="button" id="fbX" aria-label="Dismiss this notice"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
   </div>
 </aside>
 
-<header class="mast">
+<div class="minihead" id="minihead">
+  <div class="wrap mh">
+    <a class="mh-name" href="#top">Shivaganga<em>Comforts</em></a>
+    <nav aria-label="Sections, compact">
+      <a href="#house">the house</a><a href="#rooms">rooms</a><a href="#around">around</a><a href="#guests">guests</a>
+    </nav>
+    <a class="mh-tel" href="tel:+918022254347">080 2225 4347</a>
+    <a class="btn solid" href="#book" data-focus="name">Book a room</a>
+  </div>
+</div>
+
+<header class="mast" id="top">
   <div class="wrap">
     <div class="topline">
       <span class="sc">No. 71 · Hospital Road · Balepete</span>
@@ -345,34 +577,47 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
       <a class="sc" href="tel:+918022254347">080 2225 4347</a>
     </div>
     <p class="kn" lang="kn">ಶಿವಗಂಗಾ</p>
-    <h1 class="title">Shivaganga <em>Comforts</em></h1>
+    <h1 class="title"><span class="ln"><span>Shivaganga</span></span><em class="ln"><span>Comforts</span></em></h1>
     <svg class="orn" viewBox="0 0 460 48" aria-hidden="true" focusable="false">
       <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
-        <path d="M16 30H170M16 34H170M290 30H444M290 34H444"/>
-        <path d="M6 32l6-6 6 6-6 6z M442 32l6-6 6 6-6 6z"/>
-        <path d="M60 32l4-4 4 4-4 4z M110 32l4-4 4 4-4 4z M342 32l4-4 4 4-4 4z M392 32l4-4 4 4-4 4z" fill="#F4ECDC"/>
+        <path class="dr r" pathLength="1" d="M170 30H16"/><path class="dr r" pathLength="1" d="M170 34H16"/>
+        <path class="dr r" pathLength="1" d="M290 30H444"/><path class="dr r" pathLength="1" d="M290 34H444"/>
+        <g class="dots"><path d="M6 32l6-6 6 6-6 6z M442 32l6-6 6 6-6 6z"/>
+        <path d="M60 32l4-4 4 4-4 4z M110 32l4-4 4 4-4 4z M342 32l4-4 4 4-4 4z M392 32l4-4 4 4-4 4z" fill="#F4ECDC"/></g>
         <!-- gopuram -->
-        <path d="M196 42h68M200 42V35h60v7M204 35v-6h52v6M208 29v-6h44v6M212 23v-5h36v5"/>
-        <path d="M216 18c0-6 6-9 14-9s14 3 14 9"/>
-        <path d="M224 35v7M236 35v7M218 29v6M230 29v6M242 29v6"/>
+        <path class="dr" pathLength="1" d="M196 42h68M200 42V35h60v7M204 35v-6h52v6M208 29v-6h44v6M212 23v-5h36v5"/>
+        <path class="dr" pathLength="1" d="M216 18c0-6 6-9 14-9s14 3 14 9"/>
+        <path class="dr" pathLength="1" d="M224 35v7M236 35v7M218 29v6M230 29v6M242 29v6"/>
         <!-- lamps -->
-        <path d="M182 40h8M184 40c0-3 1-5 2-5s2 2 2 5M186 35c-2-3-1-6 0-8 1 2 2 5 0 8z"/>
-        <path d="M270 40h8M272 40c0-3 1-5 2-5s2 2 2 5M274 35c-2-3-1-6 0-8 1 2 2 5 0 8z"/>
+        <path class="dr" pathLength="1" d="M182 40h8M184 40c0-3 1-5 2-5s2 2 2 5"/>
+        <path class="dr" pathLength="1" d="M270 40h8M272 40c0-3 1-5 2-5s2 2 2 5"/>
       </g>
-      <g fill="#A63A22">
+      <path class="flame" d="M186 35c-2-3-1-6 0-8 1 2 2 5 0 8z" fill="#C2502F" stroke="#A63A22" stroke-width=".8"/>
+      <path class="flame" d="M274 35c-2-3-1-6 0-8 1 2 2 5 0 8z" fill="#C2502F" stroke="#A63A22" stroke-width=".8"/>
+      <g fill="#A63A22" class="dots">
         <circle cx="222" cy="6.5" r="2"/><circle cx="230" cy="4.5" r="2.4"/><circle cx="238" cy="6.5" r="2"/>
         <circle cx="12" cy="32" r="1.6"/><circle cx="448" cy="32" r="1.6"/>
         <circle cx="86" cy="32" r="1.4"/><circle cx="138" cy="32" r="1.4"/><circle cx="322" cy="32" r="1.4"/><circle cx="372" cy="32" r="1.4"/>
       </g>
     </svg>
     <p class="strap">A lodge in the market quarter of old Bengaluru, next to Swagath Hotel, a short walk from Majestic.</p>
+    <div class="mast-cta">
+      <a class="btn solid pulse" href="#book" data-focus="name">Book a room <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn line" href="tel:+918022254347"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>Call the desk</a>
+    </div>
+    <p class="proof">
+      <span><b data-count="4.8">4.8</b> <span class="stars" aria-hidden="true"><svg viewBox="0 0 86 15"><use href="#s5" fill="none" stroke="#A63A22" stroke-width="1"/></svg><span class="sf"><svg viewBox="0 0 86 15"><use href="#s5" fill="#A63A22"/></svg></span></span></span>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Shivaganga%20Comforts%20Hospital%20Road%20Balepete%20Bengaluru" target="_blank" rel="noopener"><span data-count="84">84</span> Google reviews</a>
+      <span class="sep" aria-hidden="true"></span>
+      <span><span data-count="0.4">0.4</span> km from Majestic metro</span>
+    </p>
     <nav class="nav" aria-label="Sections">
       <ul>
         <li><a href="#house">The House</a></li>
         <li><a href="#rooms">Rooms</a></li>
         <li><a href="#around">Around the Corner</a></li>
         <li><a href="#guests">Guests</a></li>
-        <li><a class="book" href="#book">Book a Room</a></li>
+        <li><a class="book" href="#book" data-focus="name">Book a Room</a></li>
       </ul>
     </nav>
   </div>
@@ -383,17 +628,18 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
 <!-- COVER SPREAD -->
 <section class="cover" aria-labelledby="cover-h">
   <div class="wrap grid">
-    <div>
+    <div data-stg>
       <div class="kicker">From the market quarter</div>
       <h2 id="cover-h">A quiet room in the middle of <em>Chickpet.</em></h2>
       <p class="deck">Silk houses, cloth lanes and wholesale markets outside the door, with Majestic metro, the city bus stand and KSR Bengaluru City station all within a kilometre.</p>
       <div class="ctas">
-        <a class="btn solid" href="#book">Book a room</a>
+        <a class="btn solid" href="#book" data-focus="name">Book a room <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn line" href="tel:+918022254347">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>
           Call the desk
         </a>
       </div>
+      <p class="direct">Book directly with the front desk, by email or phone. No booking app in between.</p>
     </div>
     <figure>
       <div class="arch hero-arch"><div class="in">
@@ -404,13 +650,13 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
     </figure>
     <aside class="glance" aria-label="At a glance">
       <h3>At a glance</h3>
-      <dl>
+      <dl data-stg>
         <div class="row">
-          <dt>4.8<span class="stars" aria-hidden="true"><svg viewBox="0 0 86 15"><use href="#s5" fill="none" stroke="#A63A22" stroke-width="1"/></svg><span class="sf"><svg viewBox="0 0 86 15"><use href="#s5" fill="#A63A22"/></svg></span></span></dt>
+          <dt><span data-count="4.8">4.8</span><span class="stars" aria-hidden="true"><svg viewBox="0 0 86 15"><use href="#s5" fill="none" stroke="#A63A22" stroke-width="1"/></svg><span class="sf"><svg viewBox="0 0 86 15"><use href="#s5" fill="#A63A22"/></svg></span></span></dt>
           <dd>Google rating, from 84 guest reviews</dd>
         </div>
-        <div class="row"><dt>0.4<small>km</small></dt><dd>to Majestic metro, as the crow flies</dd></div>
-        <div class="row"><dt>0.9<small>km</small></dt><dd>to KSR Bengaluru City railway station</dd></div>
+        <div class="row"><dt><span data-count="0.4">0.4</span><small>km</small></dt><dd>to Majestic metro, as the crow flies</dd></div>
+        <div class="row"><dt><span data-count="0.9">0.9</span><small>km</small></dt><dd>to KSR Bengaluru City railway station</dd></div>
         <div class="row"><dt>Wi-Fi</dt><dd>Internet access, as listed on OpenStreetMap</dd></div>
       </dl>
     </aside>
@@ -420,24 +666,26 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
 <!-- LETTER -->
 <section class="letter sec" id="house" aria-labelledby="house-h">
   <div class="wrap">
-    <div class="label"><span class="num">I</span> A letter from the house</div>
-    <h2 class="h2" id="house-h">Dear traveller, <em>welcome to Balepete.</em></h2>
+    <div data-rv>
+      <div class="label"><span class="num">I</span> A letter from the house</div>
+      <h2 class="h2" id="house-h">Dear traveller, <em>welcome to Balepete.</em></h2>
+    </div>
     <div class="grid">
       <div class="side">
-        <figure>
+        <figure data-rv="door">
           <div class="arch"><div class="in">
             <img src="../img/shivaganga-comforts/room-canopy-s.jpg" srcset="../img/shivaganga-comforts/room-canopy-s.jpg 900w, ../img/shivaganga-comforts/room-canopy.jpg 1600w" sizes="(max-width:860px) 46vw, 300px" alt="A carved wooden four-poster bed with a white canopy" style="object-position:50% 40%">
             <span class="tag">Sample photo</span>
           </div></div>
         </figure>
-        <p class="pull">Step off the train at KSR City and your room is <span>0.9 km</span> away.</p>
+        <p class="pull" data-rv style="--d:.25s">Step off the train at KSR City and your room is <span>0.9 km</span> away.</p>
       </div>
-      <div class="cols">
+      <div class="cols" data-rv style="--d:.15s">
         <p class="salute">Namaskara,</p>
         <p class="first">If you have come to Bengaluru to buy &mdash; silk for a wedding, cloth by the bolt, a season&rsquo;s stock for your own shop &mdash; you have come to the right part of town. Chickpet and Balepete are where old Bengaluru still trades, lane after narrow lane of saree houses, textile counters and wholesale shops.</p>
         <p>Shivaganga Comforts sits at No.&nbsp;71, Hospital Road, right next to Swagath Hotel, in the middle of it all. Majestic metro is about 0.4&nbsp;km away in a straight line, the Majestic bus stand 0.7&nbsp;km and KSR Bengaluru City railway station 0.9&nbsp;km. Arrive by train, bus or metro and you can be in your room without crossing the city.</p>
         <p>We keep it simple: a room to rest in after a long day in the markets, Wi-Fi to stay in touch with home, and an address that saves you the traffic. Guests on Google have rated their stay 4.8 out of 5 across 84 reviews, the kindest introduction we could ask for.</p>
-        <p>Write to us or ring the desk on 080&nbsp;2225&nbsp;4347, and we will tell you what is free on your dates.</p>
+        <p><a href="#book" data-focus="name">Write to us</a> or ring the desk on <a href="tel:+918022254347">080&nbsp;2225&nbsp;4347</a>, and we will tell you what is free on your dates.</p>
         <div class="sign">
           <div class="who">With warm regards,<br>Shivaganga Comforts</div>
           <div class="where">Hospital Road, Balepete</div>
@@ -451,12 +699,14 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
 <!-- ROOMS -->
 <section class="sec" id="rooms" aria-labelledby="rooms-h">
   <div class="wrap">
-    <div class="label"><span class="num">II</span> The rooms</div>
-    <h2 class="h2" id="rooms-h">Rooms, <em>listed plainly.</em></h2>
-    <p class="lede">A simple register of the rooms, like the board behind a front desk. Room names, beds and nightly rates are left blank for the owner to fill in, so nothing here is guessed.</p>
+    <div data-rv>
+      <div class="label"><span class="num">II</span> The rooms</div>
+      <h2 class="h2" id="rooms-h">Rooms, <em>listed plainly.</em></h2>
+      <p class="lede">A simple register of the rooms, like the board behind a front desk. Room names, beds and nightly rates are left blank for the owner to fill in, so nothing here is guessed.</p>
+    </div>
 
     <ol class="rooms">
-      <li class="room">
+      <li class="room" data-stg>
         <div class="no"><small>No.</small>I</div>
         <div class="arch"><div class="in">
           <img src="../img/shivaganga-comforts/room-classic-s.jpg" alt="A painted heritage room with a low bed and carved chairs">
@@ -474,10 +724,10 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
             <div><dt>Bath</dt><dd><span class="fill">to fill</span></dd></div>
             <div><dt>Per night</dt><dd><span class="fill">&#8377; to fill</span></dd></div>
           </dl>
-          <a class="btn line" href="#book" data-room="Room one">Ask about this room</a>
+          <a class="btn line" href="#book" data-room="Room one">Ask about this room <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </li>
-      <li class="room">
+      <li class="room" data-stg>
         <div class="no"><small>No.</small>II</div>
         <div class="arch"><div class="in">
           <img src="../img/shivaganga-comforts/room-canopy-s.jpg" alt="A four-poster bed with white netting and carved headboard" style="object-position:50% 50%">
@@ -495,10 +745,10 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
             <div><dt>Bath</dt><dd><span class="fill">to fill</span></dd></div>
             <div><dt>Per night</dt><dd><span class="fill">&#8377; to fill</span></dd></div>
           </dl>
-          <a class="btn line" href="#book" data-room="Room two">Ask about this room</a>
+          <a class="btn line" href="#book" data-room="Room two">Ask about this room <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </li>
-      <li class="room">
+      <li class="room" data-stg>
         <div class="no"><small>No.</small>III</div>
         <div class="arch"><div class="in">
           <img src="../img/shivaganga-comforts/room-heritage-s.jpg" alt="A warm room with a bed, window seat and wooden floor" style="object-position:30% 50%">
@@ -516,25 +766,25 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
             <div><dt>Bath</dt><dd><span class="fill">to fill</span></dd></div>
             <div><dt>Per night</dt><dd><span class="fill">&#8377; to fill</span></dd></div>
           </dl>
-          <a class="btn line" href="#book" data-room="Room three">Ask about this room</a>
+          <a class="btn line" href="#book" data-room="Room three">Ask about this room <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </li>
     </ol>
 
     <div class="every">
-      <figure>
+      <figure data-rv="door">
         <div class="arch"><div class="in">
           <img src="../img/shivaganga-comforts/bath-classic-s.jpg" alt="A tiled bathroom with twin basins" style="object-position:40% 50%">
           <span class="tag">Sample photo</span>
         </div></div>
       </figure>
-      <figure>
+      <figure data-rv="door" style="--d:.15s">
         <div class="arch"><div class="in">
           <img src="../img/shivaganga-comforts/amenities-s.jpg" alt="Small toiletry bottles and soap in a woven tray">
           <span class="tag">Sample photo</span>
         </div></div>
       </figure>
-      <div class="txt">
+      <div class="txt" data-rv style="--d:.25s">
         <h3>In every room</h3>
         <ul class="ticks">
           <li class="yes"><span>Wi-Fi</span><span>listed on OpenStreetMap</span></li>
@@ -545,16 +795,27 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
         </ul>
       </div>
     </div>
+
+    <div class="band" data-rv="scale">
+      <span class="seal" aria-hidden="true">✦</span>
+      <p><b>Tell us your dates.</b> The desk replies with what is free and the rate for your stay.</p>
+      <div class="acts">
+        <a class="btn solid" href="#book" data-focus="name">Check my dates <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn line" href="tel:+918022254347">Call</a>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- AROUND THE CORNER -->
 <section class="around sec" id="around" aria-labelledby="around-h">
   <div class="wrap">
-    <div class="label"><span class="num">III</span> Around the corner</div>
-    <h2 class="h2" id="around-h">Chickpet, <em>at your doorstep.</em></h2>
+    <div data-rv>
+      <div class="label"><span class="num">III</span> Around the corner</div>
+      <h2 class="h2" id="around-h">Chickpet, <em>at your doorstep.</em></h2>
+    </div>
     <div class="grid">
-      <figure>
+      <figure data-rv="door">
         <div class="arch tall"><div class="in">
           <img src="../img/shivaganga-comforts/city-old-blr-s.jpg" srcset="../img/shivaganga-comforts/city-old-blr-s.jpg 675w, ../img/shivaganga-comforts/city-old-blr.jpg 1350w" sizes="(max-width:860px) 92vw, 460px" alt="An old colonnaded corner building on a rainy Bengaluru street">
           <span class="tag">Sample photo</span>
@@ -562,44 +823,54 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
         <figcaption><span class="sc">Plate ii</span>Old Bengaluru on a monsoon afternoon. A sample photograph, not taken at the lodge.</figcaption>
       </figure>
       <div class="story">
-        <p class="first">Chickpet is the city&rsquo;s old trading heart. It is best known for silk sarees, the shop-lined lanes where families come to buy for weddings and festivals, and for the textile and wholesale markets that fill the streets around Balepete.</p>
-        <p>Staying here means the markets are a walk, not a cab ride. When you are done, the rest of Bengaluru is close too: the metro at Majestic connects you across the city, and the Vidhana Soudha and Cubbon Park are under two kilometres away.</p>
-
+        <div data-rv>
+          <p class="first">Chickpet is the city&rsquo;s old trading heart. It is best known for silk sarees, the shop-lined lanes where families come to buy for weddings and festivals, and for the textile and wholesale markets that fill the streets around Balepete.</p>
+          <p>Staying here means the markets are a walk, not a cab ride. When you are done, the rest of Bengaluru is close too: the metro at Majestic connects you across the city, and the Vidhana Soudha and Cubbon Park are under two kilometres away.</p>
+        </div>
         <div class="dist">
           <h3>How far, from No.&nbsp;71 Hospital Road</h3>
-          <ol>
-            <li><div class="line"><span>Majestic metro station</span><span class="km">0.4<small>km</small></span></div><div class="bar" aria-hidden="true"><i style="width:20%"></i></div></li>
-            <li><div class="line"><span>Majestic bus stand</span><span class="km">0.7<small>km</small></span></div><div class="bar" aria-hidden="true"><i style="width:35%"></i></div></li>
-            <li><div class="line"><span>KSR Bengaluru City railway station</span><span class="km">0.9<small>km</small></span></div><div class="bar" aria-hidden="true"><i style="width:45%"></i></div></li>
-            <li><div class="line"><span>KR Market</span><span class="km">1.1<small>km</small></span></div><div class="bar" aria-hidden="true"><i style="width:55%"></i></div></li>
-            <li><div class="line"><span>Vidhana Soudha</span><span class="km">1.7<small>km</small></span></div><div class="bar" aria-hidden="true"><i style="width:85%"></i></div></li>
-            <li><div class="line"><span>Cubbon Park</span><span class="km">1.7<small>km</small></span></div><div class="bar" aria-hidden="true"><i style="width:85%"></i></div></li>
-            <li><div class="line"><span>Kempegowda International Airport</span><span class="km">28.7<small>km</small></span></div><div class="bar far" aria-hidden="true"><i></i></div></li>
+          <ol data-stg>
+            <li><div class="line"><span>Majestic metro station</span><span class="km"><span data-count="0.4">0.4</span><small>km</small></span></div><div class="bar" aria-hidden="true"><i style="width:20%"></i></div></li>
+            <li><div class="line"><span>Majestic bus stand</span><span class="km"><span data-count="0.7">0.7</span><small>km</small></span></div><div class="bar" aria-hidden="true"><i style="width:35%"></i></div></li>
+            <li><div class="line"><span>KSR Bengaluru City railway station</span><span class="km"><span data-count="0.9">0.9</span><small>km</small></span></div><div class="bar" aria-hidden="true"><i style="width:45%"></i></div></li>
+            <li><div class="line"><span>KR Market</span><span class="km"><span data-count="1.1">1.1</span><small>km</small></span></div><div class="bar" aria-hidden="true"><i style="width:55%"></i></div></li>
+            <li><div class="line"><span>Vidhana Soudha</span><span class="km"><span data-count="1.7">1.7</span><small>km</small></span></div><div class="bar" aria-hidden="true"><i style="width:85%"></i></div></li>
+            <li><div class="line"><span>Cubbon Park</span><span class="km"><span data-count="1.7">1.7</span><small>km</small></span></div><div class="bar" aria-hidden="true"><i style="width:85%"></i></div></li>
+            <li><div class="line"><span>Kempegowda International Airport</span><span class="km"><span data-count="28.7">28.7</span><small>km</small></span></div><div class="bar far" aria-hidden="true"><i></i></div></li>
           </ol>
           <p class="note">Straight-line distances from the lodge&rsquo;s map position (12.9737&deg;&nbsp;N, 77.5762&deg;&nbsp;E). Walking and driving routes are longer.</p>
         </div>
       </div>
     </div>
-    <figure class="vs">
+    <figure class="vs" data-rv="wipe-x">
       <div class="frame"><div class="in">
         <img src="../img/shivaganga-comforts/city-vidhana-soudha-s.jpg" srcset="../img/shivaganga-comforts/city-vidhana-soudha-s.jpg 900w, ../img/shivaganga-comforts/city-vidhana-soudha.jpg 1600w" sizes="(max-width:1180px) 92vw, 1116px" alt="The Vidhana Soudha under a blue sky with white clouds">
         <span class="tag">Sample photo</span>
       </div></div>
       <figcaption><span class="sc">Plate iii</span>The Vidhana Soudha, 1.7 km from the lodge in a straight line.</figcaption>
     </figure>
+
+    <div class="band" data-rv="scale">
+      <span class="seal" aria-hidden="true">0.9</span>
+      <p><b>Arriving at KSR City?</b> Your room is 0.9 km from the station, in a straight line.</p>
+      <div class="acts">
+        <a class="btn solid" href="#book" data-focus="name">Book a room <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=12.9736941,77.576158" target="_blank" rel="noopener">Map</a>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- GUESTS -->
 <section class="guests" id="guests" aria-labelledby="guests-h">
-  <div class="wrap">
+  <div class="wrap" data-stg>
     <div class="label"><span class="num">IV</span> What guests say</div>
-    <h2 class="score" id="guests-h">4.8<sup>/5</sup></h2>
+    <h2 class="score" id="guests-h"><span data-count="4.8">4.8</span><sup>/5</sup></h2>
     <span class="bigstars" role="img" aria-label="4.8 out of 5 stars">
       <svg viewBox="0 0 86 15" aria-hidden="true"><use href="#s5" fill="none" stroke="#EFA27E" stroke-width=".7"/></svg>
       <span class="sf"><svg viewBox="0 0 86 15" aria-hidden="true"><use href="#s5" fill="#EFA27E"/></svg></span>
     </span>
-    <p class="from">from <b>84 reviews</b> on Google</p>
+    <p class="from">from <b><span data-count="84">84</span> reviews</b> on Google</p>
     <p class="checked">Rating as checked on 16 October 2026</p>
     <div class="quotes">
       <div class="q"><p>A favourite guest review goes here, quoted word for word.</p><span>Owner picks, with permission</span></div>
@@ -607,6 +878,7 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
       <div class="q"><p>A third, from a guest who arrived by train at KSR City.</p><span>Owner picks, with permission</span></div>
     </div>
     <div class="ctas">
+      <a class="btn solid" href="#book" data-focus="name">Book a room <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=Shivaganga%20Comforts%20Hospital%20Road%20Balepete%20Bengaluru" target="_blank" rel="noopener">Read the reviews on Google</a>
     </div>
   </div>
@@ -615,34 +887,57 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
 <!-- BOOK -->
 <section class="book sec" id="book" aria-labelledby="book-h">
   <div class="wrap">
-    <div class="label"><span class="num">V</span> Book a room</div>
-    <h2 class="h2" id="book-h">Write to <em>the front desk.</em></h2>
-    <p class="lede">Fill this in and your email app opens with a ready-written enquiry to shivagangacomforts@gmail.com. Nothing is stored on this page.</p>
+    <div data-rv>
+      <div class="label"><span class="num">V</span> Book a room</div>
+      <h2 class="h2" id="book-h">Write to <em>the front desk.</em></h2>
+      <p class="lede">Fill this in and your email app opens with a ready-written enquiry to shivagangacomforts@gmail.com. Nothing is stored on this page.</p>
+    </div>
     <div class="grid">
-      <div class="sheet"><div class="in">
+      <div class="sheet" data-rv style="--d:.1s"><div class="in">
+        <div id="formBody">
         <div class="head"><div class="t">Room enquiry</div><div class="s">Shivaganga Comforts · Balepete</div></div>
         <form id="bookForm" action="mailto:shivagangacomforts@gmail.com" method="post" enctype="text/plain" novalidate>
           <div class="fgrid">
             <div class="field" id="f-name"><label for="name">Your name <i>*</i></label><input id="name" name="name" autocomplete="name" required><div class="ferr">Please add your name.</div></div>
             <div class="field" id="f-phone"><label for="phone">Phone <i>*</i></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required><div class="ferr">Please add a phone number the desk can call back.</div></div>
+            <div class="field full"><span class="flabel" id="whenL">When are you coming?</span>
+              <div class="chips" role="group" aria-labelledby="whenL">
+                <button type="button" class="chip" data-when="0" aria-pressed="false">Tonight</button>
+                <button type="button" class="chip" data-when="1" aria-pressed="false">Tomorrow</button>
+                <button type="button" class="chip" data-when="sat" aria-pressed="false">This weekend</button>
+              </div>
+            </div>
             <div class="field"><label for="checkin">Check-in</label><input id="checkin" name="checkin" type="date"></div>
             <div class="field" id="f-out"><label for="checkout">Check-out</label><input id="checkout" name="checkout" type="date"><div class="ferr">Check-out should be after check-in.</div></div>
+            <p class="nights full" id="nights" aria-live="polite"></p>
             <div class="field"><label for="guestcount">Guests</label>
-              <select id="guestcount" name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6 or more</option></select></div>
-            <div class="field"><label for="room">Room</label>
+              <div class="stepper"><button type="button" id="gMinus" aria-label="One guest fewer">&minus;</button><input id="guestcount" name="guests" type="number" min="1" max="20" value="2" inputmode="numeric"><button type="button" id="gPlus" aria-label="One guest more">+</button></div></div>
+            <div class="field" id="f-room"><label for="room">Room</label>
               <select id="room" name="room"><option>Any available room</option><option>Room one</option><option>Room two</option><option>Room three</option></select></div>
             <div class="field full"><label for="email">Email <i>(optional)</i></label><input id="email" name="email" type="email" autocomplete="email"></div>
             <div class="field full"><label for="msg">Anything else</label><textarea id="msg" name="message" placeholder="Arrival time, number of rooms, any questions"></textarea></div>
           </div>
           <div class="actions">
-            <button class="btn solid" type="submit">Send enquiry</button>
+            <button class="btn solid" type="submit">Send enquiry <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
             <p class="status" id="status" role="status" aria-live="polite"></p>
           </div>
           <p class="fine">The desk replies to confirm availability and the rate. For the quickest answer, call <a href="tel:+918022254347">080 2225 4347</a>.</p>
         </form>
+        </div>
+        <div class="okp" id="done" hidden tabindex="-1">
+          <svg class="chk" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg>
+          <h3>Your enquiry is ready</h3>
+          <p>Your email app has opened with the enquiry written out. Press <b>Send</b>, and the front desk will reply with availability and the rate.</p>
+          <div class="sum" id="doneSum"></div>
+          <div class="acts">
+            <a class="btn solid" href="tel:+918022254347">Or call 080 2225 4347</a>
+            <button class="btn line" type="button" id="editReq">Change details</button>
+          </div>
+          <p class="again">Email app didn&rsquo;t open? <a id="mailAgain" href="mailto:shivagangacomforts@gmail.com">Open it again</a></p>
+        </div>
       </div></div>
 
-      <div class="desk">
+      <div class="desk" data-stg>
         <div class="blk">
           <div class="k">Ring the desk</div>
           <a class="big" href="tel:+918022254347">080 2225 4347</a>
@@ -650,6 +945,10 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
         <div class="blk">
           <div class="k">Write</div>
           <a class="mail" href="mailto:shivagangacomforts@gmail.com?subject=Room%20enquiry">shivagangacomforts@gmail.com</a>
+        </div>
+        <div class="blk">
+          <div class="k">Guests say</div>
+          <p class="trust" style="margin:0"><b data-count="4.8">4.8</b> out of 5 on Google, from 84 reviews</p>
         </div>
         <div class="blk">
           <div class="k">Find us</div>
@@ -674,7 +973,15 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
     <div class="flinks">
       <a href="tel:+918022254347">080 2225 4347</a>
       <a href="mailto:shivagangacomforts@gmail.com">shivagangacomforts@gmail.com</a>
-      <a href="#book">Book a room</a>
+      <a href="#book" data-focus="name">Book a room</a>
+    </div>
+    <div class="hire" data-rv>
+      <span class="fb-mark" aria-hidden="true">F</span>
+      <div><h2>Want this live?</h2><p>I can have it ready in about a week. Book a 15-min call.</p></div>
+      <div class="fb-act">
+        <a class="fb-btn pri" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="fb-btn" href="mailto:farman.builds@gmail.com?subject=Website%20for%20Shivaganga%20Comforts">Email Farman</a>
+      </div>
     </div>
     <p class="credit">Concept preview designed by Farman, an independent web developer in Bengaluru, from public information (Google, OpenStreetMap). Not the official website of Shivaganga Comforts. All photographs are free-licence Unsplash samples, not pictures of the lodge. Room details and rates are placeholders for the owner.</p>
   </div>
@@ -682,7 +989,7 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
 
 <nav class="mbar" aria-label="Quick actions">
   <a class="call" href="tel:+918022254347"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>Call</a>
-  <a class="bk" href="#book">Book a room</a>
+  <a class="bk" href="#book" data-focus="name">Book a room</a>
 </nav>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -694,42 +1001,125 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
 
 <script>
 (function(){
-  var n=document.getElementById('notice'),c=document.getElementById('noticeClose');
-  if(c)c.addEventListener('click',function(){n.classList.add('gone')});
+  var doc=document.documentElement,raf=window.requestAnimationFrame||function(f){return setTimeout(f,16)};
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasIO='IntersectionObserver' in window;
 
-  var form=document.getElementById('bookForm'),room=document.getElementById('room');
-  document.querySelectorAll('[data-room]').forEach(function(a){
-    a.addEventListener('click',function(){room.value=a.getAttribute('data-room')});
+  /* --- scroll progress --- */
+  var bar=document.getElementById('progress'),ticking=false;
+  function onScroll(){if(ticking)return;ticking=true;raf(function(){var y=window.scrollY||doc.scrollTop,max=doc.scrollHeight-innerHeight;bar.style.transform='scaleX('+(max>0?Math.min(1,y/max):0)+')';ticking=false})}
+  addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
+
+  /* --- condensed header: shows once the masthead nav has scrolled away --- */
+  var mh=document.getElementById('minihead'),mastNav=document.querySelector('.mast .nav');
+  if(hasIO)new IntersectionObserver(function(es){mh.classList.toggle('show',!es[0].isIntersecting&&es[0].boundingClientRect.top<0)}).observe(mastNav);
+
+  /* --- counters --- */
+  function count(el){
+    if(el.__c)return;el.__c=1;
+    var raw=el.getAttribute('data-count'),to=parseFloat(raw),dec=(raw.split('.')[1]||'').length,t0=null,dur=1500;
+    function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=(to*e).toFixed(dec);if(p<1)raf(f);else el.textContent=raw}
+    el.textContent=(0).toFixed(dec);raf(f);
+  }
+
+  /* --- scroll reveals --- */
+  var items=[].slice.call(document.querySelectorAll('[data-rv],[data-stg]'));
+  items.forEach(function(el){if(el.hasAttribute('data-stg'))[].forEach.call(el.children,function(c,i){c.style.setProperty('--i',i)})});
+  function reveal(el){if(el.classList.contains('in'))return;el.classList.add('in');setTimeout(function(){el.classList.add('done')},1700)}
+  if(hasIO){
+    var io=new IntersectionObserver(function(es){window.__rvOK=true;es.forEach(function(e){if(e.isIntersecting){reveal(e.target);io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:0});
+    items.forEach(function(el){io.observe(el)});
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){count(e.target);cio.unobserve(e.target)}})},{threshold:.6});
+    [].forEach.call(document.querySelectorAll('[data-count]'),function(el){cio.observe(el)});
+    setTimeout(function(){items.forEach(function(el){if(el.getBoundingClientRect().top<innerHeight)reveal(el)})},1500);
+    /* hide the mobile action bar while the booking form is on screen */
+    var mbar=document.querySelector('.mbar');
+    new IntersectionObserver(function(es){mbar.classList.toggle('away',es[0].isIntersecting)},{threshold:.15}).observe(document.querySelector('.sheet'));
+  }
+
+  /* --- Farman bar dismiss --- */
+  var fb=document.getElementById('fb');
+  try{if(sessionStorage.getItem('fbHide')==='1')fb.hidden=true}catch(e){}
+  document.getElementById('fbX').addEventListener('click',function(){fb.classList.add('off');try{sessionStorage.setItem('fbHide','1')}catch(e){}setTimeout(function(){fb.hidden=true},260)});
+
+  /* --- booking form --- */
+  var form=document.getElementById('bookForm'),room=document.getElementById('room'),fRoom=document.getElementById('f-room'),
+      formBody=document.getElementById('formBody'),done=document.getElementById('done'),s=document.getElementById('status');
+  var ci=document.getElementById('checkin'),co=document.getElementById('checkout'),nights=document.getElementById('nights');
+  function iso(d){return new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10)}
+  var today=new Date();today.setHours(12,0,0,0);
+  ci.min=iso(today);co.min=iso(today);
+  function fmt(v){if(!v)return 'not given';var p=v.split('-');return p[2]+'/'+p[1]+'/'+p[0]}
+  function nice(v){return new Date(v+'T12:00:00').toLocaleDateString('en-IN',{weekday:'short',day:'numeric',month:'short'})}
+  function updateNights(){
+    if(ci.value)co.min=ci.value;
+    var n=ci.value&&co.value?Math.round((new Date(co.value)-new Date(ci.value))/864e5):0;
+    nights.textContent=n>0?(n+(n===1?' night':' nights')+' · '+nice(ci.value)+' to '+nice(co.value)):'';
+    document.getElementById('f-out').classList.toggle('err',!!(ci.value&&co.value&&n<=0));
+  }
+  var chips=[].slice.call(document.querySelectorAll('.chip[data-when]'));
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    var w=c.getAttribute('data-when'),a=new Date(today);
+    if(w==='sat'){var k=(6-a.getDay()+7)%7;a.setDate(a.getDate()+k)}else a.setDate(a.getDate()+(+w));
+    var b=new Date(a);b.setDate(b.getDate()+1);
+    ci.value=iso(a);co.value=iso(b);
+    chips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false')});
+    updateNights();
+  })});
+  [ci,co].forEach(function(i){i.addEventListener('change',function(){chips.forEach(function(x){x.setAttribute('aria-pressed','false')});updateNights()})});
+
+  var gc=document.getElementById('guestcount');
+  function step(d){var v=Math.max(1,Math.min(20,(parseInt(gc.value,10)||1)+d));gc.value=v;gc.classList.remove('bump');void gc.offsetWidth;gc.classList.add('bump')}
+  document.getElementById('gMinus').addEventListener('click',function(){step(-1)});
+  document.getElementById('gPlus').addEventListener('click',function(){step(1)});
+
+  function showForm(){done.hidden=true;formBody.hidden=false}
+  [].forEach.call(document.querySelectorAll('a[href="#book"]'),function(a){
+    a.addEventListener('click',function(){
+      if(!done.hidden)showForm();
+      var r=a.getAttribute('data-room');
+      if(r){room.value=r;fRoom.classList.remove('flash');void fRoom.offsetWidth;fRoom.classList.add('flash')}
+      var t=document.getElementById(a.getAttribute('data-focus')||'name');
+      setTimeout(function(){try{t.focus({preventScroll:true})}catch(e){}},reduce?50:700);
+    });
+  });
+  document.getElementById('editReq').addEventListener('click',function(){showForm();document.getElementById('name').focus()});
+
+  function check(id){
+    var i=document.getElementById(id),f=document.getElementById('f-'+id),v=i.value.trim();
+    var ok=id==='phone'?v.replace(/\D/g,'').length>=8:!!v;
+    return {i:i,f:f,ok:ok};
+  }
+  ['name','phone'].forEach(function(id){
+    var i=document.getElementById(id);
+    i.addEventListener('blur',function(){if(i.value.trim()){var c=check(id);c.f.classList.toggle('err',!c.ok);c.f.classList.toggle('ok',c.ok)}});
+    i.addEventListener('input',function(){var c=check(id);if(c.ok){c.f.classList.remove('err')}c.f.classList.toggle('ok',c.ok)});
   });
 
-  var ci=document.getElementById('checkin'),co=document.getElementById('checkout');
-  var d=new Date(),iso=new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10);
-  ci.min=iso;co.min=iso;
-  ci.addEventListener('change',function(){if(ci.value){co.min=ci.value;}});
-
-  function fmt(v){if(!v)return 'not given';var p=v.split('-');return p[2]+'/'+p[1]+'/'+p[0];}
   form.addEventListener('submit',function(e){
     e.preventDefault();
-    var ok=true,s=document.getElementById('status');
-    [['f-name','name'],['f-phone','phone']].forEach(function(x){
-      var f=document.getElementById(x[0]),i=document.getElementById(x[1]);
-      var bad=!i.value.trim()||(x[1]==='phone'&&i.value.replace(/\D/g,'').length<6);
-      f.classList.toggle('err',bad);if(bad&&ok){i.focus();ok=false;}
-    });
-    var fo=document.getElementById('f-out'),badDates=ci.value&&co.value&&co.value<=ci.value;
-    fo.classList.toggle('err',!!badDates);if(badDates&&ok){co.focus();ok=false;}
-    if(!ok){s.className='status';s.textContent='Please check the highlighted fields.';return;}
-    var g=function(id){return document.getElementById(id).value.trim();};
+    var first=null;
+    ['name','phone'].forEach(function(id){var c=check(id);c.f.classList.toggle('err',!c.ok);c.i.setAttribute('aria-invalid',!c.ok);if(!c.ok&&!first)first=c.i});
+    var badDates=ci.value&&co.value&&co.value<=ci.value;document.getElementById('f-out').classList.toggle('err',!!badDates);if(badDates&&!first)first=co;
+    if(first){s.textContent='Please check the highlighted fields.';form.classList.remove('shake');void form.offsetWidth;form.classList.add('shake');first.focus();return}
+    s.textContent='';
+    var g=function(id){return document.getElementById(id).value.trim()};
     var body=['Hello Shivaganga Comforts,','','I would like to enquire about a room.','',
       'Name: '+g('name'),'Phone: '+g('phone'),'Email: '+(g('email')||'not given'),
       'Check-in: '+fmt(g('checkin')),'Check-out: '+fmt(g('checkout')),
       'Guests: '+g('guestcount'),'Room: '+g('room'),'',
-      g('msg')?('Message: '+g('msg')):'', '','Thank you.'].join('\n');
+      g('msg')?('Message: '+g('msg')):'','','Thank you.'].filter(function(l,i,a){return !(l===''&&a[i-1]==='')}).join('\n');
     var subj='Room enquiry: '+g('name')+(g('checkin')?(' ('+fmt(g('checkin'))+')'):'');
-    window.location.href='mailto:shivagangacomforts@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
-    s.className='status ok';s.textContent='Your email app should open with the enquiry ready to send. If it does not, call 080 2225 4347.';
+    var href='mailto:shivagangacomforts@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+    form.setAttribute('data-mailto',href);
+    document.getElementById('mailAgain').href=href;
+    var sum=document.getElementById('doneSum');sum.textContent='';
+    [['Name',g('name')],['Phone',g('phone')],['Dates',g('checkin')?(fmt(g('checkin'))+' to '+fmt(g('checkout'))):'to be agreed'],['Guests',g('guestcount')],['Room',g('room')]].forEach(function(r){
+      var d=document.createElement('div'),b=document.createElement('b'),v=document.createElement('span');b.textContent=r[0];v.textContent=r[1];d.appendChild(b);d.appendChild(v);sum.appendChild(d)});
+    formBody.hidden=true;done.hidden=false;done.focus({preventScroll:true});
+    try{done.scrollIntoView({block:'center',behavior:reduce?'auto':'smooth'})}catch(e){}
+    window.location.href=href;
   });
-  ['name','phone'].forEach(function(id){document.getElementById(id).addEventListener('input',function(){document.getElementById('f-'+id).classList.remove('err')});});
 })();
 </script>
 </body>

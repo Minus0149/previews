@@ -379,6 +379,245 @@ footer ul a:hover{text-decoration:underline}
 .scroll-hint{display:none;align-items:center;gap:8px;font-size:13px;color:var(--muted);margin:-18px 0 14px}
 .scroll-hint svg{width:16px;height:16px}
 @media (max-width:380px){.hero h1 .hl{white-space:normal}}
+
+/* =====================================================================
+   V3 · motion + conversion layer
+   Motion identity (friendly / playful-light): signature ease --e-out,
+   spring --e-back for small things (stickers, chips, pins), durations .18 / .45 / .8s.
+   Reduced motion keeps fades, colour, press feedback, counters and <=10px moves.
+   ===================================================================== */
+:root{--e-out:cubic-bezier(.16,1,.3,1);--e-std:cubic-bezier(.4,0,.2,1);--e-back:cubic-bezier(.34,1.56,.64,1);--fbh:0px;--hdr:72px}
+html{scroll-padding-top:calc(var(--hdr) + var(--fbh) + 12px)}
+section{scroll-margin-top:0}
+.progress{position:fixed;left:0;right:0;top:0;height:3px;z-index:120;background:linear-gradient(90deg,var(--emerald),var(--marigold));transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+
+/* header condenses (transform only) */
+header.top{top:var(--fbh);transform:translateY(calc(var(--hs,0px) + var(--fs,0px)));transition:transform .4s var(--e-std),background-color .4s,box-shadow .4s}
+header.top .wrap{transition:transform .4s var(--e-std)}
+header.top.cond{--hs:-10px;background:rgba(255,255,255,.97);box-shadow:0 12px 30px -20px rgba(22,34,28,.35)}
+header.top.cond .wrap{transform:translateY(5px)}
+.brand .mark{transition:transform .5s var(--e-back)}
+.brand:hover .mark{transform:rotate(-12deg) scale(1.06)}
+nav.links a{transition:background-color .2s,color .2s}
+nav.links a.on{background:var(--mint);color:var(--emerald-ink)}
+.hbook{min-height:44px;padding:0 18px;font-size:15px}
+.brand{min-height:44px}
+.ccard a{min-height:44px;display:flex;align-items:center}
+
+/* buttons: lift, press, arrow nudge */
+.btn{transition:transform .18s var(--e-std),background-color .2s,box-shadow .25s,border-color .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold:hover{box-shadow:0 12px 24px -12px rgba(184,110,0,.65)}
+.btn-green:hover{box-shadow:0 12px 24px -12px rgba(8,69,45,.6)}
+.btn:active{transform:translateY(0) scale(.97);transition-duration:.08s;box-shadow:none}
+.btn .arr{width:18px;height:18px;transition:transform .3s var(--e-out)}
+.btn:hover .arr{transform:translateX(4px)}
+
+/* hero choreography: eyebrow -> headline lines -> lede -> CTAs -> trust -> proof */
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes lineUp{from{transform:translateY(105%)}to{transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+@keyframes photoIn{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero .eyebrow{animation:rise .6s var(--e-out) .1s both}
+.hero h1{animation:rise .75s var(--e-out) .18s both}
+.hero h1 .hl svg path{stroke-dasharray:210;stroke-dashoffset:210;animation:draw .7s var(--e-out) .95s forwards}
+.hero .lede{animation:rise .6s var(--e-out) .42s both}
+.hero .cta{animation:rise .6s var(--e-out) .5s both}
+.hero .trust{animation:rise .6s var(--e-out) .58s both}
+.hero .proof{animation:rise .6s var(--e-out) .66s both}
+.frame .ph{animation:photoIn .9s var(--e-out) .2s both}
+.frame .blob{animation:fadeIn 1s var(--e-std) .4s both}
+.sticker.s1{animation:pop .55s var(--e-back) 1.05s both}
+.sticker.s2{animation:pop .55s var(--e-back) 1.2s both}
+.frame .ph img{transition:transform 1.2s var(--e-out)}
+.frame:hover .ph img{transform:scale(1.03)}
+.trust{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:16px;font-size:14.5px;color:var(--muted)}
+.trust a{display:inline-flex;align-items:center;gap:6px;min-height:44px;color:var(--ink);font-weight:600;text-decoration:none;border-bottom:2px solid transparent;transition:border-color .2s}
+.trust a:hover{border-color:var(--marigold)}
+.trust svg{width:16px;height:16px;color:var(--marigold-deep)}
+.trust .ok{display:inline-flex;align-items:center;gap:6px}
+.trust .ok svg{color:var(--emerald)}
+
+/* scroll reveals: armed only after IntersectionObserver proves itself (html.io) */
+.io [data-rv]:not(.done){transition:opacity .7s var(--e-out),transform .8s var(--e-out);transition-delay:var(--d,0ms)}
+.io [data-rv="up"]:not(.in){opacity:0;transform:translateY(26px)}
+.io [data-rv="left"]:not(.in){opacity:0;transform:translateX(-28px)}
+.io [data-rv="scale"]:not(.in){opacity:0;transform:scale(.94)}
+.io [data-rv="pop"]:not(.in){opacity:0;transform:scale(.85)}
+.io [data-rv="pop"]:not(.done){transition-timing-function:var(--e-back)}
+.io [data-rv="fade"]:not(.in){opacity:0}
+/* curtain over photos (transform only) */
+.cur{display:none;position:absolute;inset:0;z-index:2;pointer-events:none;background:var(--mint);transform-origin:50% 0;transition:transform 1s var(--e-out) .1s}
+.io .cur{display:block}
+.in .cur{transform:scaleY(0)}
+.done .cur{display:none}
+.cur.paper{background:#fff}
+
+/* distance ruler: line draws, stops pop in order of distance */
+.track .line{transform-origin:0 50%;transition:transform 1.4s var(--e-out) .15s}
+.io .ruler:not(.in) .line{transform:scaleX(0)}
+.stop i{transition:transform .5s var(--e-back),opacity .3s;transition-delay:var(--sd,0s)}
+.stop label{transition:opacity .5s var(--e-out),transform .5s var(--e-out);transition-delay:calc(var(--sd,0s) + .1s)}
+.io .ruler:not(.in) .stop i{transform:scale(0);opacity:0}
+.io .ruler:not(.in) .stop label{opacity:0}
+.track .air{transition:opacity .5s,transform .5s var(--e-back);transition-delay:1.5s}
+.io .ruler:not(.in) .track .air{opacity:0;transform:translateX(10px)}
+.stop.home i{position:relative}
+
+/* chips, cards, images */
+.chip{transition:transform .25s var(--e-out),box-shadow .25s,border-color .25s}
+.chip:hover{border-color:var(--emerald)}
+.chip .ic{transition:transform .4s var(--e-back),background-color .25s,color .25s}
+.chip:hover .ic{transform:rotate(-8deg) scale(1.06);background:var(--emerald);color:#fff}
+.chip.far:hover .ic{background:var(--marigold);color:#2B1C00}
+.room{transition:transform .3s var(--e-out),box-shadow .3s,border-color .3s}
+.room:hover{border-color:var(--mint-2);box-shadow:0 2px 4px rgba(22,34,28,.05),0 24px 40px -20px rgba(22,34,28,.28)}
+.room .ph img{transition:transform 1s var(--e-out)}
+.room:hover .ph img{transform:scale(1.06)}
+.why{transition:transform .3s var(--e-out),box-shadow .3s,border-color .3s}
+.why:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#E7DCC2}
+.why .ic{transition:transform .45s var(--e-back)}
+.why:hover .ic{transform:rotate(-8deg) scale(1.08)}
+.arrive .ph img{transition:transform 1.2s var(--e-out)}
+.arrive .ph:hover img{transform:scale(1.04)}
+.ccard{transition:transform .25s var(--e-out),box-shadow .25s,border-color .25s}
+.ccard:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.mapcard{transition:box-shadow .3s}
+.landmark .big{transition:transform .5s var(--e-back)}
+.landmark:hover .big{transform:rotate(-6deg) scale(1.05)}
+
+/* mid-page conversion strip */
+.cta-row{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;padding:22px 26px;border-radius:var(--r-lg);background:#fff;border:1.5px solid var(--marigold);box-shadow:0 18px 36px -24px rgba(184,110,0,.45)}
+.cta-row p{font-size:15.5px;color:var(--muted)}
+.cta-row p b{display:block;font:700 clamp(20px,2vw,24px)/1.2 var(--display);letter-spacing:-.015em;color:var(--ink);margin-bottom:2px}
+.cta-btns{display:flex;flex-wrap:wrap;gap:10px}
+.where .cta-row{background:#fff}
+
+/* booking: quick dates, nights pill, field errors, success */
+.quick{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:16px}
+.quick small{font-size:13.5px;font-weight:600;color:var(--muted);margin-right:4px}
+.qd{min-height:44px;padding:0 16px;border-radius:99px;border:1.5px solid var(--mint-2);background:var(--mint);color:var(--emerald-ink);font:600 14.5px/1 var(--body);cursor:pointer;transition:transform .18s var(--e-std),background-color .2s,border-color .2s,color .2s}
+.qd:hover{border-color:var(--emerald)}
+.qd:active{transform:scale(.95)}
+.qd[aria-pressed="true"]{background:var(--emerald);border-color:var(--emerald);color:#fff;animation:qpop .4s var(--e-back)}
+@keyframes qpop{0%{transform:scale(.9)}100%{transform:none}}
+.nights.bump{animation:qpop .45s var(--e-back)}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:#B9CBC0}
+.field label{transition:color .2s}
+.field:focus-within label{color:var(--emerald)}
+.field .ferr{display:none;font-size:13px;font-weight:600;color:#A3271A}
+.field.bad .ferr{display:block;animation:errIn .25s var(--e-out) both}
+.field.bad input{border-color:#D9534A;box-shadow:0 0 0 4px rgba(217,83,74,.12)}
+.field.good input{border-color:#9FD3B6}
+@keyframes errIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+@keyframes shake{0%,100%{transform:none}20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-4px)}80%{transform:translateX(2px)}}
+.shake{animation:shake .38s var(--e-std)}
+.flash{animation:flash 1.3s var(--e-std)}
+@keyframes flash{0%,100%{box-shadow:0 0 0 0 rgba(245,165,36,0)}25%{box-shadow:0 0 0 6px rgba(245,165,36,.45)}}
+.okpanel{display:none;margin-top:18px;padding:26px 22px;border-radius:20px;background:var(--mint);border:1.5px solid var(--mint-2);text-align:center}
+.okpanel.show{display:block;animation:okIn .55s var(--e-back) both}
+@keyframes okIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+.okpanel svg{width:68px;height:68px;display:block;margin:0 auto 12px}
+.okpanel circle{fill:var(--emerald);transform-origin:50% 50%;transform:scale(0)}
+.okpanel path{fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:44;stroke-dashoffset:44}
+.okpanel.show circle{animation:circ .45s var(--e-back) .05s forwards}
+.okpanel.show path{animation:draw .35s var(--e-out) .4s forwards}
+@keyframes circ{to{transform:scale(1)}}
+.okpanel h3{font-size:26px;color:var(--emerald-ink)}
+.okpanel p{margin:8px auto 0;max-width:36em;color:var(--emerald-ink);font-size:15.5px}
+.okpanel p a{color:var(--emerald-ink);font-weight:700}
+.okpanel .again{margin-top:14px;min-height:44px;padding:0 16px;border:0;background:none;color:var(--emerald);font:700 14.5px/1 var(--body);text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+
+/* ambient: hero glow drift, CTA pulse ring, sticker bob (motion-allowed only) */
+@media (prefers-reduced-motion:no-preference){
+  .hero::before{animation:drift 14s ease-in-out infinite alternate}
+  @keyframes drift{to{transform:translate(-60px,50px) scale(1.12)}}
+  .pulse{position:relative}
+  .pulse::after{content:"";position:absolute;inset:-2px;border-radius:99px;border:2px solid var(--marigold);pointer-events:none;animation:ring 2.6s var(--e-out) 2s infinite}
+  @keyframes ring{0%{opacity:.9;transform:scale(1)}70%,100%{opacity:0;transform:scale(1.12,1.4)}}
+  .stop.home i::after{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid var(--marigold);animation:ring 2.4s var(--e-out) 2.2s infinite}
+  .sticker.s1{animation:pop .55s var(--e-back) 1.05s both,bob 6s ease-in-out 1.6s infinite}
+  .sticker.s2{animation:pop .55s var(--e-back) 1.2s both,bob 6s ease-in-out 4.6s infinite}
+}
+
+/* ===== Farman bar (concept notice) ===== */
+.fb,.fcard{--fbg:#17181A;--fink:#F4F4F1;--fmute:#B3B4B0}
+.fb{position:fixed;z-index:110;color:var(--fink);background:var(--fbg);font:400 14px/1.5 var(--body);animation:fbIn .7s var(--e-out) 1.2s backwards}
+@keyframes fbIn{from{opacity:0;transform:translateY(var(--fbfrom,24px))}to{opacity:1;transform:none}}
+.fb.bye{animation:fbOut .3s var(--e-std) forwards}
+@keyframes fbOut{to{opacity:0;transform:translateY(var(--fbfrom,24px))}}
+.fb-row{display:flex;align-items:center;gap:10px}
+.fb-tog{flex:1;min-width:0;display:flex;align-items:center;gap:11px;background:none;border:0;color:inherit;font:inherit;text-align:left;padding:0;min-height:44px;cursor:default}
+.fb-mono{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--fink);color:var(--fbg);font:700 14px/1 var(--body)}
+.fb-lab b{display:block;font-weight:700;font-size:13.5px}
+.fb-lab small{display:block;color:var(--fmute);font-size:11.5px;line-height:1.3}
+.fb-x{flex:none;width:44px;height:44px;border:0;background:none;color:var(--fmute);font-size:22px;line-height:1;cursor:pointer;border-radius:50%;transition:background-color .2s,color .2s}
+.fb-x:hover{background:rgba(255,255,255,.08);color:var(--fink)}
+.fb-more p{margin:0 0 14px;color:#D9DAD5;font-size:13.5px}
+.fb-btns{display:flex;flex-wrap:wrap;gap:8px}
+.fb-cta,.fb-ghost{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border-radius:99px;font:700 14px/1 var(--body);text-decoration:none;white-space:nowrap;transition:transform .18s var(--e-std),background-color .2s,border-color .2s}
+.fb-cta{background:var(--fink);color:var(--fbg)}
+.fb-cta:hover{background:#fff;transform:translateY(-1px)}
+.fb-ghost{border:1.5px solid rgba(255,255,255,.28);color:var(--fink)}
+.fb-ghost:hover{border-color:var(--fink);transform:translateY(-1px)}
+.fb-cta:active,.fb-ghost:active{transform:scale(.97)}
+.fb-cta-m{display:none}
+@media (min-width:761px){
+  .fb{right:20px;bottom:20px;width:min(392px,calc(100vw - 40px));padding:14px 14px 18px 18px;border-radius:20px;box-shadow:0 30px 60px -20px rgba(22,34,28,.55),0 0 0 1px rgba(255,255,255,.06)}
+  .fb-row{margin-bottom:6px}
+  .fb-lab small{display:none}
+  .fb.away{opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .35s,transform .35s var(--e-std)}
+}
+@media (max-width:760px){
+  :root{--fbh:56px;--hdr:64px}
+  html.fb-off{--fbh:0px}
+  body{padding-top:var(--fbh)}
+  .fb{--fbfrom:-100%;left:0;right:0;top:0;padding:6px 6px 6px 14px;transition:transform .35s var(--e-std)}
+  .fb-row{height:44px}
+  .fb-tog .fb-mono{display:none}
+  .fb-cta-m{display:inline-flex;padding:0 13px;font-size:13.5px}
+  .fb-tog{cursor:pointer}
+  .fb-more{display:none;padding:10px 8px 10px 0}
+  .fb.open .fb-more{display:block;animation:errIn .3s var(--e-out) both}
+  .fb.open{box-shadow:0 20px 40px -10px rgba(0,0,0,.5)}
+  html.fb-hide .fb:not(.open){transform:translateY(-100%)}
+  html.fb-hide header.top{--fs:calc(-1 * var(--fbh))}
+}
+html.fb-off .fb{display:none}
+
+/* final Farman card */
+.fcard{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;padding:24px 28px;border-radius:var(--r-lg);background:#0F1512;border:1px solid rgba(255,255,255,.1);color:var(--fink);margin-bottom:12px}
+.fcard .fb-mono{width:46px;height:46px;font-size:19px}
+.fcard h2{font:700 21px/1.2 var(--display);color:#fff;letter-spacing:-.01em}
+.fcard p{margin-top:4px;color:#C9CDC9;font-size:15.5px}
+.fcard small{display:block;margin-top:4px;color:#9AA29D;font-size:12.5px}
+.fcard .fb-cta{color:var(--fbg)}
+.fcard .fb-ghost{color:var(--fink)}
+
+@media (max-width:900px){.hbook{display:none}}
+@media (max-width:760px){
+  .hero .lede .hide-s{display:none}
+  .cta .btn-gold{flex:1 1 100%}
+  .cta .btn-ghost{flex:1 1 100%}
+  .trust{margin-top:12px;font-size:13.5px;gap:0 12px}
+  .cta-row{padding:20px 18px}
+  .cta-btns .btn{flex:1 1 auto}
+  .fcard{grid-template-columns:auto 1fr;padding:22px 18px}
+  .fcard .fb-btns{grid-column:1/-1}
+  .fcard .fb-btns a{flex:1 1 auto}
+  .quick small{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero .eyebrow,.hero h1,.hero .lede,.hero .cta,.hero .trust,.hero .proof,.frame .ph,.sticker.s1,.sticker.s2{animation-name:fadeIn}
+  .rm.io [data-rv]:not(.in){transform:translateY(10px);opacity:0}
+  .cur{display:none!important}
+  .io .ruler:not(.in) .stop i{transform:none}
+  .fb{--fbfrom:10px}
+  @media (max-width:760px){.fb{--fbfrom:-10px}}
+}
+@media print{.fb,.progress,.mbar,.cur{display:none!important}.io [data-rv]{opacity:1!important;transform:none!important}}
 </style>
 </head>
 <body>
@@ -406,13 +645,22 @@ footer ul a:hover{text-decoration:underline}
   </defs>
 </svg>
 
-<div class="notice" role="note" id="notice">
-  <div class="wrap">
-    <span class="pill">Concept preview</span>
-    <p><b>Made for Hotel New Golden Residency by Farman, an independent web developer, from public information.</b> Not Hotel New Golden Residency's official website. Photos are samples.</p>
-    <button type="button" aria-label="Hide this notice" data-close-notice hidden>&times;</button>
+<div class="progress" aria-hidden="true"></div>
+
+<aside class="fb" id="fb" aria-label="Concept preview notice">
+  <div class="fb-row">
+    <button class="fb-tog" type="button" aria-expanded="false" aria-controls="fb-more"><span class="fb-mono" aria-hidden="true">F</span><span class="fb-lab"><b>Concept preview by Farman</b><small>Not official · sample photos</small></span></button>
+    <a class="fb-cta fb-cta-m" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a call</a>
+    <button class="fb-x" type="button" aria-label="Dismiss this notice">&times;</button>
   </div>
-</div>
+  <div class="fb-more" id="fb-more">
+    <p>Concept preview made for Golden Residency by Farman, an independent web developer, from public information. Not Golden Residency's official website; photos are samples.</p>
+    <div class="fb-btns">
+      <a class="fb-cta" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call</a>
+      <a class="fb-ghost" href="mailto:farman.builds@gmail.com?subject=Website%20for%20Golden%20Residency">Email Farman</a>
+    </div>
+  </div>
+</aside>
 
 <header class="top">
   <div class="wrap">
@@ -426,6 +674,7 @@ footer ul a:hover{text-decoration:underline}
       <a href="#why">Why stay here</a>
       <a href="#book">Book</a>
     </nav>
+    <a class="btn btn-gold hbook" href="#book"><svg aria-hidden="true"><use href="#i-cal"/></svg>Check dates</a>
     <a class="btn btn-green hcall" href="tel:+918041476434" aria-label="Call 080 4147 6434"><svg aria-hidden="true"><use href="#i-phone"/></svg><span>080 4147 6434</span></a>
   </div>
 </header>
@@ -438,13 +687,14 @@ footer ul a:hover{text-decoration:underline}
     <div>
       <span class="eyebrow"><svg aria-hidden="true"><use href="#i-pin"/></svg>Gandhi Nagar, Bengaluru<span class="hide-s">· opposite Hotel Kanishka</span></span>
       <h1 id="h-hero">Station, bus stand and metro. All within <span class="hl">a kilometre.<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14C50 5 120 3 197 9" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/></svg></span></h1>
-      <p class="lede">Hotel New Golden Residency sits on <strong>2nd Main Road, Gandhi Nagar</strong>, right opposite Hotel Kanishka. Get off at KSR Bengaluru City station, the Majestic bus stand or Majestic metro and you're a short hop from your room.</p>
+      <p class="lede">Hotel New Golden Residency sits on <strong>2nd Main Road, Gandhi Nagar</strong>, right opposite Hotel Kanishka. <span class="hide-s">Get off at KSR Bengaluru City station, the Majestic bus stand or Majestic metro and you're a short hop from your room.</span></p>
       <div class="cta">
-        <a class="btn btn-gold" href="#book"><svg aria-hidden="true"><use href="#i-cal"/></svg>Check your dates</a>
-        <a class="btn btn-ghost" href="#where"><svg aria-hidden="true"><use href="#i-pin"/></svg>See where we are</a>
+        <a class="btn btn-gold pulse" href="#book"><svg aria-hidden="true"><use href="#i-cal"/></svg>Check your dates<svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+918041476434"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call 080 4147 6434</a>
       </div>
+      <p class="trust"><a href="#reviews"><svg aria-hidden="true"><use href="#i-star"/></svg><span>3.6 · <span data-count="1035" data-sep>1,035</span> Google reviews</span></a><span class="ok"><svg aria-hidden="true"><use href="#i-phone"/></svg>Book direct, no app in between</span></p>
       <div class="proof">
-        <span class="num">1,035</span>
+        <span class="num"><span data-count="1035" data-sep>1,035</span></span>
         <div>
           <p><strong>guests have reviewed us on Google</strong>That's a lot of travellers who've stayed and said their piece.</p>
           <span class="rating"><svg aria-hidden="true"><use href="#i-star"/></svg>Google rating 3.6 / 5 · checked 16 Oct 2026 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+New+Golden+Residency+Gandhi+Nagar+Bengaluru" target="_blank" rel="noopener">read them</a></span>
@@ -466,7 +716,7 @@ footer ul a:hover{text-decoration:underline}
 <!-- WHERE WE ARE -->
 <section class="where sec" id="where" aria-labelledby="h-where">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head" data-rv="up">
       <span class="kicker">Where we are</span>
       <h2 id="h-where">Right in <span class="nw">Gandhi Nagar,</span><br> <span>between Majestic and the city.</span></h2>
       <p>If you're arriving by train, bus or metro, you're already close. Here's how far everything is from our door.</p>
@@ -474,16 +724,16 @@ footer ul a:hover{text-decoration:underline}
 
     <div class="where-grid">
       <div>
-        <div class="chips">
-          <div class="chip"><span class="ic"><svg aria-hidden="true"><use href="#i-metro"/></svg></span><span class="t"><b>Majestic metro</b><span>Nadaprabhu Kempegowda station</span></span><span class="d">0.6<small>km</small></span></div>
-          <div class="chip"><span class="ic"><svg aria-hidden="true"><use href="#i-bus"/></svg></span><span class="t"><b>Majestic bus stand</b><span>Kempegowda bus station</span></span><span class="d">0.7<small>km</small></span></div>
-          <div class="chip"><span class="ic"><svg aria-hidden="true"><use href="#i-train"/></svg></span><span class="t"><b>KSR Bengaluru City</b><span>Railway station</span></span><span class="d">1.0<small>km</small></span></div>
-          <div class="chip far"><span class="ic"><svg aria-hidden="true"><use href="#i-plane"/></svg></span><span class="t"><b>Kempegowda Int'l Airport</b><span>Plan for road time</span></span><span class="d">28<small>km</small></span></div>
+        <div class="chips" data-stg>
+          <div class="chip" data-rv="left"><span class="ic"><svg aria-hidden="true"><use href="#i-metro"/></svg></span><span class="t"><b>Majestic metro</b><span>Nadaprabhu Kempegowda station</span></span><span class="d"><span data-count="0.6">0.6</span><small>km</small></span></div>
+          <div class="chip" data-rv="left"><span class="ic"><svg aria-hidden="true"><use href="#i-bus"/></svg></span><span class="t"><b>Majestic bus stand</b><span>Kempegowda bus station</span></span><span class="d"><span data-count="0.7">0.7</span><small>km</small></span></div>
+          <div class="chip" data-rv="left"><span class="ic"><svg aria-hidden="true"><use href="#i-train"/></svg></span><span class="t"><b>KSR Bengaluru City</b><span>Railway station</span></span><span class="d"><span data-count="1.0">1.0</span><small>km</small></span></div>
+          <div class="chip far" data-rv="left"><span class="ic"><svg aria-hidden="true"><use href="#i-plane"/></svg></span><span class="t"><b>Kempegowda Int'l Airport</b><span>Plan for road time</span></span><span class="d"><span data-count="28">28</span><small>km</small></span></div>
         </div>
         <p class="footnote" style="margin-top:12px">Approximate straight-line distances from OpenStreetMap. Walking and road routes are a little longer.</p>
       </div>
 
-      <div class="mapcard">
+      <div class="mapcard" data-rv="scale">
         <div class="map">
           <iframe title="Map of Gandhi Nagar, Bengaluru, showing Hotel New Golden Residency near Majestic" referrerpolicy="no-referrer"
             src="https://www.openstreetmap.org/export/embed.html?bbox=77.5655%2C12.9722%2C77.5835%2C12.9838&amp;layer=mapnik&amp;marker=12.97807%2C77.57938"></iframe>
@@ -498,7 +748,7 @@ footer ul a:hover{text-decoration:underline}
       </div>
     </div>
 
-    <div class="landmark">
+    <div class="landmark" data-rv="up">
       <span class="big" aria-hidden="true"><svg><use href="#i-building"/></svg></span>
       <div>
         <h3>Look for <em>Hotel Kanishka</em>. We're right opposite.</h3>
@@ -508,7 +758,7 @@ footer ul a:hover{text-decoration:underline}
       <button type="button" class="btn btn-gold" data-copy="Hotel New Golden Residency, 28, 4th Cross, 2nd Main Rd, opp. Hotel Kanishka, Gandhi Nagar, Bengaluru 560009" hidden>Copy address</button>
     </div>
 
-    <div class="ruler" aria-label="Distance line from the hotel to nearby transport">
+    <div class="ruler" data-rv="fade" aria-label="Distance line from the hotel to nearby transport">
       <div class="ruler-head">
         <h3>From our door</h3>
         <small>Straight-line, approximate</small>
@@ -517,20 +767,20 @@ footer ul a:hover{text-decoration:underline}
         <div class="line"></div>
         <span class="tick" style="left:41.6%"></span><span class="scale" style="left:41.6%">0.5 km</span>
         <span class="tick" style="left:83.3%"></span><span class="scale" style="left:83.3%">1 km</span>
-        <div class="stop home up" style="left:0%"><i></i><label>Golden Residency<span>Gandhi Nagar</span></label></div>
-        <div class="stop up" style="left:50%"><i></i><label>Metro<span>0.6 km</span></label></div>
-        <div class="stop down" style="left:58.3%"><i></i><label>Bus stand<span>0.7 km</span></label></div>
-        <div class="stop up" style="left:83.3%"><i></i><label>KSR station<span>1.0 km</span></label></div>
+        <div class="stop home up" style="left:0%;--sd:.1s"><i></i><label>Golden Residency<span>Gandhi Nagar</span></label></div>
+        <div class="stop up" style="left:50%;--sd:.75s"><i></i><label>Metro<span>0.6 km</span></label></div>
+        <div class="stop down" style="left:58.3%;--sd:.9s"><i></i><label>Bus stand<span>0.7 km</span></label></div>
+        <div class="stop up" style="left:83.3%;--sd:1.25s"><i></i><label>KSR station<span>1.0 km</span></label></div>
         <span class="air"><svg aria-hidden="true"><use href="#i-plane"/></svg>Airport ~28 km</span>
       </div>
     </div>
 
     <div class="arrive">
-      <div class="ph">
+      <div class="ph" data-rv="fade"><span class="cur paper" aria-hidden="true"></span>
         <img src="../img/golden-residency/city-trains-s.jpg" srcset="../img/golden-residency/city-trains-s.jpg 900w, ../img/golden-residency/city-trains.jpg 1600w" sizes="(max-width:900px) 92vw, 580px" alt="Trains passing through Bengaluru with the city skyline behind (sample photo)">
         <span class="tag">Sample photo</span>
       </div>
-      <div class="steps">
+      <div class="steps" data-rv="up">
         <h3>Arriving at Majestic?</h3>
         <ol>
           <li><span class="n">1</span><div><b>From KSR Bengaluru City station</b><p>About 1 km away. <span class="slot">Owner adds the easiest walking route or auto tip</span></p></div></li>
@@ -539,6 +789,10 @@ footer ul a:hover{text-decoration:underline}
         </ol>
       </div>
     </div>
+    <div class="cta-row" data-rv="up">
+      <p><b>Catching a train or bus? Stay a short hop away.</b>Pick your dates and the hotel replies with a room and a rate.</p>
+      <div class="cta-btns"><a class="btn btn-gold" href="#book"><svg aria-hidden="true"><use href="#i-cal"/></svg>Check your dates<svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="tel:+918041476434"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call the front desk</a></div>
+    </div>
   </div>
 </section>
 
@@ -546,17 +800,17 @@ footer ul a:hover{text-decoration:underline}
 <section class="sec" id="rooms" aria-labelledby="h-rooms">
   <div class="wrap">
     <div class="rooms-top">
-      <div class="sec-head">
+      <div class="sec-head" data-rv="up">
         <span class="kicker">Rooms</span>
         <h2 id="h-rooms">Pick a room, then pick your dates.</h2>
         <p>Room types, beds and nightly rates come straight from the hotel.</p>
       </div>
-      <p class="owner-note"><svg aria-hidden="true"><use href="#i-edit"/></svg><span>Highlighted boxes are for the hotel to fill in: real room photos, names and rates.</span></p>
+      <p class="owner-note" data-rv="fade"><svg aria-hidden="true"><use href="#i-edit"/></svg><span>Highlighted boxes are for the hotel to fill in: real room photos, names and rates.</span></p>
     </div>
     <p class="scroll-hint"><svg aria-hidden="true"><use href="#i-swipe"/></svg>Swipe to see all rooms</p>
-    <div class="rooms">
-      <article class="room">
-        <div class="ph"><img src="../img/golden-residency/room-double-s.jpg" alt=""><span class="tag">Sample photo</span></div>
+    <div class="rooms" data-stg>
+      <article class="room" data-rv="up">
+        <div class="ph"><span class="cur" aria-hidden="true"></span><img src="../img/golden-residency/room-double-s.jpg" alt=""><span class="tag">Sample photo</span></div>
         <div class="rb">
           <span class="no">Room 01</span>
           <h3><span class="slot">Room name</span></h3>
@@ -565,11 +819,11 @@ footer ul a:hover{text-decoration:underline}
             <div><dt>Sleeps</dt><dd><span class="slot">guests</span></dd></div>
             <div><dt>AC / non-AC</dt><dd><span class="slot">to fill</span></dd></div>
           </dl>
-          <div class="foot"><span class="rate">₹ <span class="slot">rate</span> <small>/ night</small></span><a class="btn btn-ghost ask" href="#book" data-room="Room 01">Ask</a></div>
+          <div class="foot"><span class="rate">₹ <span class="slot">rate</span> <small>/ night</small></span><a class="btn btn-ghost ask" href="#book" data-room="Room 01">Ask<svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
         </div>
       </article>
-      <article class="room">
-        <div class="ph"><img src="../img/golden-residency/room-twin-s.jpg" alt=""><span class="tag">Sample photo</span></div>
+      <article class="room" data-rv="up">
+        <div class="ph"><span class="cur" aria-hidden="true"></span><img src="../img/golden-residency/room-twin-s.jpg" alt=""><span class="tag">Sample photo</span></div>
         <div class="rb">
           <span class="no">Room 02</span>
           <h3><span class="slot">Room name</span></h3>
@@ -578,11 +832,11 @@ footer ul a:hover{text-decoration:underline}
             <div><dt>Sleeps</dt><dd><span class="slot">guests</span></dd></div>
             <div><dt>AC / non-AC</dt><dd><span class="slot">to fill</span></dd></div>
           </dl>
-          <div class="foot"><span class="rate">₹ <span class="slot">rate</span> <small>/ night</small></span><a class="btn btn-ghost ask" href="#book" data-room="Room 02">Ask</a></div>
+          <div class="foot"><span class="rate">₹ <span class="slot">rate</span> <small>/ night</small></span><a class="btn btn-ghost ask" href="#book" data-room="Room 02">Ask<svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
         </div>
       </article>
-      <article class="room">
-        <div class="ph"><img src="../img/golden-residency/room-bright-s.jpg" alt=""><span class="tag">Sample photo</span></div>
+      <article class="room" data-rv="up">
+        <div class="ph"><span class="cur" aria-hidden="true"></span><img src="../img/golden-residency/room-bright-s.jpg" alt=""><span class="tag">Sample photo</span></div>
         <div class="rb">
           <span class="no">Room 03</span>
           <h3><span class="slot">Room name</span></h3>
@@ -591,11 +845,11 @@ footer ul a:hover{text-decoration:underline}
             <div><dt>Sleeps</dt><dd><span class="slot">guests</span></dd></div>
             <div><dt>AC / non-AC</dt><dd><span class="slot">to fill</span></dd></div>
           </dl>
-          <div class="foot"><span class="rate">₹ <span class="slot">rate</span> <small>/ night</small></span><a class="btn btn-ghost ask" href="#book" data-room="Room 03">Ask</a></div>
+          <div class="foot"><span class="rate">₹ <span class="slot">rate</span> <small>/ night</small></span><a class="btn btn-ghost ask" href="#book" data-room="Room 03">Ask<svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
         </div>
       </article>
-      <article class="room">
-        <div class="ph"><img src="../img/golden-residency/room-pillows-s.jpg" alt=""><span class="tag">Sample photo</span></div>
+      <article class="room" data-rv="up">
+        <div class="ph"><span class="cur" aria-hidden="true"></span><img src="../img/golden-residency/room-pillows-s.jpg" alt=""><span class="tag">Sample photo</span></div>
         <div class="rb">
           <span class="no">Room 04</span>
           <h3><span class="slot">Room name</span></h3>
@@ -604,7 +858,7 @@ footer ul a:hover{text-decoration:underline}
             <div><dt>Sleeps</dt><dd><span class="slot">guests</span></dd></div>
             <div><dt>AC / non-AC</dt><dd><span class="slot">to fill</span></dd></div>
           </dl>
-          <div class="foot"><span class="rate">₹ <span class="slot">rate</span> <small>/ night</small></span><a class="btn btn-ghost ask" href="#book" data-room="Room 04">Ask</a></div>
+          <div class="foot"><span class="rate">₹ <span class="slot">rate</span> <small>/ night</small></span><a class="btn btn-ghost ask" href="#book" data-room="Room 04">Ask<svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
         </div>
       </article>
     </div>
@@ -612,14 +866,14 @@ footer ul a:hover{text-decoration:underline}
 </section>
 
 <!-- REVIEWS BAND -->
-<section class="band" aria-labelledby="h-reviews">
+<section class="band" id="reviews" aria-labelledby="h-reviews">
   <div class="wrap">
-    <div class="num" aria-hidden="true">1,035</div>
-    <div>
+    <div class="num" aria-hidden="true" data-rv="pop"><span data-count="1035" data-sep>1,035</span></div>
+    <div data-rv="up">
       <h2 id="h-reviews"><span class="sr">1,035 </span>guests have reviewed us on Google.</h2>
       <p>Travellers have been staying here and telling others about it for a long time. Read what they say, the good and the critical, before you book.</p>
       <div class="meta">
-        <span class="small-rating"><svg aria-hidden="true"><use href="#i-star"/></svg>Average 3.6 out of 5 · as of 16 Oct 2026</span>
+        <span class="small-rating"><svg aria-hidden="true"><use href="#i-star"/></svg>Average <span data-count="3.6">3.6</span>&nbsp;out of 5 · as of 16 Oct 2026</span>
         <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+New+Golden+Residency+Gandhi+Nagar+Bengaluru" target="_blank" rel="noopener">Read the reviews on Google</a>
       </div>
       <p class="slotline">Space for the hotel: <span class="slot">what we've improved recently, in our own words</span></p>
@@ -630,67 +884,77 @@ footer ul a:hover{text-decoration:underline}
 <!-- WHY STAY -->
 <section class="sec" id="why" aria-labelledby="h-why">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head" data-rv="up">
       <span class="kicker">Why stay here</span>
       <h2 id="h-why">Simple, practical, close to everything you're catching.</h2>
       <p>Green tags are checked facts. Yellow ones are details the hotel confirms before this goes live.</p>
     </div>
-    <div class="why-grid">
-      <article class="why">
+    <div class="why-grid" data-stg>
+      <article class="why" data-rv="up">
         <span class="status ok">Checked</span>
         <span class="ic"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
         <h3>The Majestic location</h3>
         <p>Metro about 0.6 km, bus stand about 0.7 km, KSR Bengaluru City station about 1 km. Good for early trains and late buses.</p>
       </article>
-      <article class="why">
+      <article class="why" data-rv="up">
         <span class="status ok">Checked</span>
         <span class="ic"><svg aria-hidden="true"><use href="#i-chat"/></svg></span>
         <h3>Over a thousand reviews</h3>
         <p>1,035 guests have shared their stay on Google, so you can see exactly what to expect before you arrive.</p>
       </article>
-      <article class="why">
+      <article class="why" data-rv="up">
         <span class="status ok">Checked</span>
         <span class="ic"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
         <h3>Book direct, talk to a person</h3>
         <p>Call the front desk on <a href="tel:+918041476434">080 4147 6434</a> or email <a href="mailto:goldenresidency@gmail.com">goldenresidency@gmail.com</a>. No app in between.</p>
       </article>
-      <article class="why gold">
+      <article class="why gold" data-rv="up">
         <span class="status todo">Owner confirms</span>
         <span class="ic"><svg aria-hidden="true"><use href="#i-key"/></svg></span>
         <h3>Easy check-in and check-out</h3>
         <p>Check-in from <span class="slot">time</span>, check-out by <span class="slot">time</span>. ID needed at check-in: <span class="slot">documents</span></p>
       </article>
-      <article class="why gold">
+      <article class="why gold" data-rv="up">
         <span class="status todo">Owner confirms</span>
         <span class="ic"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
         <h3>Early train? Late bus?</h3>
         <p>Early check-in or late check-out: <span class="slot">yes / on request / not available</span>. Front desk hours: <span class="slot">e.g. 24 hours</span></p>
       </article>
-      <article class="why gold">
+      <article class="why gold" data-rv="up">
         <span class="status todo">Owner confirms</span>
         <span class="ic"><svg aria-hidden="true"><use href="#i-list"/></svg></span>
         <h3>What's in every room</h3>
         <p>The hotel lists what's included, for example <span class="slot">Wi-Fi</span> <span class="slot">hot water</span> <span class="slot">TV</span> <span class="slot">parking</span></p>
       </article>
     </div>
-    <div class="legend"><span><span class="status ok">Checked</span>public, verified 16 Oct 2026</span><span><span class="status todo">Owner confirms</span>filled in by the hotel</span></div>
+    <div class="legend" data-rv="fade"><span><span class="status ok">Checked</span>public, verified 16 Oct 2026</span><span><span class="status todo">Owner confirms</span>filled in by the hotel</span></div>
+    <div class="cta-row" data-rv="up">
+      <p><b>Book direct, talk to a person.</b>No app in between: your request goes straight to the front desk.</p>
+      <div class="cta-btns"><a class="btn btn-gold" href="#book"><svg aria-hidden="true"><use href="#i-cal"/></svg>Check your dates<svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="mailto:goldenresidency@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>Email the hotel</a></div>
+    </div>
   </div>
 </section>
 
 <!-- BOOKING -->
 <section class="book sec" id="book" aria-labelledby="h-book">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head" data-rv="up">
       <span class="kicker">Book</span>
       <h2 id="h-book">Tell us your dates. We'll reply with a room and a rate.</h2>
       <p>This opens an email to the hotel with your details already filled in. Nothing is booked or paid until the hotel confirms.</p>
     </div>
     <div class="book-grid">
-      <form class="card" id="bookForm" action="mailto:goldenresidency@gmail.com" method="post" enctype="text/plain" novalidate>
+      <form class="card" id="bookForm" action="mailto:goldenresidency@gmail.com" method="post" enctype="text/plain" novalidate data-rv="up">
+        <div class="quick" role="group" aria-label="Quick dates">
+          <small>Quick pick:</small>
+          <button type="button" class="qd" data-q="tonight" aria-pressed="false">Tonight</button>
+          <button type="button" class="qd" data-q="tomorrow" aria-pressed="false">Tomorrow</button>
+          <button type="button" class="qd" data-q="weekend" aria-pressed="false">This weekend</button>
+        </div>
         <div class="dates">
-          <div class="field"><label for="f-in">Check-in</label><input id="f-in" name="checkin" type="date" required></div>
+          <div class="field"><label for="f-in">Check-in</label><input id="f-in" name="checkin" type="date" required><span class="ferr">Pick a check-in date.</span></div>
           <div class="nights" id="nights" aria-live="polite">– nights</div>
-          <div class="field"><label for="f-out">Check-out</label><input id="f-out" name="checkout" type="date" required></div>
+          <div class="field"><label for="f-out">Check-out</label><input id="f-out" name="checkout" type="date" required><span class="ferr">Check-out comes after check-in.</span></div>
         </div>
         <div class="row three">
           <div class="field"><label for="f-guests">Guests</label><input id="f-guests" name="guests" type="number" min="1" max="20" value="2" inputmode="numeric"></div>
@@ -703,8 +967,8 @@ footer ul a:hover{text-decoration:underline}
           </div>
         </div>
         <div class="row">
-          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
-          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required><span class="ferr">So the hotel knows who to reply to.</span></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91" required><span class="ferr">A number with at least 8 digits.</span></div>
         </div>
         <div class="row" style="grid-template-columns:1fr">
           <div class="field"><label for="f-email">Email <span>(optional)</span></label><input id="f-email" name="email" type="email" autocomplete="email"></div>
@@ -714,12 +978,18 @@ footer ul a:hover{text-decoration:underline}
         </div>
         <div class="form-foot">
           <p>Your details go only into the email you send. This page doesn't store anything.</p>
-          <button class="btn btn-gold" type="submit"><svg aria-hidden="true"><use href="#i-mail"/></svg>Send booking request</button>
+          <button class="btn btn-gold" type="submit"><svg aria-hidden="true"><use href="#i-mail"/></svg>Send booking request<svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></button>
         </div>
-        <div class="msg" id="formMsg" role="status" aria-live="polite"></div>
+        <div class="msg" id="formMsg" role="alert"></div>
+        <div class="okpanel" id="okpanel" role="status" aria-live="polite" tabindex="-1">
+          <svg viewBox="0 0 68 68" aria-hidden="true"><circle cx="34" cy="34" r="32"/><path d="M22 35l8 8 16-18"/></svg>
+          <h3>Your request is ready to send.</h3>
+          <p id="okTxt">Your email app should open with everything filled in. Just press send.</p>
+          <button type="button" class="again" id="again">Change something</button>
+        </div>
       </form>
 
-      <aside class="contact" aria-label="Contact the hotel">
+      <aside class="contact" aria-label="Contact the hotel" data-rv="up">
         <div class="ccard call"><span class="ic"><svg aria-hidden="true"><use href="#i-phone"/></svg></span><div><small>Rather talk? Call</small><a href="tel:+918041476434">080 4147 6434</a></div></div>
         <div class="ccard"><span class="ic"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><div><small>Email</small><a href="mailto:goldenresidency@gmail.com">goldenresidency@gmail.com</a></div></div>
         <div class="ccard"><span class="ic"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><div><small>Address</small><address>28, 4th Cross, 2nd Main Rd, opp. Hotel Kanishka, Gandhi Nagar, Bengaluru 560009</address></div></div>
@@ -740,6 +1010,14 @@ footer ul a:hover{text-decoration:underline}
 
 <footer>
   <div class="wrap">
+    <section class="fcard" aria-labelledby="fcard-h" data-rv="up">
+      <span class="fb-mono" aria-hidden="true">F</span>
+      <div><h2 id="fcard-h">Want this live?</h2><p>I can have it ready in about a week. Book a 15-min call.</p><small>Farman · independent web developer, Bengaluru</small></div>
+      <div class="fb-btns">
+        <a class="fb-cta" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call</a>
+        <a class="fb-ghost" href="mailto:farman.builds@gmail.com?subject=Website%20for%20Golden%20Residency">Email Farman</a>
+      </div>
+    </section>
     <div>
       <a class="brand" href="#top" aria-label="Hotel New Golden Residency, back to top">
         <span class="mark" aria-hidden="true"><span>G</span></span>
@@ -765,18 +1043,105 @@ footer ul a:hover{text-decoration:underline}
 
 <nav class="mbar" aria-label="Quick actions">
   <a class="btn btn-green" href="tel:+918041476434"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
-  <a class="btn btn-gold" href="#book"><svg aria-hidden="true"><use href="#i-cal"/></svg>Check dates</a>
+  <a class="btn btn-gold pulse" href="#book"><svg aria-hidden="true"><use href="#i-cal"/></svg>Check dates</a>
 </nav>
 
 <script>
 (function(){
-  var EMAIL='goldenresidency@gmail.com';
-  // dismissible notice
-  var nb=document.querySelector('[data-close-notice]');
-  if(nb){nb.hidden=false;nb.addEventListener('click',function(){document.getElementById('notice').style.display='none';});}
+  var d=document, root=d.documentElement, EMAIL='goldenresidency@gmail.com';
+  var reduce=!!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+  if(reduce) root.classList.add('rm');
+  var raf=window.requestAnimationFrame||function(f){return setTimeout(f,16)};
 
-  // copy address
-  var cb=document.querySelector('[data-copy]');
+  /* ---------- Farman bar ---------- */
+  var fb=d.getElementById('fb'), tog=fb.querySelector('.fb-tog'), mqM=matchMedia('(max-width:760px)');
+  try{ if(sessionStorage.getItem('fb-x')==='1') root.classList.add('fb-off'); }catch(_){}
+  fb.querySelector('.fb-x').addEventListener('click',function(){
+    fb.classList.add('bye');
+    setTimeout(function(){ root.classList.add('fb-off'); },reduce?120:300);
+    try{ sessionStorage.setItem('fb-x','1'); }catch(_){}
+  });
+  function syncTog(){ if(mqM.matches){ tog.removeAttribute('tabindex'); } else { tog.setAttribute('tabindex','-1'); fb.classList.remove('open'); tog.setAttribute('aria-expanded','false'); } }
+  syncTog(); if(mqM.addEventListener) mqM.addEventListener('change',syncTog);
+  tog.addEventListener('click',function(){
+    if(!mqM.matches) return;
+    var o=fb.classList.toggle('open'); tog.setAttribute('aria-expanded',o?'true':'false');
+  });
+
+  /* ---------- scroll: progress, header condense, mobile bar auto-hide ---------- */
+  var prog=d.querySelector('.progress'), hdr=d.querySelector('header.top'), lastY=window.scrollY||0, ticking=false;
+  function onScroll(){
+    if(ticking) return; ticking=true;
+    raf(function(){
+      ticking=false;
+      var y=window.scrollY||root.scrollTop, h=root.scrollHeight-innerHeight;
+      prog.style.transform='scaleX('+(h>0?Math.min(1,y/h):0)+')';
+      hdr.classList.toggle('cond',y>40);
+      if(mqM.matches && !fb.classList.contains('open')){
+        if(y>lastY+6 && y>320) root.classList.add('fb-hide');
+        else if(y<lastY-6 || y<320) root.classList.remove('fb-hide');
+      }
+      lastY=y;
+    });
+  }
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  /* ---------- counters ---------- */
+  function fmt(el,v){
+    var t=el.getAttribute('data-count'), dec=(t.split('.')[1]||'').length, s=v.toFixed(dec);
+    if(el.hasAttribute('data-sep')) s=Number(s).toLocaleString('en-IN',{minimumFractionDigits:dec,maximumFractionDigits:dec});
+    return s;
+  }
+  function count(el){
+    if(el._done) return; el._done=true;
+    var to=parseFloat(el.getAttribute('data-count')), t0=null, dur=1400;
+    function step(t){ if(t0===null) t0=t; var p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3); el.textContent=fmt(el,to*e); if(p<1) raf(step); else el.textContent=fmt(el,to); }
+    raf(step);
+  }
+
+  /* ---------- scroll reveals (armed only once IO has proven itself) ---------- */
+  var items=[].slice.call(d.querySelectorAll('[data-rv]')), counters=[].slice.call(d.querySelectorAll('[data-count]'));
+  [].forEach.call(d.querySelectorAll('[data-stg]'),function(g){
+    var kids=[].filter.call(g.children,function(c){return c.hasAttribute('data-rv')});
+    kids.forEach(function(c,i){ c.style.setProperty('--d',Math.min(i*80,400)+'ms'); });
+  });
+  function show(el){
+    if(el.classList.contains('in')) return;
+    el.classList.add('in');
+    var dl=parseFloat(el.style.getPropertyValue('--d'))||0;
+    setTimeout(function(){ el.classList.add('done'); },(el.classList.contains('ruler')?2400:1200)+dl);
+  }
+  function showAll(){ items.forEach(show); counters.forEach(function(c){ if(!c._done){ c._done=true; c.textContent=fmt(c,parseFloat(c.getAttribute('data-count'))); } }); }
+  if('IntersectionObserver' in window){
+    var alive=false;
+    var io=new IntersectionObserver(function(es){
+      alive=true;
+      es.forEach(function(e){ if(e.isIntersecting){ show(e.target); io.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.12});
+    var cio=new IntersectionObserver(function(es){
+      alive=true;
+      es.forEach(function(e){
+        var el=e.target;
+        if(e.isIntersecting){ count(el); cio.unobserve(el); }
+        else if(!el._done && !el._zeroed){ el._zeroed=true; el.textContent=fmt(el,0); }
+      });
+    },{threshold:.6});
+    root.classList.add('io');
+    items.forEach(function(el){ io.observe(el); });
+    counters.forEach(function(el){ cio.observe(el); });
+    setTimeout(function(){ if(!alive){ root.classList.remove('io'); showAll(); } },1500);
+    addEventListener('beforeprint',showAll);
+    var links=[].slice.call(d.querySelectorAll('nav.links a'));
+    var sio=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ links.forEach(function(a){ a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id); }); } });
+    },{rootMargin:'-45% 0px -50% 0px'});
+    [].forEach.call(d.querySelectorAll('main section'),function(t){ sio.observe(t); });
+    var fc=d.querySelector('.fcard');
+    if(fc) new IntersectionObserver(function(es){ fb.classList.toggle('away',es[0].isIntersecting && !mqM.matches); }).observe(fc);
+  }
+
+  /* ---------- copy address ---------- */
+  var cb=d.querySelector('[data-copy]');
   if(cb&&navigator.clipboard){
     cb.hidden=false;
     cb.addEventListener('click',function(){
@@ -786,46 +1151,89 @@ footer ul a:hover{text-decoration:underline}
     });
   }
 
-  // dates
-  var fin=document.getElementById('f-in'),fout=document.getElementById('f-out'),nights=document.getElementById('nights');
-  function iso(d){var z=new Date(d.getTime()-d.getTimezoneOffset()*60000);return z.toISOString().slice(0,10);}
-  var today=new Date();fin.min=iso(today);fout.min=iso(new Date(today.getTime()+864e5));
+  /* ---------- dates ---------- */
+  var fin=d.getElementById('f-in'),fout=d.getElementById('f-out'),nights=d.getElementById('nights'),qds=[].slice.call(d.querySelectorAll('.qd'));
+  function iso(dt){var z=new Date(dt.getTime()-dt.getTimezoneOffset()*60000);return z.toISOString().slice(0,10);}
+  function addDays(dt,n){var x=new Date(dt.getFullYear(),dt.getMonth(),dt.getDate());x.setDate(x.getDate()+n);return x;}
+  var today=new Date();fin.min=iso(today);fout.min=iso(addDays(today,1));
+  function bump(){ nights.classList.remove('bump'); void nights.offsetWidth; nights.classList.add('bump'); }
   function n(){
     if(fin.value){var next=new Date(fin.value+'T00:00:00');next.setDate(next.getDate()+1);fout.min=iso(next);}
+    var before=nights.textContent;
     if(fin.value&&fout.value){
       var k=Math.round((new Date(fout.value+'T00:00:00')-new Date(fin.value+'T00:00:00'))/864e5);
       nights.textContent=k>0?(k+(k===1?' night':' nights')):'check dates';
     }else nights.textContent='– nights';
+    if(nights.textContent!==before) bump();
+    ['f-in','f-out'].forEach(function(id){ var f=d.getElementById(id).closest('.field'); if(f.classList.contains('bad')) check(id,true); });
   }
   fin.addEventListener('change',function(){
-    if(fin.value&&(!fout.value||fout.value<=fin.value)){var d=new Date(fin.value+'T00:00:00');d.setDate(d.getDate()+1);fout.value=iso(d);}
+    if(fin.value&&(!fout.value||fout.value<=fin.value)){var dd=new Date(fin.value+'T00:00:00');dd.setDate(dd.getDate()+1);fout.value=iso(dd);}
+    qds.forEach(function(q){q.setAttribute('aria-pressed','false')});
     n();
   });
-  fout.addEventListener('change',n);
-
-  // room "Ask" buttons preselect the room
-  document.querySelectorAll('[data-room]').forEach(function(a){
-    a.addEventListener('click',function(){document.getElementById('f-type').value=a.getAttribute('data-room');});
+  fout.addEventListener('change',function(){ qds.forEach(function(q){q.setAttribute('aria-pressed','false')}); n(); });
+  qds.forEach(function(q){
+    q.addEventListener('click',function(){
+      var t=new Date(), a, b, w=q.getAttribute('data-q');
+      if(w==='tonight'){ a=addDays(t,0); b=addDays(t,1); }
+      else if(w==='tomorrow'){ a=addDays(t,1); b=addDays(t,2); }
+      else { var day=t.getDay(); if(day===0){ a=addDays(t,0); b=addDays(t,1); } else { a=addDays(t,(6-day)); b=addDays(a,2); } }
+      fin.value=iso(a); fout.value=iso(b);
+      qds.forEach(function(x){x.setAttribute('aria-pressed',x===q?'true':'false')});
+      n();
+    });
   });
 
-  // mailto builder
-  var form=document.getElementById('bookForm'),msg=document.getElementById('formMsg');
-  function show(t,ok){msg.textContent=t;msg.className='msg show '+(ok?'ok':'err');}
+  /* ---------- room "Ask" buttons preselect the room ---------- */
+  var sel=d.getElementById('f-type');
+  [].forEach.call(d.querySelectorAll('[data-room]'),function(a){
+    a.addEventListener('click',function(){
+      sel.value=a.getAttribute('data-room');
+      sel.classList.remove('flash'); void sel.offsetWidth; sel.classList.add('flash');
+    });
+  });
+
+  /* ---------- validation + mailto ---------- */
+  var form=d.getElementById('bookForm'),msg=d.getElementById('formMsg'),ok=d.getElementById('okpanel');
+  var v=function(id){return (d.getElementById(id).value||'').trim();};
+  var rules={
+    'f-in':function(){return !!v('f-in')},
+    'f-out':function(){return !!v('f-out') && (!v('f-in') || v('f-out')>v('f-in'))},
+    'f-name':function(){return v('f-name').length>1},
+    'f-phone':function(){return v('f-phone').replace(/\D/g,'').length>=8}
+  };
+  function check(id,showErr){
+    var el=d.getElementById(id), fld=el.closest('.field'), good=rules[id]();
+    if(showErr) fld.classList.toggle('bad',!good);
+    fld.classList.toggle('good',good && !!v(id));
+    el.setAttribute('aria-invalid',good?'false':'true');
+    return good;
+  }
+  ['f-name','f-phone'].forEach(function(id){
+    var el=d.getElementById(id);
+    el.addEventListener('blur',function(){ if(v(id)) check(id,true); });
+    el.addEventListener('input',function(){ check(id,el.closest('.field').classList.contains('bad')); });
+  });
+  function say(t,good){msg.textContent=t;msg.className='msg show '+(good?'ok':'err');}
   form.addEventListener('submit',function(e){
     e.preventDefault();
-    var v=function(id){return (document.getElementById(id).value||'').trim();};
-    var name=v('f-name'),phone=v('f-phone'),ci=v('f-in'),co=v('f-out');
-    if(!ci||!co){show('Please choose your check-in and check-out dates.',false);(ci?fout:fin).focus();return;}
-    if(co<=ci){show('Check-out needs to be after check-in.',false);fout.focus();return;}
-    if(!name){show('Please add your name so the hotel knows who to reply to.',false);document.getElementById('f-name').focus();return;}
-    if(phone.replace(/\D/g,'').length<8){show('Please add a phone number the hotel can call back on.',false);document.getElementById('f-phone').focus();return;}
-    var fmt=function(s){var d=new Date(s+'T00:00:00');return d.toLocaleDateString('en-IN',{weekday:'short',day:'numeric',month:'short',year:'numeric'});};
+    var bad=null;
+    ['f-in','f-out','f-name','f-phone'].forEach(function(id){ if(!check(id,true) && !bad) bad=d.getElementById(id); });
+    if(bad){
+      say('A few details need a look. They are marked above.',false);
+      var fl=bad.closest('.field'); fl.classList.remove('shake'); void fl.offsetWidth; fl.classList.add('shake');
+      bad.focus(); return;
+    }
+    msg.className='msg';
+    var ci=v('f-in'),co=v('f-out'),name=v('f-name'),phone=v('f-phone');
+    var fmtD=function(s){var dd=new Date(s+'T00:00:00');return dd.toLocaleDateString('en-IN',{weekday:'short',day:'numeric',month:'short',year:'numeric'});};
     var k=Math.round((new Date(co+'T00:00:00')-new Date(ci+'T00:00:00'))/864e5);
     var body=[
       'Hello Golden Residency,','',
       'I would like to request a room.','',
-      'Check-in: '+fmt(ci),
-      'Check-out: '+fmt(co)+' ('+k+(k===1?' night':' nights')+')',
+      'Check-in: '+fmtD(ci),
+      'Check-out: '+fmtD(co)+' ('+k+(k===1?' night':' nights')+')',
       'Guests: '+(v('f-guests')||'-'),
       'Rooms: '+(v('f-rooms')||'-'),
       'Room preference: '+v('f-type'),'',
@@ -835,10 +1243,15 @@ footer ul a:hover{text-decoration:underline}
       'Message: '+(v('f-msg')||'-'),'',
       'Please confirm availability and the rate. Thank you.'
     ].join('\n');
-    var subject='Room request: '+fmt(ci)+' to '+fmt(co)+' ('+name+')';
-    window.location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-    show('Your email app should now open with everything filled in. Just press send. If nothing opened, email '+EMAIL+' or call 080 4147 6434.',true);
+    var subject='Room request: '+fmtD(ci)+' to '+fmtD(co)+' ('+name+')';
+    var href='mailto:'+EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    d.getElementById('okTxt').innerHTML='Your email app should open with <b>'+fmtD(ci)+' to '+fmtD(co)+'</b> ('+k+(k===1?' night':' nights')+') and your details filled in. Just press send. Nothing opened? Email <a href="'+href.replace(/"/g,'&quot;')+'">'+EMAIL+'</a> or call <a href="tel:+918041476434">080 4147 6434</a>.';
+    ok.classList.remove('show'); void ok.offsetWidth; ok.classList.add('show');
+    ok.focus({preventScroll:true});
+    ok.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'});
+    window.location.href=href;
   });
+  d.getElementById('again').addEventListener('click',function(){ ok.classList.remove('show'); fin.focus(); });
 })();
 </script>
 </body>
