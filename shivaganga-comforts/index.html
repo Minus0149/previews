@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script src="../preview-guard.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
@@ -1118,7 +1119,7 @@ footer .credit{margin:34px auto 0;max-width:760px;font-size:13.5px;color:#AFAAB9
       var d=document.createElement('div'),b=document.createElement('b'),v=document.createElement('span');b.textContent=r[0];v.textContent=r[1];d.appendChild(b);d.appendChild(v);sum.appendChild(d)});
     formBody.hidden=true;done.hidden=false;done.focus({preventScroll:true});
     try{done.scrollIntoView({block:'center',behavior:reduce?'auto':'smooth'})}catch(e){}
-    window.location.href=href;
+    window.__previewMail(href);
   });
 })();
 </script>

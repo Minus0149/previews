@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script src="../preview-guard.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
@@ -1249,7 +1250,7 @@ html.fb-off .fb{display:none}
     ok.classList.remove('show'); void ok.offsetWidth; ok.classList.add('show');
     ok.focus({preventScroll:true});
     ok.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'});
-    window.location.href=href;
+    window.__previewMail(href);
   });
   d.getElementById('again').addEventListener('click',function(){ ok.classList.remove('show'); fin.focus(); });
 })();

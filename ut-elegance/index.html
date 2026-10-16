@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script src="../preview-guard.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
@@ -745,7 +746,7 @@ dialog.lb.closing{animation:lbOut .2s var(--accel) forwards}
       'Name: '+$('gname').value.trim(),'Phone: '+$('gphone').value.trim(),'','Please share availability and the rate.','(Sent from the website booking form)'].filter(function(x){ return x!==null }).join('\n');
     var href='mailto:u.t.elegance@gmail.com?subject='+encodeURIComponent('Room enquiry: '+s)+'&body='+encodeURIComponent(body);
     $('mailb').href=href; sheet.dataset.mailto=href; sheet.classList.add('sent');
-    window.location.href=href });
+    window.__previewMail(href) });
 
   /* gallery lightbox */
   var lb=$('lb'), lbi=$('lbi'), gs2=[].slice.call(d.querySelectorAll('.gallery .g')), cur=0;

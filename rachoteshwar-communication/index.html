@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script src="../preview-guard.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
@@ -1067,7 +1068,7 @@ footer p{color:#BDB7A8;font-size:15px;margin:16px 0 0;max-width:26em}
     d.getElementById('done-mail').href=href;
     f.classList.add('sent'); live.classList.add('stamped');
     f.dataset.mailto=href;
-    window.location.href=href;
+    window.__previewMail(href);
   });
   d.getElementById('done-edit').addEventListener('click',function(){ f.classList.remove('sent'); live.classList.remove('stamped'); d.getElementById('model').focus() });
   sync();
