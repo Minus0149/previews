@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Wed's Filming · Wedding Photos &amp; Films, Bengaluru (concept preview)</title>
+<meta name="description" content="Concept website preview for Wed's Filming, wedding photography and films in Bengaluru, booking worldwide.">
+<meta name="theme-color" content="#0b0a09">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0a09; --bg2:#12100e; --bg3:#191613; --ink:#f2ebdd; --mute:#b3a996; --dim:#8a8172;
+  --gold:#c6a66d; --gold2:#e0c48f; --line:rgba(242,235,221,.13); --line2:rgba(198,166,109,.38);
+  --disp:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif; --sans:Jost,"Segoe UI",system-ui,sans-serif;
+  --wrap:1240px; --gut:clamp(16px,4vw,48px); --hdr:68px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hdr) + 8px);color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 17px/1.7 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* film grain */
+body::after{content:"";position:fixed;inset:-50%;z-index:90;pointer-events:none;opacity:.32;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation:grain 1.2s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+
+/* type */
+.disp{font-family:var(--disp);font-weight:400;letter-spacing:-.01em;line-height:1.02;margin:0}
+.disp em{font-style:italic;color:var(--gold2)}
+.eyebrow{font:500 12px/1.4 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin:0 0 18px;display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+.lede{color:var(--mute);font-size:clamp(17px,1.35vw,19px);max-width:56ch}
+.tag{position:absolute;z-index:3;font:500 10.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#f2ebdd;background:rgba(11,10,9,.72);border:1px solid rgba(242,235,221,.22);padding:6px 9px;border-radius:2px;backdrop-filter:blur(4px)}
+.tag.tr{top:12px;right:12px} .tag.br{bottom:12px;right:12px} .tag.tl{top:12px;left:12px}
+.slot{display:inline-block;font:500 10.5px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold2);border:1px dashed var(--line2);padding:5px 9px;border-radius:2px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;font:500 13px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);color:var(--bg);background:var(--gold);cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+.btn:hover{background:var(--gold2);border-color:var(--gold2)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:rgba(242,235,221,.4)}
+.btn.ghost:hover{border-color:var(--gold2);color:var(--gold2)}
+.btn svg{width:16px;height:16px;flex:none}
+
+/* concept notice */
+.concept{background:#1c1813;border-bottom:1px solid var(--line2);color:var(--mute);font:400 13px/1.5 var(--sans)}
+.concept .wrap{display:flex;align-items:center;gap:14px;padding-top:8px;padding-bottom:8px}
+.concept p{margin:0;flex:1}
+.concept b{color:var(--gold2);font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:11px;margin-right:8px}
+.concept button{flex:none;width:44px;height:44px;border:0;background:none;color:var(--mute);font-size:22px;cursor:pointer}
+.concept button:hover{color:var(--ink)}
+
+/* header */
+header.top{position:sticky;top:0;z-index:50;background:rgba(11,10,9,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{height:var(--hdr);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{text-decoration:none;display:flex;flex-direction:column;justify-content:center;gap:3px;line-height:1;min-height:44px}
+.logo span{font:500 21px/1 var(--disp);letter-spacing:.2em}
+.logo small{font:400 10px/1 var(--sans);letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+nav.main{display:flex;gap:4px}
+nav.main a{text-decoration:none;font:400 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mute);padding:16px 12px;transition:color .25s}
+nav.main a:hover{color:var(--gold2)}
+header .btn{min-height:44px;padding:0 18px;font-size:12px}
+
+/* HERO */
+.hero{position:relative;background:#000}
+.hero .bar{display:flex;justify-content:space-between;align-items:center;gap:16px;height:56px;padding:0 var(--gut);font:400 11px/1.3 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--dim)}
+.hero .bar b{color:var(--ink);font-weight:500}
+.hero .bar .star{color:var(--gold2)}
+.frame{position:relative;height:clamp(520px,calc(100svh - var(--hdr) - 112px - 46px),860px);overflow:hidden}
+.slide{position:absolute;inset:0;opacity:0;overflow:hidden;transition:opacity 2.4s ease}
+.slide.on{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover;object-position:var(--pd);transform:scale(1.02)}
+.slide.on img{animation:drift 9s ease-out forwards}
+@keyframes drift{from{transform:scale(1.02)}to{transform:scale(1.08)}}
+.frame::after{content:"";position:absolute;inset:0;z-index:1;background:
+  linear-gradient(90deg,rgba(6,5,4,.88) 0%,rgba(6,5,4,.55) 38%,rgba(6,5,4,0) 70%),
+  linear-gradient(0deg,rgba(6,5,4,.75) 0%,rgba(6,5,4,0) 45%)}
+.corners{position:absolute;inset:18px;z-index:2;pointer-events:none}
+.corners i{position:absolute;width:26px;height:26px;border:1px solid rgba(242,235,221,.55)}
+.corners i:nth-child(1){top:0;left:0;border-right:0;border-bottom:0}
+.corners i:nth-child(2){top:0;right:0;border-left:0;border-bottom:0}
+.corners i:nth-child(3){bottom:0;left:0;border-right:0;border-top:0}
+.corners i:nth-child(4){bottom:0;right:0;border-left:0;border-top:0}
+.hero-copy{position:absolute;z-index:3;left:0;right:0;bottom:clamp(34px,6vh,72px)}
+.hero-copy .wrap{max-width:var(--wrap)}
+.hero h1{font-size:clamp(46px,6.6vw,108px);max-width:11ch;text-shadow:0 2px 30px rgba(0,0,0,.4)}
+.hero .sub{margin:22px 0 30px;color:#e3dbcc;font-size:clamp(16px,1.3vw,19px);max-width:44ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero .ctrl{position:absolute;z-index:4;right:var(--gut);bottom:clamp(34px,6vh,72px);display:flex;align-items:center;gap:6px;font:400 12px/1 var(--sans);letter-spacing:.24em;color:var(--mute)}
+.hero .ctrl button{width:44px;height:44px;border:1px solid rgba(242,235,221,.3);background:rgba(11,10,9,.4);color:var(--ink);cursor:pointer;font-size:16px;display:grid;place-items:center}
+.hero .ctrl button:hover{border-color:var(--gold2);color:var(--gold2)}
+.hero .ctrl output{min-width:72px;text-align:center}
+.hero .ctrl output b{color:var(--ink);font-weight:500}
+
+/* facts ribbon */
+.ribbon{border-bottom:1px solid var(--line);background:var(--bg)}
+.ribbon .wrap{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:0}
+.ribbon .cell{padding:34px 24px;border-left:1px solid var(--line)}
+.ribbon .cell:first-child{border-left:0;padding-left:0}
+.ribbon .num{font:400 clamp(34px,3.2vw,46px)/1 var(--disp);color:var(--ink)}
+.ribbon .num em{font-style:italic;color:var(--gold2)}
+.ribbon .lab{margin-top:10px;font:400 11.5px/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--mute)}
+.ribbon .say{font:italic 400 clamp(22px,2vw,29px)/1.3 var(--disp);color:var(--ink);margin:0;max-width:22ch}
+
+/* sections */
+section.sec{padding:clamp(80px,10vw,140px) 0}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,80px);align-items:end;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head h2{font-size:clamp(40px,5.4vw,84px)}
+.sec-head .lede{margin:0}
+.reel{font:500 11px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--dim);margin-bottom:22px;display:block}
+.reel b{color:var(--gold);font-weight:500}
+
+/* FILMS */
+.screen{position:relative;aspect-ratio:2.39/1;overflow:hidden;background:#000;border:1px solid var(--line)}
+.screen img{width:100%;height:100%;object-fit:cover;object-position:50% 42%;filter:saturate(.85) contrast(1.05)}
+.screen::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,0,0,.1) 30%,rgba(0,0,0,.65) 100%)}
+.play{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.play .ring{width:clamp(70px,8vw,104px);height:clamp(70px,8vw,104px);border-radius:50%;border:1px solid var(--gold2);display:grid;place-items:center;background:rgba(11,10,9,.35);backdrop-filter:blur(3px)}
+.play .ring svg{width:28%;height:28%;margin-left:6%;fill:var(--gold2)}
+.play p{margin:0;font:500 11px/1.5 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--ink);text-shadow:0 1px 10px #000}
+.screen .tc{position:absolute;z-index:2;left:16px;bottom:14px;font:400 11px/1 var(--sans);letter-spacing:.2em;color:rgba(242,235,221,.75)}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.title-card{position:relative;aspect-ratio:16/9;background:radial-gradient(ellipse at 50% 40%,#1d1914 0%,#0e0c0a 75%);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;gap:10px}
+.title-card .no{font:500 10.5px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--dim)}
+.title-card h3{font:italic 400 clamp(22px,2vw,28px)/1.15 var(--disp);margin:0;color:var(--ink)}
+.title-card h3 span{display:block;font:400 11px/1.4 var(--sans);font-style:normal;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);margin-top:8px}
+.films-note{margin-top:22px;color:var(--dim);font-size:14px}
+
+/* PHOTOGRAPHS - film strip */
+#photographs{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.strip-wrap{position:relative}
+.strip{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:var(--gut);padding:0 var(--gut);scrollbar-width:thin;scrollbar-color:var(--gold) transparent;overscroll-behavior-x:contain}
+.strip::-webkit-scrollbar{height:6px}.strip::-webkit-scrollbar-thumb{background:var(--gold)}
+.film{display:flex;background:#050403;padding:30px 0;position:relative;flex:none}
+.film::before,.film::after{content:"";position:absolute;left:0;right:0;height:11px;background:repeating-linear-gradient(90deg,transparent 0 9px,rgba(242,235,221,.17) 9px 21px,transparent 21px 30px)}
+.film::before{top:10px}.film::after{bottom:10px}
+.cell-f{flex:none;scroll-snap-align:start;padding:0 9px;display:flex;flex-direction:column}
+.cell-f figure{margin:0;position:relative;height:var(--fh,470px);overflow:hidden;background:#000}
+.cell-f figure.p{aspect-ratio:2/3}.cell-f figure.l{aspect-ratio:3/2}.cell-f figure.s{aspect-ratio:4/5}
+.cell-f img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.cell-f:hover img{transform:scale(1.03)}
+.edge{display:flex;justify-content:space-between;gap:12px;padding:12px 2px 0;font:500 10.5px/1.3 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:#c79a4e}
+.edge span:last-child{color:var(--mute);font-weight:400}
+.slot-frame{height:var(--fh,470px);aspect-ratio:4/5;border:1px dashed var(--line2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:28px;text-align:center;text-decoration:none;background:linear-gradient(160deg,#16120e,#0b0908)}
+.slot-frame strong{font:italic 400 30px/1.15 var(--disp);color:var(--ink)}
+.slot-frame p{margin:0;color:var(--mute);font-size:14.5px;line-height:1.55;max-width:26ch}
+.slot-frame:hover strong{color:var(--gold2)}
+.strip-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:26px}
+.strip-nav .hint{font:400 12px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--dim)}
+.strip-nav .btns{display:flex;gap:8px}
+.strip-nav button{width:52px;height:52px;border:1px solid rgba(242,235,221,.3);background:none;color:var(--ink);cursor:pointer;font-size:18px}
+.strip-nav button:hover{border-color:var(--gold2);color:var(--gold2)}
+
+/* DESTINATION */
+.dest{position:relative}
+.dest .screen{aspect-ratio:2.39/1;border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dest .screen img{object-position:50% 12%;filter:saturate(.9)}
+.dest .screen::after{background:linear-gradient(90deg,rgba(6,5,4,.92) 0%,rgba(6,5,4,.74) 34%,rgba(6,5,4,.15) 62%,rgba(6,5,4,0) 80%)}
+.dest-copy{position:absolute;z-index:2;inset:0;display:flex;align-items:center}
+.dest-copy h2{font-size:clamp(44px,6vw,96px);max-width:9ch}
+.dest-copy .lede{margin:22px 0 0;color:#ddd4c4;max-width:40ch}
+.log{margin-top:clamp(48px,6vw,72px);display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(28px,5vw,80px);align-items:start}
+.log h3{font:400 clamp(28px,2.6vw,38px)/1.15 var(--disp);margin:0 0 14px}
+.log p{color:var(--mute);margin:0}
+.board{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.board li{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
+.board .place{font:400 clamp(24px,2.2vw,32px)/1.1 var(--disp)}
+.board .place em{color:var(--gold2)}
+.board .when{font:400 12px/1.3 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--mute);text-align:right}
+.board li.empty .place{color:var(--dim);font-style:italic}
+
+/* PROCESS */
+.process{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:start}
+.process .pic{position:sticky;top:calc(var(--hdr) + 32px);aspect-ratio:4/5;overflow:hidden;border:1px solid var(--line)}
+.process .pic img{width:100%;height:100%;object-fit:cover;object-position:30% 50%;filter:saturate(.85)}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,3vw,40px);padding:34px 0;border-bottom:1px solid var(--line)}
+.steps li:first-child{border-top:1px solid var(--line)}
+.steps .n{font:italic 400 clamp(46px,4.6vw,68px)/.9 var(--disp);color:transparent;-webkit-text-stroke:1px var(--gold);min-width:1.6em}
+.steps .sc{font:500 11px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.steps h3{font:400 clamp(26px,2.4vw,34px)/1.1 var(--disp);margin:0 0 10px}
+.steps p{margin:0;color:var(--mute)}
+.steps .slot{margin-top:12px}
+
+/* PACKAGES */
+#packages{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pkgs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pkg{position:relative;border:1px solid var(--line);padding:42px 32px 34px;background:linear-gradient(180deg,#15120f,#0e0c0a);display:flex;flex-direction:column}
+.pkg::before{content:"";position:absolute;inset:8px;border:1px solid rgba(198,166,109,.16);pointer-events:none}
+.pkg.mid{border-color:var(--line2)}
+.pkg .rn{font:italic 400 22px/1 var(--disp);color:var(--gold2);margin-bottom:18px}
+.pkg h3{font:400 clamp(28px,2.4vw,36px)/1.1 var(--disp);margin:0 0 6px;color:var(--ink)}
+.pkg .h3sub{font-size:14px;color:var(--dim);margin:0 0 24px}
+.pkg dl{margin:0 0 28px;flex:1}
+.pkg dl div{display:flex;align-items:baseline;gap:10px;padding:11px 0;font-size:14.5px}
+.pkg dt{color:var(--mute);white-space:nowrap}
+.pkg dd{margin:0;flex:1;display:flex;align-items:baseline;gap:10px;color:var(--dim)}
+.pkg dd::before{content:"";flex:1;border-bottom:1px dotted rgba(242,235,221,.25);transform:translateY(-4px)}
+.pkg .price{font:italic 400 24px/1.2 var(--disp);color:var(--ink);border-top:1px solid var(--line);padding-top:20px;margin-bottom:22px}
+.pkg .price small{display:block;font:400 11px/1.5 var(--sans);font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-top:6px}
+.pkg .btn{width:100%}
+.pkgs-note{margin-top:24px;color:var(--dim);font-size:14px;text-align:center}
+
+/* REVIEWS + INSTAGRAM */
+.rating{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(24px,4vw,64px);align-items:center;padding-bottom:clamp(60px,7vw,100px);margin-bottom:clamp(60px,7vw,100px);border-bottom:1px solid var(--line)}
+.rating .big{font:400 clamp(90px,11vw,170px)/.85 var(--disp);color:var(--ink)}
+.rating .big em{color:var(--gold2)}
+.rating .stars{color:var(--gold2);letter-spacing:.3em;font-size:18px;margin-bottom:8px}
+.rating p{margin:0;color:var(--mute)}
+.rating p strong{color:var(--ink);font-weight:400;font-family:var(--disp);font-size:clamp(24px,2.2vw,30px);display:block;margin-bottom:6px;line-height:1.2}
+.quote-slot{border:1px dashed var(--line2);padding:26px 28px;max-width:380px}
+.quote-slot q{display:block;font:italic 400 20px/1.4 var(--disp);color:var(--mute);quotes:"\201C" "\201D"}
+.quote-slot .slot{margin-top:14px}
+.ig{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,6vw,96px);align-items:center}
+.handle{font:400 clamp(34px,4.1vw,60px)/1.05 var(--disp);margin:0 0 12px;overflow-wrap:anywhere}
+.handle a{text-decoration:none}
+.handle a:hover{color:var(--gold2)}
+.ig .by{color:var(--mute);margin:0 0 30px}
+.ig .stats{display:flex;gap:clamp(28px,4vw,56px);margin-bottom:30px}
+.ig .stats div{font:400 clamp(34px,3vw,44px)/1 var(--disp)}
+.ig .stats span{display:block;margin-top:8px;font:400 11.5px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+.bio{border-left:1px solid var(--gold);padding:4px 0 4px 22px;margin:0 0 34px;font:400 13px/2 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
+.bio small{display:block;font-size:11px;letter-spacing:.2em;color:var(--dim);margin-top:6px}
+.mosaic{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:1fr 1fr;gap:12px;aspect-ratio:1/1}
+.mosaic a{position:relative;overflow:hidden;display:block;background:#000}
+.mosaic a:first-child{grid-row:1/3}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease,filter .6s}
+.mosaic a:hover img{transform:scale(1.04);filter:brightness(.8)}
+.ig .hl{color:var(--dim);font-size:14.5px;margin:0 0 30px;max-width:46ch}
+
+/* ENQUIRY */
+#enquire{background:var(--bg2);border-top:1px solid var(--line)}
+.enq{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,6vw,96px);align-items:start}
+.enq h2{font-size:clamp(46px,5.6vw,88px)}
+.contact{list-style:none;padding:0;margin:36px 0 0;border-top:1px solid var(--line)}
+.contact li{border-bottom:1px solid var(--line)}
+.contact a,.contact div{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:18px 0;text-decoration:none;align-items:baseline;min-height:44px}
+.contact span{font:500 11px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.contact b{font-weight:300;color:var(--ink);word-break:break-word}
+.contact a:hover b{color:var(--gold2)}
+form.date{border:1px solid var(--line);background:var(--bg);padding:clamp(24px,3.4vw,44px);position:relative}
+form.date::before{content:"";position:absolute;inset:8px;border:1px solid rgba(198,166,109,.14);pointer-events:none}
+.fhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:26px;flex-wrap:wrap}
+.fhead h3{font:italic 400 30px/1.1 var(--disp);margin:0}
+.fhead small{font:400 11px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--dim)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.field{position:relative;margin-bottom:22px}
+.field label,.field legend{display:block;font:500 11px/1.3 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--mute);margin-bottom:8px;padding:0}
+.field input,.field textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(242,235,221,.28);color:var(--ink);font:300 17px/1.4 var(--sans);padding:10px 0;min-height:46px;border-radius:0;transition:border-color .25s}
+.field textarea{min-height:84px;resize:vertical}
+.field input:focus,.field textarea:focus{outline:0;border-bottom-color:var(--gold2)}
+.field input::placeholder,.field textarea::placeholder{color:#6f675b}
+.field input[type=date]::-webkit-calendar-picker-indicator{filter:invert(.8) sepia(.5);cursor:pointer}
+fieldset.field{border:0;margin:0 0 24px;padding:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chip span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid rgba(242,235,221,.25);font:400 14px/1 var(--sans);letter-spacing:.06em;color:var(--mute);transition:all .2s;cursor:pointer}
+.chip input:checked+span{border-color:var(--gold);color:var(--bg);background:var(--gold)}
+.chip input:focus-visible+span{outline:2px solid var(--gold2);outline-offset:2px}
+.field.err input{border-bottom-color:#e08a6d}
+.ferr{display:none;color:#eea58c;font-size:13px;margin-top:6px}
+.field.err .ferr{display:block}
+.fsend{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:8px}
+.fsend p{margin:0;font-size:13.5px;color:var(--dim);flex:1;min-width:200px}
+.status{margin-top:18px;padding:14px 16px;border:1px solid var(--line2);color:var(--ink);font-size:14.5px;display:none}
+.status.show{display:block}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:70px 0 40px;background:#070605}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.fgrid .logo span{font-size:26px}
+.fgrid p{color:var(--mute);font-size:15px;margin:18px 0 0;max-width:38ch}
+.fgrid h4{font:500 11px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin:6px 0 16px}
+.fgrid ul{list-style:none;padding:0;margin:0}
+.fgrid li a{display:inline-flex;align-items:center;min-height:40px;text-decoration:none;color:var(--mute);font-size:15px}
+.fgrid li a:hover{color:var(--gold2)}
+.credit{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px;color:var(--dim)}
+.credit a{color:var(--mute)}
+
+/* mobile bar */
+.mbar{display:none}
+
+@media (max-width:1080px){
+  nav.main{display:none}
+  .ribbon .wrap{grid-template-columns:repeat(3,1fr)}
+  .ribbon .cell:first-child{grid-column:1/-1;border-bottom:1px solid var(--line);padding:30px 0}
+  .ribbon .cell:nth-child(2){border-left:0;padding-left:0}
+  .pkgs{grid-template-columns:1fr;max-width:560px;margin:0 auto}
+  .rating{grid-template-columns:auto 1fr}
+  .quote-slot{grid-column:1/-1;max-width:none}
+}
+@media (max-width:820px){
+  :root{--hdr:60px}
+  body{font-size:16px;padding-bottom:72px}
+  .logo span{font-size:17px;letter-spacing:.16em}
+  .logo small{font-size:9px;letter-spacing:.28em}
+  header .btn{display:none}
+  .hero .bar{height:44px;font-size:9.5px;letter-spacing:.2em}
+  .hero .bar .hide-m{display:none}
+  .frame{--ih:max(380px,min(50svh,460px));height:auto;min-height:0;padding-top:var(--ih)}
+  .slide{bottom:auto;height:var(--ih)}
+  .frame::after{bottom:auto;height:var(--ih);background:linear-gradient(0deg,#000 0%,rgba(0,0,0,.55) 22%,rgba(0,0,0,0) 48%)}
+  .corners{bottom:auto;height:calc(var(--ih) - 24px)}
+  .hero-copy{position:relative;bottom:auto;margin-top:-64px;padding-bottom:34px}
+  .slide img{object-position:var(--pm)}
+  .corners{inset:12px}
+  .hero h1{font-size:clamp(42px,12vw,60px)}
+  .hero .sub{margin:16px 0 22px}
+  .hero .ctas .btn{flex:1 1 auto;padding:0 18px}
+  .hero .ctrl{display:none}
+  .sec-head{grid-template-columns:1fr;gap:18px}
+  .cards3{grid-template-columns:1fr;gap:12px}
+  .title-card{aspect-ratio:auto;min-height:150px}
+  .screen{aspect-ratio:4/3}
+  .screen img{object-position:50% 38%}
+  .cell-f{--fh:340px}
+  .slot-frame{--fh:340px}
+  .film{padding:26px 0}
+  .dest .screen{aspect-ratio:auto;background:var(--bg);border-bottom:0}
+  .dest .screen img{height:440px;object-position:30% 20%}
+  .dest .screen::after{bottom:auto;height:440px;background:linear-gradient(0deg,var(--bg) 0%,rgba(11,10,9,.5) 22%,rgba(11,10,9,0) 50%)}
+  .dest-copy{position:relative;margin-top:-56px}
+  .dest-copy h2{font-size:clamp(42px,12vw,60px)}
+  .log{grid-template-columns:1fr}
+  .process{grid-template-columns:1fr}
+  .process .pic{position:relative;top:0;aspect-ratio:4/3}
+  .rating{grid-template-columns:1fr;gap:20px}
+  .ig{grid-template-columns:1fr}
+  .enq{grid-template-columns:1fr}
+  .grid2{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  .board .when{font-size:10.5px;letter-spacing:.16em}
+  .mbar{display:grid;grid-template-columns:1fr 1.4fr;position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(11,10,9,.97);border-top:1px solid var(--line2);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+  .mbar .btn{min-height:50px;padding:0 12px;font-size:12px;letter-spacing:.16em}
+}
+@media (max-width:420px){
+  .ribbon .cell{padding:22px 10px}
+  .ribbon .cell:nth-child(2){padding-left:0}
+  .ribbon .lab{font-size:10.5px;letter-spacing:.16em}
+  .pkg{padding:36px 22px 28px}
+  .ig .stats{gap:22px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  body::after{animation:none}
+  .slide.on img{animation:none}
+  .slide{transition-duration:.8s}
+}
+</style>
+</head>
+<body>
+
+<div class="concept" id="concept" role="note" aria-label="Concept preview notice">
+  <div class="wrap">
+    <p><b>Concept preview</b>Made for Wed's Filming by Farman, an independent web developer, from public information. Not Wed's Filming's official website. Photos are samples.</p>
+    <button type="button" aria-label="Hide this notice" data-close>&times;</button>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Wed's Filming, home"><span>WED'S FILMING</span><small>Photos &amp; Films · Bengaluru</small></a>
+    <nav class="main" aria-label="Main">
+      <a href="#films">Films</a><a href="#photographs">Photographs</a><a href="#destination">Destination</a><a href="#process">How we work</a><a href="#packages">Packages</a>
+    </nav>
+    <a class="btn" href="#enquire">Check your date</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-label="Introduction">
+  <div class="bar"><span><b>Wed's Filming</b><span class="hide-m"> &nbsp;·&nbsp; Fraser Town, Bengaluru</span></span><span class="hide-m">Wedding photos &amp; films</span><span><span class="star">★ 4.9</span> &nbsp;Google</span></div>
+  <div class="frame" id="frame">
+    <div class="slide on" style="--pd:50% 36%;--pm:50% 40%"><img src="../img/weds-filming/lehenga.jpg" srcset="../img/weds-filming/lehenga-s.jpg 900w, ../img/weds-filming/lehenga.jpg 1800w" sizes="100vw" alt="A bride in a red lehenga and a groom in an ivory sherwani under strings of warm lights"></div>
+    <div class="slide" style="--pd:50% 18%;--pm:46% 20%"><img src="../img/weds-filming/attire.jpg" srcset="../img/weds-filming/attire-s.jpg 900w, ../img/weds-filming/attire.jpg 1800w" sizes="100vw" alt="A couple in traditional wedding attire, embracing in a garden" loading="lazy"></div>
+    <div class="slide" style="--pd:50% 30%;--pm:62% 50%"><img src="../img/weds-filming/lake.jpg" srcset="../img/weds-filming/lake-s.jpg 900w, ../img/weds-filming/lake.jpg 1800w" sizes="100vw" alt="A bride and groom standing by a lake in golden light" loading="lazy"></div>
+    <div class="corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <span class="tag tr">Sample photo</span>
+    <div class="hero-copy">
+      <div class="wrap">
+        <p class="eyebrow">Wedding photos &amp; films</p>
+        <h1 class="disp">Capturing life's <em>priceless</em> moments.</h1>
+        <p class="sub">Photographs and wedding films from Bengaluru, for couples here and everywhere else. Booking worldwide.</p>
+        <div class="ctas">
+          <a class="btn" href="#enquire">Check your date</a>
+          <a class="btn ghost" href="tel:+918044328099"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>080 4432 8099</a>
+        </div>
+      </div>
+    </div>
+    <div class="ctrl" aria-label="Hero photos">
+      <button type="button" data-prev aria-label="Previous photo">&#8592;</button>
+      <output aria-live="polite"><b data-cur>01</b> / 03</output>
+      <button type="button" data-next aria-label="Next photo">&#8594;</button>
+    </div>
+  </div>
+  <div class="bar"><span>Booking worldwide</span><span class="hide-m">Scroll to begin</span><span>@weds_filming</span></div>
+</section>
+
+<!-- RIBBON -->
+<section class="ribbon" aria-label="At a glance">
+  <div class="wrap">
+    <div class="cell"><p class="say">Every glance, every ritual, every quiet second in between.</p></div>
+    <div class="cell"><div class="num">4.9<em>★</em></div><div class="lab">Google rating</div></div>
+    <div class="cell"><div class="num">80</div><div class="lab">Google reviews</div></div>
+    <div class="cell"><div class="num">30.7<em>K</em></div><div class="lab">On Instagram</div></div>
+  </div>
+</section>
+
+<!-- FILMS -->
+<section class="sec" id="films" aria-labelledby="films-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="reel"><b>Reel I</b> &nbsp;/&nbsp; Films</span><h2 class="disp" id="films-h">Your wedding, <em>cut like cinema.</em></h2></div>
+      <p class="lede">The vows, the music, the laughter between rituals, and the people who flew in for you, edited into a film you'll want to watch every anniversary.</p>
+    </div>
+    <div class="screen">
+      <img src="../img/weds-filming/gimbal.jpg" srcset="../img/weds-filming/gimbal-s.jpg 900w, ../img/weds-filming/gimbal.jpg 1800w" sizes="(max-width:1240px) 100vw, 1200px" alt="A videographer filming with a camera on a gimbal at an outdoor wedding" loading="lazy">
+      <span class="tag tr">Sample photo</span>
+      <div class="play" aria-hidden="true">
+        <div class="ring"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></div>
+        <p>Your showreel plays here</p>
+      </div>
+      <span class="tc" aria-hidden="true">WF · SHOWREEL · 00:00:00:00</span>
+    </div>
+    <div class="cards3">
+      <div class="title-card"><span class="no">Film slot · 01</span><h3>Couple's names<span>Venue · City</span></h3><span class="slot">Embed a film</span></div>
+      <div class="title-card"><span class="no">Film slot · 02</span><h3>Couple's names<span>Venue · City</span></h3><span class="slot">Embed a film</span></div>
+      <div class="title-card"><span class="no">Film slot · 03</span><h3>Couple's names<span>Venue · City</span></h3><span class="slot">Embed a film</span></div>
+    </div>
+    <p class="films-note">Wed's Filming adds its own trailers and full films here, from YouTube, Vimeo or Instagram Reels.</p>
+  </div>
+</section>
+
+<!-- PHOTOGRAPHS -->
+<section class="sec" id="photographs" aria-labelledby="photos-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="reel"><b>Reel II</b> &nbsp;/&nbsp; Photographs</span><h2 class="disp" id="photos-h">Frames you'll <em>frame.</em></h2></div>
+      <p class="lede">Portraits, candids, the details of the outfits and the light on the mandap. Scroll the strip sideways, like a contact sheet.</p>
+    </div>
+  </div>
+  <div class="strip-wrap">
+    <div class="strip" id="strip" tabindex="0" aria-label="Photo film strip, scrolls sideways">
+      <div class="film">
+        <div class="cell-f"><figure class="p"><img src="../img/weds-filming/lehenga-s.jpg" alt="Bride in a red lehenga and groom in a pink turban, under warm fairy lights" loading="lazy"><span class="tag br">Sample photo</span></figure><div class="edge"><span>WF ▸ 01A</span><span>The portrait</span></div></div>
+        <div class="cell-f"><figure class="l"><img src="../img/weds-filming/lake-s.jpg" alt="Bride and groom by a lake, autumn trees reflected in the water" loading="lazy"><span class="tag br">Sample photo</span></figure><div class="edge"><span>WF ▸ 02A</span><span>By the water</span></div></div>
+        <div class="cell-f"><figure class="s"><img src="../img/weds-filming/attire-s.jpg" alt="Groom in an embroidered sherwani holding the bride, who touches her hair" loading="lazy" style="object-position:50% 30%"><span class="tag br">Sample photo</span></figure><div class="edge"><span>WF ▸ 03A</span><span>The embrace</span></div></div>
+        <div class="cell-f"><figure class="l"><img src="../img/weds-filming/shoot-s.jpg" alt="A photographer photographing a bride and groom in a garden pavilion" loading="lazy"><span class="tag br">Sample photo</span></figure><div class="edge"><span>WF ▸ 04A</span><span>Behind the lens</span></div></div>
+        <div class="cell-f"><figure class="p"><img src="../img/weds-filming/gimbal-s.jpg" alt="A videographer with a camera rig filming at an outdoor ceremony" loading="lazy"><span class="tag br">Sample photo</span></figure><div class="edge"><span>WF ▸ 05A</span><span>Rolling</span></div></div>
+        <div class="cell-f"><a class="slot-frame" href="https://www.instagram.com/weds_filming/" target="_blank" rel="noopener"><span class="slot">Your albums here</span><strong>Real couples, real albums</strong><p>Wed's Filming's own photographs go in this strip. For now, see the couple albums in the Instagram highlights.</p></a><div class="edge"><span>WF ▸ 06A</span><span>Instagram ↗</span></div></div>
+      </div>
+    </div>
+    <div class="wrap strip-nav">
+      <span class="hint">Scroll sideways &nbsp;⟶</span>
+      <div class="btns"><button type="button" data-s="-1" aria-label="Scroll strip left">&#8592;</button><button type="button" data-s="1" aria-label="Scroll strip right">&#8594;</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATION -->
+<section class="sec dest" id="destination" aria-labelledby="dest-h" style="padding-bottom:clamp(80px,10vw,140px);padding-top:0">
+  <div class="screen">
+    <img src="../img/weds-filming/lake.jpg" srcset="../img/weds-filming/lake-s.jpg 900w, ../img/weds-filming/lake.jpg 1800w" sizes="100vw" alt="A couple by a calm lake surrounded by autumn trees" loading="lazy">
+    <span class="tag tr">Sample photo</span>
+    <div class="dest-copy">
+      <div class="wrap" style="width:100%">
+        <span class="reel"><b>Reel III</b> &nbsp;/&nbsp; Destination weddings</span>
+        <h2 class="disp" id="dest-h">Booking <em>worldwide.</em></h2>
+        <p class="lede">Home is Fraser Town, Bengaluru. Your wedding can be anywhere: a beach, a palace, a hill town or another country.</p>
+      </div>
+    </div>
+  </div>
+  <div class="wrap log">
+    <div>
+      <h3>Where the camera has been lately</h3>
+      <p>A logbook of recent destination shoots. The Goa entry is from the Wed's Filming Instagram highlights; the rest is for them to fill in.</p>
+      <p style="margin-top:26px"><a class="btn ghost" href="#enquire">Plan a destination wedding</a></p>
+    </div>
+    <ul class="board">
+      <li><span class="place">Bengaluru</span><span class="when">Home base</span></li>
+      <li><span class="place"><em>Goa</em></span><span class="when">August 2026</span></li>
+      <li class="empty"><span class="place">Next destination</span><span class="slot">Add a place</span></li>
+      <li class="empty"><span class="place">And another</span><span class="slot">Add a place</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec" id="process" aria-labelledby="proc-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="reel"><b>Reel IV</b> &nbsp;/&nbsp; How we work</span><h2 class="disp" id="proc-h">From hello <em>to highlight film.</em></h2></div>
+      <p class="lede">Four simple scenes. You plan a wedding; we plan how to remember it.</p>
+    </div>
+    <div class="process">
+      <div class="pic"><img src="../img/weds-filming/shoot.jpg" srcset="../img/weds-filming/shoot-s.jpg 900w, ../img/weds-filming/shoot.jpg 1800w" sizes="(max-width:820px) 100vw, 45vw" alt="A photographer capturing a couple embracing in a garden pavilion" loading="lazy"><span class="tag tr">Sample photo</span></div>
+      <ol class="steps">
+        <li><span class="n" aria-hidden="true">01</span><div><div class="sc">Scene one</div><h3>Enquiry</h3><p>Tell us your names, date, city and events. We'll check the calendar and tell you whether the date is free.</p></div></li>
+        <li><span class="n" aria-hidden="true">02</span><div><div class="sc">Scene two</div><h3>Planning</h3><p>A call to walk through every event, the families, the rituals that matter to you and the shots you can't miss. Then a shot plan for each day.</p></div></li>
+        <li><span class="n" aria-hidden="true">03</span><div><div class="sc">Scene three</div><h3>The day</h3><p>We photograph and film quietly, close to the moments and out of the way, so you can be present with your people.</p></div></li>
+        <li><span class="n" aria-hidden="true">04</span><div><div class="sc">Scene four</div><h3>Delivery</h3><p>Your edited photographs and films, ready to relive and share with family near and far.</p><span class="slot">Delivery time: your turnaround here</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="sec" id="packages" aria-labelledby="pkg-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="reel"><b>Reel V</b> &nbsp;/&nbsp; Packages</span><h2 class="disp" id="pkg-h">Choose your <em>coverage.</em></h2></div>
+      <p class="lede">Three tiers, laid out like a programme. Wed's Filming fills in what each one includes and the price, so couples can compare at a glance.</p>
+    </div>
+    <div class="pkgs">
+      <article class="pkg">
+        <div class="rn">I.</div><h3>Package name</h3><p class="h3sub"><span class="slot">Your package here</span></p>
+        <dl><div><dt>Events</dt><dd>—</dd></div><div><dt>Photography</dt><dd>—</dd></div><div><dt>Films</dt><dd>—</dd></div><div><dt>Album</dt><dd>—</dd></div></dl>
+        <div class="price">Price on request<small>Owner to fill in</small></div>
+        <a class="btn ghost" href="#enquire">Ask about this</a>
+      </article>
+      <article class="pkg mid">
+        <div class="rn">II.</div><h3>Package name</h3><p class="h3sub"><span class="slot">Your package here</span></p>
+        <dl><div><dt>Events</dt><dd>—</dd></div><div><dt>Photography</dt><dd>—</dd></div><div><dt>Films</dt><dd>—</dd></div><div><dt>Album</dt><dd>—</dd></div></dl>
+        <div class="price">Price on request<small>Owner to fill in</small></div>
+        <a class="btn" href="#enquire">Ask about this</a>
+      </article>
+      <article class="pkg">
+        <div class="rn">III.</div><h3>Package name</h3><p class="h3sub"><span class="slot">Your package here</span></p>
+        <dl><div><dt>Events</dt><dd>—</dd></div><div><dt>Photography</dt><dd>—</dd></div><div><dt>Films</dt><dd>—</dd></div><div><dt>Album</dt><dd>—</dd></div></dl>
+        <div class="price">Price on request<small>Owner to fill in</small></div>
+        <a class="btn ghost" href="#enquire">Ask about this</a>
+      </article>
+    </div>
+    <p class="pkgs-note">Destination weddings and custom coverage quoted separately.</p>
+  </div>
+</section>
+
+<!-- REVIEWS + INSTAGRAM -->
+<section class="sec" id="instagram" aria-labelledby="ig-h">
+  <div class="wrap">
+    <div class="rating">
+      <div class="big">4.9<em>★</em></div>
+      <div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p><strong>Rated 4.9 by 80 couples and families on Google.</strong>Read every review on Google Maps.</p>
+        <p style="margin-top:18px"><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Wed%27s+Filming+Coles+Rd+Fraser+Town+Bengaluru" target="_blank" rel="noopener">Read the reviews ↗</a></p>
+      </div>
+      <div class="quote-slot"><q>A favourite Google review goes here, quoted word for word with the reviewer's permission.</q><span class="slot">Featured review slot</span></div>
+    </div>
+
+    <div class="ig">
+      <div>
+        <span class="reel"><b>Reel VI</b> &nbsp;/&nbsp; Instagram</span>
+        <h2 class="handle disp" id="ig-h"><a href="https://www.instagram.com/weds_filming/" target="_blank" rel="noopener">@weds_filming</a></h2>
+        <p class="by">Run by Syed Shabaz</p>
+        <div class="stats"><div>30.7K<span>Followers</span></div><div>1,036<span>Posts</span></div></div>
+        <p class="bio">Wedding photos &amp; films<br>Booking worldwide ✈️<br>Capturing life's priceless moments<small>From the Instagram bio</small></p>
+        <p class="hl">The highlights hold albums from many couples, plus the Goa shoot from August 2026.</p>
+        <a class="btn" href="https://www.instagram.com/weds_filming/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Follow on Instagram</a>
+      </div>
+      <div class="mosaic">
+        <a href="https://www.instagram.com/weds_filming/" target="_blank" rel="noopener" aria-label="Open @weds_filming on Instagram"><img src="../img/weds-filming/attire-s.jpg" alt="" loading="lazy" style="object-position:50% 25%"><span class="tag tl">Sample photo</span></a>
+        <a href="https://www.instagram.com/weds_filming/" target="_blank" rel="noopener" aria-label="Open @weds_filming on Instagram"><img src="../img/weds-filming/lehenga-s.jpg" alt="" loading="lazy" style="object-position:50% 40%"><span class="tag tl">Sample photo</span></a>
+        <a href="https://www.instagram.com/weds_filming/" target="_blank" rel="noopener" aria-label="Open @weds_filming on Instagram"><img src="../img/weds-filming/shoot-s.jpg" alt="" loading="lazy"><span class="tag tl">Sample photo</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRY -->
+<section class="sec" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq">
+    <div>
+      <span class="reel"><b>Final reel</b> &nbsp;/&nbsp; Enquire</span>
+      <h2 class="disp" id="enq-h">Check <em>your date.</em></h2>
+      <p class="lede" style="margin-top:22px">Dates go quickly in wedding season. Send your details and Wed's Filming will tell you whether they're free, or simply call the studio.</p>
+      <ul class="contact">
+        <li><a href="tel:+918044328099"><span>Call</span><b>080 4432 8099</b></a></li>
+        <li><a href="mailto:wedsfilming.co.in@gmail.com"><span>Email</span><b>wedsfilming.co.in@gmail.com</b></a></li>
+        <li><a href="https://www.instagram.com/weds_filming/" target="_blank" rel="noopener"><span>Instagram</span><b>@weds_filming</b></a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=No+31%2F1+Blue+Pearl+Building+Coles+Rd+Fraser+Town+Bengaluru" target="_blank" rel="noopener"><span>Studio</span><b>No 31/1, Blue Pearl Building, Coles Rd, Cleveland Town, Fraser Town, Bengaluru</b></a></li>
+      </ul>
+    </div>
+
+    <form class="date" id="dateForm" novalidate>
+      <div class="fhead"><h3>Tell us about the day</h3><small>Opens your email app</small></div>
+      <div class="grid2">
+        <div class="field"><label for="f-names">Couple's names</label><input id="f-names" name="names" autocomplete="off" placeholder="e.g. Aisha &amp; Rohan" required><div class="ferr">Please add your names.</div></div>
+        <div class="field"><label for="f-date">Wedding date</label><input id="f-date" name="date" type="date" required><div class="ferr">Please pick the date.</div></div>
+        <div class="field"><label for="f-city">City or venue</label><input id="f-city" name="city" placeholder="Bengaluru, Goa, Dubai…" required><div class="ferr">Where is the wedding?</div></div>
+        <div class="field"><label for="f-phone">Your phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+91" required><div class="ferr">A number to reach you on.</div></div>
+      </div>
+      <fieldset class="field">
+        <legend>Events</legend>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="events" value="Engagement"><span>Engagement</span></label>
+          <label class="chip"><input type="checkbox" name="events" value="Haldi"><span>Haldi</span></label>
+          <label class="chip"><input type="checkbox" name="events" value="Mehendi"><span>Mehendi</span></label>
+          <label class="chip"><input type="checkbox" name="events" value="Sangeet"><span>Sangeet</span></label>
+          <label class="chip"><input type="checkbox" name="events" value="Wedding" checked><span>Wedding</span></label>
+          <label class="chip"><input type="checkbox" name="events" value="Reception"><span>Reception</span></label>
+          <label class="chip"><input type="checkbox" name="events" value="Pre-wedding shoot"><span>Pre-wedding shoot</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="field">
+        <legend>You'd like</legend>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="cover" value="Photos and films" checked><span>Photos &amp; films</span></label>
+          <label class="chip"><input type="radio" name="cover" value="Photos only"><span>Photos</span></label>
+          <label class="chip"><input type="radio" name="cover" value="Films only"><span>Films</span></label>
+        </div>
+      </fieldset>
+      <div class="field"><label for="f-notes">Anything else</label><textarea id="f-notes" name="notes" placeholder="Guest count, venues, the moments you care about most…"></textarea></div>
+      <div class="fsend">
+        <button class="btn" type="submit">Check my date</button>
+        <p>Your details go straight to wedsfilming.co.in@gmail.com from your own email app. Nothing is stored here.</p>
+      </div>
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="logo" href="#top"><span>WED'S FILMING</span><small>Photos &amp; Films · Bengaluru</small></a>
+        <p>Wedding photographs and films. Capturing life's priceless moments, in Bengaluru and worldwide.</p>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="tel:+918044328099">080 4432 8099</a></li>
+          <li><a href="mailto:wedsfilming.co.in@gmail.com">wedsfilming.co.in@gmail.com</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=No+31%2F1+Blue+Pearl+Building+Coles+Rd+Fraser+Town+Bengaluru" target="_blank" rel="noopener">Coles Rd, Fraser Town</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#films">Films</a></li><li><a href="#photographs">Photographs</a></li><li><a href="#destination">Destination weddings</a></li><li><a href="https://www.instagram.com/weds_filming/" target="_blank" rel="noopener">Instagram ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="credit">
+      <span>Concept website designed by Farman, an independent web developer in Bengaluru, from public information. Not the official website of Wed's Filming.</span>
+      <span>Photos: Unsplash samples, not Wed's Filming's work.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar" aria-label="Quick actions">
+  <a class="btn ghost" href="tel:+918044328099">Call</a>
+  <a class="btn" href="#enquire">Check your date</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // notice
+  var c=document.getElementById('concept');
+  c.querySelector('[data-close]').addEventListener('click',function(){c.remove()});
+
+  // hero cross-fade
+  var slides=[].slice.call(document.querySelectorAll('#frame .slide')), cur=document.querySelector('[data-cur]'), i=0, t;
+  function show(n){
+    slides[i].classList.remove('on'); i=(n+slides.length)%slides.length; slides[i].classList.add('on');
+    cur.textContent=('0'+(i+1)).slice(-2);
+  }
+  function start(){ if(reduce) return; clearInterval(t); t=setInterval(function(){show(i+1)},6500); }
+  document.querySelector('[data-next]').addEventListener('click',function(){show(i+1);start()});
+  document.querySelector('[data-prev]').addEventListener('click',function(){show(i-1);start()});
+  document.addEventListener('visibilitychange',function(){ if(document.hidden) clearInterval(t); else start(); });
+  slides.forEach(function(s){ var im=s.querySelector('img'); im.removeAttribute('loading'); });
+  start();
+
+  // film strip
+  var strip=document.getElementById('strip');
+  [].forEach.call(document.querySelectorAll('[data-s]'),function(b){
+    b.addEventListener('click',function(){
+      var cell=strip.querySelector('.cell-f'); var w=cell?cell.getBoundingClientRect().width:400;
+      strip.scrollBy({left:+b.getAttribute('data-s')*w*1.1,behavior:reduce?'auto':'smooth'});
+    });
+  });
+
+  // enquiry → mailto
+  var f=document.getElementById('dateForm'), st=document.getElementById('status');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var bad=null;
+    ['f-names','f-date','f-city','f-phone'].forEach(function(id){
+      var el=document.getElementById(id), fld=el.closest('.field'), ok=el.value.trim()!=='';
+      fld.classList.toggle('err',!ok); if(!ok && !bad) bad=el;
+    });
+    if(bad){ bad.focus(); st.textContent='A few details are missing. They are marked above.'; st.classList.add('show'); return; }
+    var v=function(id){return document.getElementById(id).value.trim()};
+    var ev=[].map.call(f.querySelectorAll('input[name=events]:checked'),function(x){return x.value}).join(', ')||'Not specified';
+    var cov=(f.querySelector('input[name=cover]:checked')||{}).value||'';
+    var d=v('f-date'), nice=d;
+    try{ nice=new Date(d+'T00:00:00').toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'}); }catch(_){}
+    var body=['Hello Wed\'s Filming,','','We would like to check whether you are free for our wedding.','',
+      'Couple: '+v('f-names'),'Wedding date: '+nice,'City / venue: '+v('f-city'),'Events: '+ev,'Coverage: '+cov,'Phone: '+v('f-phone'),'',
+      v('f-notes')?('Notes: '+v('f-notes')):'', '', 'Thank you!'].join('\n');
+    var href='mailto:wedsfilming.co.in@gmail.com?subject='+encodeURIComponent('Date check: '+v('f-names')+' · '+nice)+'&body='+encodeURIComponent(body);
+    st.innerHTML='Opening your email app with everything filled in. If nothing opens, email <a href="mailto:wedsfilming.co.in@gmail.com">wedsfilming.co.in@gmail.com</a> or call <a href="tel:+918044328099">080 4432 8099</a>.';
+    st.classList.add('show');
+    window.location.href=href;
+  });
+  f.addEventListener('input',function(e){ var fld=e.target.closest('.field'); if(fld && e.target.value.trim()) fld.classList.remove('err'); });
+})();
+</script>
+</body>
+</html>
