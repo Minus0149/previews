@@ -1,0 +1,992 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script src="../preview-guard.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Prakash Jewellers · Rajajinagar, Bengaluru (concept preview)</title>
+<meta name="description" content="Concept website preview for Prakash Jewellers, a family-owned jewellery store on 19th Main Road, Rajajinagar, Bengaluru, serving since 1989.">
+<meta name="theme-color" content="#0f3b2e">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Hanken+Grotesk:wght@400;500;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<style>
+:root{
+  --v:#0f3b2e; --v-dk:#0b2f24; --v-deep:#071f18; --v-2:#15493a;
+  --g:#c9a14a; --g-lt:#e8cf8e; --g-hi:#fff3d0; --g-dk:#8a6a24; --g-ink:#74561a;
+  --iv:#f6efe2; --iv-2:#efe5d0; --ink:#1f1b14; --mut:#5a5243; --mut-v:#cdc6af;
+  --hair:rgba(201,161,74,.42); --hair-2:rgba(201,161,74,.22);
+  --serif:'Marcellus',Georgia,serif; --sans:'Hanken Grotesk',system-ui,sans-serif; --dev:'Tiro Devanagari Hindi',serif;
+  --ease:cubic-bezier(.2,.7,.2,1); --accel:cubic-bezier(.4,0,1,1); --spring:cubic-bezier(.3,1.5,.5,1);
+  --t1:160ms; --t2:320ms; --t3:640ms;
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  --noise-l:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .35 0 0 0 0 .15 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --jaali:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cpath d='M22 2 42 22 22 42 2 22Z' fill='none' stroke='%23c9a14a' stroke-opacity='.08'/%3E%3Ccircle cx='22' cy='22' r='1.4' fill='%23c9a14a' fill-opacity='.12'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--v);color:var(--iv);font:400 17px/1.65 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--g-lt);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.velvet{background:var(--noise),radial-gradient(120% 70% at 50% 0%,rgba(40,110,84,.35),transparent 60%),var(--v)}
+
+/* type */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;font:600 12px/1.2 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--g-lt)}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--g)}
+.light .eyebrow{color:var(--g-ink)} .light .eyebrow::before{background:var(--g-dk)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:.02em}
+h2{font-size:clamp(32px,4vw,54px);line-height:1.06;text-transform:uppercase}
+h2 em,h1 em{font-style:normal}
+.lede{font-size:18px;color:var(--mut-v);max-width:560px;margin:18px 0 0}
+.light .lede{color:var(--mut)}
+.shim{background:linear-gradient(105deg,var(--g) 0%,var(--g) 40%,var(--g-hi) 50%,var(--g) 60%,var(--g) 100%);background-size:300% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 9s ease-in-out 1.6s infinite}
+.light .shim{background-image:linear-gradient(105deg,var(--g-ink) 0%,var(--g-ink) 40%,#c9a14a 50%,var(--g-ink) 60%,var(--g-ink) 100%)}
+@keyframes shimmer{0%{background-position:100% 0}30%,100%{background-position:0 0}}
+
+/* filigree */
+.fil{display:block;width:240px;height:24px;margin:22px 0 0;color:var(--g)}
+.fil.c{margin-left:auto;margin-right:auto}
+.fil path,.fil circle{fill:none;stroke:currentColor;stroke-width:1}
+.fil .dot{fill:currentColor;stroke:none}
+.io .fil[data-rv] path{stroke-dasharray:120;stroke-dashoffset:120;transition:stroke-dashoffset 1.2s var(--ease)}
+.io .fil[data-rv].in path{stroke-dashoffset:0}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:600 15px/1 var(--sans);letter-spacing:.02em;text-decoration:none;cursor:pointer;border:0;transition:transform var(--t1) var(--ease),background-color var(--t2) var(--ease),color var(--t2) var(--ease),border-color var(--t2) var(--ease),box-shadow var(--t2) var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn .arr{width:18px;height:18px;transition:transform var(--t2) var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn svg{flex:none}
+.btn-g{background:linear-gradient(180deg,#d9b55e,#b98f39);color:#1c160a;box-shadow:0 10px 30px -12px rgba(201,161,74,.7),inset 0 1px 0 rgba(255,245,215,.6)}
+.btn-g:hover{box-shadow:0 16px 36px -12px rgba(201,161,74,.85),inset 0 1px 0 rgba(255,245,215,.7)}
+.btn-o{border:1px solid var(--hair);color:var(--iv);background:rgba(255,255,255,.02)}
+.btn-o:hover{border-color:var(--g);background:rgba(201,161,74,.08)}
+.light .btn-o{color:var(--ink);border-color:rgba(116,86,26,.45)}
+.light .btn-o:hover{border-color:var(--g-ink);background:rgba(201,161,74,.1)}
+.btn-dk{background:var(--v);color:var(--iv)}
+.btn-dk:hover{background:var(--v-2)}
+.btn-g .shine{position:absolute;inset:0;border-radius:inherit;overflow:hidden;pointer-events:none}
+.btn-g .shine::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-50%;background:linear-gradient(105deg,transparent,rgba(255,250,230,.55),transparent);transform:skewX(-18deg);transition:transform .7s var(--ease)}
+.btn-g:hover .shine::after{transform:translateX(380%) skewX(-18deg)}
+
+/* tag */
+.tag{position:absolute;left:12px;bottom:12px;z-index:3;font:600 10.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#f6efe2;background:rgba(7,31,24,.72);border:1px solid rgba(201,161,74,.4);padding:6px 9px;border-radius:999px;backdrop-filter:blur(4px)}
+
+/* owner slot */
+.slot{display:inline-flex;align-items:center;gap:8px;border:1px dashed rgba(201,161,74,.6);border-radius:8px;padding:4px 10px;font:500 14px/1.3 var(--sans);color:var(--g-lt);background:rgba(201,161,74,.06)}
+.slot small{font:700 9.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--iv);opacity:.75}
+.light .slot{color:var(--g-ink);border-color:rgba(116,86,26,.5);background:rgba(201,161,74,.08)}
+.light .slot small{color:var(--ink)}
+
+/* progress */
+.prog{position:fixed;left:0;right:0;top:0;height:2px;z-index:90;background:linear-gradient(90deg,var(--g-dk),var(--g-lt),var(--g));transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+
+/* Farman bar */
+.fb{position:relative;z-index:70;background:#14130f;color:#ece6d8;font-size:13.5px;line-height:1.5}
+.fb-in{display:flex;align-items:center;gap:14px;max-width:1240px;margin:0 auto;padding:10px 60px 10px 24px;animation:fbIn .6s var(--ease) 1.2s both}
+.fb-tag{flex:none;font:700 10px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--g-lt);border:1px solid rgba(201,161,74,.5);padding:5px 9px;border-radius:999px}
+.fb p{margin:0;flex:1;min-width:0}
+.fb-act{display:flex;gap:8px;flex:none}
+.fb-act a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border-radius:999px;font-weight:700;font-size:13.5px;text-decoration:none;white-space:nowrap;transition:transform var(--t1) var(--ease),background-color var(--t2),border-color var(--t2)}
+.fb-act a:active{transform:scale(.97)}
+.fb-b1{background:#f6efe2;color:#1f1b14}.fb-b1:hover{background:#fff}
+.fb-b2{border:1px solid rgba(236,230,216,.35);color:#ece6d8}.fb-b2:hover{border-color:#ece6d8}
+.fb-x{position:absolute;right:8px;top:50%;margin-top:-22px;width:44px;height:44px;border:0;border-radius:10px;background:none;color:#b8b09d;font-size:22px;cursor:pointer;transition:color var(--t1),transform var(--t1)}
+.fb-x:hover{color:#fff}.fb-x:active{transform:scale(.92)}
+.fb{transition:opacity var(--t2) var(--ease),transform var(--t2) var(--ease)}
+.fb.tuck{opacity:0;transform:translateY(16px);pointer-events:none}
+.fb.out .fb-in{animation:fbOut .25s var(--accel) both}
+@keyframes fbIn{from{opacity:0;transform:translateY(-12px)}}
+@keyframes fbOut{to{opacity:0;transform:translateY(-8px)}}
+@media (min-width:1101px){
+  .fb{position:fixed;right:20px;bottom:20px;width:360px;border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.45);border:1px solid rgba(201,161,74,.3)}
+  .fb-in{flex-direction:column;align-items:flex-start;gap:10px;padding:18px 18px 16px;animation-name:fbCard}
+  .fb p{padding-right:26px}
+  .fb-x{top:6px;right:6px;margin:0}
+  .fb.out .fb-in{animation-name:fbCardOut}
+  @keyframes fbCard{from{opacity:0;transform:translateY(24px)}}
+  @keyframes fbCardOut{to{opacity:0;transform:translateY(12px)}}
+}
+
+/* header */
+.hd{position:sticky;top:0;z-index:60;transition:background-color var(--t2) var(--ease),box-shadow var(--t2) var(--ease)}
+.hd-in{display:flex;align-items:center;gap:28px;height:84px;transition:height var(--t2) var(--ease)}
+.hd.solid{background:rgba(9,40,31,.9);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--hair-2),0 14px 30px -20px rgba(0,0,0,.6)}
+.hd.solid .hd-in{height:66px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-height:44px}
+.mono{width:40px;height:46px;flex:none;color:var(--g);transition:transform var(--t2) var(--ease)}
+.brand:hover .mono{transform:translateY(-2px)}
+.brand b{display:block;font:400 21px/1 var(--serif);letter-spacing:.08em;text-transform:uppercase;color:var(--iv)}
+.brand span{display:block;margin-top:5px;font:600 10.5px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--g-lt)}
+.links{display:flex;gap:4px;margin-left:auto}
+.links a{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-size:14.5px;font-weight:500;text-decoration:none;color:var(--mut-v);transition:color var(--t1)}
+.links a::after{content:"";position:absolute;left:12px;right:12px;bottom:9px;height:1px;background:var(--g);transform:scaleX(0);transform-origin:0 50%;transition:transform var(--t2) var(--ease)}
+.links a:hover,.links a.on{color:var(--iv)}
+.links a:hover::after,.links a.on::after{transform:scaleX(1)}
+.hd .btn{min-height:46px;padding:0 20px;font-size:14px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;margin-top:-84px;padding:148px 0 96px;background:var(--noise),var(--jaali),radial-gradient(60% 70% at 72% 38%,rgba(201,161,74,.16),transparent 62%),radial-gradient(90% 80% at 20% 0%,rgba(36,104,80,.45),transparent 60%),var(--v)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--hair),transparent)}
+.glow{position:absolute;width:640px;height:640px;right:6%;top:4%;border-radius:50%;background:radial-gradient(circle,rgba(232,207,142,.14),transparent 62%);pointer-events:none;animation:drift 16s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-50px,40px) scale(1.08)}}
+.hero-in{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
+.dev{font:400 15px/1 var(--dev);letter-spacing:0;color:var(--g);text-transform:none}
+.hero h1{font-size:clamp(30px,3.85vw,56px);line-height:1.04;text-transform:uppercase;letter-spacing:.025em}
+.hero h1 .l{display:block}
+.hero .sub{font-size:18.5px;color:var(--mut-v);max-width:520px;margin:24px 0 0}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.trust{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:34px;padding-top:24px;border-top:1px solid var(--hair-2);max-width:560px}
+.trust .rt{display:flex;align-items:center;gap:12px}
+.trust .num{font:400 40px/1 var(--serif);color:var(--g-lt)}
+.stars{display:flex;gap:2px;color:var(--g)}
+.stars svg{width:15px;height:15px}
+.trust small{display:block;font-size:13px;color:var(--mut-v);line-height:1.35}
+.trust .pill{font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--iv);padding:9px 12px;border:1px solid var(--hair-2);border-radius:999px}
+/* hero entrance */
+.h-e{animation:rise .8s var(--ease) both;animation-delay:calc(var(--d,0) * 80ms + 150ms)}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}}
+@keyframes fade{from{opacity:0}}
+/* arch */
+.arch-wrap{position:relative;justify-self:center;width:min(100%,430px);padding:16px}
+.arch{position:relative;aspect-ratio:4/5;border-radius:50% 50% 0 0/40% 40% 0 0;overflow:hidden;background:var(--v-deep);box-shadow:0 40px 80px -30px rgba(0,0,0,.7)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.hero .arch img{object-position:50% 38%;animation:kb 22s ease-in-out 1s infinite alternate}
+@keyframes kb{to{transform:scale(1.07) translateY(-6px)}}
+.arch::before{content:"";position:absolute;inset:0;z-index:2;background:radial-gradient(90% 60% at 50% 30%,transparent 50%,rgba(7,31,24,.55));pointer-events:none}
+.sweep::after{content:"";position:absolute;inset:-10% 0;z-index:2;background:linear-gradient(105deg,transparent 38%,rgba(255,240,205,.32) 50%,transparent 62%);transform:translateX(-110%);animation:sweep 9s ease-in-out 2s infinite;pointer-events:none;mix-blend-mode:screen}
+@keyframes sweep{0%{transform:translateX(-110%)}32%,100%{transform:translateX(110%)}}
+.arch-line{position:absolute;inset:0;width:100%;height:100%;overflow:visible;color:var(--g);pointer-events:none}
+.arch-line path{fill:none;stroke:currentColor;stroke-width:1;vector-effect:non-scaling-stroke}
+.arch-line .a1{stroke-dasharray:1700;stroke-dashoffset:1700;animation:draw 2.2s var(--ease) .5s forwards}
+.arch-line .a2{opacity:.4;stroke-dasharray:1700;stroke-dashoffset:1700;animation:draw 2.4s var(--ease) .8s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.plate{position:absolute;left:50%;bottom:-6px;z-index:4;transform:translateX(-50%);white-space:nowrap;display:flex;align-items:center;gap:12px;padding:12px 20px;background:var(--v-deep);border:1px solid var(--hair);border-radius:4px;font:400 13px/1 var(--serif);letter-spacing:.24em;text-transform:uppercase;color:var(--g-lt);box-shadow:0 14px 30px -14px rgba(0,0,0,.8)}
+.plate i{width:5px;height:5px;transform:rotate(45deg);background:var(--g)}
+.arch-2{position:absolute;width:44%;left:-22%;bottom:12%;z-index:-1;opacity:.92}
+.arch-2 .arch{box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}
+.arch-2 .arch img{object-position:50% 30%}
+.arch-2 .tag{font-size:9.5px;left:8px;bottom:8px;padding:5px 7px}
+
+/* gold-rate ticker */
+.rate{position:relative;background:var(--v-deep);border-bottom:1px solid var(--hair-2);display:flex;align-items:stretch}
+.rate-lbl{flex:none;display:flex;flex-direction:column;justify-content:center;gap:4px;padding:16px 28px 16px 32px;border-right:1px solid var(--hair-2);background:var(--v-deep);position:relative;z-index:2}
+.rate-lbl b{font:400 14px/1.1 var(--serif);letter-spacing:.18em;text-transform:uppercase;color:var(--g-lt)}
+.rate-lbl span{font-size:12px;color:var(--mut-v)}
+.rate-vp{flex:1;min-width:0;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.rate-track{display:flex;width:max-content;animation:tick 38s linear infinite}
+.rate:hover .rate-track{animation-play-state:paused}
+.rate-set{display:flex;align-items:center;gap:44px;padding:0 22px}
+.rate-it{display:flex;align-items:center;gap:12px;white-space:nowrap;min-height:64px}
+.rate-it em{font:400 15px/1 var(--serif);font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:var(--iv)}
+.rate-it .slot{font-size:13.5px}
+.rate-it::after{content:"";width:5px;height:5px;margin-left:32px;transform:rotate(45deg);border:1px solid var(--g)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* sections */
+section{position:relative}
+.sec{padding:120px 0}
+.head{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end;margin-bottom:54px}
+.head .lede{margin-top:14px}
+.light{background:var(--noise-l),radial-gradient(80% 60% at 50% 0%,#fbf6ec,transparent 70%),var(--iv);color:var(--ink)}
+.light.alt{background:var(--noise-l),var(--iv-2)}
+
+/* reveals */
+.io [data-rv]{opacity:0;transition:opacity .8s var(--ease),transform .8s var(--ease),clip-path 1s var(--ease);transition-delay:calc(var(--i,0) * 75ms)}
+.io [data-rv="up"]{transform:translateY(12px)}
+.io [data-rv="scale"]{transform:scale(.95)}
+.io [data-rv="wipe"]{clip-path:inset(0 0 100% 0)}
+.io [data-rv].in{opacity:1;transform:none;clip-path:inset(0 0 0 0)}
+
+/* vitrine */
+.vitrine{background:var(--noise),radial-gradient(70% 50% at 50% 0%,rgba(36,104,80,.4),transparent 70%),var(--v-dk)}
+.cab{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:290px;gap:18px}
+.tile{position:relative;overflow:hidden;border-radius:6px;isolation:isolate;background:radial-gradient(120% 80% at 50% -10%,rgba(232,207,142,.18),transparent 55%),linear-gradient(180deg,#123f31,#0a2a20);box-shadow:inset 0 0 0 1px rgba(201,161,74,.18),0 20px 40px -26px rgba(0,0,0,.8);transition:transform var(--t2) var(--ease),box-shadow var(--t2) var(--ease)}
+.tile::before{content:"";position:absolute;inset:10px;z-index:3;border:1px solid rgba(201,161,74,.3);border-radius:50% 50% 3px 3px/80px 80px 3px 3px;pointer-events:none;transition:border-color var(--t2),inset var(--t2) var(--ease)}
+.tile:hover{transform:translateY(-6px);box-shadow:inset 0 0 0 1px rgba(201,161,74,.4),0 34px 50px -26px rgba(0,0,0,.9)}
+.tile:hover::before{border-color:rgba(232,207,142,.65)}
+.tile .spot{position:absolute;left:50%;top:0;width:460px;height:460px;margin:-230px 0 0 -230px;z-index:2;border-radius:50%;background:radial-gradient(circle,rgba(255,238,196,.2),transparent 62%);transform:translate(var(--dx,0px),var(--dy,0px));pointer-events:none;transition:opacity var(--t2);mix-blend-mode:screen}
+.tile .ph{position:absolute;inset:0;z-index:0}
+.tile .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+.tile:hover .ph img{transform:scale(1.06)}
+.tile .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,31,24,0) 40%,rgba(7,31,24,.92) 100%),radial-gradient(100% 70% at 50% 30%,transparent 50%,rgba(7,31,24,.5))}
+.tile .tag{left:auto;right:20px;top:20px;bottom:auto}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;z-index:4;padding:22px 26px 24px;display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
+.tile .no{display:block;font:600 10.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--g)}
+.tile h3{margin-top:8px;font-size:23px;line-height:1.1;text-transform:uppercase;letter-spacing:.06em;color:var(--iv)}
+.tile p{margin:8px 0 0;font-size:14px;line-height:1.5;color:var(--mut-v);max-width:300px}
+.tile .add{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--hair);color:var(--g-lt);background:rgba(7,31,24,.5);transition:transform var(--t2) var(--spring),background-color var(--t2),color var(--t2)}
+.tile .add svg{width:18px;height:18px}
+.tile:hover .add{background:var(--g);color:#1c160a;transform:rotate(90deg)}
+.tile .hit{position:absolute;inset:0;z-index:5;border:0;background:none;cursor:pointer;border-radius:6px}
+.tile.big{grid-column:span 2;grid-row:span 2}
+.tile.big h3{font-size:clamp(28px,3vw,40px)}
+.tile.tall{grid-row:span 2}
+.tile.tall .ph img{filter:saturate(.8) sepia(.12)}
+.tile.tall .ph::after{background:linear-gradient(180deg,rgba(11,47,36,.7),rgba(11,47,36,0) 45%,rgba(7,31,24,.92) 100%),radial-gradient(100% 70% at 50% 40%,transparent 50%,rgba(7,31,24,.5))}
+.tile.big .ph img{object-position:50% 35%}
+.tile.picked .add{background:var(--g);color:#1c160a}
+.tile.picked::before{border-color:var(--g-lt)}
+/* typographic tiles */
+.glyph{position:absolute;left:50%;top:44%;z-index:1;transform:translate(-50%,-50%);color:var(--g)}
+.pt{font:400 104px/1 var(--serif);color:transparent;-webkit-text-stroke:1px var(--g);letter-spacing:.02em;position:relative}
+.pt sup{position:absolute;left:-26px;top:6px;font:500 14px/1 var(--sans);-webkit-text-stroke:0;color:var(--g-lt);letter-spacing:.1em}
+.tile:hover .pt{color:rgba(201,161,74,.12)}
+.pt{transition:color var(--t3) var(--ease)}
+.glyph svg{display:block;width:118px;height:118px;overflow:visible}
+.glyph svg *{vector-effect:non-scaling-stroke}
+.watch .hand{transform-origin:60px 60px}
+.watch .hm{animation:spin 60s linear infinite}
+.watch .hh{animation:spin 720s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.glyph .lot{transition:transform var(--t3) var(--ease);transform-origin:60px 90px}
+.tile:hover .glyph .lot{transform:scale(1.06)}
+
+/* custom order */
+.custom .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.custom .arch-wrap{width:min(100%,460px);justify-self:start}
+.custom .arch img{object-position:62% 50%}
+.custom .arch-line{color:var(--g-dk)}
+.steps{list-style:none;margin:40px 0 0;padding:0;position:relative}
+.steps::before{content:"";position:absolute;left:23px;top:24px;bottom:24px;width:1px;background:linear-gradient(var(--g-dk),rgba(138,106,36,.2));transform-origin:50% 0;transition:transform 1.4s var(--ease)}
+.io .steps:not(.in)::before{transform:scaleY(0)}
+.steps li{position:relative;display:grid;grid-template-columns:48px 1fr;gap:22px;padding:0 0 30px}
+.steps li:last-child{padding-bottom:0}
+.steps .n{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--iv);border:1px solid var(--g-dk);font:400 18px/1 var(--serif);color:var(--g-ink);position:relative;z-index:1}
+.steps h3{line-height:1.2;font-size:22px;text-transform:uppercase;letter-spacing:.06em;margin-top:10px}
+.steps p{margin:6px 0 0;color:var(--mut);font-size:16px}
+.custom .ctas{margin-top:36px}
+.custom .slot{margin-top:28px}
+
+/* visit */
+.visit .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center}
+.visit .arch-wrap{width:min(100%,440px);justify-self:end}
+.visit .arch img{object-position:50% 55%}
+.sign{display:inline-flex;flex-direction:column;gap:6px;margin-top:30px;padding:18px 26px;border:1px solid var(--hair);border-radius:4px;background:linear-gradient(180deg,rgba(255,255,255,.04),transparent),var(--v-deep);position:relative}
+.sign::before{content:"";position:absolute;inset:4px;border:1px solid var(--hair-2);border-radius:2px;pointer-events:none}
+.sign b{font:400 26px/1.1 var(--serif);letter-spacing:.14em;text-transform:uppercase;color:var(--g-lt)}
+.sign span{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut-v)}
+.addr{font-style:normal;margin-top:26px;font-size:17.5px;line-height:1.7;color:var(--iv)}
+.info{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin-top:30px;background:var(--hair-2);border:1px solid var(--hair-2);border-radius:10px;overflow:hidden}
+.info > div{background:var(--v-dk);padding:18px 20px}
+.info dt{font:600 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--g)}
+.info dd{margin:10px 0 0;font-size:15.5px;color:var(--iv)}
+.info dd a{text-decoration:none;border-bottom:1px solid var(--hair);transition:border-color var(--t1),color var(--t1)}
+.info dd a:hover{border-color:var(--g-lt);color:var(--g-lt)}
+.info .wide{grid-column:1/-1}
+.hours{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:10px}
+.visit .ctas{margin-top:30px}
+
+/* instagram */
+.insta .top{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.quote{margin:0;font:400 clamp(26px,3.2vw,42px)/1.2 var(--serif);text-transform:uppercase;letter-spacing:.03em;max-width:820px}
+.quote q{quotes:"\201C" "\201D"}
+.quote cite{display:block;margin-top:16px;font:500 14px/1.4 var(--sans);font-style:normal;letter-spacing:.04em;text-transform:none;color:var(--mut)}
+.ig-stats{display:flex;gap:34px}
+.ig-stats div{text-align:left}
+.ig-stats b{display:block;font:400 44px/1 var(--serif);color:var(--g-ink)}
+.ig-stats div > span{font-size:13px;color:var(--mut);letter-spacing:.04em}
+.hl{display:flex;gap:22px;margin:48px -32px 0;padding:6px 32px 14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.hl a{flex:none;width:96px;display:flex;flex-direction:column;align-items:center;gap:10px;text-decoration:none;scroll-snap-align:start;color:var(--ink)}
+.ring{position:relative;display:grid;place-items:center;width:88px;height:88px;border-radius:50%;padding:3px;background:conic-gradient(from 210deg,var(--g-dk),var(--g-lt),var(--g),var(--g-dk));transition:transform var(--t2) var(--spring)}
+.ring i{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:var(--v);border:3px solid var(--iv-2);color:var(--g-lt)}
+.ring svg{width:34px;height:34px}
+.ring .ptx{font:400 26px/1 var(--serif);color:var(--g-lt);font-style:normal}
+.hl a:hover .ring{transform:translateY(-4px) scale(1.04)}
+.hl a:active .ring{transform:scale(.96)}
+.hl small{font-size:12.5px;line-height:1.3;text-align:center;font-weight:600;color:var(--mut)}
+.insta .ctas{margin-top:34px;align-items:center}
+.insta .note{font-size:13.5px;color:var(--mut)}
+
+/* enquiry */
+.enq .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
+.enq .side .pic{position:relative;margin-top:36px;aspect-ratio:16/10;border-radius:200px 200px 6px 6px/120px 120px 6px 6px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.enq .side .pic img{width:100%;height:100%;object-fit:cover}
+.contact-lines{display:grid;gap:10px;margin-top:28px}
+.contact-lines a{display:flex;align-items:center;gap:14px;min-height:48px;text-decoration:none;color:var(--iv);font-size:16px;transition:color var(--t1)}
+.contact-lines a:hover{color:var(--g-lt)}
+.contact-lines .ic{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--hair);color:var(--g);transition:background-color var(--t2),transform var(--t2) var(--ease)}
+.contact-lines a:hover .ic{background:rgba(201,161,74,.12);transform:translateY(-2px)}
+.contact-lines svg{width:19px;height:19px}
+.card{position:relative;background:var(--iv);color:var(--ink);border-radius:14px;padding:38px 38px 34px;box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+.card::before{content:"";position:absolute;inset:8px;border:1px solid rgba(138,106,36,.28);border-radius:9px;pointer-events:none}
+.card h3{font-size:26px;text-transform:uppercase;letter-spacing:.06em}
+.card .hint{margin:6px 0 0;color:var(--mut);font-size:15px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.f{position:relative}
+.f label,.lab{display:block;font:700 11.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--g-ink);margin-bottom:9px}
+.f input,.f textarea{width:100%;min-height:52px;padding:14px 44px 14px 16px;border:1px solid rgba(31,27,20,.22);border-radius:10px;background:#fffdf8;font:400 16px/1.4 var(--sans);color:var(--ink);transition:border-color var(--t1),box-shadow var(--t2) var(--ease)}
+.f textarea{min-height:92px;resize:vertical;padding-right:16px}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--g-dk);box-shadow:0 0 0 4px rgba(201,161,74,.22)}
+.f .ok{position:absolute;right:14px;top:40px;width:20px;height:20px;color:#2f7a52;opacity:0;transform:scale(.4);transition:opacity var(--t1),transform var(--t2) var(--spring)}
+.f.good .ok{opacity:1;transform:scale(1)}
+.f .err{display:none;margin-top:7px;font-size:13.5px;color:#a23a2a;font-weight:600}
+.f.bad input{border-color:#b8432f}
+.f.bad .err{display:block}
+.full{grid-column:1/-1}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid rgba(31,27,20,.2);background:#fffdf8;font:500 14.5px/1 var(--sans);color:var(--ink);cursor:pointer;transition:background-color var(--t2),border-color var(--t2),color var(--t2),transform var(--t2) var(--spring)}
+.chip:hover{border-color:var(--g-dk)}
+.chip:active{transform:scale(.95)}
+.chip .ck{width:0;height:14px;overflow:hidden;transition:width var(--t2) var(--spring)}
+.chip[aria-pressed="true"]{background:var(--v);border-color:var(--v);color:var(--iv)}
+.chip[aria-pressed="true"] .ck{width:14px;color:var(--g-lt)}
+.chip.pop{animation:pop .36s var(--spring)}
+@keyframes pop{40%{transform:scale(1.07)}}
+.frow{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:26px}
+.wa-alt{font-size:14.5px;font-weight:600;color:var(--g-ink);min-height:44px;display:inline-flex;align-items:center;text-underline-offset:4px}
+.fnote{margin:14px 0 0;font-size:13px;color:var(--mut)}
+.shake{animation:shake .38s ease-in-out}
+@keyframes shake{20%,60%{transform:translateX(-7px)}40%,80%{transform:translateX(7px)}}
+.done{display:none;text-align:center;padding:24px 0 8px}
+.card.sent form{display:none}
+.card.sent .done{display:block;animation:fade .5s var(--ease)}
+.tick{width:84px;height:84px;margin:0 auto 18px}
+.tick circle{fill:none;stroke:var(--g-dk);stroke-width:2;stroke-dasharray:240;stroke-dashoffset:240}
+.tick path{fill:none;stroke:var(--v);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60}
+.card.sent .tick circle{animation:draw .7s var(--ease) .1s forwards}
+.card.sent .tick path{animation:draw .45s var(--ease) .6s forwards}
+.card.sent .tick{animation:pop .5s var(--spring) .9s}
+.done p{color:var(--mut);max-width:420px;margin:10px auto 0}
+.done .frow{justify-content:center}
+.linkbtn{border:0;background:none;color:var(--g-ink);font-weight:600;text-decoration:underline;text-underline-offset:4px;min-height:44px;cursor:pointer;margin-top:6px}
+
+/* final */
+.final{text-align:center}
+.final h2{max-width:900px;margin:0 auto}
+.final .ctas{justify-content:center}
+.final .trust{justify-content:center;margin:30px auto 0;border-top:0;padding-top:0}
+.final .trust .num{color:var(--g-ink)}
+.final .trust small{color:var(--mut)}
+.final .stars{color:var(--g-dk)}
+.farman{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;text-align:left;max-width:980px;margin:80px auto 0;padding:26px 28px;border-radius:14px;background:#14130f;color:#ece6d8}
+.farman .fm-t{flex:1 1 320px}
+.farman strong{display:block;font:400 24px/1.15 var(--serif);letter-spacing:.04em;color:#fff}
+.farman span{font-size:14.5px;color:#b8b09d}
+
+/* footer */
+.ft{background:var(--noise),var(--v-deep);padding:72px 0 40px;color:var(--mut-v);font-size:15px}
+.ft-g{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:48px}
+.ft h4{margin:0 0 14px;font:600 11px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--g)}
+.ft a{text-decoration:none;color:var(--iv);display:inline-flex;min-height:36px;align-items:center;transition:color var(--t1)}
+.ft a:hover{color:var(--g-lt)}
+.ft address{font-style:normal;line-height:1.7}
+.ft .brand{margin-bottom:14px}
+.credit{margin-top:56px;padding-top:24px;border-top:1px solid var(--hair-2);font-size:13px;line-height:1.6;color:#a9a38f}
+
+/* mobile bar + toast */
+.mbar{display:none}
+.toast{position:fixed;left:50%;bottom:28px;z-index:80;display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:var(--iv);color:var(--ink);font-size:14.5px;font-weight:600;box-shadow:0 18px 40px -12px rgba(0,0,0,.6);transform:translate(-50%,24px);opacity:0;pointer-events:none;transition:opacity var(--t2) var(--ease),transform var(--t2) var(--ease);max-width:calc(100vw - 32px)}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.toast i{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--v);color:var(--g-lt);flex:none}
+.toast svg{width:12px;height:12px}
+
+/* responsive */
+@media (max-width:1100px){
+  .links{display:none}
+  .hd .hd-cta{margin-left:auto}
+  .hero-in{gap:40px}
+  .cab{grid-template-columns:repeat(3,1fr)}
+  .tile.big{grid-column:span 2}
+}
+@media (max-width:900px){
+  body{padding-bottom:78px}
+  .wrap{padding:0 20px}
+  .hero{padding:118px 0 72px}
+  .hero-in,.custom .grid,.visit .grid,.enq .grid{grid-template-columns:1fr;gap:48px}
+  .arch-2{display:none}
+  .head,.insta .top{grid-template-columns:1fr;gap:22px}
+  .sec{padding:84px 0}
+  .visit .arch-wrap,.custom .arch-wrap{justify-self:center}
+  .visit .arch-wrap{order:-1}
+  .cab{grid-template-columns:repeat(2,1fr);grid-auto-rows:250px;gap:12px}
+  .ft-g{grid-template-columns:1fr 1fr}
+  .ft-g > div:first-child{grid-column:1/-1}
+  .mbar{display:grid;grid-template-columns:1fr 1.25fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:75;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(7,31,24,.94);backdrop-filter:blur(10px);border-top:1px solid var(--hair-2)}
+  .mbar .btn{min-height:52px;padding:0 12px}
+  .mbar .btn-g::before{content:"";position:absolute;inset:-4px;border-radius:inherit;border:1px solid var(--g);opacity:0;animation:ring 2.6s var(--ease) 2s infinite}
+  .toast{bottom:92px}
+  .rate-lbl{padding:14px 18px 14px 20px}
+}
+@keyframes ring{0%{opacity:.7;transform:scale(1)}70%,100%{opacity:0;transform:scale(1.08)}}
+@media (max-width:640px){
+  html{scroll-padding-top:70px}
+  .hd-in{height:70px;gap:12px}
+  .hd.solid .hd-in{height:62px}
+  .brand b{font-size:17px}
+  .brand span{font-size:9.5px;letter-spacing:.2em}
+  .mono{width:34px;height:40px}
+  .hd .hd-cta{min-height:44px;padding:0 16px;font-size:13.5px}
+  .hero{margin-top:-70px;padding:100px 0 64px}
+  .hero h1{font-size:31px;line-height:1.08}
+  .hero .sub{font-size:16.5px;margin-top:16px}
+  .eyebrow{font-size:11px;letter-spacing:.18em;margin-bottom:14px}
+  .ctas{margin-top:24px}
+  .ctas .btn{flex:1 1 100%}
+  .trust{margin-top:26px;padding-top:20px;gap:12px 18px}
+  .trust .num{font-size:34px}
+  .fb-in{flex-wrap:wrap;padding:12px 52px 12px 16px;gap:10px}
+  .fb-tag{display:none}
+  .fb p{flex:1 1 100%;font-size:13px}
+  .fb-act{width:100%}
+  .fb-act a{flex:1;padding:0 10px;font-size:13px}
+  .fb-x{top:6px;margin:0}
+  .rate{flex-direction:column}
+  .rate-lbl{flex-direction:row;align-items:baseline;justify-content:space-between;border-right:0;border-bottom:1px solid var(--hair-2);padding:12px 20px}
+  .rate-lbl b{font-size:13px}
+  .rate-it{min-height:54px}
+  .cab{grid-template-columns:1fr 1fr;grid-auto-rows:220px}
+  .tile.big{grid-column:1/-1;grid-row:span 2}
+  .tile .cap{padding:16px 16px 18px;gap:8px}
+  .tile h3{font-size:17px;letter-spacing:.04em}
+  .tile.big h3{font-size:28px}
+  .tile p{display:none}
+  .tile.big p{display:block}
+  .tile .add{width:38px;height:38px}
+  .tile .tag{right:14px;top:14px}
+  .tile::before{inset:7px;border-radius:50% 50% 3px 3px/50px 50px 3px 3px}
+  .pt{font-size:72px}
+  .glyph svg{width:84px;height:84px}
+  .glyph{top:40%}
+  h2{font-size:30px}
+  .lede{font-size:16.5px}
+  .card{padding:28px 20px 24px}
+  .fgrid{grid-template-columns:1fr}
+  .info{grid-template-columns:1fr}
+  .sign b{font-size:20px}
+  .ig-stats b{font-size:36px}
+  .hl{margin:36px -20px 0;padding:6px 20px 14px;gap:14px}
+  .hl a{width:84px}
+  .ring{width:78px;height:78px}
+  .farman{padding:22px 18px;margin-top:56px}
+  .farman .fb-act{flex-wrap:wrap;width:100%}
+  .farman .fb-act a{flex:1}
+  .ft-g{grid-template-columns:1fr;gap:32px}
+  .nm{display:none}
+  .steps h3{font-size:19px}
+  .farman span{line-height:1.5;display:block}
+  .plate{font-size:11px;letter-spacing:.18em;padding:10px 14px}
+}
+
+/* reduced motion: keep fades, colour, press and small moves; drop loops, drift, Ken Burns, sweeps, marquee */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .glow,.hero .arch img,.sweep::after,.watch .hand,.mbar .btn-g::before{animation:none!important}
+  .sweep::after{display:none}
+  .shim{animation:none;background-position:100% 0}
+  .h-e{animation-name:fade}
+  .io [data-rv="wipe"]{clip-path:none}
+  .io [data-rv="scale"]{transform:none}
+  .rate-track{animation:none;width:auto}
+  .rate-set{flex-wrap:wrap;gap:4px 34px;padding:6px 22px}
+  .rate-set[aria-hidden]{display:none}
+  .rate-vp{-webkit-mask:none;mask:none}
+  .tile:hover .ph img,.tile .ph img{transition:none;transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a9.9 9.9 0 0 0-8.5 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2Zm0 18.1a8.1 8.1 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.1 8.1 0 1 1 12 20.1Zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3Z"/></symbol>
+    <symbol id="i-ph" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M5 3.5h3.2l1.6 4-2 1.3a11 11 0 0 0 5.4 5.4l1.3-2 4 1.6V17a2.5 2.5 0 0 1-2.5 2.5A15.5 15.5 0 0 1 2.5 6 2.5 2.5 0 0 1 5 3.5Z"/></symbol>
+    <symbol id="i-ml" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></g></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="i-arr" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-ck" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8Z"/></symbol>
+    <!-- highlight glyphs -->
+    <symbol id="g-kada" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.4"><ellipse cx="20" cy="20" rx="14" ry="9"/><ellipse cx="20" cy="20" rx="10" ry="5.5"/><path d="M6 20v3c0 5 6.3 9 14 9s14-4 14-9v-3"/></g></symbol>
+    <symbol id="g-neck" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M7 7c0 11 6 18 13 18S33 18 33 7"/><path d="M10.5 15.5l-1.5 3M15 21l-1 3.5M20 25v4M25 21l1 3.5M29.5 15.5l1.5 3"/><path d="M20 29l-2.5 3.5L20 36l2.5-3.5Z"/></g></symbol>
+    <symbol id="g-idol" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c-1.5 2.5-2.5 4-2.5 6a2.5 2.5 0 0 0 5 0c0-2-1-3.5-2.5-6Z"/><path d="M11 33c0-8 4-14 9-14s9 6 9 14"/><path d="M7 33h26M9 36h22"/><circle cx="20" cy="15" r="1.2" fill="currentColor"/></g></symbol>
+    <symbol id="g-pen" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 32l2-7L26 9l5 5-16 16Z"/><path d="M23 12l5 5M8 32h24"/></g></symbol>
+    <symbol id="g-thread" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M6 12c5-4 9 4 14 0s9 4 14 0M6 20c5-4 9 4 14 0s9 4 14 0M6 28c5-4 9 4 14 0s9 4 14 0"/><path d="M12 6v28M20 6v28M28 6v28" stroke-opacity=".45"/></g></symbol>
+    <symbol id="g-chain" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="15" width="14" height="10" rx="5"/><rect x="13" y="15" width="14" height="10" rx="5"/><rect x="22" y="15" width="14" height="10" rx="5"/></g></symbol>
+    <symbol id="g-watch" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="20" cy="20" r="9.5"/><path d="M15 11.5 16 4h8l1 7.5M15 28.5 16 36h8l1-7.5M20 15v5l3 2"/></g></symbol>
+    <symbol id="g-lotus" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M20 8c4 4 5 9 0 18-5-9-4-14 0-18Z"/><path d="M20 26c-3-7-8-10-13-10 0 6 5 10 13 10ZM20 26c3-7 8-10 13-10 0 6-5 10-13 10Z"/><path d="M8 30h24"/></g></symbol>
+    <symbol id="g-store" viewBox="0 0 40 40"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M6 34V18M34 34V18M4 34h32"/><path d="M14 34V24a6 6 0 0 1 12 0v10"/><path d="M5 18 20 6l15 12Z"/></g></symbol>
+  </defs>
+</svg>
+
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<aside class="fb" id="fb" aria-label="About this preview">
+  <div class="fb-in">
+    <span class="fb-tag">Concept preview</span>
+    <p>Concept preview made for Prakash Jewellers by Farman, an independent web developer. Not Prakash Jewellers' official website; photos are samples.</p>
+    <div class="fb-act">
+      <a class="fb-b1" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call</a>
+      <a class="fb-b2" href="mailto:farman.builds@gmail.com?subject=Website%20for%20Prakash%20Jewellers">Email Farman</a>
+    </div>
+    <button type="button" class="fb-x" id="fb-x" aria-label="Dismiss this notice">×</button>
+  </div>
+</aside>
+
+<header class="hd" id="hd">
+  <div class="wrap hd-in">
+    <a class="brand" href="#top" aria-label="Prakash Jewellers, back to top">
+      <svg class="mono" viewBox="0 0 40 46" aria-hidden="true"><path d="M2 45V20a18 18 0 0 1 36 0v25" fill="none" stroke="currentColor" stroke-width="1"/><path d="M6 45V20.5a14 14 0 0 1 28 0V45" fill="none" stroke="currentColor" stroke-width=".6" stroke-opacity=".6"/><text x="20" y="34" text-anchor="middle" font-family="Marcellus,serif" font-size="17" fill="currentColor">PJ</text><path d="M20 8.5l2 2-2 2-2-2Z" fill="currentColor"/></svg>
+      <span><b>Prakash Jewellers</b><span>Rajajinagar · Since 1989</span></span>
+    </a>
+    <nav class="links" aria-label="Sections">
+      <a href="#collections">Collections</a>
+      <a href="#custom">Custom orders</a>
+      <a href="#visit">Visit</a>
+      <a href="#instagram">Instagram</a>
+      <a href="#enquire">Enquire</a>
+    </nav>
+    <a class="btn btn-g hd-cta" href="#enquire"><span class="shine"></span>Enquire</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow h-e" style="--d:0"><span class="dev" lang="hi">प्रकाश</span> <span>Family owned · Rajajinagar<span class="nm">, Bengaluru</span></span></p>
+      <h1>
+        <span class="l h-e" style="--d:1">Serving the magic</span>
+        <span class="l h-e" style="--d:2">of <em class="shim">Indian jewellery</em></span>
+        <span class="l h-e" style="--d:3">since <em class="shim">1989</em></span>
+      </h1>
+      <p class="sub h-e" style="--d:4">A family jewellery house on 19th Main Road. Necklaces, men's kadas and chains, platinum, gold idols, and pieces made to your own design.</p>
+      <div class="ctas h-e" style="--d:5">
+        <a class="btn btn-g" href="https://wa.me/919169169995?text=Hello%20Prakash%20Jewellers%2C%20I%20would%20like%20to%20enquire%20about%20a%20piece." target="_blank" rel="noopener"><span class="shine"></span><svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg>Enquire on WhatsApp</a>
+        <a class="btn btn-o" href="#visit">Visit the store<svg class="arr" aria-hidden="true"><use href="#i-arr"/></svg></a>
+      </div>
+      <div class="trust h-e" style="--d:6">
+        <div class="rt">
+          <span class="num" data-count="4.6" data-dec="1">4.6</span>
+          <div><div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <small><span data-count="779">779</span> Google reviews</small></div>
+        </div>
+        <span class="pill">Since 1989</span>
+        <span class="pill nm">Family owned</span>
+      </div>
+    </div>
+    <div class="arch-wrap h-e" style="--d:2">
+      <div class="arch-2" aria-hidden="true">
+        <div class="arch"><img src="../img/prakash-jewellers/emerald-bust-s.jpg" alt="" width="900" height="1350" loading="lazy"><span class="tag">Sample photo</span></div>
+      </div>
+      <svg class="arch-line" viewBox="0 0 430 538" preserveAspectRatio="none" aria-hidden="true"><path class="a1" d="M2 536V215A213 213 0 0 1 428 215V536Z"/><path class="a2" d="M9 529V218A206 206 0 0 1 421 218V529Z"/></svg>
+      <div class="arch sweep">
+        <img src="../img/prakash-jewellers/necklace-case.jpg" srcset="../img/prakash-jewellers/necklace-case-s.jpg 900w, ../img/prakash-jewellers/necklace-case.jpg 1800w" sizes="(max-width:900px) 90vw, 430px" width="1800" height="1245" alt="Gold necklace and earrings set displayed on dark velvet in a showcase" fetchpriority="high">
+        <span class="tag">Sample photo</span>
+      </div>
+      <div class="plate"><i></i>Est. 1989<i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- GOLD RATE -->
+<section class="rate" aria-label="Today's gold rate">
+  <div class="rate-lbl"><b>Today's gold rate</b><span>Updated by the store</span></div>
+  <div class="rate-vp">
+    <div class="rate-track">
+      <div class="rate-set">
+        <div class="rate-it"><em>24K gold</em><span class="slot">₹ — — /g <small>Store fills</small></span></div>
+        <div class="rate-it"><em>22K gold</em><span class="slot">₹ — — /g <small>Store fills</small></span></div>
+        <div class="rate-it"><em>18K gold</em><span class="slot">₹ — — /g <small>Store fills</small></span></div>
+        <div class="rate-it"><em>Platinum</em><span class="slot">₹ — — /g <small>Store fills</small></span></div>
+      </div>
+      <div class="rate-set" aria-hidden="true">
+        <div class="rate-it"><em>24K gold</em><span class="slot">₹ — — /g <small>Store fills</small></span></div>
+        <div class="rate-it"><em>22K gold</em><span class="slot">₹ — — /g <small>Store fills</small></span></div>
+        <div class="rate-it"><em>18K gold</em><span class="slot">₹ — — /g <small>Store fills</small></span></div>
+        <div class="rate-it"><em>Platinum</em><span class="slot">₹ — — /g <small>Store fills</small></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VITRINE -->
+<section class="vitrine sec" id="collections">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow" data-rv="up">The vitrine</p>
+        <h2 data-rv="up" style="--i:1">Walk the <em class="shim">showcase</em></h2>
+        <p class="lede" data-rv="up" style="--i:2">The collections Prakash Jewellers features on its Instagram. Tap any one to add it to your enquiry, and the store can show you what is in the showcase today.</p>
+      </div>
+      <svg class="fil" data-rv viewBox="0 0 240 24" aria-hidden="true"><path d="M0 12H90"/><path d="M150 12h90"/><path d="M90 12c8 0 10-8 20 0M150 12c-8 0-10-8-20 0"/><path d="M120 2l10 10-10 10-10-10Z"/><circle class="dot" cx="120" cy="12" r="2.4"/><circle class="dot" cx="84" cy="12" r="1.4"/><circle class="dot" cx="156" cy="12" r="1.4"/></svg>
+    </div>
+
+    <div class="cab" data-stagger>
+      <article class="tile big" data-rv="scale" data-pick="Necklace">
+        <div class="ph"><img src="../img/prakash-jewellers/necklace-bust-s.jpg" srcset="../img/prakash-jewellers/necklace-bust-s.jpg 900w, ../img/prakash-jewellers/necklace-bust.jpg 1800w" sizes="(max-width:640px) 100vw, 50vw" width="1800" height="1515" alt="Gold necklace and matching earrings on a white display bust" loading="lazy"></div>
+        <span class="spot" aria-hidden="true"></span><span class="tag">Sample photo</span>
+        <div class="cap"><div><span class="no">No. 01</span><h3>Necklaces</h3><p>Necklace sets from the showcase, for weddings, festivals and everyday wear.</p></div><span class="add" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></div>
+        <button class="hit" type="button" aria-label="Add Necklaces to my enquiry"></button>
+      </article>
+      <article class="tile" data-rv="scale" data-pick="Men's kada">
+        <div class="ph"><img src="../img/prakash-jewellers/kada-velvet-s.jpg" width="900" height="900" alt="Two ornate gold bangles resting on a velvet cushion" loading="lazy"></div>
+        <span class="spot" aria-hidden="true"></span><span class="tag">Sample photo</span>
+        <div class="cap"><div><span class="no">No. 02</span><h3>Men's kada</h3></div><span class="add" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></div>
+        <button class="hit" type="button" aria-label="Add Men's kada to my enquiry"></button>
+      </article>
+      <article class="tile tall" data-rv="scale" data-pick="Gold idols">
+        <div class="ph"><img src="../img/prakash-jewellers/idol-s.jpg" width="900" height="1601" alt="A small Ganesha idol beside a stack of gold bangles" loading="lazy" style="object-position:50% 60%"></div>
+        <span class="spot" aria-hidden="true"></span><span class="tag">Sample photo</span>
+        <div class="cap"><div><span class="no">No. 03</span><h3>Gold idols</h3><p>For the pooja room, for gifting, for the festival.</p></div><span class="add" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></div>
+        <button class="hit" type="button" aria-label="Add Gold idols to my enquiry"></button>
+      </article>
+      <article class="tile" data-rv="scale" data-pick="Chains (men)">
+        <div class="ph"><img src="../img/prakash-jewellers/chain-s.jpg" width="900" height="600" alt="A heavy gold chain on a black background" loading="lazy"></div>
+        <span class="spot" aria-hidden="true"></span><span class="tag">Sample photo</span>
+        <div class="cap"><div><span class="no">No. 04</span><h3>Chains for men</h3></div><span class="add" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></div>
+        <button class="hit" type="button" aria-label="Add Chains for men to my enquiry"></button>
+      </article>
+      <article class="tile" data-rv="scale" data-pick="Platinum">
+        <div class="glyph" aria-hidden="true"><span class="pt"><sup>78</sup>Pt</span></div>
+        <span class="spot" aria-hidden="true"></span>
+        <div class="cap"><div><span class="no">No. 05</span><h3>Platinum</h3></div><span class="add" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></div>
+        <button class="hit" type="button" aria-label="Add Platinum to my enquiry"></button>
+      </article>
+      <article class="tile" data-rv="scale" data-pick="Watches">
+        <div class="glyph watch" aria-hidden="true"><svg viewBox="0 0 120 120"><g fill="none" stroke="currentColor"><circle cx="60" cy="60" r="44" stroke-width="1"/><circle cx="60" cy="60" r="38" stroke-width=".6" stroke-opacity=".5"/><path d="M60 20v7M60 93v7M20 60h7M93 60h7" stroke-width="1.2"/><path d="M80 25.4l-2 3.5M94.6 40l-3.5 2M94.6 80l-3.5-2M80 94.6l-2-3.5M40 94.6l2-3.5M25.4 80l3.5-2M25.4 40l3.5 2M40 25.4l2 3.5" stroke-width=".8" stroke-opacity=".7"/><path class="hand hh" d="M60 60V38" stroke-width="1.6" stroke-linecap="round"/><path class="hand hm" d="M60 60l18 14" stroke-width="1" stroke-linecap="round"/></g><circle cx="60" cy="60" r="2.4" fill="currentColor"/></svg></div>
+        <span class="spot" aria-hidden="true"></span>
+        <div class="cap"><div><span class="no">No. 06</span><h3>Watches</h3></div><span class="add" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></div>
+        <button class="hit" type="button" aria-label="Add Watches to my enquiry"></button>
+      </article>
+      <article class="tile" data-rv="scale" data-pick="Threads of India">
+        <div class="glyph" aria-hidden="true"><svg viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-linecap="round"><path d="M14 36c12-10 22 10 34 0s22 10 34 0 16 6 24 0M14 60c12-10 22 10 34 0s22 10 34 0 16 6 24 0M14 84c12-10 22 10 34 0s22 10 34 0 16 6 24 0" stroke-width="1.1"/><path d="M31 22v76M48 22v76M65 22v76M82 22v76M99 22v76" stroke-width=".6" stroke-opacity=".45"/></g></svg></div>
+        <span class="spot" aria-hidden="true"></span>
+        <div class="cap"><div><span class="no">No. 07</span><h3>Threads of India</h3></div><span class="add" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></div>
+        <button class="hit" type="button" aria-label="Add Threads of India to my enquiry"></button>
+      </article>
+      <article class="tile" data-rv="scale" data-pick="Laxmi Vaibhavam">
+        <div class="glyph" aria-hidden="true"><svg viewBox="0 0 120 120"><g class="lot" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M60 22c12 12 15 28 0 58-15-30-12-46 0-58Z" stroke-width="1.1"/><path d="M60 80c-8-22-24-32-40-32 0 18 16 32 40 32ZM60 80c8-22 24-32 40-32 0 18-16 32-40 32Z" stroke-width="1.1"/><path d="M60 80c-4-14-10-24-20-30M60 80c4-14 10-24 20-30" stroke-width=".6" stroke-opacity=".6"/><path d="M26 92h68M36 99h48" stroke-width=".9"/></g></svg></div>
+        <span class="spot" aria-hidden="true"></span>
+        <div class="cap"><div><span class="no">No. 08</span><h3>Laxmi Vaibhavam</h3></div><span class="add" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></div>
+        <button class="hit" type="button" aria-label="Add Laxmi Vaibhavam to my enquiry"></button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM ORDER -->
+<section class="custom sec light" id="custom">
+  <div class="wrap grid">
+    <div class="arch-wrap" data-rv="wipe">
+      <svg class="arch-line" viewBox="0 0 430 538" preserveAspectRatio="none" aria-hidden="true"><path d="M2 536V215A213 213 0 0 1 428 215V536Z"/></svg>
+      <div class="arch"><img src="../img/prakash-jewellers/craft-s.jpg" srcset="../img/prakash-jewellers/craft-s.jpg 900w, ../img/prakash-jewellers/craft.jpg 1800w" sizes="(max-width:900px) 90vw, 460px" width="1800" height="1201" alt="A craftsperson working on a gold necklace with fine tools" loading="lazy"><span class="tag">Sample photo</span></div>
+    </div>
+    <div>
+      <p class="eyebrow" data-rv="up">Customized order</p>
+      <h2 data-rv="up" style="--i:1">Your design,<br>made by the <em class="shim">family</em></h2>
+      <p class="lede" data-rv="up" style="--i:2">Have a piece in mind? A sketch, a screenshot, an old photo of your grandmother's necklace. Send it to the store and talk it through.</p>
+      <ol class="steps" data-rv="up" style="--i:3">
+        <li><span class="n">1</span><div><h3>Send a sketch or photo</h3><p>WhatsApp it to <a href="tel:+919169169995">091691 69995</a> with a note on the occasion and size.</p></div></li>
+        <li><span class="n">2</span><div><h3>Settle the design</h3><p>Go over the metal, weight and your budget with the store, in person or on chat.</p></div></li>
+        <li><span class="n">3</span><div><h3>It is made for you</h3><p>Once you approve the design, the piece is made. Collect it from the store in Rajajinagar.</p></div></li>
+      </ol>
+      <span class="slot" data-rv="up" style="--i:4"><small>Owner to fill</small> Typical making time and minimum order</span>
+      <div class="ctas" data-rv="up" style="--i:5">
+        <a class="btn btn-dk" href="https://wa.me/919169169995?text=Hello%20Prakash%20Jewellers%2C%20I%20would%20like%20a%20customized%20piece.%20Sharing%20my%20design%20here." target="_blank" rel="noopener"><svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg>Send your design on WhatsApp</a>
+        <a class="btn btn-o" href="#enquire" data-prepick="Customized order">Or use the enquiry form</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit sec velvet" id="visit">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow" data-rv="up">Visit the store</p>
+      <h2 data-rv="up" style="--i:1">Come see it<br>in the <em class="shim">light</em></h2>
+      <p class="lede" data-rv="up" style="--i:2">Jewellery is best chosen in hand. The store is in Rajajinagar's 1st N Block, on 19th Main Road.</p>
+      <div class="sign" data-rv="up" style="--i:3"><b>19th Main Road</b><span>Rajajinagar · 2nd Stage</span></div>
+      <address class="addr" data-rv="up" style="--i:4">Prakash Jewellers<br>1113, 19th Main Rd, 1st N Block, 2nd Stage,<br>Rajajinagar, Bengaluru 560010</address>
+      <dl class="info" data-rv="up" style="--i:5">
+        <div><dt>Call</dt><dd><a href="tel:+919169169995">091691 69995</a></dd></div>
+        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/919169169995" target="_blank" rel="noopener">Chat with the store</a></dd></div>
+        <div class="wide"><dt>Email</dt><dd><a href="mailto:prakashjewellers@yahoo.com">prakashjewellers@yahoo.com</a></dd></div>
+        <div class="wide"><dt>Store hours</dt><dd><div class="hours"><span class="slot"><small>Owner to fill</small> Mon to Sat</span><span class="slot"><small>Owner to fill</small> Sunday</span><span class="slot"><small>Owner to fill</small> Festival days</span></div></dd></div>
+      </dl>
+      <div class="ctas" data-rv="up" style="--i:6">
+        <a class="btn btn-g" href="https://www.google.com/maps/search/?api=1&amp;query=Prakash+Jewellers+Rajajinagar" target="_blank" rel="noopener"><span class="shine"></span><svg width="19" height="19" aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
+        <a class="btn btn-o" href="https://wa.me/919169169995?text=Hello%20Prakash%20Jewellers%2C%20what%20is%20today%27s%20gold%20rate%3F" target="_blank" rel="noopener">Ask today's gold rate</a>
+      </div>
+    </div>
+    <div class="arch-wrap" data-rv="wipe">
+      <svg class="arch-line" viewBox="0 0 430 538" preserveAspectRatio="none" aria-hidden="true"><path d="M2 536V215A213 213 0 0 1 428 215V536Z"/></svg>
+      <div class="arch sweep"><img src="../img/prakash-jewellers/store-s.jpg" srcset="../img/prakash-jewellers/store-s.jpg 900w, ../img/prakash-jewellers/store.jpg 1800w" sizes="(max-width:900px) 90vw, 440px" width="1800" height="2872" alt="Glass display cases lined with jewellery inside a store" loading="lazy"><span class="tag">Sample photo</span></div>
+      <div class="plate"><i></i>Rajajinagar<i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="insta sec light alt" id="instagram">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <p class="eyebrow" data-rv="up">On Instagram · @prakashjewellers1989</p>
+        <blockquote class="quote" data-rv="up" style="--i:1"><q>Serving the magic of Indian jewellery since 1989</q><cite>From the family's Instagram bio. Family owned business.</cite></blockquote>
+      </div>
+      <div class="ig-stats" data-rv="up" style="--i:2">
+        <div><b><span data-count="22.8" data-dec="1">22.8</span>K</b><span>followers</span></div>
+        <div><b data-count="1083">1,083</b><span>posts</span></div>
+      </div>
+    </div>
+    <nav class="hl" aria-label="Instagram story highlights" data-rv="up">
+      <a href="https://www.instagram.com/prakashjewellers1989/" target="_blank" rel="noopener"><span class="ring"><i><svg aria-hidden="true"><use href="#g-kada"/></svg></i></span><small>Mens kada</small></a>
+      <a href="https://www.instagram.com/prakashjewellers1989/" target="_blank" rel="noopener"><span class="ring"><i><em class="ptx" aria-hidden="true">Pt</em></i></span><small>Platinum</small></a>
+      <a href="https://www.instagram.com/prakashjewellers1989/" target="_blank" rel="noopener"><span class="ring"><i><svg aria-hidden="true"><use href="#g-neck"/></svg></i></span><small>Necklace</small></a>
+      <a href="https://www.instagram.com/prakashjewellers1989/" target="_blank" rel="noopener"><span class="ring"><i><svg aria-hidden="true"><use href="#g-idol"/></svg></i></span><small>Gold Idols</small></a>
+      <a href="https://www.instagram.com/prakashjewellers1989/" target="_blank" rel="noopener"><span class="ring"><i><svg aria-hidden="true"><use href="#g-pen"/></svg></i></span><small>Customized order</small></a>
+      <a href="https://www.instagram.com/prakashjewellers1989/" target="_blank" rel="noopener"><span class="ring"><i><svg aria-hidden="true"><use href="#g-thread"/></svg></i></span><small>Threads of India</small></a>
+      <a href="https://www.instagram.com/prakashjewellers1989/" target="_blank" rel="noopener"><span class="ring"><i><svg aria-hidden="true"><use href="#g-chain"/></svg></i></span><small>Chains (Men)</small></a>
+      <a href="https://www.instagram.com/prakashjewellers1989/" target="_blank" rel="noopener"><span class="ring"><i><svg aria-hidden="true"><use href="#g-watch"/></svg></i></span><small>Watches</small></a>
+      <a href="https://www.instagram.com/prakashjewellers1989/" target="_blank" rel="noopener"><span class="ring"><i><svg aria-hidden="true"><use href="#g-lotus"/></svg></i></span><small>Laxmi Vaibhavam</small></a>
+      <a href="https://www.instagram.com/prakashjewellers1989/" target="_blank" rel="noopener"><span class="ring"><i><svg aria-hidden="true"><use href="#g-store"/></svg></i></span><small>Store</small></a>
+    </nav>
+    <div class="ctas" data-rv="up">
+      <a class="btn btn-dk" href="https://www.instagram.com/prakashjewellers1989/" target="_blank" rel="noopener"><svg width="19" height="19" aria-hidden="true"><use href="#i-ig"/></svg>Follow @prakashjewellers1989</a>
+      <span class="note">New pieces go up on Instagram first. Each highlight opens their profile.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRY -->
+<section class="enq sec velvet" id="enquire">
+  <div class="wrap grid">
+    <div class="side">
+      <p class="eyebrow" data-rv="up">Enquire</p>
+      <h2 data-rv="up" style="--i:1">Tell us what<br>you're <em class="shim">looking for</em></h2>
+      <p class="lede" data-rv="up" style="--i:2">A few details and the store gets back to you. Prefer to talk? Call or WhatsApp, the family answers.</p>
+      <div class="contact-lines" data-rv="up" style="--i:3">
+        <a href="tel:+919169169995"><span class="ic"><svg aria-hidden="true"><use href="#i-ph"/></svg></span>091691 69995</a>
+        <a href="https://wa.me/919169169995" target="_blank" rel="noopener"><span class="ic"><svg aria-hidden="true"><use href="#i-wa"/></svg></span>WhatsApp the store</a>
+        <a href="mailto:prakashjewellers@yahoo.com"><span class="ic"><svg aria-hidden="true"><use href="#i-ml"/></svg></span>prakashjewellers@yahoo.com</a>
+      </div>
+      <div class="pic" data-rv="wipe" style="--i:4"><img src="../img/prakash-jewellers/bangles-stack-s.jpg" width="900" height="600" alt="A stack of ornate gold bangles on a dark surface" loading="lazy"><span class="tag">Sample photo</span></div>
+    </div>
+
+    <div class="card" id="card" data-rv="up" style="--i:2">
+      <form id="eq" novalidate>
+        <h3>Your enquiry</h3>
+        <p class="hint">★ 4.6 from 779 Google reviews · Family owned since 1989</p>
+        <div class="fgrid">
+          <div class="f" id="f-nm"><label for="nm">Your name</label><input id="nm" autocomplete="name"><span class="ok" aria-hidden="true"><svg width="20" height="20"><use href="#i-ck"/></svg></span><div class="err">Add your name.</div></div>
+          <div class="f" id="f-pn"><label for="pn">Phone</label><input id="pn" type="tel" inputmode="tel" autocomplete="tel"><span class="ok" aria-hidden="true"><svg width="20" height="20"><use href="#i-ck"/></svg></span><div class="err">Add a number with at least 10 digits.</div></div>
+          <div class="full"><span class="lab" id="lk-l">What are you looking for?</span>
+            <div class="chips" id="looking" role="group" aria-labelledby="lk-l">
+              <button type="button" class="chip" aria-pressed="false"><svg class="ck" aria-hidden="true"><use href="#i-ck"/></svg>Necklace</button>
+              <button type="button" class="chip" aria-pressed="false"><svg class="ck" aria-hidden="true"><use href="#i-ck"/></svg>Men's kada</button>
+              <button type="button" class="chip" aria-pressed="false"><svg class="ck" aria-hidden="true"><use href="#i-ck"/></svg>Chains (men)</button>
+              <button type="button" class="chip" aria-pressed="false"><svg class="ck" aria-hidden="true"><use href="#i-ck"/></svg>Platinum</button>
+              <button type="button" class="chip" aria-pressed="false"><svg class="ck" aria-hidden="true"><use href="#i-ck"/></svg>Gold idols</button>
+              <button type="button" class="chip" aria-pressed="false"><svg class="ck" aria-hidden="true"><use href="#i-ck"/></svg>Watches</button>
+              <button type="button" class="chip" aria-pressed="false"><svg class="ck" aria-hidden="true"><use href="#i-ck"/></svg>Threads of India</button>
+              <button type="button" class="chip" aria-pressed="false"><svg class="ck" aria-hidden="true"><use href="#i-ck"/></svg>Laxmi Vaibhavam</button>
+              <button type="button" class="chip" aria-pressed="false"><svg class="ck" aria-hidden="true"><use href="#i-ck"/></svg>Customized order</button>
+              <button type="button" class="chip" aria-pressed="false"><svg class="ck" aria-hidden="true"><use href="#i-ck"/></svg>Something else</button>
+            </div>
+          </div>
+          <div class="full"><span class="lab" id="bd-l">Budget range</span>
+            <div class="chips" id="budget" role="radiogroup" aria-labelledby="bd-l">
+              <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false"><svg class="ck" aria-hidden="true"><use href="#i-ck"/></svg>Under ₹50,000</button>
+              <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false"><svg class="ck" aria-hidden="true"><use href="#i-ck"/></svg>₹50,000 – 1 lakh</button>
+              <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false"><svg class="ck" aria-hidden="true"><use href="#i-ck"/></svg>₹1 – 3 lakh</button>
+              <button type="button" class="chip" role="radio" aria-checked="false" aria-pressed="false"><svg class="ck" aria-hidden="true"><use href="#i-ck"/></svg>₹3 lakh +</button>
+              <button type="button" class="chip" role="radio" aria-checked="true" aria-pressed="true"><svg class="ck" aria-hidden="true"><use href="#i-ck"/></svg>Prefer to discuss</button>
+            </div>
+          </div>
+          <div class="f full"><label for="nt">Anything else? <span style="text-transform:none;letter-spacing:0;font-weight:500;color:var(--mut)">(optional)</span></label><textarea id="nt" placeholder="Occasion, date you need it by, a design you have seen"></textarea></div>
+        </div>
+        <div class="frow">
+          <button class="btn btn-dk" type="submit">Send enquiry<svg class="arr" aria-hidden="true"><use href="#i-arr"/></svg></button>
+          <a class="wa-alt" id="wa-alt" href="https://wa.me/919169169995" target="_blank" rel="noopener">or send it on WhatsApp</a>
+        </div>
+        <p class="fnote">Goes to prakashjewellers@yahoo.com with your details filled in. Nothing is stored on this page.</p>
+      </form>
+      <div class="done" role="status" aria-live="polite">
+        <svg class="tick" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="38"/><path d="M26 43l11 11 22-23"/></svg>
+        <h3>Your enquiry is ready</h3>
+        <p id="done-p">The store will get back to you on the number you gave. For a quicker reply, send the same note on WhatsApp.</p>
+        <div class="frow">
+          <a class="btn btn-dk" id="done-wa" href="https://wa.me/919169169995" target="_blank" rel="noopener"><svg width="19" height="19" aria-hidden="true"><use href="#i-wa"/></svg>Send on WhatsApp too</a>
+          <a class="btn btn-o" href="tel:+919169169995">Call the store</a>
+        </div>
+        <button class="linkbtn" type="button" id="edit">Change my enquiry</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final sec light">
+  <div class="wrap">
+    <svg class="fil c" data-rv viewBox="0 0 240 24" aria-hidden="true" style="color:var(--g-dk);margin-bottom:26px"><path d="M0 12H90"/><path d="M150 12h90"/><path d="M90 12c8 0 10-8 20 0M150 12c-8 0-10-8-20 0"/><path d="M120 2l10 10-10 10-10-10Z"/><circle class="dot" cx="120" cy="12" r="2.4"/><circle class="dot" cx="84" cy="12" r="1.4"/><circle class="dot" cx="156" cy="12" r="1.4"/></svg>
+    <p class="eyebrow" data-rv="up">Rajajinagar · Since 1989</p>
+    <h2 data-rv="up" style="--i:1">Come see the showcase<br>on <em class="shim">19th Main Road</em></h2>
+    <div class="ctas" data-rv="up" style="--i:2">
+      <a class="btn btn-g" href="https://wa.me/919169169995?text=Hello%20Prakash%20Jewellers%2C%20I%20would%20like%20to%20enquire%20about%20a%20piece." target="_blank" rel="noopener"><span class="shine"></span><svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg>Enquire on WhatsApp</a>
+      <a class="btn btn-o" href="tel:+919169169995"><svg width="18" height="18" aria-hidden="true"><use href="#i-ph"/></svg>Call 091691 69995</a>
+      <a class="btn btn-o" href="https://www.google.com/maps/search/?api=1&amp;query=Prakash+Jewellers+Rajajinagar" target="_blank" rel="noopener"><svg width="18" height="18" aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+    </div>
+    <div class="trust" data-rv="up" style="--i:3">
+      <div class="rt"><span class="num">4.6</span><div><div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><small>779 Google reviews</small></div></div>
+    </div>
+
+    <div class="farman" data-rv="up">
+      <div class="fm-t"><strong>Want this live?</strong><span>I can have it ready in about a week. Book a 15-min call.</span></div>
+      <div class="fb-act">
+        <a class="fb-b1" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call</a>
+        <a class="fb-b2" href="mailto:farman.builds@gmail.com?subject=Website%20for%20Prakash%20Jewellers">Email Farman</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-g">
+      <div>
+        <a class="brand" href="#top" aria-label="Prakash Jewellers, back to top">
+          <svg class="mono" viewBox="0 0 40 46" aria-hidden="true"><path d="M2 45V20a18 18 0 0 1 36 0v25" fill="none" stroke="currentColor" stroke-width="1"/><text x="20" y="34" text-anchor="middle" font-family="Marcellus,serif" font-size="17" fill="currentColor">PJ</text><path d="M20 8.5l2 2-2 2-2-2Z" fill="currentColor"/></svg>
+          <span><b>Prakash Jewellers</b><span>Rajajinagar · Since 1989</span></span>
+        </a>
+        <p style="margin:0;max-width:340px">Serving the magic of Indian jewellery since 1989. A family owned business. <span class="dev" lang="hi">प्रकाश</span></p>
+      </div>
+      <div>
+        <h4>The store</h4>
+        <address>1113, 19th Main Rd, 1st N Block,<br>2nd Stage, Rajajinagar,<br>Bengaluru 560010</address>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Prakash+Jewellers+Rajajinagar" target="_blank" rel="noopener">Open in Google Maps →</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+919169169995">091691 69995</a><br>
+        <a href="https://wa.me/919169169995" target="_blank" rel="noopener">WhatsApp</a><br>
+        <a href="mailto:prakashjewellers@yahoo.com">prakashjewellers@yahoo.com</a><br>
+        <a href="https://www.instagram.com/prakashjewellers1989/" target="_blank" rel="noopener">Instagram @prakashjewellers1989</a>
+      </div>
+    </div>
+    <div class="credit">Concept preview by Farman, an independent web developer, built from Prakash Jewellers' public Google Maps listing and Instagram profile (rating, review and follower counts as of 17 Oct 2026). Gold rates, hours and making times are slots for the store to fill. Sample photos from Unsplash (free licence), not the store's own pieces. Not the official website of Prakash Jewellers.</div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick contact">
+  <a class="btn btn-o" href="tel:+919169169995"><svg width="18" height="18" aria-hidden="true"><use href="#i-ph"/></svg>Call</a>
+  <a class="btn btn-g" href="https://wa.me/919169169995?text=Hello%20Prakash%20Jewellers%2C%20I%20would%20like%20to%20enquire%20about%20a%20piece." target="_blank" rel="noopener"><svg width="20" height="20" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+</nav>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><i><svg aria-hidden="true"><use href="#i-ck"/></svg></i><span id="toast-t"></span></div>
+
+<script>
+(function(){
+  var d=document, de=d.documentElement, $=function(id){ return d.getElementById(id) };
+  var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var EMAIL='prakashjewellers@yahoo.com', WA='https://wa.me/919169169995';
+
+  /* Farman bar */
+  var fb=$('fb');
+  $('fb-x').addEventListener('click',function(){ fb.classList.add('out'); setTimeout(function(){ fb.remove() },260) });
+  var fm=d.querySelector('.farman');
+  if(fm && 'IntersectionObserver' in window){ new IntersectionObserver(function(es){ es.forEach(function(e){ fb.classList.toggle('tuck', e.isIntersecting && innerWidth>1100) }) }).observe(fm) }
+
+  /* progress + condensing header */
+  var prog=$('prog'), hd=$('hd'), ticking=false;
+  function onScroll(){ if(ticking) return; ticking=true; requestAnimationFrame(function(){
+    var h=de.scrollHeight-innerHeight; prog.style.transform='scaleX('+(h>0?Math.min(1,scrollY/h):0)+')';
+    hd.classList.toggle('solid', hd.getBoundingClientRect().top<=0 && scrollY>40); ticking=false }) }
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  [].forEach.call(d.querySelectorAll('[data-stagger]'),function(p){ [].forEach.call(p.children,function(c,i){ if(!c.style.getPropertyValue('--i')) c.style.setProperty('--i',Math.min(i,6)) }) });
+
+  /* counters */
+  function fmt(v,dec){ return dec? v.toFixed(dec) : Math.round(v).toLocaleString('en-IN') }
+  function countUp(el){ if(el.dataset.done) return; el.dataset.done=1;
+    var to=parseFloat(el.dataset.count), dec=+(el.dataset.dec||0), t0=null, dur=1400;
+    function f(t){ if(!t0) t0=t; var p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3); el.textContent=fmt(to*e,dec); if(p<1) requestAnimationFrame(f); else el.textContent=fmt(to,dec) }
+    el.textContent=fmt(0,dec); requestAnimationFrame(f) }
+
+  /* reveals: hidden state only after IO is confirmed; 1.5 s safety */
+  var rv=[].slice.call(d.querySelectorAll('[data-rv]'));
+  function show(el){ el.classList.add('in') }
+  if('IntersectionObserver' in window){
+    de.classList.add('io'); var fired=false;
+    var io=new IntersectionObserver(function(es){ fired=true; es.forEach(function(e){ if(e.isIntersecting){ show(e.target); io.unobserve(e.target) } }) },{rootMargin:'0px 0px -8% 0px'});
+    rv.forEach(function(el){ io.observe(el) });
+    setTimeout(function(){ if(!fired) rv.forEach(show) },1500);
+    var cio=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ countUp(e.target); cio.unobserve(e.target) } }) },{threshold:.6});
+    [].forEach.call(d.querySelectorAll('[data-count]'),function(c){ cio.observe(c) });
+    var links={}; [].forEach.call(d.querySelectorAll('nav.links a'),function(a){ links[a.getAttribute('href').slice(1)]=a });
+    var sio=new IntersectionObserver(function(es){ es.forEach(function(e){ var a=links[e.target.id]; if(a && e.isIntersecting){ for(var k in links) links[k].classList.remove('on'); a.classList.add('on') } }) },{rootMargin:'-45% 0px -50% 0px'});
+    Object.keys(links).forEach(function(id){ var s=$(id); if(s) sio.observe(s) });
+  }
+
+  /* spotlight follows the pointer inside each cabinet tile */
+  if(matchMedia('(hover:hover)').matches){
+    [].forEach.call(d.querySelectorAll('.tile'),function(t){ var sp=t.querySelector('.spot'), raf=0;
+      t.addEventListener('pointermove',function(e){ var r=t.getBoundingClientRect(), x=e.clientX-r.left-r.width/2, y=e.clientY-r.top;
+        cancelAnimationFrame(raf); raf=requestAnimationFrame(function(){ sp.style.setProperty('--dx',x+'px'); sp.style.setProperty('--dy',y+'px') }) });
+      t.addEventListener('pointerleave',function(){ sp.style.setProperty('--dx','0px'); sp.style.setProperty('--dy','0px') });
+    });
+  }
+
+  /* toast */
+  var toast=$('toast'), tt=null;
+  function say(msg){ $('toast-t').textContent=msg; toast.classList.add('on'); clearTimeout(tt); tt=setTimeout(function(){ toast.classList.remove('on') },2600) }
+
+  /* chips */
+  var look=[].slice.call(d.querySelectorAll('#looking .chip')), bud=[].slice.call(d.querySelectorAll('#budget .chip'));
+  function bounce(c){ c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop') }
+  function setLook(c,on){ c.setAttribute('aria-pressed',on?'true':'false'); bounce(c); syncWA() }
+  look.forEach(function(c){ c.addEventListener('click',function(){ setLook(c, c.getAttribute('aria-pressed')!=='true') }) });
+  bud.forEach(function(c){ c.addEventListener('click',function(){ bud.forEach(function(o){ o.setAttribute('aria-pressed','false'); o.setAttribute('aria-checked','false') }); c.setAttribute('aria-pressed','true'); c.setAttribute('aria-checked','true'); bounce(c); syncWA() }) });
+  function chipByName(n){ for(var i=0;i<look.length;i++){ if(look[i].textContent.trim().toLowerCase()===n.toLowerCase()) return look[i] } return null }
+
+  /* tiles + "prepick" links add to the enquiry */
+  function pick(name, go){ var c=chipByName(name); if(c && c.getAttribute('aria-pressed')!=='true') setLook(c,true);
+    [].forEach.call(d.querySelectorAll('.tile[data-pick]'),function(t){ var cc=chipByName(t.dataset.pick); t.classList.toggle('picked', !!(cc && cc.getAttribute('aria-pressed')==='true')) });
+    say(name+' added to your enquiry');
+    if(go) setTimeout(function(){ $('enquire').scrollIntoView({behavior:RM?'auto':'smooth'}) },380) }
+  [].forEach.call(d.querySelectorAll('.tile[data-pick] .hit'),function(b){ b.addEventListener('click',function(){ pick(b.parentNode.dataset.pick,true) }) });
+  [].forEach.call(d.querySelectorAll('[data-prepick]'),function(a){ a.addEventListener('click',function(){ pick(a.dataset.prepick,false) }) });
+
+  /* form */
+  var nm=$('nm'), pn=$('pn'), nt=$('nt'), card=$('card');
+  var rules={ 'f-nm':function(){ return nm.value.trim().length>1 }, 'f-pn':function(){ return pn.value.replace(/\D/g,'').length>=10 } };
+  function check(id,showErr){ var ok=rules[id](), w=$(id); if(showErr) w.classList.toggle('bad',!ok); else if(ok) w.classList.remove('bad'); w.classList.toggle('good',ok); return ok }
+  [['nm','f-nm'],['pn','f-pn']].forEach(function(p){ var el=$(p[0]);
+    el.addEventListener('blur',function(){ if(el.value.trim()) check(p[1],true) });
+    el.addEventListener('input',function(){ check(p[1],false); syncWA() }) });
+  nt.addEventListener('input',syncWA);
+  function chosen(){ return look.filter(function(c){ return c.getAttribute('aria-pressed')==='true' }).map(function(c){ return c.textContent.trim() }) }
+  function budget(){ var b=bud.filter(function(c){ return c.getAttribute('aria-pressed')==='true' })[0]; return b?b.textContent.trim():'Prefer to discuss' }
+  function lines(){ var ch=chosen();
+    return ['Hello Prakash Jewellers,','',
+      'I would like to enquire about: '+(ch.length?ch.join(', '):'not sure yet'),
+      'Budget range: '+budget(),
+      (nt.value.trim()?'Note: '+nt.value.trim():null),'',
+      'Name: '+(nm.value.trim()||'-'),'Phone: '+(pn.value.trim()||'-'),'','(Sent from the website enquiry form)'].filter(function(x){ return x!==null }) }
+  function waHref(){ return WA+'?text='+encodeURIComponent(lines().join('\n')) }
+  function syncWA(){ var h=waHref(); $('wa-alt').href=h; $('done-wa').href=h }
+  syncWA();
+  $('eq').addEventListener('submit',function(e){ e.preventDefault();
+    var first=null; ['f-nm','f-pn'].forEach(function(id){ if(!check(id,true) && !first) first=id });
+    if(first){ var w=$(first); w.classList.remove('shake'); void w.offsetWidth; w.classList.add('shake'); w.querySelector('input').focus(); return }
+    var ch=chosen();
+    var subj='Enquiry: '+(ch.length?ch.join(', '):'Jewellery')+' · '+budget();
+    var href='mailto:'+EMAIL+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(lines().join('\n'));
+    syncWA(); card.classList.add('sent');
+    window.__previewMail(href) });
+  $('edit').addEventListener('click',function(){ card.classList.remove('sent'); nm.focus() });
+})();
+</script>
+</body>
+</html>
