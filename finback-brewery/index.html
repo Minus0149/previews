@@ -1,0 +1,1099 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Finback Brewery · Taproom in Glendale, Queens</title>
+<meta name="description" content="Concept homepage preview for Finback Brewery, a brewery taproom at 78-01 77th Ave, Glendale, NY 11385. Made by Farman, an independent web developer.">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..900,0..100,0..1;1,9..144,400..900,0..100,0..1&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0e2233; --navy2:#173550; --deep:#09182500; --abyss:#081521;
+  --foam:#f4ecda; --foam2:#ebdfc4; --paper:#fbf6ea;
+  --ink:#0e2233; --mute:#4a5560; --mute-d:#b7c2cb;
+  --copper:#a84a17; --copper-l:#e3894a; --amber:#e9a53b; --amber-d:#c97c1c;
+  --hop:#a9c54c; --hop-d:#4f6b12; --sea:#2f6f8f;
+  --line:rgba(14,34,51,.16); --line-d:rgba(244,236,218,.18);
+  --display:'Fraunces',Georgia,serif; --body:'Work Sans',system-ui,-apple-system,'Segoe UI',sans-serif; --label:'Rubik Mono One','Work Sans',sans-serif;
+  --e-out:cubic-bezier(.22,1,.36,1); --e-std:cubic-bezier(.2,0,0,1); --e-in:cubic-bezier(.4,0,1,1); --e-back:cubic-bezier(.34,1.56,.64,1); --e-fluid:cubic-bezier(.45,.05,.2,1);
+  --t1:.16s; --t2:.28s; --t3:.6s; --t4:.9s;
+  --rise:22px;
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@media (prefers-reduced-motion:reduce){:root{--rise:8px}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--foam);color:var(--ink);font:400 17px/1.6 var(--body);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+button{font:inherit;color:inherit}
+.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
+@media (min-width:700px){.wrap{width:min(1240px,100% - 64px)}}
+.skip{position:absolute;left:-9999px;top:8px;z-index:200;background:var(--ink);color:var(--foam);padding:12px 16px;border-radius:8px}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* riso texture */
+.grain{position:relative;isolation:isolate}
+.grain::after{content:"";position:absolute;inset:0;background-image:var(--grain);opacity:.16;mix-blend-mode:multiply;pointer-events:none;z-index:-1}
+.dark.grain::after{mix-blend-mode:screen;opacity:.09}
+
+/* type */
+.eyebrow{font:400 11px/1.3 var(--label);letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor;opacity:.7}
+.h2{font-family:var(--display);font-weight:800;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;font-size:clamp(38px,5.4vw,76px);line-height:.98;letter-spacing:-.02em}
+.h2 em{font-style:italic;font-weight:600;color:var(--copper)}
+.dark .h2 em{color:var(--amber)}
+.lede{font-size:clamp(17px,1.5vw,19px);color:var(--mute);max-width:56ch}
+.dark{background:var(--navy);color:var(--foam)}
+.dark .lede{color:var(--mute-d)}
+.riso{text-shadow:.045em .03em 0 rgba(169,197,76,.55)}
+
+/* buttons */
+.btn{--bg:var(--copper);--fg:#fff8ec;position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;background:var(--bg);color:var(--fg);font:700 16px/1 var(--body);text-decoration:none;border:2px solid var(--bg);cursor:pointer;transition:transform var(--t1) var(--e-std),background var(--t2),color var(--t2),border-color var(--t2),box-shadow var(--t2);box-shadow:0 3px 0 rgba(8,21,33,.35)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 rgba(8,21,33,.3)}
+.btn:active{transform:translateY(1px) scale(.97);box-shadow:0 1px 0 rgba(8,21,33,.35);transition-duration:.08s}
+.btn .arr{transition:transform var(--t2) var(--e-back)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn.ghost{--bg:transparent;--fg:var(--ink);border-color:var(--ink);box-shadow:none}
+.btn.ghost:hover{--bg:var(--ink);--fg:var(--foam)}
+.dark .btn.ghost{--fg:var(--foam);border-color:rgba(244,236,218,.6)}
+.dark .btn.ghost:hover{--bg:var(--foam);--fg:var(--ink);border-color:var(--foam)}
+.btn.foam{--bg:var(--foam);--fg:var(--ink)}
+.btn.foam:hover{--bg:#fff}
+.btn.sm{min-height:44px;padding:0 18px;font-size:15px}
+.txtlink{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px;transition:color var(--t1),text-underline-offset var(--t2) var(--e-out)}
+.txtlink:hover{color:var(--copper);text-underline-offset:7px}
+.dark .txtlink:hover{color:var(--amber)}
+.ring::after{content:"";position:absolute;inset:-2px;border-radius:inherit;border:2px solid var(--amber);opacity:0;pointer-events:none}
+@media (prefers-reduced-motion:no-preference){.ring::after{animation:ring 2.8s var(--e-out) 2.6s infinite}}
+@keyframes ring{0%{opacity:.9;transform:scale(1)}70%,100%{opacity:0;transform:scale(1.08,1.35)}}
+
+/* owner-fill slots */
+.slot{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;border:1.5px dashed rgba(14,34,51,.38);border-radius:10px;padding:6px 10px;font-style:italic;color:var(--mute);background:rgba(255,255,255,.35)}
+.slot b{font:400 9.5px/1 var(--label);letter-spacing:.1em;font-style:normal;color:var(--hop-d);background:rgba(169,197,76,.22);padding:4px 6px;border-radius:5px}
+.dark .slot,.back .slot{border-color:rgba(244,236,218,.4);color:var(--mute-d);background:rgba(255,255,255,.04)}
+.dark .slot b,.back .slot b{color:var(--hop);background:rgba(169,197,76,.14)}
+.tag{position:absolute;left:12px;bottom:12px;z-index:3;font:400 9.5px/1 var(--label);letter-spacing:.1em;background:rgba(8,21,33,.78);color:var(--foam);padding:7px 9px;border-radius:6px;backdrop-filter:blur(4px)}
+
+/* progress (beer line) */
+.progress{position:fixed;left:0;top:0;height:4px;width:100%;z-index:120;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--amber-d),var(--amber));pointer-events:none}
+.progress::after{content:"";position:absolute;right:0;top:0;width:10px;height:4px;background:var(--foam);border-radius:0 4px 4px 0}
+
+/* ---------- Farman bar ---------- */
+.fb{font-family:var(--body);color:#e8e6e1;z-index:110;transition:opacity .55s var(--e-out),transform .55s var(--e-out)}
+.fb-in{position:relative;background:#17181b;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;align-items:start}
+.fb-mark{grid-row:span 2;width:34px;height:34px;border-radius:8px;background:#fff;color:#17181b;display:grid;place-items:center;font:800 17px/1 var(--display)}
+.fb p{font-size:14px;line-height:1.45;color:#c9c8c3;padding-right:36px}
+.fb p b{color:#fff}
+.fb-act{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.fb-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 14px;border-radius:8px;font:600 15px/1 var(--body);text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.24);transition:transform var(--t1) var(--e-std),background var(--t2),border-color var(--t2)}
+.fb-btn:hover{border-color:#fff;transform:translateY(-2px)}
+.fb-btn:active{transform:scale(.97)}
+.fb-btn.pri{background:#fff;color:#17181b;border-color:#fff;font-weight:700}
+.fb-btn.pri:hover{background:var(--foam2)}
+.fb-btn .arr{transition:transform var(--t2) var(--e-back)}
+.fb-btn:hover .arr{transform:translateX(3px)}
+.fb-x{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;background:none;color:#a9a8a3;border-radius:8px;cursor:pointer;display:grid;place-items:center;transition:color var(--t1),background var(--t1)}
+.fb-x:hover{color:#fff;background:rgba(255,255,255,.08)}
+.fbw .fb{opacity:0;transform:translateY(-10px);pointer-events:none}
+.fbw.fb-on .fb{opacity:1;transform:none;pointer-events:auto}
+.fbw.fb-on .fb.off{opacity:0;transform:translateY(-10px);pointer-events:none;transition-duration:.24s;transition-timing-function:var(--e-in)}
+@media (min-width:861px){
+  .fb{position:fixed;right:16px;bottom:16px;width:520px}
+  .fb-in{border-radius:14px;padding:14px 16px;box-shadow:0 24px 60px -18px rgba(0,0,0,.55)}
+  .fbw .fb,.fbw.fb-on .fb.off{transform:translateY(12px)}
+}
+@media (max-width:860px){.fb{position:relative}.fb-in{padding:12px 16px}.fb-act{grid-column:1 / -1}.fb-btn{flex:1 1 auto}}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:100;background:var(--navy);color:var(--foam);transition:box-shadow var(--t2),background var(--t2)}
+.hdr.cond{background:rgba(14,34,51,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 14px 30px -20px rgba(0,0,0,.6)}
+.hdr-in{display:flex;align-items:center;gap:22px;height:76px;transition:height var(--t2) var(--e-std)}
+.hdr.cond .hdr-in{height:62px}
+.logo{display:inline-flex;align-items:baseline;gap:10px;text-decoration:none;min-height:44px;align-items:center}
+.logo .wm{font-family:var(--display);font-weight:900;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;font-size:30px;letter-spacing:-.02em;line-height:1;transition:transform var(--t2) var(--e-std);transform-origin:0 50%}
+.hdr.cond .logo .wm{transform:scale(.88)}
+.logo .sub{font:400 9.5px/1.25 var(--label);letter-spacing:.14em;color:var(--hop)}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;text-decoration:none;font-weight:500;font-size:15px;border-radius:999px;color:#dfe6ea;transition:background var(--t1),color var(--t1)}
+.nav a:hover{background:rgba(244,236,218,.1);color:#fff}
+.hdr-call{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 6px;font-weight:600;font-size:15px;text-decoration:none;color:var(--foam);transition:color var(--t1)}
+.hdr-call:hover{color:var(--amber)}
+@media (max-width:1020px){.nav{display:none}.hdr-in{justify-content:space-between}.hdr-call{margin-left:auto}}
+@media (max-width:560px){.hdr-call span{display:none}.hdr-call{width:44px;justify-content:center;border:1.5px solid rgba(244,236,218,.4);border-radius:999px}.hdr-in{gap:10px}.logo .sub{display:none}.logo .wm{font-size:27px}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:44px 0 0;overflow:hidden;background:
+  radial-gradient(circle at 1px 1px,rgba(244,236,218,.07) 1.1px,transparent 1.6px) 0 0/7px 7px,
+  radial-gradient(120% 80% at 85% 10%,#1b3f5d 0%,transparent 60%),var(--navy)}
+.hero-g{display:grid;grid-template-columns:1.06fr .94fr;gap:40px;align-items:center;padding-bottom:120px}
+.hero h1{font-family:var(--display);font-weight:900;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;font-size:clamp(58px,8.6vw,132px);line-height:.88;letter-spacing:-.035em;margin:22px 0 24px}
+.hero h1 .l{display:block}
+.hero h1 em{font-style:italic;font-weight:700;color:var(--amber);font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1}
+.hero .eyebrow{color:var(--hop)}
+.hero .lede{color:#cdd6dc;max-width:46ch}
+.hero .lede b{color:var(--foam);font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:30px}
+.trust{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:28px;font-size:15px;color:#cdd6dc}
+.trust .stars{display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 10px;border:1.5px solid var(--line-d);border-radius:999px;color:var(--foam);text-decoration:none;transition:border-color var(--t2),background var(--t2)}
+.trust .stars:hover{border-color:var(--amber);background:rgba(233,165,59,.08)}
+.trust .stars b{font-family:var(--display);font-size:20px;font-weight:800}
+.st{display:inline-flex;gap:1px;color:var(--amber)}
+.trust .sep{width:4px;height:4px;border-radius:50%;background:var(--mute-d);opacity:.6}
+
+.hero-art{position:relative;min-height:540px}
+.arch{position:relative;width:76%;margin:0 0 0 auto;aspect-ratio:4/5;border-radius:999px 999px 26px 26px;overflow:hidden;background:var(--navy2);box-shadow:-14px 14px 0 var(--copper)}
+.arch img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.05)}
+.arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,34,51,0) 50%,rgba(14,34,51,.55));pointer-events:none}
+.arch .tag{left:auto;right:14px;bottom:14px}
+.pint{position:absolute;left:-7%;bottom:-26px;width:46%;max-width:270px;filter:drop-shadow(0 22px 26px rgba(0,0,0,.35))}
+.sticker{position:absolute;right:-3%;top:4%;width:132px;height:132px;z-index:3}
+.sticker .rot{width:100%;height:100%}
+.sticker .core{position:absolute;inset:22px;border-radius:50%;background:var(--hop);color:var(--navy);display:grid;place-items:center;text-align:center;box-shadow:4px 4px 0 var(--navy)}
+.sticker .core b{display:block;font:800 30px/1 var(--display);font-variation-settings:"SOFT" 100,"WONK" 1}
+.sticker .core small{display:block;font:400 9px/1.2 var(--label);letter-spacing:.08em;margin-top:2px}
+.hero-wave{position:absolute;left:0;right:0;bottom:-1px;height:110px;pointer-events:none}
+.hero-wave svg{width:100%;height:100%}
+.hero-wave .wl{stroke-dasharray:1;stroke-dashoffset:0}
+
+/* pint svg internals */
+.pint .liq{transform:translateY(0)}
+.pint .stream{transform-origin:50% 0}
+.pint .bub{opacity:0}
+.pint .foamw{transform:translateX(0)}
+
+@media (max-width:960px){
+  .hero{padding-top:28px}
+  .hero-g{grid-template-columns:1fr;gap:26px;padding-bottom:100px}
+  .hero-art{min-height:0;max-width:520px;width:100%;margin-inline:auto}
+  .arch{width:72%}
+}
+@media (max-width:560px){
+  .hero h1{font-size:clamp(54px,15.5vw,70px);margin:16px 0 18px}
+  .cta-row{margin-top:22px}
+  .cta-row .btn{flex:1 1 auto}
+  .trust{margin-top:20px;gap:10px 14px}
+  .trust .sep,.trust .txtlink{display:none}
+  .hero-g>div:first-child{display:flex;flex-direction:column}
+  .hero-g>div:first-child .trust{order:4;margin:2px 0 0}
+  .hero-g>div:first-child .cta-row{order:5;margin-top:18px}
+  .hero .lede{font-size:16.5px}
+  .sticker{width:104px;height:104px;right:0}
+  .sticker .core{inset:17px}
+  .sticker .core b{font-size:24px}
+  .arch{width:74%}
+  .pint{width:44%;bottom:-18px;left:-2%}
+}
+
+/* ---------- section scaffolding ---------- */
+.sec{padding:clamp(80px,10vw,136px) 0}
+.sec-h{display:grid;grid-template-columns:1.1fr .9fr;gap:24px 60px;align-items:end;margin-bottom:clamp(36px,5vw,56px)}
+.sec-h .eyebrow{color:var(--copper);margin-bottom:16px}
+.dark .sec-h .eyebrow{color:var(--hop)}
+@media (max-width:860px){.sec-h{grid-template-columns:1fr}}
+.after-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:44px}
+.after-cta p{color:var(--mute);font-size:15px}
+.dark .after-cta p{color:var(--mute-d)}
+
+/* ---------- on tap (can labels) ---------- */
+.taps{background:var(--foam)}
+.cans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.can{position:relative;perspective:1400px}
+.can-in{position:relative;aspect-ratio:3/3.75;transform-style:preserve-3d;transition:transform .8s var(--e-fluid)}
+.can.flip .can-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;border-radius:26px;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:2px solid var(--ink);display:flex;flex-direction:column;box-shadow:6px 7px 0 var(--ink)}
+.face.back{transform:rotateY(180deg);background:var(--navy);color:var(--foam);padding:24px 22px 20px}
+.face.front{background:var(--paper)}
+.can:hover .face{box-shadow:9px 11px 0 var(--ink)}
+.face{transition:box-shadow var(--t2) var(--e-std)}
+.lbl{position:relative;flex:0 0 52%;background:var(--c1);overflow:hidden;border-bottom:2px solid var(--ink)}
+.lbl::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 1px 1px,rgba(14,34,51,.22) 1.1px,transparent 1.7px) 0 0/6px 6px;mix-blend-mode:multiply}
+.lbl .fill{position:absolute;left:-10%;right:-10%;bottom:0;height:62%;background:var(--c2);transform:translateY(0);transition:transform 1.4s var(--e-fluid)}
+.lbl .fill svg{position:absolute;left:0;top:-15px;width:100%;height:16px}
+.lbl .num{position:absolute;left:18px;top:16px;font:400 11px/1 var(--label);letter-spacing:.14em;color:var(--ink);background:var(--paper);padding:6px 8px;border-radius:6px;border:1.5px solid var(--ink)}
+.lbl .big{position:absolute;right:14px;bottom:4px;font:900 clamp(78px,8vw,112px)/.8 var(--display);font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;color:var(--paper);text-shadow:4px 3px 0 var(--ink);letter-spacing:-.04em}
+.lbl .fluke{position:absolute;left:18px;bottom:16px;width:46px;color:var(--ink);opacity:.8}
+.c-a{--c1:#e3894a;--c2:#a84a17}
+.c-b{--c1:#c9dc7f;--c2:#4f6b12}
+.c-c{--c1:#8cc0d6;--c2:#2f6f8f}
+.c-d{--c1:#f1c46a;--c2:#c97c1c}
+.c-e{--c1:#e9b7a0;--c2:#8d3a2a}
+.c-f{--c1:#b8c8d3;--c2:#173550}
+.lbl-meta{flex:1;display:flex;flex-direction:column;gap:10px;padding:16px 18px 16px}
+.lbl-meta .nm{font:700 22px/1.1 var(--display);font-style:italic;font-variation-settings:"SOFT" 100,"WONK" 1;color:var(--mute);border-bottom:2px dashed rgba(14,34,51,.35);padding-bottom:6px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.lbl-meta .nm small{font:400 9px/1 var(--label);font-style:normal;letter-spacing:.1em;color:var(--hop-d)}
+.lbl-meta .row{display:flex;gap:10px}
+.lbl-meta .row .slot{flex:1;font-size:14px;padding:6px 9px;justify-content:space-between}
+.lbl-meta .oneliner{font-size:13.5px;padding:6px 9px}
+.flipbtn{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:999px;border:1.5px solid var(--ink);background:transparent;cursor:pointer;font:600 14px/1 var(--body);transition:background var(--t1),color var(--t1),transform var(--t1) var(--e-std)}
+.flipbtn:hover{background:var(--ink);color:var(--foam)}
+.flipbtn:active{transform:scale(.96)}
+.flipbtn svg{transition:transform var(--t3) var(--e-back)}
+.flipbtn:hover svg{transform:rotate(180deg)}
+.back .flipbtn{border-color:rgba(244,236,218,.55);color:var(--foam)}
+.back .flipbtn:hover{background:var(--foam);color:var(--ink)}
+.back h3{font:800 24px/1.1 var(--display);font-variation-settings:"SOFT" 100,"WONK" 1;margin:6px 0 14px}
+.back .eyebrow{color:var(--hop)}
+.back ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.back li{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px dashed rgba(244,236,218,.25);padding-bottom:9px;font-size:14.5px;color:#d6dee3}
+.back li .slot{font-size:12.5px;padding:4px 8px}
+.taps-note{display:flex;gap:14px;align-items:flex-start;margin-top:34px;padding:18px 20px;border-radius:16px;background:var(--foam2);border:1.5px solid var(--line);max-width:760px}
+.taps-note p{font-size:15.5px;color:var(--mute)}
+.taps-note svg{flex:0 0 auto;color:var(--copper);margin-top:2px}
+.swipe{display:none;font:400 10px/1 var(--label);letter-spacing:.12em;color:var(--mute);margin-top:6px}
+@media (max-width:980px){.cans{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){
+  .cans{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding:6px 16px 22px;margin-inline:-16px;scrollbar-width:none}
+  .cans::-webkit-scrollbar{display:none}
+  .can{flex:0 0 80%;scroll-snap-align:center}
+  .swipe{display:block}
+}
+
+/* ---------- visit ---------- */
+.visit{background:
+  radial-gradient(circle at 1px 1px,rgba(244,236,218,.06) 1.1px,transparent 1.6px) 0 0/7px 7px,var(--navy)}
+.visit-g{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch}
+.card-d{display:flex;flex-direction:column;background:var(--navy2);border:1.5px solid var(--line-d);border-radius:24px;padding:clamp(22px,3vw,34px)}
+.addr{font-family:var(--display);font-weight:800;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;font-size:clamp(30px,3.6vw,48px);line-height:1.02;letter-spacing:-.015em;margin:14px 0 8px}
+.addr small{display:block;font:500 17px/1.4 var(--body);color:var(--mute-d);letter-spacing:0;margin-top:10px}
+.visit .eyebrow{color:var(--hop)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.postcard{position:relative;margin-top:26px;border-radius:18px;overflow:hidden;border:1.5px solid var(--line-d);background:var(--abyss);flex:1 0 170px;min-height:170px}
+.postcard svg{position:absolute;inset:0;width:100%;height:100%}.postcard svg.pin{inset:auto;left:50%;top:44%;width:34px;height:44px}
+.postcard .pin{position:absolute;left:50%;top:44%;transform:translate(-50%,-100%);color:var(--amber)}
+.postcard .pin::after{content:"";position:absolute;left:50%;top:100%;width:18px;height:6px;margin-left:-9px;border-radius:50%;background:rgba(233,165,59,.35)}
+.postcard .lab{position:absolute;left:14px;bottom:12px;font:400 9.5px/1.3 var(--label);letter-spacing:.1em;color:var(--mute-d)}
+.days{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 18px}
+.chip{min-height:44px;min-width:52px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line-d);background:transparent;color:var(--foam);font:600 14px/1 var(--body);cursor:pointer;transition:background var(--t1),border-color var(--t1),color var(--t1),transform var(--t1) var(--e-std)}
+.chip:hover{border-color:var(--foam)}
+.chip:active{transform:scale(.95)}
+.chip[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:var(--ink)}
+.chip.pop{animation:pop .38s var(--e-back)}
+@keyframes pop{0%{transform:scale(.92)}60%{transform:scale(1.06)}100%{transform:scale(1)}}
+.readout{border-radius:18px;background:var(--abyss);border:1.5px solid var(--line-d);padding:20px 22px;display:grid;gap:10px}
+.readout .day{font:800 34px/1 var(--display);font-variation-settings:"SOFT" 100,"WONK" 1}
+.readout .day span{color:var(--amber);font-style:italic;font-weight:600}
+.readout .fade{transition:opacity .25s var(--e-std),transform .25s var(--e-std)}
+.readout.swap .fade{opacity:0;transform:translateY(4px)}
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.rule{border:1.5px solid var(--line-d);border-radius:16px;padding:16px;display:grid;gap:8px;align-content:start;transition:border-color var(--t2),transform var(--t2) var(--e-std),background var(--t2)}
+.rule:hover{border-color:rgba(233,165,59,.6);transform:translateY(-3px);background:rgba(255,255,255,.025)}
+.rule h3{font:700 16px/1.2 var(--body);display:flex;align-items:center;gap:8px}
+.rule h3 svg{color:var(--hop)}
+.rule .slot{font-size:13.5px}
+@media (max-width:960px){.visit-g{grid-template-columns:1fr}}
+@media (max-width:480px){.rules{grid-template-columns:1fr}.days .chip{flex:1 0 calc(25% - 8px);min-width:0;padding:0 6px}}
+
+/* ---------- photos ---------- */
+.room{background:var(--foam)}
+.gal{display:grid;grid-template-columns:1.35fr .65fr .8fr;grid-template-rows:280px 280px;gap:16px}
+.gal figure{position:relative;margin:0;border-radius:22px;overflow:hidden;border:2px solid var(--ink);background:var(--navy2)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--e-out)}
+.gal figure:hover img{transform:scale(1.05)}
+.gal figure:nth-child(1){grid-row:span 2}
+.gal figure:nth-child(2){grid-row:span 2}
+.gal figcaption{position:absolute;right:12px;top:12px;z-index:3;font:600 13px/1.2 var(--body);background:var(--paper);color:var(--ink);border:1.5px solid var(--ink);padding:7px 10px;border-radius:999px}
+@media (max-width:860px){.gal{grid-template-columns:1fr 1fr;grid-template-rows:260px 200px 200px}.gal figure:nth-child(1){grid-column:span 2;grid-row:auto}.gal figure:nth-child(2){grid-row:span 2}}
+@media (max-width:520px){.gal{grid-template-rows:230px 170px 170px;gap:12px}}
+
+/* ---------- rating band ---------- */
+.rate{background:var(--copper);color:var(--foam);padding:clamp(70px,8vw,110px) 0;position:relative;overflow:hidden}
+.rate::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 1px 1px,rgba(14,34,51,.25) 1.2px,transparent 1.8px) 0 0/8px 8px;pointer-events:none}
+.rate-g{position:relative;display:grid;grid-template-columns:auto 1fr;gap:30px 64px;align-items:center}
+.score{display:flex;align-items:flex-end;gap:18px}
+.score .n{font:900 clamp(120px,16vw,220px)/.8 var(--display);font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;letter-spacing:-.05em;text-shadow:7px 6px 0 var(--navy)}
+.score .of{font:400 12px/1.4 var(--label);letter-spacing:.12em;padding-bottom:10px}
+.bigstars{position:relative;display:inline-block;margin-bottom:14px}
+.bigstars .bs{display:flex;gap:4px;color:rgba(244,236,218,.3)}
+.bigstars .fg{position:absolute;inset:0;width:94%;overflow:hidden;color:var(--foam)}
+.rate h2{font:800 clamp(30px,3.6vw,48px)/1.05 var(--display);font-variation-settings:"SOFT" 100,"WONK" 1;letter-spacing:-.015em;max-width:20ch}
+.rate p{color:#fde9d8;margin-top:12px;max-width:52ch}
+.rate .slot{border-color:rgba(244,236,218,.55);color:#fde9d8;background:rgba(14,34,51,.15)}
+.rate .slot b{background:rgba(14,34,51,.35);color:#e3f0b3}
+.rate .btns{margin-top:22px}
+.rate .btn.foam:hover{--bg:var(--navy);--fg:var(--foam)}
+.rate .btn.ghost{--fg:var(--foam);border-color:rgba(244,236,218,.7)}
+.rate .btn.ghost:hover{--bg:var(--foam);--fg:var(--ink)}
+@media (max-width:860px){.rate-g{grid-template-columns:1fr}}
+
+/* ---------- events ---------- */
+.events{background:var(--foam2)}
+.stubs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.stub{position:relative;display:grid;grid-template-columns:96px 1fr;background:var(--paper);border:2px solid var(--ink);border-radius:18px;min-height:168px;transition:transform var(--t2) var(--e-std),box-shadow var(--t2);box-shadow:5px 6px 0 var(--ink)}
+.stub:hover{transform:translate(-2px,-3px) rotate(-.4deg);box-shadow:8px 10px 0 var(--ink)}
+.stub .dt{display:grid;place-content:center;text-align:center;gap:4px;border-right:2px dashed var(--ink);background:var(--hop);border-radius:16px 0 0 16px;color:var(--ink)}
+.stub .dt b{font:900 40px/1 var(--display);font-variation-settings:"SOFT" 100,"WONK" 1;opacity:.35}
+.stub .dt small{font:400 10px/1 var(--label);letter-spacing:.14em;opacity:.65}
+.stub:nth-child(2) .dt{background:var(--amber)}
+.stub:nth-child(3) .dt{background:#8cc0d6}
+.stub .ev{padding:18px 18px;display:grid;gap:10px;align-content:center}
+.stub .ev h3{font:700 20px/1.15 var(--display);font-style:italic;color:var(--mute);font-variation-settings:"SOFT" 100,"WONK" 1}
+.stub .ev .slot{font-size:13.5px}
+.stub::before,.stub::after{content:"";position:absolute;left:84px;width:22px;height:22px;border-radius:50%;background:var(--foam2);border:2px solid var(--ink)}
+.stub::before{top:-12px;clip-path:inset(50% 0 0 0)}
+.stub::after{bottom:-12px;clip-path:inset(0 0 50% 0)}
+@media (max-width:960px){.stubs{grid-template-columns:1fr}}
+
+/* ---------- private events form ---------- */
+.priv{background:var(--foam)}
+.priv-g{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,72px);align-items:start}
+.perks{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+.perks li{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:var(--mute)}
+.perks li svg{flex:0 0 auto;color:var(--hop-d);margin-top:3px}
+.contact-mini{margin-top:26px;display:grid;gap:4px;font-size:16px}
+.contact-mini a{font-weight:600;display:inline-flex;align-items:center;min-height:44px}
+.fcard{position:relative;background:var(--paper);border:2px solid var(--ink);border-radius:26px;padding:clamp(22px,3vw,34px);box-shadow:8px 9px 0 var(--navy)}
+.fcard h3{font:800 28px/1.1 var(--display);font-variation-settings:"SOFT" 100,"WONK" 1;margin-bottom:6px}
+.fcard .sub{color:var(--mute);font-size:15px;margin-bottom:20px}
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f{position:relative;display:grid;gap:6px}
+.f.full{grid-column:1/-1}
+.f label{font-weight:600;font-size:14.5px}
+.f label i{font-style:normal;color:var(--mute);font-weight:400}
+.f input,.f textarea{width:100%;min-height:50px;border:1.5px solid rgba(14,34,51,.35);border-radius:12px;background:#fff;padding:12px 14px;font:400 16px/1.4 var(--body);color:var(--ink);transition:border-color var(--t1),box-shadow var(--t2)}
+.f textarea{min-height:96px;resize:vertical}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--copper);box-shadow:0 0 0 4px rgba(168,74,23,.16)}
+.f .err{display:none;font-size:13.5px;color:#9b2c12;font-weight:500}
+.f.bad input{border-color:#b3341a;box-shadow:0 0 0 4px rgba(179,52,26,.12)}
+.f.bad .err{display:block}
+.f.good input{border-color:var(--hop-d)}
+.f .ok{position:absolute;right:12px;top:39px;width:22px;height:22px;color:var(--hop-d);opacity:0;transform:scale(.6);transition:opacity var(--t2),transform var(--t2) var(--e-back);pointer-events:none}
+.f.good .ok{opacity:1;transform:scale(1)}
+.shake{animation:shake .38s var(--e-std)}
+@keyframes shake{20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
+.stepper{display:flex;align-items:center;border:1.5px solid rgba(14,34,51,.35);border-radius:12px;background:#fff;overflow:hidden;min-height:50px}
+.stepper button{flex:0 0 50px;width:50px;align-self:stretch;border:0;background:var(--foam2);font:700 22px/1 var(--body);cursor:pointer;transition:background var(--t1)}
+.stepper button:hover{background:var(--amber)}
+.stepper button:active{transform:scale(.94)}
+.stepper input{border:0;min-height:46px;text-align:center;font-weight:700;border-radius:0;box-shadow:none!important;-moz-appearance:textfield}
+.stepper input::-webkit-inner-spin-button{-webkit-appearance:none}
+.stepper:focus-within{border-color:var(--copper);box-shadow:0 0 0 4px rgba(168,74,23,.16)}
+.occ{display:flex;flex-wrap:wrap;gap:8px}
+.occ .chip{color:var(--ink);border-color:rgba(14,34,51,.3)}
+.occ .chip:hover{border-color:var(--ink)}
+.occ .chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:var(--foam)}
+.fsend{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:20px}
+.fsend .btn{flex:0 0 auto}
+.fsend small{color:var(--mute);font-size:13.5px;max-width:34ch}
+.done{display:none;text-align:center;padding:10px 0 4px}
+.fcard.sent form{display:none}
+.fcard.sent .done{display:block;animation:fin .5s var(--e-out)}
+@keyframes fin{from{opacity:0;transform:translateY(var(--rise))}to{opacity:1;transform:none}}
+.done .mini{width:96px;margin:0 auto 14px}
+.fcard.sent .mini .ml{animation:mfill 1.1s var(--e-fluid) .1s both}
+@keyframes mfill{from{transform:translateY(64px)}to{transform:translateY(0)}}
+.fcard.sent .mini .ck{stroke-dasharray:40;stroke-dashoffset:40;animation:draw .45s var(--e-out) 1s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.done h3{margin-bottom:6px}
+.done p{color:var(--mute);max-width:44ch;margin:0 auto}
+.done pre{text-align:left;white-space:pre-wrap;background:var(--foam);border:1.5px dashed var(--line);border-radius:12px;padding:12px 14px;font:13px/1.5 ui-monospace,Consolas,monospace;color:var(--ink);margin:16px 0;max-height:200px;overflow:auto}
+@media (max-width:960px){.priv-g{grid-template-columns:1fr}}
+@media (max-width:520px){.fg2{grid-template-columns:1fr}.fsend .btn{width:100%}}
+
+/* ---------- final CTA ---------- */
+.final{position:relative;overflow:hidden;padding:clamp(90px,11vw,150px) 0 clamp(70px,8vw,110px);text-align:center;background:
+  radial-gradient(circle at 1px 1px,rgba(244,236,218,.07) 1.1px,transparent 1.6px) 0 0/7px 7px,var(--navy)}
+.final h2{font-family:var(--display);font-weight:900;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;font-size:clamp(46px,7.4vw,112px);line-height:.92;letter-spacing:-.03em;max-width:13ch;margin:18px auto 22px}
+.final h2 em{font-style:italic;font-weight:700;color:var(--amber)}
+.final .eyebrow{color:var(--hop)}
+.final .lede{margin:0 auto;color:#cdd6dc}
+.final .cta-row{justify-content:center}
+.bubbles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.bubbles i{position:absolute;bottom:-20px;width:var(--s);height:var(--s);left:var(--x);border-radius:50%;border:1.5px solid rgba(233,165,59,.45);background:rgba(233,165,59,.08)}
+@media (prefers-reduced-motion:no-preference){.bubbles i{animation:bub var(--d) linear var(--dl) infinite}}
+@media (prefers-reduced-motion:reduce){.bubbles i{bottom:var(--y,10%)}}
+@keyframes bub{0%{transform:translate(0,0);opacity:0}10%{opacity:1}50%{transform:translate(10px,-50vh)}90%{opacity:.9}100%{transform:translate(-6px,-105vh);opacity:0}}
+
+/* ---------- Farman card + footer ---------- */
+.farman{background:var(--foam);padding:56px 0 30px}
+.fm-card{display:grid;grid-template-columns:auto 1fr auto;gap:18px 24px;align-items:center;background:#17181b;color:#e8e6e1;border-radius:20px;padding:24px 26px}
+.fm-card .fb-mark{grid-row:auto}
+.fm-card h2{font:700 21px/1.25 var(--body);color:#fff}
+.fm-card p{color:#b9b8b3;font-size:15px;margin-top:4px}
+.fm-card .fb-act{margin-top:0}
+@media (max-width:860px){.fm-card{grid-template-columns:auto 1fr;align-items:start}.fm-card .fb-act{grid-column:1/-1}.fm-card .fb-btn{flex:1 1 auto}}
+.foot{background:var(--foam);padding:30px 0 40px;border-top:1.5px solid var(--line)}
+.foot-g{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:28px}
+.foot .wm{font:900 34px/1 var(--display);font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;letter-spacing:-.02em}
+.foot h3{font:400 10px/1 var(--label);letter-spacing:.14em;color:var(--copper);margin-bottom:12px}
+.foot p,.foot li{font-size:15.5px;color:var(--mute)}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.foot a{display:inline-flex;align-items:center;min-height:44px;font-weight:600;color:var(--ink);text-decoration-thickness:1.5px;text-underline-offset:4px;transition:color var(--t1)}
+.foot a:hover{color:var(--copper)}
+.credit{margin-top:26px;padding-top:18px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--mute);line-height:1.55}
+@media (max-width:860px){.foot-g{grid-template-columns:1fr}}
+
+/* ---------- mobile action bar ---------- */
+.mbar{display:none}
+@media (max-width:760px){
+  body{padding-bottom:84px}
+  .mbar{display:grid;grid-template-columns:auto 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:90;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(14,34,51,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line-d);transition:transform .35s var(--e-out)}
+  .mbar.away{transform:translateY(110%)}
+  .mbar a{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;border-radius:999px;text-decoration:none;font-weight:700;font-size:16px}
+  .mbar .call{padding:0 20px;border:1.5px solid rgba(244,236,218,.5);color:var(--foam)}
+  .mbar .go{background:var(--amber);color:var(--ink)}
+  .mbar .go:active,.mbar .call:active{transform:scale(.97)}
+}
+
+/* ---------- motion (JS-gated; content visible without JS) ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .js .hero .in{animation:rise .8s var(--e-out) both;animation-delay:calc(var(--i,0) * 80ms + 120ms)}
+  .js .arch{animation:archIn 1s var(--e-out) .35s both}
+  .js .arch img{animation:kb 22s var(--e-fluid) 1.2s infinite alternate}
+  .sticker .rot{animation:spin 26s linear infinite}
+  .js .pint .bub{animation:bubR var(--d,2.6s) ease-in var(--dl,2.4s) infinite}
+  .js .pint .foamw{animation:foamx 3.2s linear 2.6s infinite}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .hero .in{animation:fadeS .6s var(--e-out) both;animation-delay:calc(var(--i,0) * 70ms + 80ms)}
+  .js .arch{animation:fade .7s var(--e-out) .3s both}
+}
+.js .pint .liq{animation:pour 2.3s var(--e-fluid) .7s both}
+.js .pint .stream{animation:stream 2.6s var(--e-std) .45s both}
+.js .hero-wave .wl{animation:draww 2.2s var(--e-out) .9s both}
+.js .sticker{animation:fade .6s var(--e-out) 1.1s both}
+@keyframes rise{from{opacity:0;transform:translateY(var(--rise))}to{opacity:1;transform:none}}
+@keyframes fadeS{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes archIn{from{opacity:0;transform:translateY(30px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.09) translate(-1.5%,1%)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pour{from{transform:translateY(250px)}to{transform:translateY(0)}}
+@keyframes stream{0%{transform:scaleY(0);opacity:1}14%{transform:scaleY(1);opacity:1}82%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+@keyframes bubR{0%{opacity:0;transform:translateY(0)}15%{opacity:.85}100%{opacity:0;transform:translateY(-190px)}}
+@keyframes foamx{to{transform:translateX(-40px)}}
+@keyframes draww{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+
+/* scroll reveals: hidden state only after JS confirms IntersectionObserver */
+.io [data-rv]{opacity:0;transition:opacity var(--t4) var(--e-out),transform var(--t4) var(--e-out),clip-path 1s var(--e-out);transition-delay:calc(var(--i,0) * 75ms)}
+.io [data-rv="up"]{transform:translateY(calc(var(--rise) * 1.3))}
+.io [data-rv="scale"]{transform:scale(.94)}
+.io [data-rv="wipe"]{opacity:1}
+.io [data-rv="wipe"] img{clip-path:inset(100% 0 0 0);transform:scale(1.08);transition:clip-path 1.1s var(--e-out),transform 1.4s var(--e-out);transition-delay:calc(var(--i,0) * 90ms)}
+.io [data-rv="wipe"].on img{clip-path:inset(0 0 0 0);transform:none}
+.io [data-rv="wipe"].on:hover img{transform:scale(1.05);transition-delay:0s}
+.io [data-rv="left"]{transform:translateX(calc(var(--rise) * -1.2))}
+.io [data-rv].on{opacity:1;transform:none;clip-path:inset(0 0 0 0)}
+@media (prefers-reduced-motion:reduce){
+  .io [data-rv="scale"]{transform:scale(.98)}
+  .io [data-rv="left"]{transform:translateX(-8px)}
+  .can-in{transition:none}
+  .can.flip .can-in{transform:none}
+  .face.back{transform:none;opacity:0;visibility:hidden;transition:opacity .3s var(--e-std),visibility 0s .3s}
+  .face.front{transition:opacity .3s var(--e-std),box-shadow var(--t2)}
+  .can.flip .face.back{opacity:1;visibility:visible;transition:opacity .3s var(--e-std)}
+  .can.flip .face.front{opacity:0}
+  .gal figure:hover img{transform:scale(1.03)}
+}
+/* label fill (pour line) */
+.io .can .lbl .fill{transform:translateY(105%)}
+.io .can.on .lbl .fill{transform:translateY(0);transition-delay:calc(var(--i,0) * 90ms + .2s)}
+@media (prefers-reduced-motion:reduce){.io .can .lbl .fill{transform:none;opacity:0;transition:opacity .8s var(--e-out)}.io .can.on .lbl .fill{opacity:1}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<aside class="fb" id="fb" aria-label="About this concept preview">
+  <div class="fb-in">
+    <span class="fb-mark" aria-hidden="true">F</span>
+    <p><b>Concept preview</b> made for Finback Brewery by Farman, an independent web developer. Not Finback Brewery's official website; photos are samples.</p>
+    <div class="fb-act">
+      <a class="fb-btn pri" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="fb-btn" href="mailto:farman.builds@gmail.com?subject=Website%20for%20Finback%20Brewery">Email Farman</a>
+    </div>
+    <button class="fb-x" type="button" id="fbX" aria-label="Dismiss this notice"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+  </div>
+</aside>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#top" aria-label="Finback Brewery, back to top">
+      <span class="wm">Finback</span>
+      <span class="sub">BREWERY<br>GLENDALE, QUEENS</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#on-tap">On tap</a>
+      <a href="#visit">Visit</a>
+      <a href="#events">Events</a>
+      <a href="#private">Private events</a>
+    </nav>
+    <a class="hdr-call" href="tel:+17186288600" aria-label="Call Finback Brewery at +1 718-628-8600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>718-628-8600</span></a>
+    <a class="btn sm" href="#visit">Plan your visit</a>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero dark grain" aria-labelledby="h1">
+  <div class="wrap hero-g">
+    <div>
+      <p class="eyebrow in" style="--i:0">Brewery taproom · Glendale, Queens</p>
+      <h1 id="h1" class="riso"><span class="l in" style="--i:1">Come up</span><span class="l in" style="--i:2">for a <em>pour.</em></span></h1>
+      <p class="lede in" style="--i:3">Finback Brewery's taproom is at <b>78-01 77th Ave, Glendale, NY</b>. See what's on tap, check the hours, get directions, or ask about bringing your whole crew.</p>
+      <div class="cta-row in" style="--i:4">
+        <a class="btn ring" href="#visit">Plan your visit <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn ghost" href="#private">Private events</a>
+      </div>
+      <div class="trust in" style="--i:5">
+        <a class="stars" href="https://www.google.com/maps/search/?api=1&amp;query=Finback+Brewery+78-01+77th+Ave+Glendale+NY+11385" target="_blank" rel="noopener" aria-label="Rated 4.7 out of 5 from 469 Google reviews (opens Google Maps)">
+          <span class="st" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg></span>
+          <b data-count="4.7" data-dec="1">4.7</b><span><span data-count="469">469</span> Google reviews</span>
+        </a>
+        <span class="sep" aria-hidden="true"></span>
+        <a class="txtlink" href="tel:+17186288600">Call +1 718-628-8600</a>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="false">
+      <div class="sticker" aria-hidden="true">
+        <svg class="rot" viewBox="0 0 140 140"><defs><path id="cp" d="M70 70m-58 0a58 58 0 1 1 116 0a58 58 0 1 1-116 0"/></defs><circle cx="70" cy="70" r="69" fill="#0e2233"/><text font-family="Rubik Mono One, sans-serif" font-size="9.4" fill="#f4ecda"><textPath href="#cp" textLength="358" lengthAdjust="spacing">FINBACK BREWERY · GLENDALE, QUEENS ·</textPath></text></svg>
+        <div class="core"><div><b>4.7★</b><small>GOOGLE</small></div></div>
+      </div>
+      <figure class="arch">
+        <img src="../img/finback-brewery/taps-s.jpg" srcset="../img/finback-brewery/taps-s.jpg 900w, ../img/finback-brewery/taps.jpg 1800w" sizes="(max-width:960px) 80vw, 40vw" alt="A row of beer taps along a copper-coloured bar wall" width="900" height="600" fetchpriority="high">
+        <span class="tag">Sample photo</span>
+      </figure>
+      <svg class="pint" viewBox="0 -70 240 400" aria-hidden="true">
+        <defs>
+          <clipPath id="glass"><path d="M47 32 L193 32 L183 296 Q181 312 165 312 L75 312 Q59 312 57 296 Z"/></clipPath>
+          <linearGradient id="beer" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2b54a"/><stop offset=".55" stop-color="#e09a2f"/><stop offset="1" stop-color="#b8701a"/></linearGradient>
+        </defs>
+        <!-- tap -->
+        <g fill="#f4ecda"><rect x="104" y="-70" width="32" height="34" rx="6" fill="#a9c54c"/><rect x="112" y="-40" width="16" height="22"/><rect x="96" y="-22" width="48" height="10" rx="4"/><rect x="113" y="-14" width="14" height="10" rx="2"/></g>
+        <rect class="stream" x="115" y="-4" width="10" height="300" rx="5" fill="#e9a53b"/>
+        <g clip-path="url(#glass)">
+          <rect x="0" y="0" width="240" height="330" fill="rgba(244,236,218,.08)"/>
+          <g class="liq">
+            <rect x="0" y="70" width="240" height="260" fill="url(#beer)"/>
+            <g class="foamw"><path d="M0 72 Q10 58 20 72 T40 72 T60 72 T80 72 T100 72 T120 72 T140 72 T160 72 T180 72 T200 72 T220 72 T240 72 T260 72 T280 72 V40 H0Z" fill="#fbf6ea"/></g>
+            <rect x="0" y="34" width="290" height="20" fill="#fbf6ea"/>
+            <circle cx="80" cy="60" r="5" fill="#fff"/><circle cx="150" cy="56" r="4" fill="#fff"/><circle cx="118" cy="64" r="3" fill="#fff"/>
+            <g fill="#fff7e2">
+              <circle class="bub" cx="90" cy="300" r="3" style="--d:2.8s;--dl:3.2s"/>
+              <circle class="bub" cx="140" cy="300" r="2.4" style="--d:2.3s;--dl:3.6s"/>
+              <circle class="bub" cx="116" cy="300" r="3.4" style="--d:3.1s;--dl:4s"/>
+              <circle class="bub" cx="160" cy="300" r="2" style="--d:2.5s;--dl:4.4s"/>
+              <circle class="bub" cx="76" cy="300" r="2.2" style="--d:2.9s;--dl:4.9s"/>
+            </g>
+          </g>
+        </g>
+        <path d="M51 36 L197 36 L187 300 Q185 316 169 316 L79 316 Q63 316 61 300 Z" fill="none" stroke="#a84a17" stroke-width="4" opacity=".9"/>
+        <path d="M47 32 L193 32 L183 296 Q181 312 165 312 L75 312 Q59 312 57 296 Z" fill="none" stroke="#f4ecda" stroke-width="4"/>
+        <path d="M66 52 L60 270" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".35"/>
+      </svg>
+    </div>
+  </div>
+  <div class="hero-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 110" preserveAspectRatio="none">
+      <path d="M0 64 C120 34 240 34 360 60 S600 92 720 64 S960 30 1080 58 S1320 90 1440 60 V110 H0Z" fill="#f4ecda"/>
+      <path class="wl" pathLength="1" d="M0 46 C120 16 240 16 360 42 S600 74 720 46 S960 12 1080 40 S1320 72 1440 42" fill="none" stroke="#a9c54c" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ON TAP -->
+<section class="sec taps grain" id="on-tap" aria-labelledby="tap-h">
+  <div class="wrap">
+    <div class="sec-h">
+      <div>
+        <p class="eyebrow" data-rv="up">The board</p>
+        <h2 class="h2" id="tap-h" data-rv="up" style="--i:1">What's <em>on tap</em> right now.</h2>
+      </div>
+      <div>
+        <p class="lede" data-rv="up" style="--i:2">Each label below is a live slot. The brewery adds the beer name, style and ABV, and flips the label for pour sizes, notes and cans to go. Changing the board takes a minute, no developer needed.</p>
+        <p class="swipe" aria-hidden="true">Swipe the labels →</p>
+      </div>
+    </div>
+
+    <div class="cans" id="cans">
+      <!-- 6 can-label cards -->
+      <article class="can c-a" data-rv="up" style="--i:0">
+        <div class="can-in">
+          <div class="face front">
+            <div class="lbl"><div class="fill"><svg viewBox="0 0 200 16" preserveAspectRatio="none"><path d="M0 16 V8 Q12.5 0 25 8 T50 8 T75 8 T100 8 T125 8 T150 8 T175 8 T200 8 V16Z" fill="currentColor" style="color:var(--c2)"/></svg></div><span class="num">TAP 01</span><span class="big" aria-hidden="true">01</span></div>
+            <div class="lbl-meta">
+              <p class="nm">Beer name <small>OWNER FILLS</small></p>
+              <div class="row"><span class="slot"><b>STYLE</b> —</span><span class="slot"><b>ABV</b> —&nbsp;%</span></div>
+              <span class="slot oneliner"><b>ONE-LINER</b> How it tastes, in a sentence</span>
+              <button class="flipbtn" type="button" aria-pressed="false" aria-label="Flip label for tap 1 details"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16M3 21v-5h5"/></svg>Flip label</button>
+            </div>
+          </div>
+          <div class="face back" aria-hidden="true">
+            <p class="eyebrow">Tap 01 · details</p>
+            <h3>The back of the can</h3>
+            <ul>
+              <li>Tasting notes <span class="slot"><b>FILL</b></span></li>
+              <li>Pour sizes &amp; prices <span class="slot"><b>FILL</b></span></li>
+              <li>Cans to go? <span class="slot"><b>FILL</b></span></li>
+              <li>Pairs with <span class="slot"><b>FILL</b></span></li>
+            </ul>
+            <button class="flipbtn" type="button" tabindex="-1" aria-label="Flip back to the front of tap 1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16M3 21v-5h5"/></svg>Flip back</button>
+          </div>
+        </div>
+      </article>
+      <article class="can c-b" data-rv="up" style="--i:1">
+        <div class="can-in">
+          <div class="face front">
+            <div class="lbl"><div class="fill"><svg viewBox="0 0 200 16" preserveAspectRatio="none"><path d="M0 16 V8 Q12.5 0 25 8 T50 8 T75 8 T100 8 T125 8 T150 8 T175 8 T200 8 V16Z" fill="currentColor" style="color:var(--c2)"/></svg></div><span class="num">TAP 02</span><span class="big" aria-hidden="true">02</span></div>
+            <div class="lbl-meta">
+              <p class="nm">Beer name <small>OWNER FILLS</small></p>
+              <div class="row"><span class="slot"><b>STYLE</b> —</span><span class="slot"><b>ABV</b> —&nbsp;%</span></div>
+              <span class="slot oneliner"><b>ONE-LINER</b> How it tastes, in a sentence</span>
+              <button class="flipbtn" type="button" aria-pressed="false" aria-label="Flip label for tap 2 details"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16M3 21v-5h5"/></svg>Flip label</button>
+            </div>
+          </div>
+          <div class="face back" aria-hidden="true">
+            <p class="eyebrow">Tap 02 · details</p>
+            <h3>The back of the can</h3>
+            <ul>
+              <li>Tasting notes <span class="slot"><b>FILL</b></span></li>
+              <li>Pour sizes &amp; prices <span class="slot"><b>FILL</b></span></li>
+              <li>Cans to go? <span class="slot"><b>FILL</b></span></li>
+              <li>Pairs with <span class="slot"><b>FILL</b></span></li>
+            </ul>
+            <button class="flipbtn" type="button" tabindex="-1" aria-label="Flip back to the front of tap 2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16M3 21v-5h5"/></svg>Flip back</button>
+          </div>
+        </div>
+      </article>
+      <article class="can c-c" data-rv="up" style="--i:2">
+        <div class="can-in">
+          <div class="face front">
+            <div class="lbl"><div class="fill"><svg viewBox="0 0 200 16" preserveAspectRatio="none"><path d="M0 16 V8 Q12.5 0 25 8 T50 8 T75 8 T100 8 T125 8 T150 8 T175 8 T200 8 V16Z" fill="currentColor" style="color:var(--c2)"/></svg></div><span class="num">TAP 03</span><span class="big" aria-hidden="true">03</span></div>
+            <div class="lbl-meta">
+              <p class="nm">Beer name <small>OWNER FILLS</small></p>
+              <div class="row"><span class="slot"><b>STYLE</b> —</span><span class="slot"><b>ABV</b> —&nbsp;%</span></div>
+              <span class="slot oneliner"><b>ONE-LINER</b> How it tastes, in a sentence</span>
+              <button class="flipbtn" type="button" aria-pressed="false" aria-label="Flip label for tap 3 details"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16M3 21v-5h5"/></svg>Flip label</button>
+            </div>
+          </div>
+          <div class="face back" aria-hidden="true">
+            <p class="eyebrow">Tap 03 · details</p>
+            <h3>The back of the can</h3>
+            <ul>
+              <li>Tasting notes <span class="slot"><b>FILL</b></span></li>
+              <li>Pour sizes &amp; prices <span class="slot"><b>FILL</b></span></li>
+              <li>Cans to go? <span class="slot"><b>FILL</b></span></li>
+              <li>Pairs with <span class="slot"><b>FILL</b></span></li>
+            </ul>
+            <button class="flipbtn" type="button" tabindex="-1" aria-label="Flip back to the front of tap 3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16M3 21v-5h5"/></svg>Flip back</button>
+          </div>
+        </div>
+      </article>
+      <article class="can c-d" data-rv="up" style="--i:0">
+        <div class="can-in">
+          <div class="face front">
+            <div class="lbl"><div class="fill"><svg viewBox="0 0 200 16" preserveAspectRatio="none"><path d="M0 16 V8 Q12.5 0 25 8 T50 8 T75 8 T100 8 T125 8 T150 8 T175 8 T200 8 V16Z" fill="currentColor" style="color:var(--c2)"/></svg></div><span class="num">TAP 04</span><span class="big" aria-hidden="true">04</span></div>
+            <div class="lbl-meta">
+              <p class="nm">Beer name <small>OWNER FILLS</small></p>
+              <div class="row"><span class="slot"><b>STYLE</b> —</span><span class="slot"><b>ABV</b> —&nbsp;%</span></div>
+              <span class="slot oneliner"><b>ONE-LINER</b> How it tastes, in a sentence</span>
+              <button class="flipbtn" type="button" aria-pressed="false" aria-label="Flip label for tap 4 details"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16M3 21v-5h5"/></svg>Flip label</button>
+            </div>
+          </div>
+          <div class="face back" aria-hidden="true">
+            <p class="eyebrow">Tap 04 · details</p>
+            <h3>The back of the can</h3>
+            <ul>
+              <li>Tasting notes <span class="slot"><b>FILL</b></span></li>
+              <li>Pour sizes &amp; prices <span class="slot"><b>FILL</b></span></li>
+              <li>Cans to go? <span class="slot"><b>FILL</b></span></li>
+              <li>Pairs with <span class="slot"><b>FILL</b></span></li>
+            </ul>
+            <button class="flipbtn" type="button" tabindex="-1" aria-label="Flip back to the front of tap 4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16M3 21v-5h5"/></svg>Flip back</button>
+          </div>
+        </div>
+      </article>
+      <article class="can c-e" data-rv="up" style="--i:1">
+        <div class="can-in">
+          <div class="face front">
+            <div class="lbl"><div class="fill"><svg viewBox="0 0 200 16" preserveAspectRatio="none"><path d="M0 16 V8 Q12.5 0 25 8 T50 8 T75 8 T100 8 T125 8 T150 8 T175 8 T200 8 V16Z" fill="currentColor" style="color:var(--c2)"/></svg></div><span class="num">TAP 05</span><span class="big" aria-hidden="true">05</span></div>
+            <div class="lbl-meta">
+              <p class="nm">Beer name <small>OWNER FILLS</small></p>
+              <div class="row"><span class="slot"><b>STYLE</b> —</span><span class="slot"><b>ABV</b> —&nbsp;%</span></div>
+              <span class="slot oneliner"><b>ONE-LINER</b> How it tastes, in a sentence</span>
+              <button class="flipbtn" type="button" aria-pressed="false" aria-label="Flip label for tap 5 details"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16M3 21v-5h5"/></svg>Flip label</button>
+            </div>
+          </div>
+          <div class="face back" aria-hidden="true">
+            <p class="eyebrow">Tap 05 · details</p>
+            <h3>The back of the can</h3>
+            <ul>
+              <li>Tasting notes <span class="slot"><b>FILL</b></span></li>
+              <li>Pour sizes &amp; prices <span class="slot"><b>FILL</b></span></li>
+              <li>Cans to go? <span class="slot"><b>FILL</b></span></li>
+              <li>Pairs with <span class="slot"><b>FILL</b></span></li>
+            </ul>
+            <button class="flipbtn" type="button" tabindex="-1" aria-label="Flip back to the front of tap 5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16M3 21v-5h5"/></svg>Flip back</button>
+          </div>
+        </div>
+      </article>
+      <article class="can c-f" data-rv="up" style="--i:2">
+        <div class="can-in">
+          <div class="face front">
+            <div class="lbl"><div class="fill"><svg viewBox="0 0 200 16" preserveAspectRatio="none"><path d="M0 16 V8 Q12.5 0 25 8 T50 8 T75 8 T100 8 T125 8 T150 8 T175 8 T200 8 V16Z" fill="currentColor" style="color:var(--c2)"/></svg></div><span class="num">TAP 06</span><span class="big" aria-hidden="true">06</span></div>
+            <div class="lbl-meta">
+              <p class="nm">Beer name <small>OWNER FILLS</small></p>
+              <div class="row"><span class="slot"><b>STYLE</b> —</span><span class="slot"><b>ABV</b> —&nbsp;%</span></div>
+              <span class="slot oneliner"><b>ONE-LINER</b> How it tastes, in a sentence</span>
+              <button class="flipbtn" type="button" aria-pressed="false" aria-label="Flip label for tap 6 details"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16M3 21v-5h5"/></svg>Flip label</button>
+            </div>
+          </div>
+          <div class="face back" aria-hidden="true">
+            <p class="eyebrow">Tap 06 · details</p>
+            <h3>The back of the can</h3>
+            <ul>
+              <li>Tasting notes <span class="slot"><b>FILL</b></span></li>
+              <li>Pour sizes &amp; prices <span class="slot"><b>FILL</b></span></li>
+              <li>Cans to go? <span class="slot"><b>FILL</b></span></li>
+              <li>Pairs with <span class="slot"><b>FILL</b></span></li>
+            </ul>
+            <button class="flipbtn" type="button" tabindex="-1" aria-label="Flip back to the front of tap 6"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16M3 21v-5h5"/></svg>Flip back</button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="taps-note" data-rv="up">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16.5v.5"/></svg>
+      <p><b>Owner fills:</b> the real tap list. We haven't guessed any beer names or styles. On the live site this board can be edited from a phone, or pulled from a tap-list service you already use.</p>
+    </div>
+    <div class="after-cta" data-rv="up">
+      <a class="btn" href="#visit">Plan your visit <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p>Hours, directions and house rules, one scroll down.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="sec visit dark grain" id="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <div class="sec-h">
+      <div>
+        <p class="eyebrow" data-rv="up">Plan your visit</p>
+        <h2 class="h2" id="visit-h" data-rv="up" style="--i:1">Find the <em>taproom.</em></h2>
+      </div>
+      <p class="lede" data-rv="up" style="--i:2">Everything you need before you head over: where we are, when we're pouring, and the house rules.</p>
+    </div>
+    <div class="visit-g">
+      <div class="card-d" data-rv="left">
+        <p class="eyebrow">Address</p>
+        <p class="addr">78-01 77th Ave<small>Glendale, NY 11385 · Queens, United States</small></p>
+        <div class="btns">
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=78-01+77th+Ave%2C+Glendale%2C+NY+11385" target="_blank" rel="noopener">Get directions <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <button class="btn ghost" type="button" id="copyAddr">Copy address</button>
+          <a class="btn ghost" href="tel:+17186288600">Call</a>
+        </div>
+        <div class="postcard" aria-hidden="true">
+          <svg viewBox="0 0 600 170" preserveAspectRatio="none">
+            <g fill="none" stroke="rgba(244,236,218,.12)" stroke-width="1.5">
+              <path d="M0 30 C100 10 200 50 300 30 S500 10 600 30"/><path d="M0 60 C100 40 200 80 300 60 S500 40 600 60"/><path d="M0 90 C100 70 200 110 300 90 S500 70 600 90"/><path d="M0 120 C100 100 200 140 300 120 S500 100 600 120"/><path d="M0 150 C100 130 200 170 300 150 S500 130 600 150"/>
+            </g>
+            <path d="M0 98 C120 70 220 120 300 84 S470 60 600 92" fill="none" stroke="#a9c54c" stroke-width="2.5" stroke-dasharray="6 7"/>
+          </svg>
+          <svg class="pin" width="34" height="44" viewBox="0 0 24 32"><path d="M12 0C5.4 0 0 5.2 0 11.7 0 20.4 12 32 12 32s12-11.6 12-20.3C24 5.2 18.6 0 12 0z" fill="currentColor"/><circle cx="12" cy="11.5" r="4.5" fill="#0e2233"/></svg>
+          <span class="lab">78-01 77TH AVE · GLENDALE · NY 11385<br>DECORATIVE, NOT A MAP</span>
+        </div>
+      </div>
+
+      <div class="card-d" data-rv="up" style="--i:1">
+        <p class="eyebrow">Taproom hours</p>
+        <div class="days" role="group" aria-label="Pick a day">
+          <button class="chip" type="button" data-d="1" aria-pressed="false">Mon</button><button class="chip" type="button" data-d="2" aria-pressed="false">Tue</button><button class="chip" type="button" data-d="3" aria-pressed="false">Wed</button><button class="chip" type="button" data-d="4" aria-pressed="false">Thu</button><button class="chip" type="button" data-d="5" aria-pressed="false">Fri</button><button class="chip" type="button" data-d="6" aria-pressed="false">Sat</button><button class="chip" type="button" data-d="0" aria-pressed="false">Sun</button>
+        </div>
+        <div class="readout" id="readout" aria-live="polite">
+          <p class="day fade" id="rdDay">Every <span>day</span></p>
+          <p class="fade"><span class="slot"><b>OWNER FILLS</b> Opening time – closing time</span></p>
+          <p class="fade" style="font-size:14.5px;color:var(--mute-d)" id="rdNote">Holiday hours and private-event closures can be flagged here too.</p>
+        </div>
+        <div class="rules">
+          <div class="rule"><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 15h4M7 11h10"/></svg>Age policy</h3><span class="slot"><b>OWNER TO CONFIRM</b> 21+ with valid ID</span></div>
+          <div class="rule"><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 3v8a3 3 0 0 0 6 0V3M7 3v18M17 3c-2 2-3 5-3 8h3v10"/></svg>Food</h3><span class="slot"><b>OWNER FILLS</b> Kitchen, trucks or bring your own?</span></div>
+          <div class="rule"><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M6 7h12M6 17h12"/></svg>Cans to go &amp; shipping</h3><span class="slot"><b>OWNER FILLS</b> To-go, delivery, shipping</span></div>
+          <div class="rule"><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 1.8 6 5.5"/></svg>Groups</h3><a class="txtlink" href="#private">Send a group enquiry →</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTOS -->
+<section class="sec room grain" aria-labelledby="room-h">
+  <div class="wrap">
+    <div class="sec-h">
+      <div>
+        <p class="eyebrow" data-rv="up">The room</p>
+        <h2 class="h2" id="room-h" data-rv="up" style="--i:1">Tanks, taps &amp; <em>a seat</em> for you.</h2>
+      </div>
+      <p class="lede" data-rv="up" style="--i:2">These are sample photos to show the layout. On the live site, this is where the taproom's own photos go: the bar, the brewhouse, the crowd on a busy night.</p>
+    </div>
+    <div class="gal">
+      <figure data-rv="wipe"><img src="../img/finback-brewery/taproom-s.jpg" srcset="../img/finback-brewery/taproom-s.jpg 900w, ../img/finback-brewery/taproom.jpg 1800w" sizes="(max-width:860px) 100vw, 50vw" alt="A brewery dining room with long benches in front of steel brewing tanks" width="900" height="600"><figcaption>Your taproom</figcaption><span class="tag">Sample photo</span></figure>
+      <figure data-rv="wipe" style="--i:1"><img src="../img/finback-brewery/tanks-s.jpg" alt="A long corridor of stainless steel fermentation tanks" width="900" height="600"><figcaption>The brewhouse</figcaption><span class="tag">Sample photo</span></figure>
+      <figure data-rv="wipe" style="--i:2"><img src="../img/finback-brewery/pour-s.jpg" alt="A pale beer being poured from a tap into a glass" width="900" height="600"><figcaption>At the bar</figcaption><span class="tag">Sample photo</span></figure>
+      <figure data-rv="wipe" style="--i:3"><img src="../img/finback-brewery/glow-s.jpg" alt="A hand holding a glass under a tap as beer fills it, lit warm gold" width="900" height="600"><figcaption>Fresh pour</figcaption><span class="tag">Sample photo</span></figure>
+    </div>
+  </div>
+</section>
+
+<!-- RATING -->
+<section class="rate" aria-labelledby="rate-h">
+  <div class="wrap rate-g">
+    <div class="score" data-rv="scale">
+      <span class="n" data-count="4.7" data-dec="1">4.7</span>
+      <span class="of">OUT OF 5<br>ON GOOGLE</span>
+    </div>
+    <div data-rv="up" style="--i:1">
+      <div class="bigstars" role="img" aria-label="4.7 out of 5 stars">
+        <div class="bs" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg></div>
+        <div class="bs fg" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" style="flex:0 0 auto"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" style="flex:0 0 auto"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" style="flex:0 0 auto"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" style="flex:0 0 auto"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" style="flex:0 0 auto"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg></div>
+      </div>
+      <h2 id="rate-h">Rated 4.7 from <span data-count="469">469</span> Google reviews.</h2>
+      <p>That's the real score from Google Maps today. Owners can feature a few favorite reviews here, quoted with the reviewer's name as it appears on Google.</p>
+      <p><span class="slot"><b>OWNER PICKS</b> 3 reviews to feature</span></p>
+      <div class="btns">
+        <a class="btn foam" href="#visit">Plan your visit</a>
+        <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Finback+Brewery+78-01+77th+Ave+Glendale+NY+11385" target="_blank" rel="noopener">Read reviews on Google</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="sec events grain" id="events" aria-labelledby="ev-h">
+  <div class="wrap">
+    <div class="sec-h">
+      <div>
+        <p class="eyebrow" data-rv="up">On the calendar</p>
+        <h2 class="h2" id="ev-h" data-rv="up" style="--i:1">Coming up at <em>the bar.</em></h2>
+      </div>
+      <p class="lede" data-rv="up" style="--i:2">Release days, trivia, music, pop-ups: whatever the taproom runs goes on these ticket stubs, with a date regulars can save.</p>
+    </div>
+    <div class="stubs">
+      <article class="stub" data-rv="up"><div class="dt"><small>MONTH</small><b>00</b></div><div class="ev"><h3>Event name</h3><span class="slot"><b>OWNER FILLS</b> Time · what's happening</span></div></article>
+      <article class="stub" data-rv="up" style="--i:1"><div class="dt"><small>MONTH</small><b>00</b></div><div class="ev"><h3>Event name</h3><span class="slot"><b>OWNER FILLS</b> Time · what's happening</span></div></article>
+      <article class="stub" data-rv="up" style="--i:2"><div class="dt"><small>MONTH</small><b>00</b></div><div class="ev"><h3>Event name</h3><span class="slot"><b>OWNER FILLS</b> Time · what's happening</span></div></article>
+    </div>
+    <div class="after-cta" data-rv="up">
+      <a class="btn" href="#visit">Plan your visit <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="txtlink" href="#private">Or book the room for your own event</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVATE EVENTS -->
+<section class="sec priv grain" id="private" aria-labelledby="pv-h">
+  <div class="wrap priv-g">
+    <div>
+      <p class="eyebrow" data-rv="up" style="color:var(--copper)">Private events &amp; groups</p>
+      <h2 class="h2" id="pv-h" data-rv="up" style="--i:1;margin-top:16px">Bringing <em>the whole crew?</em></h2>
+      <p class="lede" data-rv="up" style="--i:2;margin-top:18px">Birthdays, work nights, send-offs. Tell the taproom your date and headcount and they'll get back to you with what's possible.</p>
+      <ul class="perks" data-rv="up" style="--i:3">
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Under a minute: name, contact, date and headcount.</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Goes straight to info@finbackbrewery.com.</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Packages, spaces and minimums: <span class="slot" style="font-size:14px"><b>OWNER FILLS</b></span></span></li>
+      </ul>
+      <div class="contact-mini" data-rv="up" style="--i:4">
+        <span>Rather talk? <a href="tel:+17186288600">+1 718-628-8600</a></span>
+        <span>Or email <a href="mailto:info@finbackbrewery.com">info@finbackbrewery.com</a></span>
+      </div>
+    </div>
+
+    <div class="fcard" id="fcard" data-rv="scale" style="--i:1">
+      <form id="pForm" novalidate>
+        <h3>Group enquiry</h3>
+        <p class="sub">We'll put your details into an email to the taproom.</p>
+        <div class="fg2">
+          <div class="f" id="f-name"><label for="pn">Your name</label><input id="pn" name="name" autocomplete="name" required placeholder="First and last name"><svg class="ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span class="err">Please add your name.</span></div>
+          <div class="f" id="f-contact"><label for="pc">Email or phone</label><input id="pc" name="contact" autocomplete="email" required placeholder="you@example.com or phone"><svg class="ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span class="err">Add an email or a phone number we can reply to.</span></div>
+          <div class="f" id="f-date"><label for="pd">Date <i>(roughly is fine)</i></label><input id="pd" name="date" type="date"><span class="err">Pick a date from today on.</span></div>
+          <div class="f"><label for="ps">Group size</label><div class="stepper"><button type="button" id="sMinus" aria-label="Fewer people">−</button><input id="ps" name="size" type="number" inputmode="numeric" min="2" max="500" value="12" aria-label="Number of people"><button type="button" id="sPlus" aria-label="More people">+</button></div></div>
+          <div class="f full"><span style="font-weight:600;font-size:14.5px" id="occL">Occasion <i style="font-style:normal;color:var(--mute);font-weight:400">(optional)</i></span><div class="occ" role="group" aria-labelledby="occL"><button class="chip" type="button" aria-pressed="false">Birthday</button><button class="chip" type="button" aria-pressed="false">Work event</button><button class="chip" type="button" aria-pressed="false">Celebration</button><button class="chip" type="button" aria-pressed="false">Something else</button></div></div>
+          <div class="f full"><label for="pm">Message <i>(optional)</i></label><textarea id="pm" name="message" placeholder="Times, food questions, anything they should know"></textarea></div>
+        </div>
+        <div class="fsend">
+          <button class="btn" type="submit">Send enquiry <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <small>No account, no app. Your enquiry goes to info@finbackbrewery.com.</small>
+        </div>
+      </form>
+      <div class="done" id="done" aria-live="polite">
+        <svg class="mini" viewBox="0 0 96 110" aria-hidden="true">
+          <defs><clipPath id="mg"><path d="M18 14 L78 14 L72 98 Q71 104 65 104 L31 104 Q25 104 24 98 Z"/></clipPath></defs>
+          <g clip-path="url(#mg)"><g class="ml"><rect x="0" y="34" width="96" height="80" fill="#e9a53b"/><rect x="0" y="22" width="96" height="14" fill="#fbf6ea"/></g></g>
+          <path d="M18 14 L78 14 L72 98 Q71 104 65 104 L31 104 Q25 104 24 98 Z" fill="none" stroke="#0e2233" stroke-width="3.5"/>
+          <path class="ck" d="M34 62 l10 10 l18 -20" fill="none" stroke="#0e2233" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Cheers, your enquiry is ready.</h3>
+        <p>Here's exactly what the taproom will receive. On the live site it sends straight to info@finbackbrewery.com.</p>
+        <pre id="donePre"></pre>
+        <button class="btn ghost sm" type="button" id="again">Edit or send another</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final dark grain" aria-labelledby="fin-h">
+  <div class="bubbles" aria-hidden="true">
+    <i style="--s:14px;--x:8%;--d:13s;--dl:0s;--y:20%"></i><i style="--s:8px;--x:18%;--d:10s;--dl:3s;--y:62%"></i><i style="--s:20px;--x:30%;--d:16s;--dl:6s;--y:12%"></i><i style="--s:10px;--x:68%;--d:12s;--dl:1.5s;--y:40%"></i><i style="--s:16px;--x:80%;--d:15s;--dl:4.5s;--y:70%"></i><i style="--s:7px;--x:90%;--d:9s;--dl:7s;--y:28%"></i><i style="--s:12px;--x:52%;--d:14s;--dl:9s;--y:84%"></i>
+  </div>
+  <div class="wrap" style="position:relative">
+    <p class="eyebrow" data-rv="up">Last call</p>
+    <h2 id="fin-h" class="riso" data-rv="up" style="--i:1">See you at <em>78-01 77th Ave.</em></h2>
+    <p class="lede" data-rv="up" style="--i:2">Glendale, Queens. Check the hours, grab directions and pull up a stool.</p>
+    <div class="cta-row" data-rv="up" style="--i:3">
+      <a class="btn" href="#visit">Plan your visit <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn ghost" href="#private">Private events</a>
+      <a class="btn ghost" href="tel:+17186288600">Call +1 718-628-8600</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="farman" aria-label="About this concept">
+  <div class="wrap">
+    <div class="fm-card" data-rv="up">
+      <span class="fb-mark" aria-hidden="true">F</span>
+      <div>
+        <h2>Want this live? I can have it ready in about a week.</h2>
+        <p>Book a 15-min call. Built by Farman, an independent web developer.</p>
+      </div>
+      <div class="fb-act">
+        <a class="fb-btn pri" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="fb-btn" href="mailto:farman.builds@gmail.com?subject=Website%20for%20Finback%20Brewery">Email Farman</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-g">
+      <div>
+        <p class="wm">Finback</p>
+        <p style="margin-top:8px">Brewery taproom in Glendale, Queens.</p>
+      </div>
+      <div>
+        <h3>FIND US</h3>
+        <ul>
+          <li>78-01 77th Ave, Glendale, NY 11385</li>
+          <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=78-01+77th+Ave%2C+Glendale%2C+NY+11385" target="_blank" rel="noopener">Get directions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>GET IN TOUCH</h3>
+        <ul>
+          <li><a href="tel:+17186288600">+1 718-628-8600</a></li>
+          <li><a href="mailto:info@finbackbrewery.com">info@finbackbrewery.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="credit">Concept preview made for Finback Brewery by Farman, an independent web developer, from public information. Not Finback Brewery's official website. Photos are samples from Unsplash, not Finback's own. Rating as shown on Google (4.7 from 469 reviews).</p>
+  </div>
+</footer>
+
+<nav class="mbar" id="mbar" aria-label="Quick actions">
+  <a class="call" href="tel:+17186288600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="go" href="#visit">Plan your visit</a>
+</nav>
+
+<script>
+(function(){
+  var d=document,root=d.documentElement,$=function(id){return d.getElementById(id)};
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var cans=$('cans');
+  [].forEach.call(cans.querySelectorAll('.can'),function(c){
+    var front=c.querySelector('.front'),back=c.querySelector('.back'),fb=front.querySelector('.flipbtn'),bb=back.querySelector('.flipbtn');
+    function set(on){c.classList.toggle('flip',on);fb.setAttribute('aria-pressed',on);back.setAttribute('aria-hidden',!on);front.setAttribute('aria-hidden',on);
+      bb.tabIndex=on?0:-1;fb.tabIndex=on?-1:0;setTimeout(function(){(on?bb:fb).focus({preventScroll:true})},reduce?60:420)}
+    fb.addEventListener('click',function(){set(true)});bb.addEventListener('click',function(){set(false)});
+  });
+
+  /* --- Farman bar --- */
+  var fb=$('fb'),hide=false;try{hide=sessionStorage.getItem('fbkFbHide')==='1'}catch(e){}
+  if(hide){fb.hidden=true}else{root.classList.add('fbw');setTimeout(function(){root.classList.add('fb-on')},1200)}
+  $('fbX').addEventListener('click',function(){fb.classList.add('off');try{sessionStorage.setItem('fbkFbHide','1')}catch(e){}setTimeout(function(){fb.hidden=true},260)});
+
+  /* --- header condense + beer-line progress --- */
+  var hdr=$('hdr'),prog=$('progress'),tick=false;
+  function onScroll(){tick=false;var y=scrollY,h=root.scrollHeight-innerHeight;hdr.classList.toggle('cond',y>40);prog.style.transform='scaleX('+(h>0?Math.min(1,y/h):0)+')'}
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+
+  /* --- counters --- */
+  function count(el){if(el.dataset.done)return;el.dataset.done=1;var to=parseFloat(el.dataset.count),dec=+(el.dataset.dec||0),t0=null,dur=1300;
+    function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=(to*e).toFixed(dec);if(p<1)requestAnimationFrame(step);else el.textContent=to.toFixed(dec)}
+    requestAnimationFrame(step)}
+
+  /* --- scroll reveals (hidden state only once IO is confirmed; 1.5 s safety) --- */
+  var rv=[].slice.call(d.querySelectorAll('[data-rv]')),cnt=[].slice.call(d.querySelectorAll('[data-count]'));
+  if('IntersectionObserver' in window){
+    var fired=false;
+    var io=new IntersectionObserver(function(es){fired=true;es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');[].forEach.call(e.target.querySelectorAll('[data-count]'),count);if(e.target.dataset.count)count(e.target);io.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+    root.classList.add('io');rv.forEach(function(el){io.observe(el)});
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){count(e.target);cio.unobserve(e.target)}})},{threshold:.6});
+    cnt.forEach(function(el){cio.observe(el)});
+    setTimeout(function(){if(!fired){rv.forEach(function(el){el.classList.add('on')})}},1500);
+  }
+
+  /* --- hours day picker --- */
+  var names=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],chips=[].slice.call(d.querySelectorAll('.days .chip')),ro=$('readout'),today=new Date().getDay();
+  function pick(day,anim){chips.forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.d===day)});
+    var upd=function(){$('rdDay').innerHTML=names[day].replace(/(day)$/,'<span>$1</span>');$('rdNote').textContent=day===today?'That\'s today. Holiday hours and private-event closures can be flagged here too.':'Holiday hours and private-event closures can be flagged here too.';ro.classList.remove('swap')};
+    if(anim){ro.classList.add('swap');setTimeout(upd,180)}else upd()}
+  chips.forEach(function(b){b.addEventListener('click',function(){pick(+b.dataset.d,true);b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop')})});
+  pick(today,false);
+
+  /* --- copy address --- */
+  $('copyAddr').addEventListener('click',function(){var b=this,t='78-01 77th Ave, Glendale, NY 11385';
+    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='Copied ✓'},function(){b.textContent=t}).then(function(){setTimeout(function(){b.textContent='Copy address'},2200)})});
+
+  /* --- form --- */
+  var form=$('pForm'),card=$('fcard'),pn=$('pn'),pc=$('pc'),pd=$('pd'),ps=$('ps');
+  var t=new Date(),iso=new Date(t.getTime()-t.getTimezoneOffset()*6e4).toISOString().slice(0,10);pd.min=iso;
+  function okContact(v){v=v.trim();return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)||v.replace(/\D/g,'').length>=10}
+  var rules={'f-name':function(){return pn.value.trim().length>=2},'f-contact':function(){return okContact(pc.value)},'f-date':function(){return !pd.value||pd.value>=iso}};
+  function check(id,show){var ok=rules[id](),w=$(id);if(show)w.classList.toggle('bad',!ok);else if(ok)w.classList.remove('bad');if(id!=='f-date')w.classList.toggle('good',ok);return ok}
+  [[pn,'f-name'],[pc,'f-contact'],[pd,'f-date']].forEach(function(p){p[0].addEventListener('blur',function(){if(p[0].value.trim())check(p[1],true)});p[0].addEventListener('input',function(){check(p[1],false)})});
+  function clamp(v){v=parseInt(v,10);if(isNaN(v))v=12;return Math.max(2,Math.min(500,v))}
+  $('sMinus').addEventListener('click',function(){ps.value=clamp(ps.value)-1<2?2:clamp(ps.value)-1});
+  $('sPlus').addEventListener('click',function(){ps.value=Math.min(500,clamp(ps.value)+1)});
+  ps.addEventListener('blur',function(){ps.value=clamp(ps.value)});
+  var occ=[].slice.call(d.querySelectorAll('.occ .chip'));
+  occ.forEach(function(b){b.addEventListener('click',function(){var was=b.getAttribute('aria-pressed')==='true';occ.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed',!was);b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop')})});
+  form.addEventListener('submit',function(e){e.preventDefault();
+    var first=null;['f-name','f-contact','f-date'].forEach(function(id){if(!check(id,true)&&!first)first=id});
+    if(first){var w=$(first);w.classList.remove('shake');void w.offsetWidth;w.classList.add('shake');w.querySelector('input').focus();return}
+    var size=clamp(ps.value);ps.value=size;
+    var o=occ.filter(function(b){return b.getAttribute('aria-pressed')==='true'}).map(function(b){return b.textContent})[0];
+    var dt=pd.value?new Date(pd.value+'T12:00:00').toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'}):'Flexible / not set yet';
+    var msg=$('pm').value.trim();
+    var body=['Hi Finback Brewery,','','I\'d like to ask about a private event / group visit at the taproom.','',
+      'Date: '+dt,'Group size: '+size+' people',(o?'Occasion: '+o:null),(msg?'Message: '+msg:null),'',
+      'Name: '+pn.value.trim(),'Reply to: '+pc.value.trim(),'','Thanks!','(Sent from the website group enquiry form)'].filter(function(x){return x!==null}).join('\n');
+    var subj='Private event enquiry: '+size+' people, '+dt+' ('+pn.value.trim()+')';
+    var href='mailto:info@finbackbrewery.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+    $('donePre').textContent='To: info@finbackbrewery.com\nSubject: '+subj+'\n\n'+body;
+    card.classList.add('sent');
+    card.scrollIntoView({block:'nearest',behavior:reduce?'auto':'smooth'});
+    setTimeout(function(){window.__previewMail(href)},reduce?150:1500);
+  });
+  $('again').addEventListener('click',function(){card.classList.remove('sent');pn.focus()});
+
+  /* --- mobile bar hides while the form is on screen --- */
+  var mbar=$('mbar');
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){mbar.classList.toggle('away',es[0].isIntersecting)},{threshold:.25}).observe(card)}
+})();
+</script>
+<script src="../preview-guard.js"></script>
+</body>
+</html>
