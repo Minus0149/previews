@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Asan Jewellers · Jewellery store on Bay St, Rockdale</title>
+<meta name="description" content="Concept homepage for Asan Jewellers, a jewellery store at 26 Bay St, Rockdale NSW. Rated 4.9 on Google from 251 reviews. Made by Farman as a preview, not the official website.">
+<meta name="theme-color" content="#FBF7F4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300..600;1,300..500&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pearl:#FBF7F4;--paper:#FFFDFB;--blush:#F5E7E2;--blush-2:#EBD5CE;--blush-3:#E2C4BB;
+  --ink:#2B1B21;--ink-2:#55424A;--ink-3:#6E5A61;
+  --garnet:#7A1C33;--garnet-d:#5C1325;--garnet-l:#F3DDE2;
+  --line:rgba(43,27,33,.14);--line-2:rgba(43,27,33,.26);
+  --display:"Noto Serif Display","Didot","Bodoni 72",Georgia,serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --e-out:cubic-bezier(.16,1,.3,1);--e-std:cubic-bezier(.4,0,.2,1);--e-in:cubic-bezier(.3,0,1,1);--e-back:cubic-bezier(.34,1.56,.64,1);
+  --t1:.16s;--t2:.32s;--t3:.6s;
+  --wrap:1240px;--gut:clamp(16px,4vw,48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--pearl);color:var(--ink);font:400 17px/1.65 var(--body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--garnet);outline-offset:3px;border-radius:2px}
+.wrap{width:100%;max-width:calc(var(--wrap) + var(--gut)*2);margin:0 auto;padding:0 var(--gut)}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--ink);color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none;transition:top var(--t1)}
+.skip:focus{top:12px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* grain (static, decorative) */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .17 0 0 0 0 .1 0 0 0 0 .13 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,header,footer,.fb,.mbar{position:relative;z-index:1}
+
+/* type */
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font:600 12px/1.2 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--garnet)}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.h2{font:300 clamp(38px,5.2vw,68px)/1.04 var(--display);letter-spacing:-.015em;font-variation-settings:"wdth" 100}
+.h2 em{font-style:italic;font-weight:300;color:var(--garnet)}
+.lede{max-width:56ch;color:var(--ink-2);font-size:clamp(17px,1.35vw,19px)}
+.sec{padding:clamp(80px,10vw,136px) 0;position:relative}
+.sec-head{display:grid;gap:18px;margin-bottom:clamp(40px,5vw,64px)}
+@media (min-width:900px){.sec-head.split{grid-template-columns:1.1fr .9fr;align-items:end;gap:48px}}
+
+/* tags */
+.tag{position:absolute;z-index:3;left:12px;top:12px;display:inline-flex;align-items:center;gap:6px;padding:5px 9px;background:rgba(255,253,251,.92);color:var(--ink-2);font:600 10.5px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;border-radius:2px;backdrop-filter:blur(4px)}
+.tag::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--garnet)}
+.slot-tag{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border:1px dashed var(--garnet);color:var(--garnet);font:600 10.5px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;border-radius:2px;background:rgba(255,253,251,.6)}
+
+/* buttons */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:1px solid transparent;font:600 16px/1 var(--body);letter-spacing:.01em;text-decoration:none;cursor:pointer;isolation:isolate;transition:transform var(--t1) var(--e-std),background var(--t2),color var(--t2),border-color var(--t2),box-shadow var(--t2)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.97);transition-duration:.09s}
+.btn .arr{transition:transform var(--t2) var(--e-back)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn-p{background:var(--garnet);color:#fff;box-shadow:0 14px 30px -16px rgba(122,28,51,.7)}
+.btn-p:hover{background:var(--garnet-d);box-shadow:0 18px 36px -16px rgba(122,28,51,.8)}
+.btn-p::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,transparent 30%,rgba(255,232,236,.38) 48%,transparent 66%);transform:translateX(-110%);transition:transform .9s var(--e-out)}
+.btn-p:hover::after{transform:translateX(110%)}
+.btn-g{background:transparent;color:var(--ink);border-color:var(--line-2)}
+.btn-g:hover{border-color:var(--ink);background:var(--paper)}
+.btn-w{background:#fff;color:var(--garnet-d)}
+.btn-w:hover{background:var(--garnet-l)}
+.btn-o{color:#fff;border-color:rgba(255,255,255,.45)}
+.btn-o:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn.sm{min-height:44px;padding:0 18px;font-size:15px}
+.link{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;font-size:15.5px;color:var(--garnet);text-decoration:none;position:relative}
+.link::after{content:"";position:absolute;left:0;right:22px;bottom:9px;height:1px;background:currentColor;transform:scaleX(.35);transform-origin:0 50%;transition:transform var(--t2) var(--e-out)}
+.link:hover::after{transform:scaleX(1)}
+.link .arr{transition:transform var(--t2) var(--e-back)}
+.link:hover .arr{transform:translateX(4px)}
+
+/* ---------- progress ---------- */
+.progress{position:fixed;left:0;top:0;right:0;height:2px;z-index:90;background:var(--garnet);transform-origin:0 50%;transform:scaleX(0)}
+
+/* ---------- Farman bar ---------- */
+.fb{font-family:var(--body);color:#e9e6e3;z-index:80;transition:opacity .55s var(--e-out),transform .55s var(--e-out)}
+.fb-in{position:relative;background:#1b1a1c;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;align-items:start}
+.fb-mark{grid-row:span 2;width:34px;height:34px;border-radius:8px;background:#fff;color:#1b1a1c;display:grid;place-items:center;font:700 16px/1 var(--body)}
+.fb p{font-size:14px;line-height:1.45;color:#c9c6c3;padding-right:36px}
+.fb p b{color:#fff}
+.fb-act{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.fb-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 14px;border-radius:8px;font:600 15px/1 var(--body);text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.24);transition:transform var(--t1) var(--e-std),background var(--t2),border-color var(--t2)}
+.fb-btn:hover{border-color:#fff;transform:translateY(-2px)}
+.fb-btn:active{transform:scale(.97)}
+.fb-btn.pri{background:#fff;color:#1b1a1c;border-color:#fff;font-weight:700}
+.fb-btn.pri:hover{background:#efe9e6}
+.fb-btn .arr{transition:transform var(--t2) var(--e-back)}
+.fb-btn:hover .arr{transform:translateX(3px)}
+.fb-x{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;background:none;color:#a9a6a3;border-radius:8px;cursor:pointer;display:grid;place-items:center;transition:color var(--t1),background var(--t1)}
+.fb-x:hover{color:#fff;background:rgba(255,255,255,.08)}
+.fbw .fb{opacity:0;transform:translateY(-10px);pointer-events:none}
+.fbw.fb-on .fb{opacity:1;transform:none;pointer-events:auto}
+.fbw.fb-on .fb.off{opacity:0;transform:translateY(-10px);pointer-events:none;transition-duration:.24s;transition-timing-function:var(--e-in)}
+@media (min-width:861px){
+  .fb{position:fixed;right:16px;bottom:16px;width:520px}
+  .fb-in{border-radius:12px;padding:14px 16px;box-shadow:0 24px 60px -18px rgba(0,0,0,.5)}
+  .fbw .fb,.fbw.fb-on .fb.off{transform:translateY(12px)}
+}
+@media (max-width:860px){.fb{position:relative}.fb-in{padding:12px 16px}.fb-act{grid-column:1 / -1}.fb-btn{flex:1 1 auto}}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:60;border-bottom:1px solid transparent;transition:background var(--t2),border-color var(--t2),box-shadow var(--t2)}
+.hdr.cond{background:rgba(251,247,244,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:var(--line);box-shadow:0 14px 30px -28px rgba(43,27,33,.6)}
+.hdr-in{display:flex;align-items:center;gap:18px;height:76px;transition:height var(--t2) var(--e-std)}
+.hdr.cond .hdr-in{height:64px}
+.logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;min-height:48px;transform-origin:0 50%;transition:transform var(--t2) var(--e-std)}
+.hdr.cond .logo{transform:scale(.94)}
+.logo svg{flex:none;color:var(--garnet)}
+.logo b{display:block;font:400 26px/1 var(--display);letter-spacing:.01em}
+.logo small{display:block;margin-top:4px;font:600 9.5px/1 var(--body);letter-spacing:.42em;text-transform:uppercase;color:var(--ink-3)}
+.nav{display:flex;gap:2px;margin-left:auto}
+.nav a{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 13px;text-decoration:none;font-weight:500;font-size:15.5px;color:var(--ink-2);transition:color var(--t1)}
+.nav a::after{content:"";position:absolute;left:13px;right:13px;bottom:8px;height:1px;background:var(--garnet);transform:scaleX(0);transform-origin:0 50%;transition:transform var(--t2) var(--e-out)}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after{transform:scaleX(1)}
+.hdr-cta{display:flex;gap:8px;align-items:center}
+.icon-btn{width:44px;height:44px;display:none;place-items:center;border:1px solid var(--line-2);border-radius:50%;text-decoration:none;color:var(--garnet);transition:border-color var(--t1),transform var(--t1) var(--e-std),background var(--t1)}
+.icon-btn:hover{border-color:var(--garnet);background:var(--paper)}
+.icon-btn:active{transform:scale(.94)}
+@media (max-width:1020px){.nav{display:none}.hdr-cta{margin-left:auto}}
+@media (max-width:640px){.hdr-call{display:none}.icon-btn{display:grid}.hdr-in{height:66px}.logo b{font-size:23px}.hdr .btn.sm{padding:0 16px}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:clamp(28px,5vw,64px) 0 clamp(64px,8vw,104px);overflow:hidden}
+.hero-amb{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.hero-amb i{position:absolute;border-radius:50%;filter:blur(60px);opacity:.75}
+.hero-amb i:nth-child(1){width:520px;height:520px;right:-120px;top:-140px;background:radial-gradient(circle,#F0D3CB 0%,rgba(240,211,203,0) 70%)}
+.hero-amb i:nth-child(2){width:420px;height:420px;left:-160px;bottom:-120px;background:radial-gradient(circle,#F3DDE2 0%,rgba(243,221,226,0) 70%)}
+@media (prefers-reduced-motion:no-preference){
+  .hero-amb i:nth-child(1){animation:drift1 18s ease-in-out infinite alternate}
+  .hero-amb i:nth-child(2){animation:drift2 22s ease-in-out infinite alternate}
+}
+@keyframes drift1{to{transform:translate(-80px,60px) scale(1.08)}}
+@keyframes drift2{to{transform:translate(70px,-50px) scale(1.1)}}
+.hero-grid{display:grid;gap:48px;align-items:center}
+@media (min-width:960px){.hero-grid{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(40px,5vw,88px)}}
+.hero .eyebrow{margin-bottom:22px}
+.hero-txt{display:flex;flex-direction:column;align-items:flex-start}
+@media (max-width:640px){.hero-txt .trust{order:4;margin-top:22px}.hero-txt .hero-cta{order:5;margin-top:22px}.hero-txt .hero-p{order:6;margin-top:24px}.hero-sub{margin-top:22px}.e-long{display:none}.hero-cta .btn{flex:1 1 auto}}
+.h1{position:relative;font-weight:300;line-height:.86;letter-spacing:-.02em}
+.h1 .a{position:relative;display:inline-block;font:300 clamp(92px,13.5vw,208px)/.86 var(--display);overflow:hidden;padding:0 .04em .06em 0}
+.h1 .a::after{content:attr(data-t);position:absolute;inset:0;padding:inherit;color:transparent;background:linear-gradient(100deg,transparent 42%,rgba(255,206,218,.9) 48%,#fff 50%,rgba(255,206,218,.9) 52%,transparent 58%) no-repeat;background-size:300% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;pointer-events:none}
+.h1 .b{display:flex;align-items:center;gap:16px;margin-top:14px;font:600 clamp(13px,1.25vw,16px)/1 var(--body);letter-spacing:.62em;text-transform:uppercase;color:var(--ink-2)}
+.h1 .b::after{content:"";flex:1;max-width:180px;height:1px;background:var(--line-2)}
+.hero-sub{margin-top:clamp(26px,3vw,36px);max-width:30ch;font:300 clamp(25px,2.6vw,36px)/1.22 var(--display);color:var(--ink)}
+.hero-sub em{font-style:italic;color:var(--garnet)}
+.hero-p{margin-top:16px;max-width:46ch;color:var(--ink-2)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.trust{display:flex;align-items:center;gap:14px;margin-top:26px;text-decoration:none;width:max-content;max-width:100%}
+.trust .g{width:44px;height:44px;flex:none;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;background:var(--paper);font:700 17px/1 var(--body);color:var(--ink-2)}
+.trust b{font:400 28px/1 var(--display)}
+.stars{display:inline-flex;gap:2px;color:var(--garnet);vertical-align:2px}
+.trust small{display:block;font-size:14px;color:var(--ink-3);margin-top:3px}
+.trust:hover .g{border-color:var(--garnet)}
+
+/* hero visual: arch */
+.visual{position:relative;justify-self:center;width:min(100%,460px);margin:14px 0 0}
+.arch{position:relative;aspect-ratio:4/5.4;border-radius:999px 999px 6px 6px;overflow:hidden;background:var(--blush);box-shadow:0 40px 80px -50px rgba(92,19,37,.55)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.arch::after{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.75);border-radius:999px 999px 2px 2px;pointer-events:none;z-index:2}
+.visual::before{content:"";position:absolute;inset:-16px;border:1px solid rgba(122,28,51,.32);border-radius:999px 999px 10px 10px;pointer-events:none}
+.arch .tag{top:auto;bottom:26px;left:26px}
+.ringart{position:absolute;left:-58px;bottom:58px;width:150px;z-index:4;color:var(--garnet);filter:drop-shadow(0 6px 14px rgba(251,247,244,.9))}
+.ringart .d{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ringart .halo{fill:var(--pearl);opacity:.86}
+.spark{transform-origin:center;transform-box:fill-box}
+.rate{position:absolute;right:-22px;top:22%;z-index:4;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:14px 18px 13px;box-shadow:0 24px 50px -30px rgba(43,27,33,.45);text-decoration:none;transition:transform var(--t2) var(--e-std),box-shadow var(--t2)}
+.rate:hover{transform:translateY(-4px);box-shadow:0 30px 56px -30px rgba(43,27,33,.55)}
+.rate b{display:block;font:400 40px/1 var(--display)}
+.rate small{display:block;margin-top:6px;font-size:13px;line-height:1.3;color:var(--ink-3)}
+@media (max-width:959px){.visual{width:min(86%,400px);margin-top:24px}.ringart{left:-36px;width:118px;bottom:40px}.rate{right:-14px}}
+
+/* hero entrance (CSS only, content visible at the end even without JS) */
+@media (prefers-reduced-motion:no-preference){
+  .in-1,.in-2,.in-3,.in-4,.in-5,.in-6{animation:rise .8s var(--e-out) both}
+  .in-v{animation:archIn 1.1s var(--e-out) .25s both}
+}
+@media (prefers-reduced-motion:reduce){
+  .in-1,.in-2,.in-3,.in-4,.in-5,.in-6,.in-v{animation:riseR .7s var(--e-out) both}
+}
+.in-1{animation-delay:.05s!important}.in-2{animation-delay:.14s!important}.in-3{animation-delay:.26s!important}.in-4{animation-delay:.34s!important}.in-5{animation-delay:.42s!important}.in-6{animation-delay:.5s!important}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes riseR{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes archIn{from{opacity:0;transform:translateY(30px) scale(.97)}to{opacity:1;transform:none}}
+.h1 .a::after{animation:glint 1.7s var(--e-std) 1.05s both}
+.h1:hover .a::after{animation:glint2 1.4s var(--e-std) both}
+@keyframes glint{from{background-position:100% 0}to{background-position:0 0}}
+@keyframes glint2{from{background-position:100% 0}to{background-position:0 0}}
+/* ring draws itself (one shot, kept under reduced motion: it is a line draw, not a slide or loop) */
+.ringart .d{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.5s var(--e-out) forwards}
+.ringart .d.p2{animation-delay:.35s}.ringart .d.p3{animation-delay:.9s;animation-duration:1s}.ringart .d.p4{animation-delay:1.25s;animation-duration:.8s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.spark{opacity:0;animation:sparkIn .6s var(--e-back) 1.9s forwards}
+@keyframes sparkIn{from{opacity:0;transform:scale(.3) rotate(-30deg)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){.spark{animation:sparkIn .6s var(--e-back) 1.9s forwards,twinkle 3.2s ease-in-out 2.6s infinite}}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(.6) rotate(45deg);opacity:.55}}
+@media print{.ringart .d{stroke-dashoffset:0;animation:none}}
+
+/* ---------- proof strip ---------- */
+.proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,253,251,.6)}
+.proof ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.proof li{padding:26px 24px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.proof li:first-child{border-left:0;padding-left:0}
+.proof b{font:300 clamp(30px,3vw,40px)/1.05 var(--display);color:var(--ink)}
+.proof b .u{color:var(--garnet)}
+.proof .lbl{font-size:14.5px;color:var(--ink-3);line-height:1.4}
+.proof a{text-decoration:none;display:flex;flex-direction:column;gap:4px;min-height:44px}
+.proof a:hover .lbl{color:var(--garnet)}
+@media (max-width:860px){.proof ul{grid-template-columns:1fr 1fr}.proof li{padding:20px 16px}.proof li:nth-child(3){border-left:0;padding-left:0}.proof li:nth-child(n+3){border-top:1px solid var(--line)}}
+
+/* ---------- reveals ---------- */
+[data-rv].armed:not(.in){opacity:0}
+[data-rv].armed{transition:opacity .8s var(--e-out),transform .8s var(--e-out)}
+[data-rv="up"].armed:not(.in){transform:translateY(26px)}
+[data-rv="scale"].armed:not(.in){transform:scale(.965)}
+[data-rv="kids"].armed:not(.in){opacity:1}
+[data-rv="kids"].armed:not(.rv-done)>*{transition:opacity .7s var(--e-out),transform .7s var(--e-out);transition-delay:calc(var(--i,0) * 70ms)}
+[data-rv="kids"].armed:not(.in)>*{opacity:0;transform:translateY(20px);transition:none}
+[data-rv="wipe"].armed:not(.in){opacity:1}
+[data-rv="wipe"].armed>*{transition:clip-path 1s var(--e-out),opacity .8s var(--e-out)}
+[data-rv="wipe"].armed:not(.in)>*{clip-path:inset(0 0 100% 0);transition:none}
+[data-rv].armed:not(.in){transition:none}
+@media (prefers-reduced-motion:reduce){
+  [data-rv="up"].armed:not(.in),[data-rv="kids"].armed:not(.in)>*{transform:translateY(8px)}
+  [data-rv="scale"].armed:not(.in){transform:none}
+  [data-rv="wipe"].armed:not(.in)>*{clip-path:none;opacity:0}
+}
+
+/* ---------- showcase ---------- */
+.show{display:grid;gap:clamp(14px,1.6vw,22px);grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-flow:dense}
+.pc{position:relative;display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:transform var(--t2) var(--e-std),box-shadow var(--t2),border-color var(--t2)}
+.pc:hover{transform:translateY(-6px);box-shadow:0 34px 60px -40px rgba(92,19,37,.55);border-color:var(--line-2)}
+.pc .ph{position:relative;overflow:hidden;background:var(--blush);aspect-ratio:3/2}
+.pc .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--e-out)}
+.pc:hover .ph img{transform:scale(1.045)}
+.glint{position:relative;overflow:hidden}
+.glint::after{content:"";position:absolute;inset:-2px;z-index:2;pointer-events:none;background:linear-gradient(105deg,transparent 32%,rgba(255,240,236,.55) 46%,rgba(255,255,255,.85) 50%,rgba(255,240,236,.55) 54%,transparent 68%);transform:translateX(-130%);transition:transform 0s}
+.pc:hover .glint::after,.pc:focus-within .glint::after,.svc:hover.glint::after{transform:translateX(130%);transition:transform 1.05s var(--e-std)}
+.pc .meta{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:18px 20px 16px;margin-top:auto}
+.pc h3{font:400 clamp(26px,2.3vw,32px)/1.05 var(--display)}
+.pc h3 small{display:block;margin-top:6px;font:500 13.5px/1.3 var(--body);color:var(--ink-3);letter-spacing:0}
+.pc .ask{flex:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--line-2);font-weight:600;font-size:14.5px;text-decoration:none;color:var(--garnet);transition:background var(--t2),color var(--t2),border-color var(--t2),transform var(--t1)}
+.pc .ask:hover{background:var(--garnet);color:#fff;border-color:var(--garnet)}
+.pc .ask:active{transform:scale(.96)}
+.pc .ask .arr{transition:transform var(--t2) var(--e-back)}
+.pc .ask:hover .arr{transform:translateX(3px)}
+.pc.wide{grid-column:span 2}
+.pc.wide .ph{aspect-ratio:16/8.4}
+.pc.tall{grid-row:span 2}
+.pc.tall .ph{aspect-ratio:auto;flex:1;min-height:320px}
+/* owner-fill slots */
+.pc.slot{background:var(--blush);border-style:solid}
+.pc.slot .ph{background:transparent;display:grid;place-items:center;aspect-ratio:16/10}
+.pc.slot .meta{align-items:flex-start;margin-top:0}
+.pc.slot .frame{position:absolute;inset:14px;border:1px solid rgba(122,28,51,.28);border-radius:2px}
+.pc.slot .frame::before,.pc.slot .frame::after{content:"";position:absolute;width:14px;height:14px;border:1px solid var(--garnet)}
+.pc.slot .frame::before{left:-5px;top:-5px;border-right:0;border-bottom:0}
+.pc.slot .frame::after{right:-5px;bottom:-5px;border-left:0;border-top:0}
+.pc.slot svg.ic{width:96px;height:96px;color:var(--garnet);transition:transform var(--t3) var(--e-back)}
+.pc.slot:hover svg.ic{transform:translateY(-4px) rotate(-6deg)}
+.pc.slot .ph .slot-tag{position:absolute;top:26px;left:26px}
+.pc.slot h3{font-style:italic}
+.pc.slot p{font-size:14.5px;color:var(--ink-2);line-height:1.5;margin-top:6px}
+.show-note{margin-top:22px;font-size:14.5px;color:var(--ink-3);display:flex;gap:10px;align-items:flex-start}
+.show-note svg{flex:none;margin-top:3px;color:var(--garnet)}
+@media (max-width:900px){.show{grid-template-columns:1fr 1fr}.pc.wide{grid-column:span 2}.pc.tall{grid-row:span 1}.pc.tall .ph{aspect-ratio:4/5;flex:none;min-height:0}}
+@media (max-width:600px){.show{grid-template-columns:1fr}.pc.wide{grid-column:auto}.pc.wide .ph{aspect-ratio:3/2}.pc .meta{padding:16px}.pc.slot .ph{aspect-ratio:2/1}.pc.slot svg.ic{width:72px;height:72px}}
+
+/* inline CTA band */
+.cta-line{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 28px;margin-top:clamp(40px,5vw,60px);padding:22px 0 0;border-top:1px solid var(--line)}
+.cta-line p{font:300 clamp(22px,2.2vw,28px)/1.25 var(--display)}
+.cta-line p em{color:var(--garnet)}
+.cta-line .acts{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+/* ---------- services (if you offer it) ---------- */
+.sec.blush{background:linear-gradient(180deg,var(--blush) 0%,#F8EDE9 100%)}
+.svcs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line-2)}
+.svc{position:relative;padding:clamp(28px,3.4vw,44px) clamp(0px,2vw,28px) clamp(28px,3.4vw,44px) 0;border-bottom:1px solid var(--line-2);display:grid;grid-template-columns:auto minmax(0,1fr);align-content:start;gap:6px 24px;transition:background var(--t2)}
+.svc:nth-child(2n){padding-left:clamp(20px,3vw,44px);border-left:1px solid var(--line-2)}
+.svc .num{grid-row:span 4;font:300 italic 46px/1 var(--display);color:var(--garnet);min-width:58px}
+.svc h3{font:400 clamp(26px,2.4vw,32px)/1.1 var(--display)}
+.svc p{color:var(--ink-2);max-width:44ch}
+.svc .row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-top:12px}
+.svc:hover{background:rgba(255,253,251,.45)}
+.svc .num{transition:transform var(--t3) var(--e-back)}
+.svc:hover .num{transform:translateY(-4px)}
+.fill-lines{display:grid;gap:8px;margin-top:12px;max-width:380px}
+.fill-lines span{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed rgba(122,28,51,.35);padding:4px 0;font-size:14.5px;color:var(--ink-3)}
+.fill-lines span i{font-style:normal;color:var(--garnet);font-weight:600}
+@media (max-width:760px){.svcs{grid-template-columns:1fr}.svc:nth-child(2n){padding-left:0;border-left:0}.svc .num{font-size:38px;min-width:44px}}
+
+/* ---------- steps ---------- */
+.steps{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,48px)}
+.steps::before{content:"";position:absolute;left:0;right:0;top:27px;height:1px;background:var(--line-2);transform-origin:0 50%;transition:transform 1.4s var(--e-out) .1s}
+.steps.armed:not(.in)::before{transform:scaleX(0);transition:none}
+.step{position:relative}
+.step .dot{position:relative;width:56px;height:56px;border-radius:50%;background:var(--pearl);border:1px solid var(--garnet);display:grid;place-items:center;color:var(--garnet);font:400 italic 24px/1 var(--display);margin-bottom:22px}
+.step h3{font:400 clamp(24px,2.1vw,29px)/1.15 var(--display);margin-bottom:8px}
+.step p{color:var(--ink-2);max-width:34ch}
+@media (max-width:760px){.steps{grid-template-columns:1fr;gap:30px;padding-left:76px}.steps::before{left:27px;right:auto;top:0;bottom:0;width:1px;height:auto;transform-origin:50% 0}.steps.armed:not(.in)::before{transform:scaleY(0)}.step .dot{position:absolute;left:-76px;top:-4px;margin:0}}
+
+/* ---------- reviews ---------- */
+.rev{display:grid;gap:clamp(36px,5vw,72px);align-items:center}
+@media (min-width:960px){.rev{grid-template-columns:.85fr 1.15fr}}
+.score{position:relative;text-align:left}
+.score .big{font:300 clamp(120px,15vw,200px)/.85 var(--display);letter-spacing:-.03em;display:flex;align-items:flex-start;gap:8px}
+.score .big sup{font:400 .25em/1 var(--body);color:var(--garnet);margin-top:.35em}
+.score .stars5{display:flex;gap:6px;margin:18px 0 10px;color:var(--garnet)}
+.score .stars5 svg{width:26px;height:26px}
+.stars5 svg{opacity:.25;transform:scale(.7);transition:opacity .4s var(--e-out),transform .5s var(--e-back);transition-delay:calc(var(--i) * 90ms + .2s)}
+.stars5.lit svg{opacity:1;transform:none}
+.no-io .stars5 svg{opacity:1;transform:none}
+.score .sc-p{font-size:18px;color:var(--ink-2)}
+.score p b{color:var(--ink)}
+.quotes{display:grid;gap:14px}
+.q{position:relative;padding:22px 24px 22px 74px;background:var(--paper);border:1px dashed rgba(122,28,51,.32);border-radius:4px;transition:transform var(--t2) var(--e-std),border-color var(--t2)}
+.q:hover{transform:translateX(4px);border-color:var(--garnet)}
+.q::before{content:"\201C";position:absolute;left:22px;top:6px;font:300 72px/1 var(--display);color:var(--garnet);opacity:.55}
+.q p{font:300 italic clamp(19px,1.6vw,22px)/1.35 var(--display);color:var(--ink-2)}
+.q small{display:block;margin-top:10px;font-size:13px;color:var(--ink-3);letter-spacing:.04em}
+
+/* ---------- enquiry ---------- */
+.enq{display:grid;gap:clamp(28px,4vw,56px);align-items:start}
+@media (min-width:980px){.enq{grid-template-columns:.8fr 1.2fr}}
+.enq-side{position:relative}
+.enq-photo{position:relative;border-radius:999px 999px 4px 4px;overflow:hidden;aspect-ratio:4/4.6;max-width:420px;background:var(--blush)}
+.enq-photo img{width:100%;height:100%;object-fit:cover;object-position:40% 50%}
+.enq-side .h2{margin:18px 0 16px}
+.enq-side ul{display:grid;gap:10px;margin-top:22px}
+.enq-side li{display:flex;gap:12px;align-items:flex-start;color:var(--ink-2);font-size:16px}
+.enq-side li svg{flex:none;margin-top:4px;color:var(--garnet)}
+@media (max-width:979px){.enq-photo{display:none}}
+.form-card{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:clamp(22px,3vw,40px);box-shadow:0 40px 80px -60px rgba(92,19,37,.5)}
+.form-card::before{content:"";position:absolute;inset:8px;border:1px solid var(--line);border-radius:3px;pointer-events:none}
+.fc-body{position:relative}
+.fgroup{border:0;margin:0 0 22px;padding:0;min-width:0}
+.fgroup legend,.flabel{display:block;font:600 12px/1.2 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);margin-bottom:12px;padding:0}
+.flabel .opt,.fgroup legend .opt{color:var(--ink-3);letter-spacing:.06em;text-transform:none;font-weight:500;font-size:13px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--line-2);background:transparent;cursor:pointer;font-weight:500;font-size:15px;display:inline-flex;align-items:center;gap:8px;transition:background var(--t2),color var(--t2),border-color var(--t2),transform var(--t1) var(--e-std)}
+.chip::before{content:"";width:7px;height:7px;border-radius:50%;border:1px solid currentColor;transition:background var(--t2),transform var(--t2) var(--e-back)}
+.chip:hover{border-color:var(--garnet);color:var(--garnet)}
+.chip:active{transform:scale(.95)}
+.chip[aria-pressed="true"]{background:var(--garnet);color:#fff;border-color:var(--garnet)}
+.chip[aria-pressed="true"]::before{background:#fff;border-color:#fff;transform:scale(1.15)}
+.chip.pop{animation:pop .42s var(--e-back)}
+@keyframes pop{0%{transform:scale(.92)}60%{transform:scale(1.06)}100%{transform:scale(1)}}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:600px){.frow{grid-template-columns:1fr}}
+.field{position:relative;margin-bottom:16px}
+.field input,.field textarea{width:100%;min-height:54px;padding:14px 16px;border:1px solid var(--line-2);border-radius:4px;background:var(--pearl);font-size:16px;transition:border-color var(--t2),box-shadow var(--t2),background var(--t2)}
+.field textarea{min-height:110px;resize:vertical;line-height:1.5}
+.field input:hover,.field textarea:hover{border-color:rgba(43,27,33,.4)}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--garnet);background:#fff;box-shadow:0 0 0 4px rgba(122,28,51,.12)}
+.field .err{display:none;margin-top:6px;font-size:13.5px;color:#9b1c2e}
+.field.bad input{border-color:#9b1c2e}
+.field.bad .err{display:block}
+.field .ok{position:absolute;right:14px;top:42px;width:20px;height:20px;color:var(--garnet);opacity:0;transform:scale(.6);transition:opacity var(--t2),transform var(--t2) var(--e-back);pointer-events:none}
+.field.good .ok{opacity:1;transform:none}
+.field.shake{animation:shake .38s var(--e-std)}
+@keyframes shake{20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
+.check{display:flex;align-items:center;gap:12px;min-height:44px;cursor:pointer;font-size:15.5px;color:var(--ink-2);margin:2px 0 20px}
+.check input{appearance:none;-webkit-appearance:none;flex:none;width:22px;height:22px;border:1px solid var(--line-2);border-radius:4px;background:var(--pearl);display:grid;place-items:center;cursor:pointer;transition:background var(--t2),border-color var(--t2)}
+.check input::after{content:"";width:10px;height:6px;border:2px solid #fff;border-top:0;border-right:0;transform:rotate(-45deg) scale(0);margin-top:-3px;transition:transform var(--t2) var(--e-back)}
+.check input:checked{background:var(--garnet);border-color:var(--garnet)}
+.check input:checked::after{transform:rotate(-45deg) scale(1)}
+.fsend{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+.fsend .btn{flex:0 0 auto}
+.fsend small{font-size:14px;color:var(--ink-3);line-height:1.45}
+.fsend small a{color:var(--garnet);font-weight:600}
+.done{display:none;position:relative;text-align:center;padding:18px 4px 6px}
+.done svg{width:84px;height:84px;color:var(--garnet);margin:0 auto 14px}
+.done .c1,.done .c2{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
+.done h3{font:400 clamp(30px,3vw,40px)/1.1 var(--display);margin-bottom:8px}
+.done p{color:var(--ink-2);max-width:44ch;margin:0 auto}
+.done pre{text-align:left;white-space:pre-wrap;font:13px/1.5 ui-monospace,Consolas,monospace;background:var(--blush);color:var(--ink-2);border-radius:4px;padding:14px;margin:18px 0;max-height:220px;overflow:auto}
+.form-card.sent .fc-body{display:none}
+.form-card.sent .done{display:block}
+.form-card.sent .c1{stroke-dasharray:1;animation:draw .7s var(--e-out) both}
+.form-card.sent .c2{stroke-dasharray:1;animation:draw .5s var(--e-out) .45s both}
+.form-card.sent .done h3,.form-card.sent .done p{animation:riseR .6s var(--e-out) .3s both}
+.done-acts{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+
+/* ---------- visit ---------- */
+.visit{display:grid;gap:clamp(28px,4vw,64px)}
+@media (min-width:960px){.visit{grid-template-columns:1.05fr .95fr;align-items:stretch}}
+.addr-card{position:relative;background:var(--garnet);color:#fff;border-radius:4px;padding:clamp(28px,4vw,52px);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:36px;min-height:380px}
+.addr-card .rings{position:absolute;right:-90px;top:-90px;width:340px;height:340px;color:rgba(255,255,255,.16);pointer-events:none}
+.addr-card .rings circle{fill:none;stroke:currentColor;stroke-width:1}
+@media (prefers-reduced-motion:no-preference){.addr-card .rings{animation:spin 60s linear infinite}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.addr-card .eyebrow{color:#F3C9D2}
+.addr-card .no{font:300 clamp(96px,11vw,150px)/.85 var(--display)}
+.addr-card address{font-style:normal;font:300 clamp(28px,2.8vw,38px)/1.15 var(--display)}
+.addr-card address small{display:block;margin-top:10px;font:500 15px/1.4 var(--body);color:#F3D9DE;letter-spacing:.02em}
+.addr-card .acts{display:flex;flex-wrap:wrap;gap:10px}
+.hours{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:clamp(24px,3vw,40px)}
+.hours h3{font:400 30px/1.1 var(--display);margin:10px 0 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.hours table{width:100%;border-collapse:collapse;font-size:16px}
+.hours td{padding:11px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;color:var(--ink-3)}
+.hours td:last-child span{display:inline-block;min-width:120px;border-bottom:1px dashed rgba(122,28,51,.4);color:var(--garnet);font-size:14px;text-align:center}
+.hours .pay{margin-top:22px;padding-top:18px;border-top:1px solid var(--line-2)}
+.hours .pay b{display:block;font:400 22px/1.2 var(--display);margin-bottom:6px}
+.hours .pay p{font-size:15px;color:var(--ink-2)}
+
+/* ---------- final CTA ---------- */
+.final{position:relative;text-align:center;padding:clamp(84px,10vw,140px) 0;overflow:hidden}
+.final::before{content:"";position:absolute;left:50%;top:50%;width:min(720px,140vw);aspect-ratio:1;transform:translate(-50%,-50%);border:1px solid rgba(122,28,51,.16);border-radius:50%;pointer-events:none}
+.final::after{content:"";position:absolute;left:50%;top:50%;width:min(560px,110vw);aspect-ratio:1;transform:translate(-50%,-50%);border:1px solid rgba(122,28,51,.1);border-radius:50%;pointer-events:none}
+.final .h2{font-size:clamp(44px,6.6vw,92px);max-width:14ch;margin:16px auto 20px}
+.final p{color:var(--ink-2);max-width:46ch;margin:0 auto}
+.final .acts{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:32px}
+.final .mini{margin-top:22px;font-size:14.5px;color:var(--ink-3)}
+
+/* ---------- farman card + footer ---------- */
+.farman{background:#1b1a1c;color:#e9e6e3;padding:clamp(52px,7vw,84px) 0}
+.farman-in{display:grid;gap:22px;align-items:center}
+@media (min-width:900px){.farman-in{grid-template-columns:auto minmax(0,1fr) auto;gap:28px}}
+.farman .fb-mark{width:52px;height:52px;font-size:22px;border-radius:12px}
+.farman h2{font:400 clamp(30px,3.4vw,42px)/1.1 var(--display);color:#fff;margin-bottom:6px}
+.farman p{color:#bdb9b6;max-width:56ch}
+.farman .fb-act{margin:0}
+.foot{background:#141315;color:#a9a5a2;padding:30px 0 34px;font-size:14px;line-height:1.6}
+.foot-in{display:grid;gap:12px}
+.foot a{color:#e9e6e3}
+.foot .credit{color:#8f8b88;font-size:13px;max-width:110ch}
+
+/* ---------- mobile bar ---------- */
+.mbar{display:none}
+@media (max-width:860px){
+  body{padding-bottom:78px}
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:grid;grid-template-columns:1fr 1.5fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(251,247,244,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);transition:transform .4s var(--e-out)}
+  .mbar.away{transform:translateY(110%)}
+  .mbar .btn{min-height:52px;padding:0 12px}
+}
+.pulse{position:relative}
+.pulse::before{content:"";position:absolute;inset:-1px;border-radius:inherit;border:1.5px solid var(--garnet);opacity:0;pointer-events:none}
+@media (prefers-reduced-motion:no-preference){.pulse::before{animation:pring 2.8s var(--e-out) 2.4s infinite}}
+@keyframes pring{0%{opacity:.8;transform:scale(1)}70%,100%{opacity:0;transform:scale(1.08,1.35)}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<aside class="fb" id="fb" aria-label="About this concept preview">
+  <div class="fb-in">
+    <span class="fb-mark" aria-hidden="true">F</span>
+    <p><b>Concept preview</b> made for Asan Jewellers by Farman, an independent web developer. Not Asan Jewellers' official website; photos are samples.</p>
+    <div class="fb-act">
+      <a class="fb-btn pri" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="fb-btn" href="mailto:farman.builds@gmail.com?subject=Website%20for%20Asan%20Jewellers">Email Farman</a>
+    </div>
+    <button class="fb-x" type="button" id="fbX" aria-label="Dismiss this notice"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+  </div>
+</aside>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#top" aria-label="Asan Jewellers, back to top">
+      <svg width="34" height="40" viewBox="0 0 34 40" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="17" cy="26" r="12"/><circle cx="17" cy="26" r="9.5" opacity=".5"/><path d="M11 6h12l4 4-10 9L7 10z" stroke-linejoin="round"/><path d="M7 10h20M14 6l-1 4 4 9 4-9-1-4" stroke-linejoin="round" opacity=".7"/></svg>
+      <span><b>Asan</b><small>Jewellers</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#pieces">Showcase</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="hdr-cta">
+      <a class="btn btn-g sm hdr-call" href="tel:+61426666987"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>0426 666 987</a>
+      <a class="icon-btn" href="tel:+61426666987" aria-label="Call Asan Jewellers on 0426 666 987"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></a>
+      <a class="btn btn-p sm" href="#enquire">Enquire</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="h1">
+  <div class="hero-amb" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <p class="eyebrow in-1"><span>Jewellery store · Rockdale<span class="e-long">, Sydney</span></span></p>
+      <h1 class="h1" id="h1"><span class="a in-2" data-t="Asan">Asan</span><span class="b in-3">Jewellers</span></h1>
+      <p class="hero-sub in-4">Seen a piece you love? <em>Ask about it</em> before you come in.</p>
+      <p class="hero-p in-4">Tell us what you're after, whether it's a ring, a chain, earrings or a bangle, then see it in person at 26 Bay St, Rockdale.</p>
+      <div class="hero-cta in-5">
+        <a class="btn btn-p" href="#enquire">Enquire about a piece <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-g" href="tel:+61426666987">Call 0426 666 987</a>
+      </div>
+      <a class="trust in-6" href="#reviews">
+        <span class="g" aria-hidden="true">G</span>
+        <span><b><span class="count" data-to="4.9" data-dec="1">4.9</span></b> <span class="stars" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span><small>from <span class="count" data-to="251">251</span> Google reviews</small></span>
+      </a>
+    </div>
+
+    <div class="visual in-v">
+      <div class="arch">
+        <img src="../img/asan-jewellers/chain-arch-s.jpg" srcset="../img/asan-jewellers/chain-arch-s.jpg 900w, ../img/asan-jewellers/chain-arch.jpg 1800w" sizes="(min-width:960px) 460px, 86vw" width="900" height="1350" alt="Gold curb chain draped over a white arch-shaped stand (sample photo)" fetchpriority="high">
+        <span class="tag">Sample photo</span>
+      </div>
+      <svg class="ringart" viewBox="0 0 160 190" aria-hidden="true">
+        <circle class="halo" cx="80" cy="122" r="66"/>
+        <path class="d p1" pathLength="1" d="M80 64a58 58 0 1 1 0 116a58 58 0 1 1 0-116z"/>
+        <path class="d p2" pathLength="1" d="M80 74a48 48 0 1 0 0 96a48 48 0 1 0 0-96z" opacity=".55"/>
+        <path class="d p3" pathLength="1" d="M66 22h28l12 14-26 30-26-30z"/>
+        <path class="d p4" pathLength="1" d="M54 36h52M66 22l-4 14 18 30 18-30-4-14M80 22v14"/>
+        <path class="spark" d="M128 18l3 9 9 3-9 3-3 9-3-9-9-3 9-3z" fill="currentColor"/>
+      </svg>
+      <a class="rate" href="#reviews" aria-label="Rated 4.9 from 251 Google reviews">
+        <b><span class="count" data-to="4.9" data-dec="1">4.9</span><span style="color:var(--garnet);font-size:.6em"> ★</span></b>
+        <small><span class="count" data-to="251">251</span> Google<br>reviews</small>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF STRIP -->
+<section class="proof" aria-label="At a glance">
+  <div class="wrap">
+    <ul data-rv="kids">
+      <li style="--i:0"><b><span class="count" data-to="4.9" data-dec="1">4.9</span><span class="u"> ★</span></b><span class="lbl">Google rating</span></li>
+      <li style="--i:1"><b><span class="count" data-to="251">251</span></b><span class="lbl">reviews from customers</span></li>
+      <li style="--i:2"><a href="https://www.google.com/maps/search/?api=1&amp;query=Asan%20Jewellers%2C%2026%20Bay%20St%2C%20Rockdale%20NSW%202216" target="_blank" rel="noopener"><b>26 Bay St</b><span class="lbl">Rockdale NSW 2216</span></a></li>
+      <li style="--i:3"><a href="#enquire"><b><em style="font-style:italic;color:var(--garnet)">Ask first</em></b><span class="lbl">enquire online, then visit</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="sec" id="pieces" aria-labelledby="pieces-h">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div data-rv="up">
+        <p class="eyebrow">01 · The showcase</p>
+        <h2 class="h2" id="pieces-h" style="margin-top:18px">Find a piece <em>worth asking about.</em></h2>
+      </div>
+      <p class="lede" data-rv="up">Tap any category to start an enquiry with it already chosen. The photos here are samples showing how the shop's own pieces would sit on the page.</p>
+    </div>
+
+    <div class="show" data-rv="kids">
+      <article class="pc wide" style="--i:0">
+        <div class="ph glint"><img src="../img/asan-jewellers/ring-gem-s.jpg" srcset="../img/asan-jewellers/ring-gem-s.jpg 900w, ../img/asan-jewellers/ring-gem.jpg 1800w" sizes="(min-width:900px) 66vw, 100vw" width="900" height="600" alt="Rose-gold ring with a pink gemstone and a halo of small stones (sample photo)" loading="lazy"><span class="tag">Sample photo</span></div>
+        <div class="meta"><h3>Rings<small>Owner fill: the ring styles you carry</small></h3><a class="ask" href="#enquire" data-want="Ring">Ask about a ring <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="pc tall" style="--i:1">
+        <div class="ph glint"><img src="../img/asan-jewellers/earrings-s.jpg" srcset="../img/asan-jewellers/earrings-s.jpg 900w, ../img/asan-jewellers/earrings.jpg 1800w" sizes="(min-width:900px) 33vw, 100vw" width="900" height="1125" style="object-position:78% 60%" alt="Small gold hoop earrings resting on a pink ribbed dish (sample photo)" loading="lazy"><span class="tag">Sample photo</span></div>
+        <div class="meta"><h3>Earrings<small>Owner fill: studs, hoops, drops</small></h3><a class="ask" href="#enquire" data-want="Earrings">Ask <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="pc" style="--i:2">
+        <div class="ph glint"><img src="../img/asan-jewellers/chains-s.jpg" srcset="../img/asan-jewellers/chains-s.jpg 900w, ../img/asan-jewellers/chains.jpg 1800w" sizes="(min-width:900px) 33vw, 100vw" width="900" height="600" alt="Several fine gold chains laid over a grey stone block (sample photo)" loading="lazy"><span class="tag">Sample photo</span></div>
+        <div class="meta"><h3>Chains<small>Owner fill: lengths &amp; links</small></h3><a class="ask" href="#enquire" data-want="Chain">Ask <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="pc" style="--i:3">
+        <div class="ph glint"><img src="../img/asan-jewellers/bangle-s.jpg" srcset="../img/asan-jewellers/bangle-s.jpg 900w, ../img/asan-jewellers/bangle.jpg 1800w" sizes="(min-width:900px) 33vw, 100vw" width="900" height="600" alt="Rose-gold bangle with a stone-set paisley pattern on a blush background (sample photo)" loading="lazy"><span class="tag">Sample photo</span></div>
+        <div class="meta"><h3>Bangles<small>Owner fill: sizes &amp; styles</small></h3><a class="ask" href="#enquire" data-want="Bangle">Ask <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="pc slot" style="--i:4">
+        <div class="ph glint"><span class="frame" aria-hidden="true"></span><span class="slot-tag">Owner fill</span>
+          <svg class="ic" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" aria-hidden="true"><path d="M20 6h24M32 6v10"/><path d="M32 16c-9 0-14 9-14 18 0 11 7 22 14 24 7-2 14-13 14-24 0-9-5-18-14-18z"/><path d="M32 24l-7 10 7 14 7-14z" opacity=".6"/></svg></div>
+        <div class="meta"><div><h3>Your piece here</h3><p>A photo, name and metal of a real piece from the counter.</p></div></div>
+      </article>
+      <article class="pc slot" style="--i:5">
+        <div class="ph glint"><span class="frame" aria-hidden="true"></span><span class="slot-tag">Owner fill</span>
+          <svg class="ic" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" aria-hidden="true"><ellipse cx="32" cy="38" rx="22" ry="10"/><ellipse cx="32" cy="34" rx="22" ry="10" opacity=".55"/><path d="M24 12h16l5 7-13 12-13-12z"/><path d="M19 19h26" opacity=".6"/></svg></div>
+        <div class="meta"><div><h3>Your piece here</h3><p>New arrivals or a favourite from the window.</p></div></div>
+      </article>
+      <article class="pc slot" style="--i:6">
+        <div class="ph glint"><span class="frame" aria-hidden="true"></span><span class="slot-tag">Owner fill</span>
+          <svg class="ic" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14c6 20 14 30 22 30s16-10 22-30"/><path d="M14 14c5 16 11 25 18 25s13-9 18-25" opacity=".5"/><circle cx="32" cy="50" r="6"/></svg></div>
+        <div class="meta"><div><h3>Your collection here</h3><p>One card per collection, each with its own enquiry button.</p></div></div>
+      </article>
+    </div>
+
+    <p class="show-note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5" stroke-linecap="round"/></svg>Photos and collection names are placeholders until Asan Jewellers supplies photos of its own pieces.</p>
+
+    <div class="cta-line" data-rv="up">
+      <p>Not sure of the exact piece? <em>Describe it</em> and attach a photo later.</p>
+      <div class="acts"><a class="btn btn-p" href="#enquire">Enquire about a piece <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="link" href="tel:+61426666987">or call 0426 666 987</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec blush" id="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="sec-head split">
+      <div data-rv="up">
+        <p class="eyebrow">02 · Services</p>
+        <h2 class="h2" id="svc-h" style="margin-top:18px">Made, mended, <em>explained.</em></h2>
+      </div>
+      <p class="lede" data-rv="up">These cards show only if Asan Jewellers offers each service. The owner confirms what applies and adds the details in their own words.</p>
+    </div>
+    <div class="svcs" data-rv="kids">
+      <div class="svc glint" style="--i:0">
+        <span class="num" aria-hidden="true">i</span>
+        <h3>Custom design</h3>
+        <p>If you offer it: how a custom piece starts, what customers should bring, and how long it usually takes.</p>
+        <div class="row"><span class="slot-tag">If you offer it</span><a class="link" href="#enquire" data-want="Custom design">Ask about custom work <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+      <div class="svc glint" style="--i:1">
+        <span class="num" aria-hidden="true">ii</span>
+        <h3>Repairs &amp; resizing</h3>
+        <p>If you offer it: the repairs you take on, such as broken chains, ring resizing or clasps, and whether you quote in store.</p>
+        <div class="row"><span class="slot-tag">If you offer it</span><a class="link" href="#enquire" data-want="Repair">Ask about a repair <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+      <div class="svc glint" style="--i:2">
+        <span class="num" aria-hidden="true">iii</span>
+        <h3>Gold &amp; metals</h3>
+        <p>The metals and purities you stock, listed so customers know before they visit.</p>
+        <div class="fill-lines" aria-label="Metals to be listed by the owner"><span>Metal <i>owner to add</i></span><span>Purity / karat <i>owner to add</i></span><span>Finish <i>owner to add</i></span></div>
+      </div>
+      <div class="svc glint" style="--i:3">
+        <span class="num" aria-hidden="true">iv</span>
+        <h3>Payment &amp; lay-by</h3>
+        <p>How customers can pay, and whether lay-by is available and on what terms.</p>
+        <div class="fill-lines" aria-label="Payment details to be added by the owner"><span>Payment methods <i>owner to add</i></span><span>Lay-by <i>if you offer it</i></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="sec-head" data-rv="up">
+      <p class="eyebrow">03 · How enquiring works</p>
+      <h2 class="h2" id="how-h" style="margin-top:6px">Three steps from <em>idea to counter.</em></h2>
+    </div>
+    <ol class="steps" data-rv="kids">
+      <li class="step" style="--i:0"><span class="dot" aria-hidden="true">1</span><h3>Tell us what you're after</h3><p>Pick ring, chain, earrings, bangle, custom or repair, add a rough budget if you like, and a few words.</p></li>
+      <li class="step" style="--i:1"><span class="dot" aria-hidden="true">2</span><h3>Hear back from the shop</h3><p>Asan Jewellers replies by phone or email. Have a photo of a piece you like? Send it in that reply.</p></li>
+      <li class="step" style="--i:2"><span class="dot" aria-hidden="true">3</span><h3>See it on Bay St</h3><p>Come in to 26 Bay St, Rockdale to see it in person before you decide.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec blush" id="reviews" aria-labelledby="rev-h">
+  <div class="wrap rev">
+    <div class="score" data-rv="up">
+      <p class="eyebrow">04 · Reviews</p>
+      <h2 class="sr" id="rev-h">Google reviews</h2>
+      <div class="big" style="margin-top:22px"><span class="count" data-to="4.9" data-dec="1">4.9</span><sup>/ 5</sup></div>
+      <div class="stars5" id="stars5" aria-hidden="true">
+        <svg style="--i:0" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg style="--i:1" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg style="--i:2" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg style="--i:3" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg style="--i:4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg>
+      </div>
+      <p class="sc-p">Rated <b>4.9 out of 5</b> on Google from <b><span class="count" data-to="251">251</span> reviews</b>.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">
+        <a class="btn btn-g" href="https://www.google.com/maps/search/?api=1&amp;query=Asan%20Jewellers%2C%2026%20Bay%20St%2C%20Rockdale%20NSW%202216" target="_blank" rel="noopener">Read them on Google <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <a class="btn btn-p" href="#enquire">Enquire now</a>
+      </div>
+    </div>
+    <div class="quotes" data-rv="kids">
+      <figure class="q" style="--i:0"><p>A favourite Google review goes here, quoted word for word.</p><small>OWNER FILL · reviewer's first name, with permission</small></figure>
+      <figure class="q" style="--i:1"><p>A second review, ideally about a ring, chain or a custom piece.</p><small>OWNER FILL · reviewer's first name, with permission</small></figure>
+      <figure class="q" style="--i:2"><p>A third review, perhaps about a repair or the service in store.</p><small>OWNER FILL · reviewer's first name, with permission</small></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRY -->
+<section class="sec" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq">
+    <div class="enq-side" data-rv="up">
+      <div class="enq-photo"><img src="../img/asan-jewellers/bands-s.jpg" srcset="../img/asan-jewellers/bands-s.jpg 900w, ../img/asan-jewellers/bands.jpg 1800w" sizes="420px" width="900" height="598" alt="Two interlocking gold bands on blush fabric (sample photo)" loading="lazy"><span class="tag" style="top:auto;bottom:18px;left:18px">Sample photo</span></div>
+      <p class="eyebrow" style="margin-top:28px">05 · Enquire</p>
+      <h2 class="h2" id="enq-h">Enquire about <em>a piece.</em></h2>
+      <p class="lede">A few details are enough. Your enquiry goes straight to Asan Jewellers at <a href="mailto:asanjewellersrockdale@gmail.com" style="color:var(--garnet);font-weight:600">asanjewellersrockdale@gmail.com</a>.</p>
+      <ul>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg>4.9 on Google from 251 reviews</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>26 Bay St, Rockdale NSW 2216</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>Prefer to talk? <a href="tel:+61426666987" style="color:var(--garnet);font-weight:600">0426 666 987</a></span></li>
+      </ul>
+    </div>
+
+    <div class="form-card" id="formCard" data-rv="scale">
+      <form class="fc-body" id="eForm" novalidate>
+        <fieldset class="fgroup">
+          <legend>What you're after</legend>
+          <div class="chips" id="wantChips">
+            <button type="button" class="chip" aria-pressed="false">Ring</button>
+            <button type="button" class="chip" aria-pressed="false">Chain</button>
+            <button type="button" class="chip" aria-pressed="false">Earrings</button>
+            <button type="button" class="chip" aria-pressed="false">Bangle</button>
+            <button type="button" class="chip" aria-pressed="false">Custom design</button>
+            <button type="button" class="chip" aria-pressed="false">Repair</button>
+            <button type="button" class="chip" aria-pressed="false">Other</button>
+          </div>
+        </fieldset>
+        <fieldset class="fgroup">
+          <legend>Rough budget <span class="opt">(optional)</span></legend>
+          <div class="chips" id="budChips">
+            <button type="button" class="chip" aria-pressed="false">Under $500</button>
+            <button type="button" class="chip" aria-pressed="false">$500 to $1,500</button>
+            <button type="button" class="chip" aria-pressed="false">$1,500 to $3,000</button>
+            <button type="button" class="chip" aria-pressed="false">$3,000+</button>
+            <button type="button" class="chip" aria-pressed="false">Not sure yet</button>
+          </div>
+        </fieldset>
+        <div class="frow">
+          <div class="field" id="f-name">
+            <label class="flabel" for="en">Your name</label>
+            <input id="en" name="name" autocomplete="name" required>
+            <svg class="ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+            <p class="err">Please add your name.</p>
+          </div>
+          <div class="field" id="f-contact">
+            <label class="flabel" for="ec">Phone or email</label>
+            <input id="ec" name="contact" autocomplete="email" inputmode="email" required>
+            <svg class="ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+            <p class="err">Add a phone number or an email so the shop can reply.</p>
+          </div>
+        </div>
+        <div class="field">
+          <label class="flabel" for="em">Message <span class="opt">(optional)</span></label>
+          <textarea id="em" name="message" placeholder="e.g. a fine gold chain for everyday wear, around 45 cm"></textarea>
+        </div>
+        <label class="check"><input type="checkbox" id="ephoto"> I'll attach a photo when you reply</label>
+        <div class="fsend">
+          <button class="btn btn-p" type="submit">Send enquiry <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <small>★ 4.9 from 251 Google reviews<br>Or call <a href="tel:+61426666987">0426 666 987</a></small>
+        </div>
+      </form>
+      <div class="done" id="done" aria-live="polite">
+        <svg viewBox="0 0 84 84" aria-hidden="true"><circle class="c1" pathLength="1" cx="42" cy="42" r="38" stroke-width="1.6"/><path class="c2" pathLength="1" d="M27 43l10 10 20-22" stroke-width="2.4"/></svg>
+        <h3>Your enquiry is ready</h3>
+        <p>On the live site this goes straight to Asan Jewellers. Here's what they'd receive:</p>
+        <pre id="donePre"></pre>
+        <div class="done-acts"><button class="btn btn-g sm" type="button" id="again">Send another</button><a class="btn btn-p sm" href="tel:+61426666987">Call the shop</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="sec blush" id="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <div class="sec-head" data-rv="up">
+      <p class="eyebrow">06 · Visit</p>
+      <h2 class="h2" id="visit-h" style="margin-top:6px">Come and see it <em>in person.</em></h2>
+    </div>
+    <div class="visit">
+      <div class="addr-card" data-rv="wipe">
+        <div>
+          <svg class="rings" viewBox="0 0 340 340" aria-hidden="true"><circle cx="170" cy="170" r="168"/><circle cx="170" cy="170" r="130"/><circle cx="170" cy="170" r="92"/><circle cx="170" cy="338" r="6" fill="currentColor"/></svg>
+          <p class="eyebrow">Asan Jewellers</p>
+          <p class="no" aria-hidden="true">26</p>
+          <address>Bay St, Rockdale<small>26 Bay St, Rockdale NSW 2216 · Sydney, Australia</small></address>
+        </div>
+        <div class="acts">
+          <a class="btn btn-w" href="https://www.google.com/maps/search/?api=1&amp;query=Asan%20Jewellers%2C%2026%20Bay%20St%2C%20Rockdale%20NSW%202216" target="_blank" rel="noopener">Get directions <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          <a class="btn btn-o" href="tel:+61426666987">Call 0426 666 987</a>
+        </div>
+      </div>
+      <div class="hours" data-rv="up">
+        <span class="slot-tag">Owner fill</span>
+        <h3>Opening hours</h3>
+        <table>
+          <tbody>
+            <tr><td>Monday to Friday</td><td><span>owner to add</span></td></tr>
+            <tr><td>Saturday</td><td><span>owner to add</span></td></tr>
+            <tr><td>Sunday</td><td><span>owner to add</span></td></tr>
+            <tr><td>Public holidays</td><td><span>owner to add</span></td></tr>
+          </tbody>
+        </table>
+        <div class="pay">
+          <b>Contact</b>
+          <p><a href="tel:+61426666987" style="color:var(--garnet);font-weight:600">+61 426 666 987</a><br><a href="mailto:asanjewellersrockdale@gmail.com" style="color:var(--garnet);font-weight:600;word-break:break-all">asanjewellersrockdale@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" aria-labelledby="final-h">
+  <div class="wrap" data-rv="up">
+    <p class="eyebrow">Asan Jewellers · Rockdale</p>
+    <h2 class="h2" id="final-h">Seen something? <em>Ask about it.</em></h2>
+    <p>Send an enquiry in under a minute, or call the shop directly.</p>
+    <div class="acts">
+      <a class="btn btn-p" href="#enquire">Enquire about a piece <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-g" href="tel:+61426666987">Call 0426 666 987</a>
+    </div>
+    <p class="mini">★ 4.9 from 251 Google reviews · 26 Bay St, Rockdale NSW 2216</p>
+  </div>
+</section>
+</main>
+
+<section class="farman" aria-labelledby="farman-h">
+  <div class="wrap">
+    <div class="farman-in">
+      <span class="fb-mark" aria-hidden="true">F</span>
+      <div><h2 id="farman-h">Want this live?</h2><p>I can have it ready in about a week, with your own pieces, hours and services in place. Book a 15-min call.</p></div>
+      <div class="fb-act">
+        <a class="fb-btn pri" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="fb-btn" href="mailto:farman.builds@gmail.com?subject=Website%20for%20Asan%20Jewellers">Email Farman</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>Asan Jewellers · 26 Bay St, Rockdale NSW 2216 · <a href="tel:+61426666987">+61 426 666 987</a> · <a href="mailto:asanjewellersrockdale@gmail.com">asanjewellersrockdale@gmail.com</a></p>
+    <p class="credit">Concept preview made for Asan Jewellers by Farman, an independent web developer, from public information (Google Maps). Not Asan Jewellers' official website. Photos are samples: free-licence Unsplash images, not Asan Jewellers' own pieces. Collections, metals, services, hours and payment details are placeholders for the owner.</p>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a class="btn btn-g" href="tel:+61426666987" aria-label="Call Asan Jewellers"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="btn btn-p pulse" href="#enquire">Enquire about a piece</a>
+</div>
+
+<script>
+(function(){
+  var d=document,root=d.documentElement,$=function(id){return d.getElementById(id)};
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Farman bar */
+  var fb=$('fb');
+  try{if(sessionStorage.getItem('ajFbHide')==='1')fb.hidden=true}catch(e){}
+  root.classList.add('fbw');
+  setTimeout(function(){root.classList.add('fb-on')},1200);
+  $('fbX').addEventListener('click',function(){fb.classList.add('off');try{sessionStorage.setItem('ajFbHide','1')}catch(e){}setTimeout(function(){fb.hidden=true},260)});
+
+  /* progress + condensed header */
+  var prog=$('progress'),hdr=$('hdr'),tick=false;
+  function onScroll(){tick=false;var y=scrollY||root.scrollTop,h=root.scrollHeight-innerHeight;prog.style.transform='scaleX('+(h>0?Math.min(1,y/h):0)+')';hdr.classList.toggle('cond',y>20)}
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+
+  /* counters */
+  function countUp(el){if(el.dataset.done)return;el.dataset.done=1;var to=parseFloat(el.dataset.to),dec=+(el.dataset.dec||0),t0=null,dur=1400;
+    function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=(to*e).toFixed(dec);if(p<1)requestAnimationFrame(step);else el.textContent=to.toFixed(dec)}
+    requestAnimationFrame(step)}
+
+  /* reveals: elements are only hidden ("armed") just before they scroll into view, with a 1.5 s safety reveal */
+  var items=[].slice.call(d.querySelectorAll('[data-rv]')),stars=$('stars5');
+  function show(el){el.classList.add('in');[].forEach.call(el.querySelectorAll('.count'),countUp);if(el.contains(stars))stars.classList.add('lit');setTimeout(function(){el.classList.add('rv-done')},1500)}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;io.unobserve(el);if(el.classList.contains('armed')){void el.offsetWidth;requestAnimationFrame(function(){show(el)})}else show(el)}})},{rootMargin:'0px 0px -6% 0px',threshold:.08});
+    var arm=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;arm.unobserve(el);if(el.getBoundingClientRect().top>innerHeight*.94)el.classList.add('armed');io.observe(el)}})},{rootMargin:'0px 0px 35% 0px'});
+    items.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight*.94&&r.bottom>0){el.classList.add('armed');io.observe(el)}else arm.observe(el)});
+    setTimeout(function(){items.forEach(function(el){if(el.classList.contains('armed')&&!el.classList.contains('in')&&el.getBoundingClientRect().top<innerHeight)show(el)})},1500);
+    var hc=[].slice.call(d.querySelectorAll('.hero .count'));
+    hc.forEach(function(el){el.textContent=(0).toFixed(+(el.dataset.dec||0))});
+    setTimeout(function(){hc.forEach(countUp)},700);
+  }else{root.classList.add('no-io');items.forEach(function(el){el.classList.add('in')})}
+
+  /* chips */
+  var want=[].slice.call(d.querySelectorAll('#wantChips .chip')),bud=[].slice.call(d.querySelectorAll('#budChips .chip'));
+  function popc(b){b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop')}
+  want.forEach(function(b){b.addEventListener('click',function(){b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true');popc(b)})});
+  bud.forEach(function(b){b.addEventListener('click',function(){var was=b.getAttribute('aria-pressed')==='true';bud.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed',!was);popc(b)})});
+  [].forEach.call(d.querySelectorAll('[data-want]'),function(a){a.addEventListener('click',function(){var w=a.dataset.want;want.forEach(function(b){if(b.textContent===w&&b.getAttribute('aria-pressed')!=='true'){b.setAttribute('aria-pressed','true');setTimeout(function(){popc(b)},reduce?50:650)}})})});
+
+  /* form */
+  var form=$('eForm'),card=$('formCard'),en=$('en'),ec=$('ec');
+  function contactOk(v){v=v.trim();return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)||v.replace(/\D/g,'').length>=8}
+  var rules={'f-name':function(){return en.value.trim().length>=2},'f-contact':function(){return contactOk(ec.value)}};
+  function check(id,showErr){var ok=rules[id](),w=$(id);if(showErr)w.classList.toggle('bad',!ok);else if(ok)w.classList.remove('bad');w.classList.toggle('good',ok);return ok}
+  [[en,'f-name'],[ec,'f-contact']].forEach(function(p){p[0].addEventListener('blur',function(){if(p[0].value.trim())check(p[1],true)});p[0].addEventListener('input',function(){check(p[1],false)})});
+  form.addEventListener('submit',function(e){e.preventDefault();
+    var first=null;['f-name','f-contact'].forEach(function(id){if(!check(id,true)&&!first)first=id});
+    if(first){var w=$(first);w.classList.remove('shake');void w.offsetWidth;w.classList.add('shake');w.querySelector('input').focus();return}
+    var picks=want.filter(function(b){return b.getAttribute('aria-pressed')==='true'}).map(function(b){return b.textContent});
+    var budget=bud.filter(function(b){return b.getAttribute('aria-pressed')==='true'}).map(function(b){return b.textContent})[0];
+    var msg=$('em').value.trim(),photo=$('ephoto').checked;
+    var body=['Hello Asan Jewellers,','','I would like to enquire about a piece.','',
+      'Looking for: '+(picks.length?picks.join(', '):'Not sure yet'),
+      'Rough budget: '+(budget||'Not given'),
+      (msg?'Details: '+msg:null),
+      (photo?'I will attach a photo when you reply.':null),'',
+      'Name: '+en.value.trim(),'Contact: '+ec.value.trim(),'','(Sent from the website enquiry form)'].filter(function(x){return x!==null}).join('\n');
+    var subj='Enquiry: '+(picks.length?picks.join(', '):'A piece')+' ('+en.value.trim()+')';
+    var href='mailto:asanjewellersrockdale@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+    $('donePre').textContent='Subject: '+subj+'\n\n'+body;
+    card.classList.add('sent');
+    card.scrollIntoView({block:'nearest',behavior:reduce?'auto':'smooth'});
+    window.__previewMail(href);
+  });
+  $('again').addEventListener('click',function(){card.classList.remove('sent');en.focus()});
+
+  /* mobile bar hides while the form is on screen */
+  var mbar=$('mbar');
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){mbar.classList.toggle('away',es[0].isIntersecting)},{threshold:.2}).observe(card)}
+})();
+</script>
+<script src="../preview-guard.js"></script>
+</body>
+</html>
