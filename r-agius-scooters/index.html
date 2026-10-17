@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>R. Agius Scooters · Motor scooters on Edgware Road, London W2 (concept preview)</title>
+<meta name="description" content="Concept homepage for R. Agius Scooters, a motor scooter dealer at 363 Edgware Rd, London W2 1BS. Made by Farman from public information; not the official website.">
+<meta name="theme-color" content="#111213">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --tar:#111213;--tar2:#191b1d;--tar3:#24272a;--chalk:#F2EFE8;--paper:#E9E5DB;--ink:#121314;
+  --mute:#57534b;--mute-d:#aeaba3;--line:#121314;--line-d:rgba(242,239,232,.16);
+  --red:#E1301F;--red-d:#B8231A;--red-block:#C2251A;
+  --display:'Anton',Impact,'Arial Narrow Bold',sans-serif;--body:'Barlow',system-ui,sans-serif;--cond:'Barlow Condensed','Arial Narrow',sans-serif;
+  --e-out:cubic-bezier(.16,1,.3,1);--e-std:cubic-bezier(.2,0,0,1);--e-in:cubic-bezier(.3,0,1,1);--e-back:cubic-bezier(.175,.885,.32,1.275);
+  --t1:140ms;--t2:260ms;--t3:640ms;
+  --wrap:1260px;--gut:clamp(16px,4vw,44px);
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:80px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;font:400 17px/1.6 var(--body);color:var(--ink);background:var(--chalk);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:400}
+p{margin:0}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--red);color:#fff;padding:10px 14px;border-radius:4px;font-weight:700}
+.skip:focus{left:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cond{font-family:var(--cond);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.tar{background:var(--tar);color:var(--chalk);position:relative;isolation:isolate}
+.tar::before{content:"";position:absolute;inset:0;z-index:-1;background-image:var(--noise);opacity:.07;pointer-events:none}
+
+/* progress */
+.progress{position:fixed;left:0;right:0;top:0;height:3px;z-index:95;background:var(--red);transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+
+/* ---------- plate (number-plate label) ---------- */
+.plate{display:inline-flex;align-items:stretch;background:var(--chalk);color:var(--ink);border:2px solid var(--ink);border-radius:6px;font:700 15px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;overflow:hidden;box-shadow:0 0 0 2px var(--chalk)}
+.plate .band{background:var(--red);color:#fff;display:grid;place-items:center;padding:0 7px;font-size:11px;letter-spacing:.06em}
+.plate .pt{padding:7px 11px 6px}
+.tar .plate{box-shadow:none;border-color:var(--chalk)}
+.plate.y{background:var(--ink);color:var(--chalk);border-color:var(--ink);box-shadow:none}
+
+/* sample photo tag + owner-fill tag */
+.tag{position:absolute;left:10px;bottom:10px;z-index:3;display:inline-flex;align-items:center;gap:6px;padding:5px 8px 4px;background:rgba(17,18,19,.82);color:var(--chalk);font:600 11px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;border-radius:3px;backdrop-filter:blur(4px)}
+.fill{display:inline-flex;align-items:center;gap:6px;font:600 12px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--red-d);border:1.5px dashed currentColor;border-radius:4px;padding:6px 8px 5px}
+.tar .fill{color:#ff8a7c}
+.fill::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+
+/* ---------- buttons ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:6px;border:2px solid var(--ink);
+  font:700 17px/1 var(--cond);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;background:transparent;color:var(--ink);
+  transition:transform var(--t1) var(--e-std),background-color var(--t2),color var(--t2),box-shadow var(--t2) var(--e-std),border-color var(--t2)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 0 var(--ink)}
+.btn:active{transform:translateY(0) scale(.97);box-shadow:0 0 0 var(--ink)}
+.btn .arr{transition:transform var(--t2) var(--e-back);flex:none}
+.btn:hover .arr{transform:translateX(4px)}
+.btn.pri{background:var(--red);border-color:var(--red);color:#fff}
+.btn.pri:hover{background:var(--red-d);border-color:var(--red-d)}
+.tar .btn{color:var(--chalk);border-color:rgba(242,239,232,.5)}
+.tar .btn:hover{border-color:var(--chalk);box-shadow:0 5px 0 rgba(242,239,232,.9)}
+.tar .btn.pri{color:#fff;border-color:var(--red)}
+.tar .btn.pri:hover{box-shadow:0 5px 0 #7d150e}
+.btn.pri:not(.tar .btn):hover{box-shadow:0 5px 0 var(--ink)}
+.btn.sm{min-height:44px;padding:0 16px;font-size:15px}
+.ring::after{content:"";position:absolute;inset:-2px;border:2px solid var(--red);border-radius:7px;pointer-events:none;opacity:0}
+@media (prefers-reduced-motion:no-preference){.ring::after{animation:ring 2.8s var(--e-out) 2.4s infinite}}
+@keyframes ring{0%{opacity:.9;transform:scale(1)}70%,100%{opacity:0;transform:scale(1.05,1.35)}}
+
+/* ---------- Farman bar ---------- */
+.fb{font-family:var(--body);color:#e8e6e1;z-index:80;transition:opacity .55s var(--e-out),transform .55s var(--e-out)}
+.fb-in{position:relative;background:#1d1e20;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;align-items:start;border:1px solid rgba(255,255,255,.1)}
+.fb-mark{grid-row:span 2;width:34px;height:34px;border-radius:7px;background:#fff;color:#1d1e20;display:grid;place-items:center;font:400 18px/1 var(--display)}
+.fb p{font-size:14px;line-height:1.45;color:#c9c7c1;padding-right:36px}
+.fb p b{color:#fff}
+.fb-act{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.fb-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 14px;border-radius:7px;font:600 15px/1 var(--body);text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.26);transition:transform var(--t1) var(--e-std),background-color var(--t2),border-color var(--t2)}
+.fb-btn:hover{border-color:#fff;transform:translateY(-2px)}
+.fb-btn:active{transform:scale(.97)}
+.fb-btn.pri{background:#fff;color:#1d1e20;border-color:#fff;font-weight:700}
+.fb-btn.pri:hover{background:#e9e6df}
+.fb-btn .arr{transition:transform var(--t2) var(--e-back)}
+.fb-btn:hover .arr{transform:translateX(3px)}
+.fb-x{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;background:none;color:#a9a8a3;border-radius:8px;cursor:pointer;display:grid;place-items:center;transition:color var(--t1),background-color var(--t1)}
+.fb-x:hover{color:#fff;background:rgba(255,255,255,.08)}
+.fbw .fb{opacity:0;transform:translateY(-10px);pointer-events:none}
+.fbw.fb-on .fb{opacity:1;transform:none;pointer-events:auto}
+.fbw.fb-on .fb.tuck{opacity:0;transform:translateY(12px);pointer-events:none}
+.fbw.fb-on .fb.off{opacity:0;transform:translateY(-10px);pointer-events:none;transition-duration:.24s;transition-timing-function:var(--e-in)}
+@media (min-width:861px){
+  .fb{position:fixed;right:20px;bottom:20px;width:424px}
+  .fb-in{border-radius:12px;padding:14px 16px;box-shadow:0 24px 60px -18px rgba(0,0,0,.6)}
+  .fbw .fb,.fbw.fb-on .fb.tuck{opacity:0;transform:translateY(12px);pointer-events:none}
+.fbw.fb-on .fb.off{transform:translateY(12px)}
+}
+@media (max-width:860px){.fb{position:relative}.fb-in{padding:12px 16px}.fb p{font-size:13.5px}.fb-act{grid-column:1 / -1}.fb-btn{flex:1 1 auto}}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(17,18,19,.0);color:var(--chalk);transition:background-color var(--t2),box-shadow var(--t2)}
+.hdr-in{display:flex;align-items:center;gap:20px;height:76px;transition:height var(--t2) var(--e-std)}
+.hdr.cond{background:rgba(17,18,19,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(242,239,232,.1)}
+.hdr.cond .hdr-in{height:62px}
+.logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;min-height:44px}
+.logo .plate{font-size:16px}
+.logo .plate .pt{padding:8px 10px 7px}
+.logo small{display:block;font:600 12px/1.15 var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--mute-d)}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 12px;text-decoration:none;font:600 16px/1 var(--cond);letter-spacing:.1em;text-transform:uppercase;color:#d9d6cf;transition:color var(--t1)}
+.nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:8px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:0 50%;transition:transform var(--t2) var(--e-out)}
+.nav a:hover{color:#fff}.nav a:hover::after{transform:scaleX(1)}
+.hdr-cta{display:flex;gap:10px;align-items:center}
+.icon-btn{width:46px;height:46px;border-radius:6px;display:grid;place-items:center;border:2px solid rgba(242,239,232,.4);color:var(--chalk);transition:transform var(--t1) var(--e-std),border-color var(--t2),background-color var(--t2)}
+.icon-btn:hover{border-color:var(--chalk);transform:translateY(-2px)}
+.icon-btn:active{transform:scale(.95)}
+.hdr .hdr-tel{font:600 16px/1 var(--cond);letter-spacing:.06em;color:var(--chalk);text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 6px}
+.hdr .hdr-tel:hover{color:#fff;text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:4px}
+#hdrIcon{display:none}
+@media (max-width:1100px){.hdr .hdr-tel{display:none}#hdrIcon{display:grid}}
+@media (max-width:860px){.nav{display:none}.hdr-cta{margin-left:auto}.hdr-cta .btn{display:none}.logo small{display:none}.hdr-in{height:64px}}
+
+/* ---------- hero ---------- */
+.hero{margin-top:-76px;padding-top:76px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(28px,4vw,64px);align-items:center;padding-top:clamp(28px,5vw,64px);padding-bottom:clamp(30px,4vw,48px)}
+.hero-eye{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.hero h1{font-family:var(--display);text-transform:uppercase;font-size:clamp(66px,9.6vw,150px);line-height:.88;letter-spacing:.005em;margin:20px 0 14px}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.02em}
+.hero h1 .ln span{display:inline-block}
+.hero h1 .dot{color:var(--red)}
+.hero .what{font:600 clamp(17px,1.7vw,21px)/1.25 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:#e2dfd8;display:flex;align-items:center;gap:12px}
+.hero .what::before{content:"";width:34px;height:4px;background:var(--red);flex:none}
+.lede{margin-top:18px;max-width:34em;font-size:clamp(17px,1.4vw,19px);color:#cfccc5}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.trust{display:flex;align-items:center;gap:18px;margin-top:26px;padding:14px 18px 14px 14px;border:1px solid var(--line-d);border-radius:10px;background:rgba(242,239,232,.035);width:max-content;max-width:100%;text-decoration:none;transition:border-color var(--t2),transform var(--t1) var(--e-std)}
+.trust:hover{border-color:rgba(242,239,232,.45);transform:translateY(-2px)}
+.gauge{width:118px;height:70px;flex:none}
+.gauge .trk{stroke:rgba(242,239,232,.16)}
+.gauge .arc{stroke:var(--red);stroke-dasharray:157;stroke-dashoffset:9.4}
+.gauge .tk{stroke:rgba(242,239,232,.55)}
+.gauge .nd{transform-origin:60px 60px;transform:rotate(79.2deg)}
+.gauge text{font:600 9px var(--cond);fill:#9d9a93}
+.js .gauge.arm .arc{stroke-dashoffset:157}
+.js .gauge.arm .nd{transform:rotate(-90deg)}
+.gauge .arc{transition:stroke-dashoffset 1.5s var(--e-out)}
+.gauge .nd{transition:transform 1.5s cubic-bezier(.34,1.3,.5,1)}
+@media (prefers-reduced-motion:reduce){.gauge .arc{transition-duration:.8s}.gauge .nd{transition:transform .8s var(--e-out)}}
+.trust-num{font:400 44px/1 var(--display);display:flex;align-items:baseline;gap:6px}
+.trust-num .st{color:var(--red);font-size:28px}
+.trust small{display:block;font:600 14px/1.25 var(--cond);letter-spacing:.1em;text-transform:uppercase;color:#cfccc5;margin-top:4px}
+.trust small u{text-decoration-color:var(--red);text-underline-offset:3px}
+
+.hero-photo{position:relative;aspect-ratio:4/5;max-height:640px;justify-self:end;width:100%;clip-path:polygon(0 0,calc(100% - 56px) 0,100% 56px,100% 100%,0 100%);background:var(--tar3)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:46% 60%}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,18,19,0) 55%,rgba(17,18,19,.75))}
+@media (prefers-reduced-motion:no-preference){.hero-photo img{animation:kb 24s ease-in-out 1.2s infinite alternate}}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.08) translate(-1.5%,-1%)}}
+.hero-photo .tag{left:auto;right:12px;bottom:auto;top:66px}
+.stock-jump{position:absolute;left:16px;bottom:16px;z-index:3;text-decoration:none;transition:transform var(--t2) var(--e-back)}
+.stock-jump .plate{font-size:16px}
+.stock-jump:hover{transform:translateY(-3px)}
+.stock-jump .arr{transition:transform var(--t2) var(--e-back)}
+.stock-jump:hover .arr{transform:translateX(4px)}
+
+/* road band — signature lane line */
+.road{position:relative;height:112px;background:#0c0d0e;overflow:hidden;border-top:1px solid rgba(242,239,232,.06)}
+.road::before{content:"";position:absolute;inset:0;background-image:var(--noise);opacity:.1}
+.road .lane{position:absolute;left:0;right:0;top:50%;height:6px;margin-top:-3px;background:repeating-linear-gradient(90deg,var(--chalk) 0 64px,transparent 64px 112px);opacity:.9}
+.road .cover{position:absolute;left:0;right:0;top:50%;height:12px;margin-top:-6px;background:#0c0d0e;transform-origin:100% 50%;transform:scaleX(0)}
+.road .reds{position:absolute;left:0;right:0;bottom:12px;height:14px;border-top:4px solid var(--red);border-bottom:4px solid var(--red)}
+.road .kerb{position:absolute;left:0;right:0;top:12px;height:4px;background:rgba(242,239,232,.55)}
+.road .rider{position:absolute;top:50%;left:0;width:64px;height:40px;margin-top:-46px;color:var(--red);transform:translateX(calc(100vw - var(--gut) - 200px))}
+.road .pin{position:absolute;right:calc(var(--gut) + 0px);top:50%;transform:translateY(-50%);z-index:2}
+.road .pin .plate{font-size:15px}
+.js .road.arm .cover{transform:scaleX(1)}
+.js .road.arm .rider{transform:translateX(-80px)}
+.road .cover{transition:transform 1.7s var(--e-std)}
+.road .rider{transition:transform 1.7s var(--e-std)}
+@media (prefers-reduced-motion:reduce){
+  .js .road.arm .rider{transform:translateX(calc(100vw - var(--gut) - 200px))}
+  .road .cover{transition:transform 1.1s var(--e-std)}
+}
+@media (max-width:860px){.road .rider{transform:translateX(calc(100vw - var(--gut) - 200px))}@media (prefers-reduced-motion:reduce){.js .road.arm .rider{transform:translateX(calc(100vw - var(--gut) - 200px))}}}
+
+/* hero entrance */
+.js .hx{animation:hxIn .8s var(--e-out) both;animation-delay:var(--d,0ms)}
+.js .hero h1 .ln span{animation:lnIn .9s var(--e-out) both;animation-delay:var(--d,0ms)}
+.js .hx-plate{animation:plIn .7s var(--e-out) both;animation-delay:var(--d,0ms)}
+.js .hx-photo{animation:phIn .9s var(--e-out) both;animation-delay:var(--d,0ms)}
+.hero-photo::before{content:"";position:absolute;inset:0;z-index:5;background:var(--tar);transform-origin:50% 0;transform:scaleY(0);pointer-events:none}
+@media (prefers-reduced-motion:no-preference){.js .hx-photo::before{animation:curtain 1.1s var(--e-out) both;animation-delay:calc(var(--d,0ms) + 80ms)}}
+@keyframes curtain{from{transform:scaleY(1)}to{transform:scaleY(0)}}
+@keyframes hxIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes lnIn{from{opacity:0;transform:translateY(105%)}to{opacity:1;transform:none}}
+@keyframes plIn{from{opacity:0;transform:translateX(-26px)}to{opacity:1;transform:none}}
+@keyframes phIn{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  @keyframes hxIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  @keyframes lnIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  @keyframes plIn{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}
+}
+
+/* ---------- route (3 steps) ---------- */
+.route{padding:clamp(44px,6vw,72px) 0;background:var(--tar2)}
+.route-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;position:relative}
+.step{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:6px 16px;align-items:center;padding:20px 20px 20px 18px;border:2px solid rgba(242,239,232,.18);border-radius:10px;text-decoration:none;color:var(--chalk);background:var(--tar);min-height:104px;
+  transition:transform var(--t2) var(--e-out),border-color var(--t2),background-color var(--t2),box-shadow var(--t2)}
+.step:hover{transform:translateY(-4px);border-color:var(--chalk);box-shadow:0 10px 0 -2px var(--red)}
+.step:active{transform:translateY(-1px) scale(.98)}
+.step .n{font:400 48px/1 var(--display);color:var(--red);grid-row:span 2}
+.step b{font:400 26px/1 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.step span.d{grid-column:2;font-size:15.5px;line-height:1.4;color:#c4c1ba}
+.step .go{grid-row:1 / span 2;grid-column:3;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(242,239,232,.08);transition:transform var(--t2) var(--e-back),background-color var(--t2)}
+.step:hover .go{transform:translateX(4px);background:var(--red)}
+@media (max-width:900px){.route-grid{grid-template-columns:1fr}.step{min-height:0}}
+
+/* ---------- section heads ---------- */
+.sec{padding:clamp(64px,8vw,112px) 0}
+.sh{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:20px 48px;align-items:end;margin-bottom:clamp(30px,4vw,48px)}
+.kick{display:inline-flex;align-items:center;gap:10px;font:600 15px/1 var(--cond);letter-spacing:.16em;text-transform:uppercase;color:var(--red-d)}
+.tar .kick{color:#ff8a7c}
+.kick::before{content:"";width:26px;height:4px;background:var(--red)}
+.h2{font-family:var(--display);text-transform:uppercase;font-size:clamp(46px,6.4vw,96px);line-height:.9;letter-spacing:.005em;margin-top:14px}
+.h2 .r{color:var(--red)}
+.sh p{color:var(--mute);font-size:18px;max-width:34em}
+.tar .sh p{color:#c4c1ba}
+@media (max-width:860px){.sh{grid-template-columns:1fr}}
+
+/* ---------- stock ---------- */
+.stock{background:var(--chalk);background-image:linear-gradient(90deg,rgba(18,19,20,.05) 1px,transparent 1px);background-size:calc(100% / 12) 100%}
+.stock-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{position:relative;background:#fff;border:2px solid var(--ink);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;
+  transition:transform var(--t2) var(--e-out),box-shadow var(--t2) var(--e-out)}
+.card:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:8px 10px 0 var(--ink)}
+.card .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--paper);border-bottom:2px solid var(--ink)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--e-out)}
+.card:hover .ph img{transform:scale(1.06)}
+.card .ph.empty{display:grid;place-items:center;background:repeating-linear-gradient(-45deg,#ece8de 0 14px,#e5e1d6 14px 28px)}
+.card .ph.empty svg{width:62%;max-width:230px;color:#8d887d;transition:transform .7s var(--e-out)}
+.card:hover .ph.empty svg{transform:translateX(8px)}
+.card .ph.empty .tag{background:var(--ink)}
+.card .no{position:absolute;left:12px;top:12px;z-index:3}
+.card .no .plate{font-size:14px}
+.card .bd{padding:18px 18px 18px;display:flex;flex-direction:column;gap:12px;flex:1}
+.card .model{font:400 26px/1.05 var(--display);text-transform:uppercase;color:var(--ink)}
+.card .model i{font-style:normal;color:#77726a}
+.specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1.5px solid var(--ink);border-radius:8px;overflow:hidden}
+.specs div{padding:9px 10px 8px;border-left:1.5px solid var(--ink);min-width:0}
+.specs div:first-child{border-left:0}
+.specs dt{font:600 11.5px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.specs dd{margin:5px 0 0;font:700 17px/1.1 var(--cond);letter-spacing:.04em;color:#6b665c;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card .ask{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:50px;padding:0 16px;border-radius:7px;background:var(--ink);color:var(--chalk);border:0;cursor:pointer;font:700 16px/1 var(--cond);letter-spacing:.1em;text-transform:uppercase;transition:background-color var(--t2),transform var(--t1) var(--e-std)}
+.card .ask:hover{background:var(--red)}
+.card .ask:active{transform:scale(.97)}
+.card .ask .arr{transition:transform var(--t2) var(--e-back)}
+.card .ask:hover .arr{transform:translateX(4px)}
+.stock-note{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;padding:18px 20px;border:2px dashed var(--ink);border-radius:12px;background:rgba(255,255,255,.5)}
+.stock-note p{max-width:46em;color:var(--mute);font-size:16px}
+.stock-note p b{color:var(--ink)}
+@media (max-width:1000px){.stock-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){
+  .stock-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:84%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;margin:0 calc(-1 * var(--gut));padding:4px var(--gut) 20px;scroll-padding:0 var(--gut);scrollbar-width:none}
+  .stock-grid::-webkit-scrollbar{display:none}
+  .stock-grid .card{scroll-snap-align:start}
+  .card:hover{transform:none;box-shadow:none}
+  .swipe{display:flex!important}
+}
+.swipe{display:none;align-items:center;gap:8px;margin:-10px 0 14px;font:600 13px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+
+/* ---------- riders ---------- */
+.riders{background:var(--paper)}
+.rgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.rcard{position:relative;border-radius:12px;overflow:hidden;background:var(--tar);color:var(--chalk);min-height:440px;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate;transition:transform var(--t2) var(--e-out),box-shadow var(--t2)}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 18px 40px -18px rgba(0,0,0,.5)}
+.rcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s var(--e-out)}
+.rcard:hover img{transform:scale(1.06)}
+.rcard::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(17,18,19,.1) 10%,rgba(17,18,19,.55) 45%,rgba(17,18,19,.96) 78%)}
+.rcard .tag{left:auto;right:12px;bottom:auto;top:12px}
+.rcard .num{position:absolute;left:16px;top:12px;font:400 64px/1 var(--display);color:rgba(242,239,232,.9);-webkit-text-stroke:0}
+.rcard .in{padding:22px}
+.rcard h3{font:400 34px/.95 var(--display);text-transform:uppercase}
+.rcard p{margin-top:10px;color:#d8d5ce;font-size:16.5px;line-height:1.5}
+.rcard .btn{margin-top:16px;width:100%;justify-content:space-between}
+@media (max-width:1000px){.rgrid{grid-template-columns:1fr}.rcard{min-height:360px}}
+
+/* ---------- proof (poster block) ---------- */
+.proof{background:var(--red-block);color:#fff;position:relative;overflow:hidden;isolation:isolate}
+.proof::before{content:"";position:absolute;inset:0;z-index:-1;background-image:var(--noise);opacity:.09}
+.proof::after{content:"";position:absolute;left:0;right:0;bottom:22px;height:14px;border-top:4px solid rgba(255,255,255,.85);border-bottom:4px solid rgba(255,255,255,.85);z-index:-1}
+.proof-in{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:28px 56px;align-items:center;padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(72px,8vw,110px)}
+.big{display:flex;align-items:flex-end;gap:clamp(14px,2vw,28px);flex-wrap:wrap}
+.big .v{font:400 clamp(110px,15vw,220px)/.8 var(--display);letter-spacing:-.01em}
+.big .side{padding-bottom:10px}
+.big .stars{display:flex;gap:4px}
+.big .stars svg{width:30px;height:30px}
+.big .side b{display:block;font:400 clamp(40px,4.6vw,64px)/.9 var(--display);margin-top:10px}
+.big .side span{display:block;font:600 16px/1.2 var(--cond);letter-spacing:.14em;text-transform:uppercase;margin-top:6px}
+.proof h2{font:400 clamp(34px,3.6vw,50px)/.95 var(--display);text-transform:uppercase}
+.proof p{margin-top:14px;font-size:18px;color:#fff;max-width:30em}
+.proof .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.proof .btn{border-color:#fff;color:#fff}
+.proof .btn:hover{box-shadow:0 5px 0 #6e130c}
+.proof .btn.wht{background:#fff;color:var(--red-block)}
+.proof .slot{margin-top:22px;padding:14px 16px;border:2px dashed rgba(255,255,255,.75);border-radius:10px;font-size:15.5px;line-height:1.45}
+.proof .slot b{font:700 13px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:6px}
+@media (max-width:900px){.proof-in{grid-template-columns:1fr}}
+
+/* ---------- shop extras (owner slots) ---------- */
+.extras{background:var(--chalk);padding:clamp(56px,7vw,88px) 0}
+.xgrid{display:grid;grid-template-columns:minmax(0,.9fr) repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+.xhead .h2{font-size:clamp(40px,4.4vw,64px)}
+.xhead p{color:var(--mute);margin-top:12px;font-size:16.5px}
+.xslot{border:2px dashed var(--ink);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:10px;background:#fff;transition:transform var(--t2) var(--e-out),border-color var(--t2),background-color var(--t2)}
+.xslot:hover{transform:translateY(-4px);border-style:solid}
+.xslot svg{width:40px;height:40px;color:var(--red)}
+.xslot h3{font:400 28px/1 var(--display);text-transform:uppercase}
+.xslot p{color:var(--mute);font-size:15.5px;line-height:1.45}
+.xslot .fill{margin-top:auto;align-self:flex-start}
+@media (max-width:1000px){.xgrid{grid-template-columns:1fr 1fr}.xhead{grid-column:1/-1}}
+@media (max-width:560px){.xgrid{grid-template-columns:1fr}}
+
+/* ---------- enquire ---------- */
+.enq-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,4vw,64px);align-items:start}
+.enq-side .h2{font-size:clamp(50px,6vw,92px)}
+.enq-side>p{margin-top:16px;color:#c4c1ba;font-size:18px;max-width:28em}
+.direct{margin-top:28px;display:grid;gap:12px}
+.dline{display:flex;align-items:center;gap:14px;padding:14px 16px;border:2px solid rgba(242,239,232,.18);border-radius:10px;text-decoration:none;color:var(--chalk);min-height:64px;transition:border-color var(--t2),transform var(--t1) var(--e-std),background-color var(--t2)}
+.dline:hover{border-color:var(--chalk);transform:translateY(-2px);background:rgba(242,239,232,.04)}
+.dline:active{transform:scale(.98)}
+.dline .ic{width:42px;height:42px;border-radius:8px;background:var(--red);display:grid;place-items:center;flex:none;color:#fff}
+.dline small{display:block;font:600 12.5px/1 var(--cond);letter-spacing:.14em;text-transform:uppercase;color:#a9a6a0}
+.dline b{display:block;font:400 26px/1.1 var(--display);letter-spacing:.02em;margin-top:4px;word-break:break-word}
+.dline.em b{font:600 19px/1.2 var(--body);letter-spacing:0}
+.ticket{position:relative;background:var(--chalk);color:var(--ink);border-radius:14px;padding:clamp(20px,3vw,34px);box-shadow:0 30px 70px -30px rgba(0,0,0,.7)}
+.ticket::before{content:"";position:absolute;left:0;right:0;top:0;height:10px;border-radius:14px 14px 0 0;background:repeating-linear-gradient(90deg,var(--red) 0 34px,var(--ink) 34px 68px)}
+.t-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:6px 0 20px}
+.t-head h3{font:400 32px/1 var(--display);text-transform:uppercase}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f{position:relative;display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1/-1}
+.f label,.f .lbl{font:700 13.5px/1 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.f label i{font-style:normal;color:var(--mute);font-weight:500;letter-spacing:.06em;text-transform:none;font-family:var(--body);font-size:13px}
+.f input,.f textarea{width:100%;font:500 17px/1.4 var(--body);color:var(--ink);background:#fff;border:2px solid #c9c4b8;border-radius:8px;padding:13px 14px;min-height:52px;transition:border-color var(--t2),box-shadow var(--t2)}
+.f textarea{min-height:96px;resize:vertical}
+.f input:hover,.f textarea:hover{border-color:#8f8a7f}
+.f input:focus,.f textarea:focus{outline:0;border-color:var(--ink);box-shadow:0 4px 0 var(--red)}
+.f .err{display:none;font-size:14px;color:var(--red-d);font-weight:600}
+.f.bad input{border-color:var(--red-d)}
+.f.bad .err{display:block}
+.f.good input{border-color:#2f6b45}
+.f .ok{position:absolute;right:12px;top:37px;width:22px;height:22px;border-radius:50%;background:#2f6b45;color:#fff;display:grid;place-items:center;opacity:0;transform:scale(.6);transition:opacity var(--t2),transform var(--t2) var(--e-back);pointer-events:none}
+.f.good .ok{opacity:1;transform:none}
+.f.flash input{animation:flash 1.2s var(--e-out)}
+@keyframes flash{0%{box-shadow:0 0 0 0 rgba(225,48,31,.55)}100%{box-shadow:0 0 0 12px rgba(225,48,31,0)}}
+.shake{animation:shake .38s var(--e-std)}
+@keyframes shake{0%,100%{transform:none}20%{transform:translateX(-8px)}45%{transform:translateX(7px)}70%{transform:translateX(-4px)}}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:0 16px;border-radius:999px;border:2px solid var(--ink);background:#fff;cursor:pointer;font:700 15px/1 var(--cond);letter-spacing:.08em;text-transform:uppercase;transition:background-color var(--t2),color var(--t2),transform var(--t1) var(--e-std)}
+.chip:hover{background:var(--paper)}
+.chip:active{transform:scale(.95)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--chalk)}
+.chip.pop{animation:pop .36s var(--e-back)}
+@keyframes pop{0%{transform:scale(.92)}60%{transform:scale(1.06)}100%{transform:scale(1)}}
+.send{margin-top:18px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center}
+.send .btn{min-width:240px}
+.send small{color:var(--mute);font-size:14px;line-height:1.4;max-width:24em}
+.done{display:none;text-align:left}
+.ticket.sent form{display:none}
+.ticket.sent .done{display:block;animation:hxIn .5s var(--e-out) both}
+.check{width:76px;height:76px}
+.check circle{stroke:var(--red);stroke-width:4;fill:none;stroke-dasharray:226;stroke-dashoffset:226}
+.check path{stroke:var(--ink);stroke-width:6;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60}
+.ticket.sent .check circle{animation:draw .6s var(--e-out) .1s forwards}
+.ticket.sent .check path{animation:draw .45s var(--e-out) .55s forwards}
+.ticket.sent .check{animation:pop .5s var(--e-back) .5s both}
+@keyframes draw{to{stroke-dashoffset:0}}
+.done h3{font:400 40px/1 var(--display);text-transform:uppercase;margin-top:14px}
+.done p{color:var(--mute);margin-top:8px}
+.done pre{white-space:pre-wrap;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:14px;font:500 14px/1.5 var(--body);margin:16px 0;max-height:260px;overflow:auto}
+.done .row{display:flex;flex-wrap:wrap;gap:10px}
+.ticket .btn:not(.pri){color:var(--ink);border-color:var(--ink)}
+.ticket .btn:not(.pri):hover{box-shadow:0 5px 0 var(--ink)}
+.ticket .btn.pri:hover{box-shadow:0 5px 0 var(--ink)}
+@media (max-width:980px){.enq-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.fgrid{grid-template-columns:1fr}.send .btn{width:100%;min-width:0}}
+
+/* ---------- visit ---------- */
+.visit{background:var(--chalk)}
+.vgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:stretch}
+.addr{font:400 clamp(56px,7.6vw,118px)/.86 var(--display);text-transform:uppercase;margin-top:14px}
+.addr .r{color:var(--red)}
+.addr-sub{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:18px}
+.vacts{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.copy-btn[data-done="1"]{background:var(--ink);color:var(--chalk)}
+.hours{margin-top:30px;border:2px solid var(--ink);border-radius:12px;overflow:hidden;background:#fff}
+.hours-h{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:14px 16px;border-bottom:2px solid var(--ink);background:var(--paper)}
+.hours-h b{font:400 24px/1 var(--display);text-transform:uppercase}
+.hours table{width:100%;border-collapse:collapse}
+.hours td{padding:10px 16px;border-top:1px solid #ddd8cc;font:600 16px/1.2 var(--cond);letter-spacing:.08em;text-transform:uppercase}
+.hours tr:first-child td{border-top:0}
+.hours td+td{text-align:right;color:#6b665c;letter-spacing:.18em}
+.vmap{position:relative;border-radius:14px;overflow:hidden;min-height:520px;background:var(--tar);display:grid;grid-template-rows:1fr auto}
+.vmap .ph{position:relative;overflow:hidden;min-height:300px}
+.vmap .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.vmap .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,18,19,0) 50%,rgba(17,18,19,.9))}
+.vmap .ph .tag{left:auto;right:12px;top:12px;bottom:auto}
+.diagram{position:relative;padding:18px 18px 16px;color:var(--chalk)}
+.diagram svg{width:100%;height:auto;display:block}
+.diagram .cap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font:600 12.5px/1.2 var(--cond);letter-spacing:.14em;text-transform:uppercase;color:#a9a6a0;margin-top:8px}
+.dg-lane{stroke-dasharray:22 16;stroke-dashoffset:0}
+.dg-draw{stroke-dasharray:560;stroke-dashoffset:0;transition:stroke-dashoffset 1.6s var(--e-std)}
+.js .armed-dg .dg-draw{stroke-dashoffset:560}
+@media (max-width:980px){.vgrid{grid-template-columns:1fr}.vmap{min-height:0}}
+
+/* ---------- final CTA ---------- */
+.final{padding:clamp(56px,7vw,96px) 0;overflow:hidden}
+.final-in{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 40px;align-items:end}
+.final h2{font:400 clamp(52px,7.4vw,120px)/.86 var(--display);text-transform:uppercase}
+.final h2 .r{color:var(--red)}
+.final p{margin-top:14px;color:#c4c1ba;font-size:18px}
+.final .acts{display:flex;flex-direction:column;gap:12px;min-width:300px}
+.final .btn{justify-content:space-between}
+.final .mini{display:flex;align-items:center;gap:8px;margin-top:4px;font:600 14px/1.2 var(--cond);letter-spacing:.1em;text-transform:uppercase;color:#bdbab3}
+.final .mini svg{color:var(--red)}
+@media (max-width:860px){.final-in{grid-template-columns:1fr}.final .acts{min-width:0}}
+
+/* ---------- farman card + footer ---------- */
+.farman{background:#1d1e20;color:#e8e6e1;padding:clamp(48px,6vw,80px) 0}
+.fcard{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:22px 32px;align-items:center;border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:clamp(22px,3vw,34px)}
+.fcard .fb-mark{width:54px;height:54px;font-size:26px;border-radius:12px}
+.fcard h2{font:400 clamp(30px,3.2vw,42px)/1 var(--display);text-transform:uppercase;color:#fff}
+.fcard p{color:#bcbab4;margin-top:8px;font-size:16.5px}
+.fcard .fb-act{margin:0}
+@media (max-width:860px){.fcard{grid-template-columns:1fr}.fcard .fb-act{display:grid;grid-template-columns:1fr}}
+footer.site-footer{background:#0c0d0e;color:#a9a7a1;padding:44px 0 48px;font-size:15px}
+.foot{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:24px 48px}
+.foot b{display:block;color:#fff;font:400 24px/1 var(--display);text-transform:uppercase;margin-bottom:10px}
+.foot h3{font:700 13px/1 var(--cond);letter-spacing:.16em;text-transform:uppercase;color:#d8d5ce;margin-bottom:10px}
+.foot a{color:#e8e6e1;text-decoration:underline;text-decoration-color:rgba(232,230,225,.35);text-underline-offset:3px;display:inline-block;padding:4px 0}
+.foot a:hover{text-decoration-color:var(--red)}
+.credit{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;font-size:13.5px;line-height:1.6;color:#9d9b95}
+@media (max-width:860px){.foot{grid-template-columns:1fr}}
+
+/* ---------- mobile bar ---------- */
+.mbar{display:none}
+@media (max-width:860px){
+  body{padding-bottom:78px}
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:grid;grid-template-columns:1fr 1.5fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(17,18,19,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(242,239,232,.12);transition:transform .4s var(--e-out)}
+  .mbar.away{transform:translateY(110%)}
+  .mbar .btn{min-height:54px;padding:0 12px;font-size:16px}
+  .mbar .btn:not(.pri){color:var(--chalk);border-color:rgba(242,239,232,.5)}
+}
+
+/* ---------- scroll reveals (hidden only once JS has armed them) ---------- */
+[data-rv]{transition:opacity .7s var(--e-out),transform .7s var(--e-out),clip-path .8s var(--e-out);transition-delay:var(--sd,0ms)}
+.rv-on [data-rv="up"].armed:not(.in){opacity:0;transform:translateY(28px)}
+.rv-on [data-rv="scale"].armed:not(.in){opacity:0;transform:scale(.94)}
+.rv-on [data-rv="wipe"].armed:not(.in){opacity:0;clip-path:inset(0 100% 0 0)}
+.rv-on [data-rv="plate"].armed:not(.in){opacity:0;transform:translateX(-28px)}
+.rv-done{transition-delay:0ms!important}
+[data-rv].rv-done{transition:transform var(--t2) var(--e-out),box-shadow var(--t2) var(--e-out),border-color var(--t2),background-color var(--t2)}
+@media (prefers-reduced-motion:reduce){
+  .rv-on [data-rv="up"].armed:not(.in){transform:translateY(10px)}
+  .rv-on [data-rv="scale"].armed:not(.in){transform:scale(.985)}
+  .rv-on [data-rv="wipe"].armed:not(.in){clip-path:none}
+  .rv-on [data-rv="plate"].armed:not(.in){transform:translateX(-10px)}
+}
+
+/* ---------- responsive hero ---------- */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-photo{aspect-ratio:16/10;max-height:none;justify-self:stretch}
+}
+@media (max-width:560px){
+  .hero{margin-top:-64px;padding-top:64px}
+  .hero-grid{padding-top:22px;gap:26px}
+  .hero h1{font-size:clamp(60px,18.4vw,80px);margin:14px 0 12px}
+  .hero .what{font-size:15.5px;letter-spacing:.1em}
+  .hero .what::before{width:22px}
+  .lede{font-size:16.5px;margin-top:14px}
+  .cta-row{margin-top:20px}
+  .cta-row .btn{flex:1 1 100%}
+  .hero-text{display:flex;flex-direction:column}
+  .hero-text .trust{order:1;margin-top:16px}.hero-text .lede{order:2}.hero-text .cta-row{order:3}
+  .trust{gap:12px;padding:8px 14px 8px 10px;width:100%}
+  .gauge{width:84px;height:50px}
+  .trust-num{font-size:32px}.trust-num .st{font-size:22px}
+  .trust small{font-size:13px}
+  .hero-photo{aspect-ratio:4/3;clip-path:polygon(0 0,calc(100% - 34px) 0,100% 34px,100% 100%,0 100%)}
+  .hero-photo .tag{top:44px}
+  .road{height:96px}
+  .road .pin{display:none}
+  .h2{font-size:clamp(46px,14vw,64px)}
+  .specs dd{font-size:16px}
+  .vacts .btn{flex:1 1 auto}
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<aside class="fb" id="fb" aria-label="About this concept preview">
+  <div class="fb-in">
+    <span class="fb-mark" aria-hidden="true">F</span>
+    <p><b>Concept preview</b> made for R. Agius Scooters by Farman, an independent web developer. Not R. Agius Scooters' official website; photos are samples.</p>
+    <div class="fb-act">
+      <a class="fb-btn pri" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="fb-btn" href="mailto:farman.builds@gmail.com?subject=Website%20for%20R.%20Agius%20Scooters">Email Farman</a>
+    </div>
+    <button class="fb-x" type="button" id="fbX" aria-label="Dismiss this notice"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+  </div>
+</aside>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#top" aria-label="R. Agius Scooters, back to top">
+      <span class="plate" aria-hidden="true"><span class="band">W2</span><span class="pt">R.AGIUS</span></span>
+      <span><small>Scooters<br>Edgware Road</small></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#stock">Stock</a><a href="#riders">Riders</a><a href="#enquire">Enquire</a><a href="#visit">Visit</a>
+    </nav>
+    <div class="hdr-cta">
+      <a class="hdr-tel" href="tel:+442077230995"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>020 7723 0995</a>
+      <a class="icon-btn" href="tel:+442077230995" aria-label="Call R. Agius Scooters on 020 7723 0995" id="hdrIcon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+      <a class="btn pri sm" href="#enquire">Enquire</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ================= HERO ================= -->
+<section class="hero tar" aria-labelledby="hero-h">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <div class="hero-eye">
+        <span class="plate hx-plate" style="--d:120ms"><span class="band">GB</span><span class="pt">363 Edgware Rd</span></span>
+        <span class="plate hx-plate" style="--d:200ms"><span class="pt">W2 1BS</span></span>
+      </div>
+      <h1 id="hero-h"><span class="ln"><span style="--d:260ms">R. Agius</span></span><span class="ln"><span style="--d:340ms">Scooters<span class="dot">.</span></span></span></h1>
+      <p class="what hx" style="--d:430ms">Motor scooter dealer · London W2</p>
+      <p class="lede hx" style="--d:500ms">See what's in the showroom, ask about the scooter that fits your ride and your budget, and find us on Edgware Road. Commuting, courier shifts or your first set of wheels: start here.</p>
+      <div class="cta-row hx" style="--d:570ms">
+        <a class="btn pri ring" href="#enquire">Enquire about a scooter <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn" href="tel:+442077230995"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call 020 7723 0995</a>
+      </div>
+      <a class="trust hx" style="--d:650ms" href="https://www.google.com/maps/search/?api=1&amp;query=R.Agius%20Scooters%2C%20363%20Edgware%20Rd%2C%20London%20W2%201BS" target="_blank" rel="noopener" aria-label="Rated 4.7 out of 5 from 82 Google reviews. Read them on Google">
+        <svg class="gauge arm" id="gauge" viewBox="0 0 120 70" aria-hidden="true">
+          <path class="trk" d="M10 60 A50 50 0 0 1 110 60" fill="none" stroke-width="7" stroke-linecap="round"/>
+          <path class="arc" d="M10 60 A50 50 0 0 1 110 60" fill="none" stroke-width="7" stroke-linecap="round"/>
+          <g class="tk" stroke-width="1.6" stroke-linecap="round"><path d="M20 60h-6"/><path d="M28.3 32.6l-4.6-3.6"/><path d="M47.6 18.2l-1.9-5.5"/><path d="M72.4 18.2l1.9-5.5"/><path d="M91.7 32.6l4.6-3.6"/><path d="M100 60h6"/></g>
+          <text x="12" y="69">0</text><text x="103" y="69">5</text>
+          <g class="nd"><path d="M60 60 L60 20" stroke="#F2EFE8" stroke-width="3" stroke-linecap="round"/></g>
+          <circle cx="60" cy="60" r="6" fill="#E1301F"/>
+        </svg>
+        <span>
+          <span class="trust-num"><span class="count" data-to="4.7" data-dec="1">4.7</span><span class="st">★</span></span>
+          <small><span class="count" data-to="82" data-dec="0">82</span> Google reviews · <u>read them</u></small>
+        </span>
+      </a>
+    </div>
+    <div class="hero-photo hx-photo" style="--d:240ms">
+      <img src="../img/r-agius-scooters/row-s.jpg" srcset="../img/r-agius-scooters/row-s.jpg 900w, ../img/r-agius-scooters/row.jpg 1800w" sizes="(max-width:980px) 100vw, 44vw" alt="A row of classic motor scooters parked side by side in a dark street" width="900" height="600" fetchpriority="high">
+      <span class="tag">Sample photo</span>
+      <a class="stock-jump" href="#stock"><span class="plate"><span class="band">→</span><span class="pt">See the showroom <svg class="arr" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-1px"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a>
+    </div>
+  </div>
+  <div class="road arm" id="road" aria-hidden="true">
+    <div class="kerb"></div>
+    <div class="lane"></div>
+    <div class="cover"></div>
+    <svg class="rider" viewBox="0 0 64 40" fill="currentColor"><circle cx="13" cy="31" r="7"/><circle cx="51" cy="31" r="7"/><path d="M5 29c0-7 5-11 12-11h14l4 8h9l5-13-2-4h-5V6h8l3 7c5 2 8 7 9 12l1 4h-6a8 8 0 0 0-14 0H22a8 8 0 0 0-14 0z"/><circle cx="13" cy="31" r="3" fill="#0c0d0e"/><circle cx="51" cy="31" r="3" fill="#0c0d0e"/></svg>
+    <span class="pin"><span class="plate"><span class="band">W2</span><span class="pt">No. 363</span></span></span>
+    <div class="reds"></div>
+  </div>
+</section>
+
+<!-- ================= ROUTE ================= -->
+<section class="route tar" aria-label="Three ways in">
+  <div class="wrap route-grid" data-stagger>
+    <a class="step" href="#stock" data-rv="up"><span class="n">01</span><b>Browse the stock</b><span class="d">What's in the showroom, with price and mileage.</span><span class="go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="step" href="#enquire" data-rv="up"><span class="n">02</span><b>Enquire</b><span class="d">Name a scooter or a budget. Takes a minute.</span><span class="go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="step" href="#visit" data-rv="up"><span class="n">03</span><b>Come and see it</b><span class="d">363 Edgware Road, London W2&nbsp;1BS.</span><span class="go" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </div>
+</section>
+
+<!-- ================= STOCK ================= -->
+<section class="sec stock" id="stock" aria-labelledby="stock-h">
+  <div class="wrap">
+    <div class="sh">
+      <div>
+        <span class="kick" data-rv="plate">In the showroom</span>
+        <h2 class="h2" id="stock-h" data-rv="wipe">Stock on<br>Edgware Rd<span class="r">.</span></h2>
+      </div>
+      <p data-rv="up">Every card is one scooter on the floor: photo, model, price and mileage. Tap "Ask about this one" and the enquiry form fills itself in.</p>
+    </div>
+
+    <p class="swipe" aria-hidden="true">Swipe the stock <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+    <div class="stock-grid" data-stagger>
+      <article class="card" data-rv="up">
+        <div class="ph"><img src="../img/r-agius-scooters/red-s.jpg" srcset="../img/r-agius-scooters/red-s.jpg 900w, ../img/r-agius-scooters/red.jpg 1800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 33vw" alt="A red motor scooter with a top box parked against a white wall" width="900" height="675" loading="lazy" style="object-position:40% 60%"><span class="tag">Sample photo</span><span class="no"><span class="plate"><span class="band">01</span><span class="pt">Stock</span></span></span></div>
+        <div class="bd">
+          <span class="fill">Your stock goes here</span>
+          <h3 class="model">Make &amp; model <i>/ year</i></h3>
+          <dl class="specs"><div><dt>Price</dt><dd>£ ——</dd></div><div><dt>Mileage</dt><dd>—— mi</dd></div><div><dt>Engine</dt><dd>—— cc</dd></div></dl>
+          <button class="ask" type="button" data-ask="Stock 01">Ask about this one <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+      <article class="card" data-rv="up">
+        <div class="ph empty"><svg viewBox="0 0 120 72" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="56" r="11"/><circle cx="96" cy="56" r="11"/><path d="M11 52c0-12 8-19 20-19h22l6 13h15"/><path d="M74 46l10-26"/><path d="M76 10h14"/><path d="M84 20l-4-10"/><path d="M84 54c2-8 22-8 24 0"/><path d="M27 29c2-4 24-4 28 0"/><path d="M35 56h50"/></svg><span class="tag">Photo of your scooter</span><span class="no"><span class="plate"><span class="band">02</span><span class="pt">Stock</span></span></span></div>
+        <div class="bd">
+          <span class="fill">Your stock goes here</span>
+          <h3 class="model">Make &amp; model <i>/ year</i></h3>
+          <dl class="specs"><div><dt>Price</dt><dd>£ ——</dd></div><div><dt>Mileage</dt><dd>—— mi</dd></div><div><dt>Engine</dt><dd>—— cc</dd></div></dl>
+          <button class="ask" type="button" data-ask="Stock 02">Ask about this one <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+      <article class="card" data-rv="up">
+        <div class="ph empty"><svg viewBox="0 0 120 72" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="56" r="11"/><circle cx="96" cy="56" r="11"/><path d="M11 52c0-12 8-19 20-19h22l6 13h15"/><path d="M74 46l10-26"/><path d="M76 10h14"/><path d="M84 20l-4-10"/><path d="M84 54c2-8 22-8 24 0"/><path d="M27 29c2-4 24-4 28 0"/><path d="M35 56h50"/></svg><span class="tag">Photo of your scooter</span><span class="no"><span class="plate"><span class="band">03</span><span class="pt">Stock</span></span></span></div>
+        <div class="bd">
+          <span class="fill">Your stock goes here</span>
+          <h3 class="model">Make &amp; model <i>/ year</i></h3>
+          <dl class="specs"><div><dt>Price</dt><dd>£ ——</dd></div><div><dt>Mileage</dt><dd>—— mi</dd></div><div><dt>Engine</dt><dd>—— cc</dd></div></dl>
+          <button class="ask" type="button" data-ask="Stock 03">Ask about this one <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+      <article class="card" data-rv="up">
+        <div class="ph empty"><svg viewBox="0 0 120 72" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="56" r="11"/><circle cx="96" cy="56" r="11"/><path d="M11 52c0-12 8-19 20-19h22l6 13h15"/><path d="M74 46l10-26"/><path d="M76 10h14"/><path d="M84 20l-4-10"/><path d="M84 54c2-8 22-8 24 0"/><path d="M27 29c2-4 24-4 28 0"/><path d="M35 56h50"/></svg><span class="tag">Photo of your scooter</span><span class="no"><span class="plate"><span class="band">04</span><span class="pt">Stock</span></span></span></div>
+        <div class="bd">
+          <span class="fill">Your stock goes here</span>
+          <h3 class="model">Make &amp; model <i>/ year</i></h3>
+          <dl class="specs"><div><dt>Price</dt><dd>£ ——</dd></div><div><dt>Mileage</dt><dd>—— mi</dd></div><div><dt>Engine</dt><dd>—— cc</dd></div></dl>
+          <button class="ask" type="button" data-ask="Stock 04">Ask about this one <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+      <article class="card" data-rv="up">
+        <div class="ph empty"><svg viewBox="0 0 120 72" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="56" r="11"/><circle cx="96" cy="56" r="11"/><path d="M11 52c0-12 8-19 20-19h22l6 13h15"/><path d="M74 46l10-26"/><path d="M76 10h14"/><path d="M84 20l-4-10"/><path d="M84 54c2-8 22-8 24 0"/><path d="M27 29c2-4 24-4 28 0"/><path d="M35 56h50"/></svg><span class="tag">Photo of your scooter</span><span class="no"><span class="plate"><span class="band">05</span><span class="pt">Stock</span></span></span></div>
+        <div class="bd">
+          <span class="fill">Your stock goes here</span>
+          <h3 class="model">Make &amp; model <i>/ year</i></h3>
+          <dl class="specs"><div><dt>Price</dt><dd>£ ——</dd></div><div><dt>Mileage</dt><dd>—— mi</dd></div><div><dt>Engine</dt><dd>—— cc</dd></div></dl>
+          <button class="ask" type="button" data-ask="Stock 05">Ask about this one <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+      <article class="card" data-rv="up">
+        <div class="ph empty"><svg viewBox="0 0 120 72" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="56" r="11"/><circle cx="96" cy="56" r="11"/><path d="M11 52c0-12 8-19 20-19h22l6 13h15"/><path d="M74 46l10-26"/><path d="M76 10h14"/><path d="M84 20l-4-10"/><path d="M84 54c2-8 22-8 24 0"/><path d="M27 29c2-4 24-4 28 0"/><path d="M35 56h50"/></svg><span class="tag">Photo of your scooter</span><span class="no"><span class="plate"><span class="band">06</span><span class="pt">Stock</span></span></span></div>
+        <div class="bd">
+          <span class="fill">Your stock goes here</span>
+          <h3 class="model">Make &amp; model <i>/ year</i></h3>
+          <dl class="specs"><div><dt>Price</dt><dd>£ ——</dd></div><div><dt>Mileage</dt><dd>—— mi</dd></div><div><dt>Engine</dt><dd>—— cc</dd></div></dl>
+          <button class="ask" type="button" data-ask="Stock 06">Ask about this one <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+    </div>
+
+    <div class="stock-note" data-rv="up">
+      <p><b>Can't see the right one?</b> Tell us the kind of scooter and the budget you have in mind, and we'll come back to you.</p>
+      <a class="btn pri" href="#enquire">Enquire about a scooter <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RIDERS ================= -->
+<section class="sec riders" id="riders" aria-labelledby="riders-h">
+  <div class="wrap">
+    <div class="sh">
+      <div>
+        <span class="kick" data-rv="plate">Who's riding</span>
+        <h2 class="h2" id="riders-h" data-rv="wipe">Built for<br>London riding<span class="r">.</span></h2>
+      </div>
+      <p data-rv="up">However you ride, the first step is the same: tell us what the scooter needs to do. Pick one and it goes straight into your enquiry.</p>
+    </div>
+    <div class="rgrid" data-stagger>
+      <article class="rcard" data-rv="scale">
+        <img src="../img/r-agius-scooters/night-s.jpg" srcset="../img/r-agius-scooters/night-s.jpg 900w, ../img/r-agius-scooters/night.jpg 1800w" sizes="(max-width:1000px) 100vw, 33vw" alt="A rider on a scooter passing blurred city lights at night" width="900" height="506" loading="lazy">
+        <span class="tag">Sample photo</span>
+        <span class="num" aria-hidden="true">A</span>
+        <div class="in">
+          <h3>The daily commute</h3>
+          <p>Into town and back, every day. Tell us your route and your budget and we'll point you at what suits it.</p>
+          <a class="btn pri" href="#enquire" data-use="Commuting">Enquire for commuting <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard" data-rv="scale">
+        <img src="../img/r-agius-scooters/courier-s.jpg" srcset="../img/r-agius-scooters/courier-s.jpg 900w, ../img/r-agius-scooters/courier.jpg 1800w" sizes="(max-width:1000px) 100vw, 33vw" alt="A helmeted delivery rider on a red scooter moving through a city at night" width="900" height="641" loading="lazy" style="object-position:55% 50%">
+        <span class="tag">Sample photo</span>
+        <span class="num" aria-hidden="true">B</span>
+        <div class="in">
+          <h3>Courier shifts</h3>
+          <p>Long days, lots of miles. Say how much you ride in a week and what you want to spend.</p>
+          <a class="btn pri" href="#enquire" data-use="Courier work">Enquire for courier work <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard" data-rv="scale">
+        <img src="../img/r-agius-scooters/dash-s.jpg" srcset="../img/r-agius-scooters/dash-s.jpg 900w, ../img/r-agius-scooters/dash.jpg 1800w" sizes="(max-width:1000px) 100vw, 33vw" alt="Close-up of a scooter's speedometer and handlebars" width="900" height="600" loading="lazy">
+        <span class="tag">Sample photo</span>
+        <span class="num" aria-hidden="true">C</span>
+        <div class="in">
+          <h3>Your first scooter</h3>
+          <p>New to riding? Ask anything: what to look at, what to expect, what your budget gets you.</p>
+          <a class="btn pri" href="#enquire" data-use="First scooter">Enquire about a first scooter <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROOF ================= -->
+<section class="proof" aria-labelledby="proof-h">
+  <div class="wrap proof-in">
+    <div class="big" data-rv="up">
+      <span class="v"><span class="count" data-to="4.7" data-dec="1">4.7</span></span>
+      <span class="side">
+        <span class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24"><defs><linearGradient id="pf"><stop offset="70%" stop-color="#fff"/><stop offset="70%" stop-color="rgba(255,255,255,.35)"/></linearGradient></defs><path fill="url(#pf)" d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg></span>
+        <b><span class="count" data-to="82" data-dec="0">82</span> reviews</b>
+        <span>on Google</span>
+      </span>
+    </div>
+    <div data-rv="up">
+      <h2 id="proof-h">Riders rate us 4.7&nbsp;out&nbsp;of&nbsp;5.</h2>
+      <p>That's the score from 82 Google reviews. Read them for yourself, then come and see the stock.</p>
+      <div class="acts">
+        <a class="btn wht" href="https://www.google.com/maps/search/?api=1&amp;query=R.Agius%20Scooters%2C%20363%20Edgware%20Rd%2C%20London%20W2%201BS" target="_blank" rel="noopener">Read the reviews <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        <a class="btn" href="#enquire">Enquire</a>
+      </div>
+      <div class="slot"><b>Owner to fill</b>Pick two or three of your favourite Google reviews and they'll sit here, word for word, with the reviewer's first name.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXTRAS (owner slots) ================= -->
+<section class="extras" aria-labelledby="extras-h">
+  <div class="wrap xgrid" data-stagger>
+    <div class="xhead" data-rv="up">
+      <span class="kick">Also at the shop?</span>
+      <h2 class="h2" id="extras-h">More than<br>sales<span class="r">?</span></h2>
+      <p>Slots for anything else you offer. Keep the ones you do, delete the rest.</p>
+    </div>
+    <div class="xslot" data-rv="up">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>
+      <h3>Servicing</h3>
+      <p>What you service, how to book it, and how long it usually takes.</p>
+      <span class="fill">Owner to confirm</span>
+    </div>
+    <div class="xslot" data-rv="up">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+      <h3>Parts &amp; kit</h3>
+      <p>Parts, helmets, locks, top boxes: whatever you keep on the shelves.</p>
+      <span class="fill">Owner to confirm</span>
+    </div>
+    <div class="xslot" data-rv="up">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+      <h3>Part-exchange</h3>
+      <p>If you take scooters in part-exchange, say how it works here.</p>
+      <span class="fill">Owner to confirm</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ENQUIRE ================= -->
+<section class="sec tar" id="enquire" aria-labelledby="enq-h">
+  <div class="wrap enq-grid">
+    <div class="enq-side">
+      <span class="kick" data-rv="plate">Enquire</span>
+      <h2 class="h2" id="enq-h" data-rv="wipe">Ask about<br>a scooter<span class="r">.</span></h2>
+      <p data-rv="up">Name a scooter from the stock or just a budget. We'll reply by phone or email, whichever you leave.</p>
+      <div class="direct" data-stagger>
+        <a class="dline" href="tel:+442077230995" data-rv="up"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Rather talk? Call</small><b>020 7723 0995</b></span></a>
+        <a class="dline em" href="mailto:info@agiusscooters.com" data-rv="up"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span><span><small>Email</small><b>info@agiusscooters.com</b></span></a>
+      </div>
+    </div>
+
+    <div class="ticket" id="ticket" data-rv="up">
+      <form id="eForm" novalidate>
+        <div class="t-head"><h3>Scooter enquiry</h3><span class="plate y"><span class="pt">To: R. Agius</span></span></div>
+        <div class="fgrid">
+          <div class="f" id="f-name"><label for="en">Your name</label><input id="en" name="name" autocomplete="name" required><span class="ok" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><span class="err" id="en-err">Please add your name.</span></div>
+          <div class="f" id="f-contact"><label for="ec">Phone or email</label><input id="ec" name="contact" autocomplete="tel" inputmode="email" required aria-describedby="ec-err"><span class="ok" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><span class="err" id="ec-err">A phone number or an email, so we can reply.</span></div>
+          <div class="f full" id="f-which"><label for="ew">Which scooter, or your budget <i>(optional)</i></label><input id="ew" name="which" placeholder="e.g. Stock 03, or around £2,000"></div>
+          <div class="f full"><span class="lbl" id="use-l">What's it for? <i style="font:400 13px var(--body);letter-spacing:0;text-transform:none;color:var(--mute)">(optional)</i></span>
+            <div class="chips" id="useChips" role="group" aria-labelledby="use-l"><button type="button" class="chip" aria-pressed="false">Commuting</button><button type="button" class="chip" aria-pressed="false">Courier work</button><button type="button" class="chip" aria-pressed="false">First scooter</button><button type="button" class="chip" aria-pressed="false">Just looking</button></div></div>
+          <div class="f full"><label for="em">Message <i>(optional)</i></label><textarea id="em" name="message" placeholder="Anything we should know: when you can visit, questions, part-exchange…"></textarea></div>
+        </div>
+        <div class="send">
+          <button class="btn pri" type="submit">Send enquiry <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <small>Goes straight to info@agiusscooters.com. No account, no spam.</small>
+        </div>
+      </form>
+      <div class="done" aria-live="polite">
+        <svg class="check" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36"/><path d="M24 41l11 11 21-23"/></svg>
+        <h3>Enquiry ready</h3>
+        <p>Here's what R. Agius Scooters will receive:</p>
+        <pre id="donePre"></pre>
+        <div class="row"><button class="btn sm" type="button" id="again">Edit or send another</button><a class="btn sm pri" href="tel:+442077230995">Or call now</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISIT ================= -->
+<section class="sec visit" id="visit" aria-labelledby="visit-h">
+  <div class="wrap vgrid">
+    <div>
+      <span class="kick" data-rv="plate">Visit the showroom</span>
+      <h2 class="addr" id="visit-h" data-rv="wipe">363<br>Edgware<br>Road<span class="r">.</span></h2>
+      <div class="addr-sub" data-rv="up"><span class="plate"><span class="band">GB</span><span class="pt">London W2 1BS</span></span></div>
+      <div class="vacts" data-rv="up">
+        <a class="btn pri" href="https://www.google.com/maps/dir/?api=1&amp;destination=R.Agius%20Scooters%2C%20363%20Edgware%20Rd%2C%20London%20W2%201BS" target="_blank" rel="noopener">Get directions <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        <button class="btn copy-btn" type="button" id="copyAddr">Copy address</button>
+      </div>
+      <div class="hours" data-rv="up">
+        <div class="hours-h"><b>Opening hours</b><span class="fill">Your opening hours go here</span></div>
+        <table><tbody>
+          <tr><td>Monday</td><td>— : —</td></tr><tr><td>Tuesday</td><td>— : —</td></tr><tr><td>Wednesday</td><td>— : —</td></tr><tr><td>Thursday</td><td>— : —</td></tr><tr><td>Friday</td><td>— : —</td></tr><tr><td>Saturday</td><td>— : —</td></tr><tr><td>Sunday</td><td>— : —</td></tr>
+        </tbody></table>
+      </div>
+    </div>
+    <div class="vmap" data-rv="scale">
+      <div class="ph"><img src="../img/r-agius-scooters/street-s.jpg" srcset="../img/r-agius-scooters/street-s.jpg 900w, ../img/r-agius-scooters/street.jpg 1800w" sizes="(max-width:980px) 100vw, 46vw" alt="A London street at dusk with a red double-decker bus passing in a blur" width="900" height="1139" loading="lazy"><span class="tag">Sample photo</span></div>
+      <div class="diagram" id="diagram">
+        <svg viewBox="0 0 520 120" fill="none" aria-labelledby="dg-t" role="img"><title id="dg-t">Diagram: the shop at number 363 on Edgware Road</title>
+          <path d="M0 60 H520" stroke="#2c2f33" stroke-width="54"/>
+          <path d="M0 33 H520 M0 87 H520" stroke="rgba(242,239,232,.5)" stroke-width="2"/>
+          <path class="dg-lane" d="M0 60 H520" stroke="#F2EFE8" stroke-width="3"/>
+          <path class="dg-draw" d="M10 60 H372" stroke="#E1301F" stroke-width="6" stroke-linecap="round"/>
+          <path d="M372 87 V100" stroke="#E1301F" stroke-width="3"/>
+          <circle cx="372" cy="60" r="12" fill="#E1301F"/><circle cx="372" cy="60" r="4.5" fill="#111213"/>
+          <rect x="324" y="96" width="96" height="22" rx="4" fill="#F2EFE8"/>
+          <text x="372" y="112" text-anchor="middle" font-family="Barlow Condensed, sans-serif" font-weight="700" font-size="14" letter-spacing="2" fill="#111213">NO. 363</text>
+          <text x="14" y="22" font-family="Barlow Condensed, sans-serif" font-weight="700" font-size="15" letter-spacing="3" fill="#F2EFE8">EDGWARE ROAD · W2</text>
+        </svg>
+        <div class="cap"><span>Diagram, not to scale</span><span>363 Edgware Rd, London W2 1BS</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final tar" aria-labelledby="final-h">
+  <div class="wrap final-in">
+    <div data-rv="up">
+      <h2 id="final-h">Got your eye<br>on one<span class="r">?</span></h2>
+      <p>Send an enquiry in a minute, or ring the showroom.</p>
+    </div>
+    <div class="acts" data-rv="up">
+      <a class="btn pri ring" href="#enquire">Enquire about a scooter <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn" href="tel:+442077230995">Call 020 7723 0995 <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <span class="mini"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg>4.7 from 82 Google reviews · Edgware Rd, W2</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="farman" aria-labelledby="farman-h">
+  <div class="wrap">
+    <div class="fcard">
+      <span class="fb-mark" aria-hidden="true">F</span>
+      <div><h2 id="farman-h">Want this live?</h2><p>I can have it ready in about a week, with your real stock, photos and opening hours in place. Book a 15-min call.</p></div>
+      <div class="fb-act">
+        <a class="fb-btn pri" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="fb-btn" href="mailto:farman.builds@gmail.com?subject=Website%20for%20R.%20Agius%20Scooters">Email Farman</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div><b>R. Agius Scooters</b>Motor scooter dealer<br>363 Edgware Rd, London W2 1BS, United Kingdom</div>
+    <div><h3>Contact</h3><a href="tel:+442077230995">020 7723 0995</a><br><a href="mailto:info@agiusscooters.com">info@agiusscooters.com</a></div>
+    <div><h3>On this page</h3><a href="#stock">Stock</a> · <a href="#enquire">Enquire</a> · <a href="#visit">Visit</a></div>
+    <p class="credit">Concept preview made for R. Agius Scooters by Farman, an independent web developer, from public information. Not R. Agius Scooters' official website. Photos are samples from Unsplash and do not show the shop or its stock. Rating as shown on Google (4.7 from 82 reviews).</p>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a class="btn" href="tel:+442077230995" aria-label="Call R. Agius Scooters"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="btn pri" href="#enquire">Enquire <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+
+<script>
+(function(){
+  var d=document,root=d.documentElement,$=function(id){return d.getElementById(id)};
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* --- Farman bar --- */
+  var fb=$('fb');
+  try{if(sessionStorage.getItem('ragFbHide')==='1')fb.hidden=true}catch(e){}
+  root.classList.add('fbw');
+  setTimeout(function(){root.classList.add('fb-on')},1200);
+  $('fbX').addEventListener('click',function(){fb.classList.add('off');try{sessionStorage.setItem('ragFbHide','1')}catch(e){}setTimeout(function(){fb.hidden=true},260)});
+
+  /* desktop: the floating card steps aside once the in-page Farman card / footer is on screen */
+  if('IntersectionObserver' in window&&matchMedia('(min-width:861px)').matches){var fv={};var fo=new IntersectionObserver(function(es){es.forEach(function(e){fv[e.target.tagName]=e.isIntersecting});fb.classList.toggle('tuck',!!(fv.SECTION||fv.FOOTER))});fo.observe(d.querySelector('.farman'));fo.observe(d.querySelector('.site-footer'))}
+
+  /* --- progress + condensed header --- */
+  var prog=$('progress'),hdr=$('hdr'),tick=false;
+  function onScroll(){tick=false;var y=scrollY||root.scrollTop,h=root.scrollHeight-innerHeight;prog.style.transform='scaleX('+(h>0?Math.min(1,y/h):0)+')';hdr.classList.toggle('cond',y>24)}
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+
+  /* --- counters --- */
+  function countUp(el,dur){if(el.dataset.done)return;el.dataset.done=1;var to=parseFloat(el.dataset.to),dec=+(el.dataset.dec||0),t0=null;dur=dur||1400;
+    function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=(to*e).toFixed(dec);if(p<1)requestAnimationFrame(step);else el.textContent=to.toFixed(dec)}
+    el.textContent=(0).toFixed(dec);requestAnimationFrame(step)}
+
+  /* --- hero signature: speedometer + lane line --- */
+  var gauge=$('gauge'),road=$('road');
+  [].forEach.call(d.querySelectorAll('.hero .count'),function(el){el.textContent=(0).toFixed(+(el.dataset.dec||0))});
+  setTimeout(function(){gauge.classList.remove('arm');[].forEach.call(d.querySelectorAll('.hero .count'),function(el){countUp(el,1500)})},reduce?500:850);
+  requestAnimationFrame(function(){requestAnimationFrame(function(){setTimeout(function(){road.classList.remove('arm')},reduce?300:700)})});
+
+  /* --- staggers --- */
+  [].forEach.call(d.querySelectorAll('[data-stagger]'),function(g){[].forEach.call(g.querySelectorAll('[data-rv]'),function(el,i){el.style.setProperty('--sd',Math.min(i*80,420)+'ms')})});
+
+  /* --- reveals: hidden ("armed") only just before scrolling into view --- */
+  var items=[].slice.call(d.querySelectorAll('[data-rv]'));
+  var dg=$('diagram');
+  function show(el){el.classList.add('in');[].forEach.call(el.querySelectorAll('.count'),function(c){countUp(c)});setTimeout(function(){el.classList.add('rv-done')},1300)}
+  if('IntersectionObserver' in window){
+    root.classList.add('rv-on');
+    /* clip-path wipes report zero intersection, so wiped elements are watched through their parent */
+    var px=new Map();function prox(el){return el.dataset.rv==='wipe'?el.parentElement:el}
+    items.forEach(function(el){var t=prox(el);if(!px.has(t))px.set(t,[]);px.get(t).push(el)});
+    function each(t,fn){(px.get(t)||[]).forEach(fn)}
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);each(e.target,function(el){if(el.classList.contains('in'))return;if(el.classList.contains('armed')){void el.offsetWidth;requestAnimationFrame(function(){show(el)})}else show(el)})}})},{rootMargin:'0px 0px -6% 0px',threshold:.08});
+    var arm=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){arm.unobserve(e.target);var below=e.target.getBoundingClientRect().top>innerHeight*.94;each(e.target,function(el){if(below)el.classList.add('armed')});io.observe(e.target)}})},{rootMargin:'0px 0px 35% 0px'});
+    px.forEach(function(els,t){var r=t.getBoundingClientRect();if(r.top<innerHeight*.94&&r.bottom>0){els.forEach(function(el){el.classList.add('armed')});io.observe(t)}else arm.observe(t)});
+    setTimeout(function(){items.forEach(function(el){if(el.classList.contains('armed')&&!el.classList.contains('in')&&el.getBoundingClientRect().top<innerHeight)show(el)})},1500);
+    /* diagram route line draws when it scrolls into view (armed only if it starts below the fold) */
+    if(dg.getBoundingClientRect().top>innerHeight){dg.classList.add('armed-dg');
+      var dgo=new IntersectionObserver(function(x){if(x[0].isIntersecting){dgo.disconnect();requestAnimationFrame(function(){requestAnimationFrame(function(){dg.classList.remove('armed-dg')})})}},{threshold:.4});dgo.observe(dg);
+    }
+  }else{items.forEach(function(el){el.classList.add('in')})}
+
+  /* --- form --- */
+  var form=$('eForm'),ticket=$('ticket'),en=$('en'),ec=$('ec'),ew=$('ew'),em=$('em');
+  var chips=[].slice.call(d.querySelectorAll('#useChips .chip'));
+  function popc(b){b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop')}
+  function setUse(name){chips.forEach(function(b){var on=b.textContent===name&&b.getAttribute('aria-pressed')!=='true';if(b.textContent===name){b.setAttribute('aria-pressed',on?'true':'false');popc(b)}else b.setAttribute('aria-pressed','false')})}
+  chips.forEach(function(b){b.addEventListener('click',function(){setUse(b.textContent)})});
+  var rules={'f-name':function(){return en.value.trim().length>=2},'f-contact':function(){var v=ec.value.trim();return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)||v.replace(/\D/g,'').length>=10}};
+  function check(id,showErr){var ok=rules[id](),w=$(id);if(showErr)w.classList.toggle('bad',!ok);else if(ok)w.classList.remove('bad');w.classList.toggle('good',ok);w.querySelector('input').setAttribute('aria-invalid',showErr&&!ok?'true':'false');return ok}
+  [[en,'f-name'],[ec,'f-contact']].forEach(function(p){p[0].addEventListener('blur',function(){if(p[0].value.trim())check(p[1],true)});p[0].addEventListener('input',function(){check(p[1],false)})});
+  function goForm(focusEl){var y=ticket.getBoundingClientRect().top+scrollY-90;scrollTo({top:y,behavior:reduce?'auto':'smooth'});setTimeout(function(){(focusEl||en).focus({preventScroll:true})},reduce?50:600)}
+  /* stock cards prefill */
+  [].forEach.call(d.querySelectorAll('[data-ask]'),function(b){b.addEventListener('click',function(){ticket.classList.remove('sent');ew.value=b.dataset.ask+' (seen on the website)';var w=$('f-which');w.classList.remove('flash');void w.offsetWidth;w.classList.add('flash');goForm(en.value.trim()?em:en)})});
+  /* rider cards preselect use */
+  [].forEach.call(d.querySelectorAll('[data-use]'),function(a){a.addEventListener('click',function(e){e.preventDefault();ticket.classList.remove('sent');var u=a.dataset.use;chips.forEach(function(b){var on=b.textContent===u;b.setAttribute('aria-pressed',on?'true':'false');if(on)popc(b)});goForm()})});
+
+  form.addEventListener('submit',function(e){e.preventDefault();
+    var first=null;['f-name','f-contact'].forEach(function(id){if(!check(id,true)&&!first)first=id});
+    if(first){var w=$(first);w.classList.remove('shake');void w.offsetWidth;w.classList.add('shake');w.querySelector('input').focus();return}
+    var use=chips.filter(function(b){return b.getAttribute('aria-pressed')==='true'}).map(function(b){return b.textContent})[0];
+    var which=ew.value.trim(),msg=em.value.trim(),c=ec.value.trim(),isMail=c.indexOf('@')>-1;
+    var body=['Hello R. Agius Scooters,','','I would like to enquire about a scooter.','',
+      'Scooter or budget: '+(which||'Not sure yet'),
+      'What it is for: '+(use||'Not given'),
+      (msg?'Message: '+msg:null),'',
+      'Name: '+en.value.trim(),(isMail?'Email: ':'Phone: ')+c,'',
+      'Please get back to me.','(Sent from the website enquiry form)'].filter(function(x){return x!==null}).join('\n');
+    var subj='Scooter enquiry: '+(which||use||'General')+' ('+en.value.trim()+')';
+    var href='mailto:info@agiusscooters.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+    $('donePre').textContent='Subject: '+subj+'\n\n'+body;
+    ticket.classList.add('sent');
+    var y=ticket.getBoundingClientRect().top+scrollY-90;if(ticket.getBoundingClientRect().top<70)scrollTo({top:y,behavior:reduce?'auto':'smooth'});
+    window.__previewMail(href);
+  });
+  $('again').addEventListener('click',function(){ticket.classList.remove('sent');en.focus()});
+
+  /* --- copy address --- */
+  var cb=$('copyAddr');
+  cb.addEventListener('click',function(){var t='R. Agius Scooters, 363 Edgware Rd, London W2 1BS, United Kingdom';
+    function ok(){cb.dataset.done='1';cb.textContent='Address copied ✓';setTimeout(function(){cb.dataset.done='';cb.textContent='Copy address'},2200)}
+    if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,function(){cb.textContent='363 Edgware Rd, W2 1BS'})}else cb.textContent='363 Edgware Rd, W2 1BS'});
+
+  /* --- mobile bar hides while the form is on screen --- */
+  var mbar=$('mbar');
+  if('IntersectionObserver' in window){var vis={};var mo=new IntersectionObserver(function(es){es.forEach(function(e){vis[e.target===ticket?'t':'h']=e.isIntersecting});mbar.classList.toggle('away',!!(vis.t||vis.h))},{threshold:.25});mo.observe(ticket);mo.observe(d.querySelector('.hero .cta-row'))}
+})();
+</script>
+<script src="../preview-guard.js"></script>
+</body>
+</html>
