@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Gulshan Terrace · Banquet Hall in Woodside, Queens</title>
+<meta name="description" content="Concept homepage for Gulshan Terrace, a banquet hall at 59-15 37th Ave, Woodside, NY. Rated 4.2 on Google from 290 reviews. Made by Farman as a preview, not the official website.">
+<meta name="theme-color" content="#0A1F1A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Playfair+Display:ital,wght@1,400;1,500&family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --em-950:#081915;--em-900:#0A1F1A;--em-800:#0F2B24;--em-700:#15392F;--em-600:#1D4A3D;
+  --aub-900:#220E1D;--aub-800:#2B1226;--aub-700:#3A1A33;
+  --mari:#F2A93B;--mari-l:#FFC66B;--brass:#C9A35B;--brass-l:#E4C88A;--brass-d:#8A6420;
+  --ivory:#F6EEDF;--ivory-2:#EFE3CC;--ivory-line:#DCCBA9;
+  --t-dk:#F4EBDD;--t-dk-2:#CFC4B0;--t-dk-3:#A99F8C;
+  --ink:#16302A;--ink-2:#45514A;
+  --sc:"Playfair Display SC",Georgia,serif;--it:"Playfair Display",Georgia,serif;--sans:"Albert Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --e-out:cubic-bezier(.16,1,.3,1);--e-std:cubic-bezier(.2,0,0,1);--e-in:cubic-bezier(.3,0,1,1);--e-back:cubic-bezier(.34,1.56,.64,1);
+  --t1:.16s;--t2:.3s;--t3:.6s;
+  --wrap:1240px;--gut:clamp(16px,4vw,40px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--em-900);color:var(--t-dk);font:400 17px/1.6 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:400}
+p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--mari);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--mari);color:#1B1206;padding:10px 16px;border-radius:999px;font-weight:700;text-decoration:none;transition:top var(--t2)}
+.skip:focus{top:12px}
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:90;background:linear-gradient(90deg,var(--brass),var(--mari));transform:scaleX(0);transform-origin:0 50%;pointer-events:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- type helpers ---------- */
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font:600 12.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--brass-l)}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.h2{font:400 clamp(36px,4.6vw,62px)/1.04 var(--sc);letter-spacing:.005em}
+.h2 em{font:italic 400 1em/1 var(--it);color:var(--mari)}
+.lede{font-size:clamp(17px,1.4vw,19px);color:var(--t-dk-2);max-width:56ch}
+.light .h2 em{color:var(--brass-d)}
+.light .eyebrow{color:var(--brass-d)}
+.light .lede{color:var(--ink-2)}
+
+/* ---------- ornaments ---------- */
+.orn{display:flex;align-items:center;gap:14px;color:var(--brass);max-width:220px}
+.orn i{flex:1;height:1px;background:currentColor;transform-origin:var(--o,100%) 50%}
+.orn i+svg+i{--o:0%}
+.orn svg{flex:none}
+.armed .orn i{transform:scaleX(0);transition:transform .9s var(--e-out) .15s}
+.armed.shown .orn i{transform:none}
+.tag{position:absolute;z-index:3;display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:rgba(8,25,21,.72);color:#F4EBDD;font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(228,200,138,.3);pointer-events:none}
+.tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--mari)}
+.slot{display:inline-flex;align-items:flex-start;gap:8px;padding:8px 12px;border:1px dashed currentColor;border-radius:10px;font:500 14.5px/1.45 var(--sans)}
+.slot b{font:700 10.5px/1.6 var(--sans);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.dark-slot{color:var(--brass-l)}
+.light .slot{color:var(--brass-d)}
+
+/* ---------- buttons ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:1px solid transparent;font:600 16px/1 var(--sans);text-decoration:none;cursor:pointer;white-space:nowrap;transition:transform var(--t1) var(--e-std),background var(--t2),box-shadow var(--t2),border-color var(--t2),color var(--t2)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn .arr{transition:transform var(--t2) var(--e-back)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn.pri{background:var(--mari);color:#1F1405;box-shadow:0 14px 34px -14px rgba(242,169,59,.75)}
+.btn.pri:hover{background:var(--mari-l);box-shadow:0 18px 40px -14px rgba(242,169,59,.9)}
+.btn.ghost{border-color:rgba(244,235,221,.38);color:var(--t-dk)}
+.btn.ghost:hover{border-color:var(--brass-l);background:rgba(228,200,138,.08)}
+.light .btn.ghost{border-color:rgba(22,48,42,.35);color:var(--ink)}
+.light .btn.ghost:hover{border-color:var(--ink);background:rgba(22,48,42,.05)}
+.btn.sm{min-height:44px;padding:0 18px;font-size:15px}
+.ring::after{content:"";position:absolute;inset:-1px;border-radius:inherit;border:1.5px solid var(--mari);pointer-events:none;opacity:0}
+@media (prefers-reduced-motion:no-preference){.ring::after{animation:ring 2.8s var(--e-out) 2.4s infinite}}
+@keyframes ring{0%{opacity:.9;transform:scale(1)}70%,100%{opacity:0;transform:scale(1.08,1.4)}}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+/* ---------- Farman bar ---------- */
+.fb{font-family:var(--sans);color:#e8e6e1;z-index:80;transition:opacity .55s var(--e-out),transform .55s var(--e-out)}
+.fb-in{position:relative;background:#18181a;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;align-items:start}
+.fb-mark{grid-row:span 2;width:34px;height:34px;border-radius:8px;background:#fff;color:#18181a;display:grid;place-items:center;font:700 18px/1 var(--sc)}
+.fb p{font-size:14px;line-height:1.45;color:#c8c7c2;padding-right:36px}
+.fb p b{color:#fff}
+.fb-act{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.fb-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 14px;border-radius:8px;font:600 15px/1 var(--sans);text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.24);transition:transform var(--t1) var(--e-std),background var(--t2),border-color var(--t2)}
+.fb-btn:hover{border-color:#fff;transform:translateY(-2px)}
+.fb-btn:active{transform:scale(.97)}
+.fb-btn.pri{background:#fff;color:#18181a;border-color:#fff;font-weight:700}
+.fb-btn.pri:hover{background:#efe9dd}
+.fb-btn .arr{transition:transform var(--t2) var(--e-back)}
+.fb-btn:hover .arr{transform:translateX(3px)}
+.fb-x{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;background:none;color:#a9a8a3;border-radius:8px;cursor:pointer;display:grid;place-items:center;transition:color var(--t1),background var(--t1)}
+.fb-x:hover{color:#fff;background:rgba(255,255,255,.08)}
+.fbw .fb{opacity:0;transform:translateY(-10px);pointer-events:none}
+.fbw.fb-on .fb{opacity:1;transform:none;pointer-events:auto}
+.fbw.fb-on.fb-tuck .fb,.fbw.fb-on .fb.off{opacity:0;transform:translateY(-10px);pointer-events:none;transition-duration:.24s;transition-timing-function:var(--e-in)}
+@media (min-width:901px){
+  .fb{position:fixed;right:16px;bottom:16px;width:520px}
+  .fb-in{border-radius:12px;padding:14px 16px;box-shadow:0 24px 60px -18px rgba(0,0,0,.6)}
+  .fbw .fb,.fbw.fb-on .fb.off,.fbw.fb-on.fb-tuck .fb{transform:translateY(12px)}
+}
+@media (max-width:900px){.fb{position:relative}.fb-in{padding:12px 16px}.fb-act{grid-column:1 / -1}.fb-btn{flex:1 1 auto}}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:60;border-bottom:1px solid transparent;transition:background var(--t2),border-color var(--t2),box-shadow var(--t2)}
+.hdr.cond{background:rgba(8,25,21,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:rgba(228,200,138,.16);box-shadow:0 16px 30px -24px rgba(0,0,0,.8)}
+.hdr-in{display:flex;align-items:center;gap:18px;height:76px;transition:height var(--t2) var(--e-std)}
+.hdr.cond .hdr-in{height:64px}
+.logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;min-height:48px}
+.logo svg{flex:none;transition:transform var(--t2) var(--e-std)}
+.hdr.cond .logo svg{transform:scale(.88)}
+.logo b{display:block;font:400 21px/1 var(--sc);letter-spacing:.02em;color:var(--t-dk)}
+.logo small{display:block;margin-top:5px;font:600 10.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--brass-l)}
+.nav{display:flex;gap:2px;margin-left:auto}
+.nav a{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 13px;text-decoration:none;font-weight:500;font-size:15.5px;color:var(--t-dk-2);transition:color var(--t1)}
+.nav a::after{content:"";position:absolute;left:13px;right:13px;bottom:8px;height:1px;background:var(--mari);transform:scaleX(0);transform-origin:50% 50%;transition:transform var(--t2) var(--e-out)}
+.nav a:hover{color:var(--t-dk)}
+.nav a:hover::after{transform:scaleX(1)}
+.hdr-cta{display:flex;gap:8px;align-items:center}
+.hdr-tel{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;text-decoration:none;font-weight:600;font-size:15px;color:var(--t-dk);border-radius:999px;transition:background var(--t2),transform var(--t1)}
+.hdr-tel:hover{background:rgba(228,200,138,.1)}
+.hdr-tel:active{transform:scale(.97)}
+.hdr-tel svg{color:var(--mari)}
+@media (max-width:1080px){.hdr-tel span{display:none}.hdr-tel{width:44px;padding:0;justify-content:center;border:1px solid rgba(228,200,138,.3)}}
+@media (max-width:900px){.nav{display:none}.hdr-cta{margin-left:auto}.hdr-in{height:64px}}
+@media (max-width:420px){.logo small{letter-spacing:.12em}.hdr-cta .btn{padding:0 14px}}
+@media (max-width:600px){.hdr-cta .btn{display:none}.logo b{white-space:nowrap;font-size:20px}}
+@media (max-width:360px){.logo small{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;isolation:isolate;overflow:hidden;margin-top:-76px;padding:calc(76px + clamp(84px,9vw,128px)) 0 clamp(64px,7vw,96px)}
+.hero-bg{position:absolute;inset:0;z-index:-2;overflow:hidden}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+@media (prefers-reduced-motion:no-preference){.hero-bg img{animation:kb 26s ease-in-out .6s infinite alternate}}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.1) translate(-1.5%,-1%)}}
+.hero-bg::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(60% 50% at 78% 38%,rgba(242,169,59,.16),transparent 70%),
+  linear-gradient(90deg,rgba(8,25,21,.97) 0%,rgba(8,25,21,.9) 40%,rgba(10,31,26,.62) 72%,rgba(10,31,26,.55) 100%),
+  linear-gradient(0deg,rgba(8,25,21,.95) 0%,transparent 30%)}
+.hero .tag{right:var(--gut);bottom:18px}
+.garland{position:absolute;left:0;right:0;top:56px;height:180px;z-index:-1;pointer-events:none;overflow:visible}
+.garland svg{width:100%;height:100%;display:block;overflow:visible}
+.wire{fill:none;stroke:#3C3420;stroke-width:1.6}
+.wire.back{stroke:#2A2A1A;stroke-width:1.2;opacity:.8}
+@media (prefers-reduced-motion:no-preference){.wire{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.3s var(--e-out) .15s forwards}.wire.back{animation-delay:.35s}}
+@media (prefers-reduced-motion:reduce){.wire{animation:fade .8s ease .1s both}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{from{opacity:0}}
+.bulb{opacity:0;transform-box:fill-box;transform-origin:50% 0;animation:bulbOn .55s var(--e-back) forwards;animation-delay:calc(.75s + var(--d))}
+@media (prefers-reduced-motion:reduce){.bulb{animation:fade .5s ease forwards;animation-delay:calc(.3s + var(--d))}}
+@keyframes bulbOn{0%{opacity:0;transform:scale(.4)}60%{opacity:1}100%{opacity:1;transform:none}}
+.bulb .halo{opacity:.55}
+@media (prefers-reduced-motion:no-preference){.bulb .halo{animation:twinkle var(--tw,3.4s) ease-in-out calc(2s + var(--t)) infinite}}
+@keyframes twinkle{0%,100%{opacity:.55}45%{opacity:.18}55%{opacity:.85}}
+
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(32px,5vw,72px);align-items:center}
+.hero-copy>*{animation:rise .8s var(--e-out) both}
+.hero-copy .eyebrow{animation-delay:.1s}
+.hero h1{font:400 clamp(58px,8.2vw,124px)/.92 var(--sc);letter-spacing:.005em;margin:20px 0 22px;animation:none}
+.hero h1 span{display:block;animation:rise .9s var(--e-out) both}
+.hero h1 span:nth-child(1){animation-delay:.18s}
+.hero h1 span:nth-child(2){animation-delay:.27s;font:italic 400 .9em/1.02 var(--it);color:var(--mari);padding-left:.55em}
+.hero .lede{animation-delay:.38s}
+.hero .cta-row{margin-top:30px;animation-delay:.46s}
+.trust{display:inline-flex;align-items:center;gap:14px;margin-top:26px;padding:10px 16px 10px 12px;border-radius:999px;background:rgba(8,25,21,.55);border:1px solid rgba(228,200,138,.22);text-decoration:none;animation-delay:.55s!important;transition:border-color var(--t2),background var(--t2)}
+.trust:hover{border-color:var(--brass-l);background:rgba(8,25,21,.75)}
+.trust .score{font:700 26px/1 var(--sc);color:var(--t-dk)}
+.trust small{display:block;font-size:13.5px;line-height:1.3;color:var(--t-dk-2)}
+.stars{position:relative;display:inline-block;width:92px;height:16px;color:rgba(228,200,138,.28)}
+.stars svg{position:absolute;inset:0;width:92px;height:16px}
+.stars .fill{position:absolute;inset:0;overflow:hidden;color:var(--mari);width:var(--w,84%)}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}}
+@media (prefers-reduced-motion:reduce){@keyframes rise{from{opacity:0;transform:translateY(8px)}}}
+
+/* ---------- date-check card ---------- */
+.check-col{position:relative;display:flex;justify-content:center;animation:cardIn 1s var(--e-out) .32s both}
+@keyframes cardIn{from{opacity:0;transform:translateY(26px) scale(.97)}}
+@media (prefers-reduced-motion:reduce){@keyframes cardIn{from{opacity:0;transform:translateY(8px)}}}
+.dc-wrap{position:relative;width:100%;max-width:470px}
+.arch{position:absolute;inset:-16px;width:calc(100% + 32px);height:calc(100% + 32px);pointer-events:none;overflow:visible}
+.arch path{fill:none}
+.arch .a1{stroke:var(--brass);stroke-width:1.2}
+.arch .a2{stroke:rgba(242,169,59,.55);stroke-width:1;stroke-dasharray:1 6;stroke-linecap:round}
+.keystone{position:absolute;left:50%;top:-30px;transform:translateX(-50%);color:var(--mari);pointer-events:none}
+.dc{--ar:150px;position:relative;background:linear-gradient(180deg,rgba(23,62,51,.94),rgba(9,28,23,.97) 70%);border:1px solid rgba(228,200,138,.42);border-radius:50% 50% 22px 22px / var(--ar) var(--ar) 22px 22px;padding:58px clamp(20px,3vw,34px) 28px;box-shadow:0 40px 90px -40px rgba(0,0,0,.85),inset 0 1px 0 rgba(255,255,255,.06);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.dc-head{text-align:center}
+.dc-head .rosette{display:block;margin:0 auto 10px;color:var(--brass-l)}
+.dc-head h2{font:400 30px/1.05 var(--sc)}
+.dc-head p{margin-top:6px;font-size:14.5px;color:var(--t-dk-2)}
+.plate{margin:18px 0 16px;padding:14px 12px 12px;text-align:center;border-top:1px solid rgba(228,200,138,.2);border-bottom:1px solid rgba(228,200,138,.2);min-height:104px;display:grid;align-content:center}
+.plate .wd{font:600 11.5px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--brass-l)}
+.plate .md{display:block;margin:6px 0 4px;font:italic 400 34px/1.05 var(--it);color:var(--t-dk)}
+.plate .yr{font-size:13.5px;color:var(--t-dk-2)}
+.plate.empty .md{color:var(--t-dk-3)}
+.plate.flip .md,.plate.flip .wd{animation:flip .5s var(--e-out)}
+@keyframes flip{from{opacity:0;transform:translateY(10px)}}
+.fld{display:block;margin-bottom:14px}
+.fld>span:not(.err),.fld-l{display:block;margin-bottom:7px;font:600 11.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brass-l)}
+.fld>span i{font-style:normal;letter-spacing:.04em;text-transform:none;color:var(--t-dk-3);font-weight:500}
+.in{width:100%;min-height:50px;padding:12px 14px;border-radius:12px;border:1px solid rgba(228,200,138,.3);background:rgba(255,255,255,.04);color:var(--t-dk);font-size:16px;color-scheme:dark;transition:border-color var(--t2),box-shadow var(--t2),background var(--t2)}
+.in::placeholder{color:#8F8776}
+.in:hover{border-color:rgba(228,200,138,.55)}
+.in:focus{outline:0;border-color:var(--mari);background:rgba(255,255,255,.07);box-shadow:0 0 0 4px rgba(242,169,59,.16)}
+select.in{appearance:none;-webkit-appearance:none;padding-right:40px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23E4C88A' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;cursor:pointer}
+select.in option{background:#0F2B24;color:#F4EBDD}
+textarea.in{min-height:84px;resize:vertical}
+.row2{display:grid;grid-template-columns:1.25fr 1fr;gap:12px}
+.step{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;border:1px solid rgba(228,200,138,.3);border-radius:12px;background:rgba(255,255,255,.04);min-height:50px;transition:border-color var(--t2),box-shadow var(--t2)}
+.step:focus-within{border-color:var(--mari);box-shadow:0 0 0 4px rgba(242,169,59,.16)}
+.step button{width:44px;height:48px;border:0;background:none;color:var(--brass-l);font-size:22px;line-height:1;cursor:pointer;border-radius:10px;transition:background var(--t1),transform var(--t1)}
+.step button:hover{background:rgba(228,200,138,.1)}
+.step button:active{transform:scale(.9)}
+.step input{width:100%;min-width:0;border:0;background:none;text-align:center;font-weight:600;font-size:17px;padding:0;-moz-appearance:textfield;appearance:textfield}
+.step input::-webkit-outer-spin-button,.step input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.step input:focus{outline:0}
+.err{display:none;margin-top:6px;font-size:13.5px;color:#FFB4A0}
+.fld.bad .in,.fld.bad .step{border-color:#E8826A}
+.fld.bad .err{display:block}
+.fld.good .in{border-color:rgba(160,210,170,.55)}
+.shake{animation:shake .36s var(--e-std)}
+@keyframes shake{20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
+.dc .btn{width:100%;margin-top:6px}
+.dc-foot{margin-top:12px;text-align:center;font-size:13.5px;color:var(--t-dk-2)}
+.dc-foot a{display:inline-flex;align-items:center;min-height:44px;color:var(--brass-l);font-weight:600;text-decoration:underline;text-decoration-color:rgba(228,200,138,.45);text-underline-offset:4px}
+.dc-foot{margin-bottom:-10px}
+.sum{display:none;align-items:center;gap:10px;justify-content:space-between;margin:2px 0 16px;padding:10px 10px 10px 14px;border-radius:12px;background:rgba(242,169,59,.1);border:1px solid rgba(242,169,59,.35);font-size:14.5px}
+.sum b{font-weight:600;color:var(--t-dk)}
+.sum button{flex:none;min-height:44px;padding:0 14px;border-radius:999px;border:1px solid rgba(228,200,138,.4);background:none;color:var(--brass-l);font-weight:600;font-size:14px;cursor:pointer;transition:background var(--t1),transform var(--t1)}
+.sum button:hover{background:rgba(228,200,138,.1)}
+.sum button:active{transform:scale(.96)}
+.js-only{display:none}
+.js .js-only{display:flex}
+.js .dc:not(.s2on) .s2{display:none}
+.js .dc.s2on .s1{display:none}
+.js .dc.s2on .sum{display:flex}
+.js .dc.s2on .s2{animation:rise .5s var(--e-out) both}
+.done{display:none;text-align:center;padding:6px 0 4px}
+.dc.sent form{display:none}
+.dc.sent .done{display:block;animation:rise .5s var(--e-out) both}
+.done svg{margin:0 auto 10px;display:block}
+.done .c1{stroke-dasharray:160;stroke-dashoffset:160;animation:dash .7s var(--e-out) .05s forwards}
+.done .c2{stroke-dasharray:40;stroke-dashoffset:40;animation:dash .45s var(--e-out) .55s forwards}
+@keyframes dash{to{stroke-dashoffset:0}}
+.done h3{font:400 26px/1.1 var(--sc)}
+.done p{margin-top:8px;font-size:15px;color:var(--t-dk-2)}
+.done pre{text-align:left;white-space:pre-wrap;max-height:170px;overflow:auto;margin:14px 0;padding:12px;border-radius:12px;background:rgba(0,0,0,.25);border:1px solid rgba(228,200,138,.18);font:13px/1.5 ui-monospace,Consolas,monospace;color:var(--t-dk-2)}
+.done .cta-row{justify-content:center}
+.done .btn{width:auto}
+
+/* ---------- marquee band ---------- */
+.band{position:relative;background:var(--em-950);border-top:1px solid rgba(228,200,138,.18);border-bottom:1px solid rgba(228,200,138,.18);overflow:hidden;padding:20px 0}
+.band-track{display:flex;width:max-content}
+.band ul{display:flex;align-items:center;gap:0;margin:0;padding:0;list-style:none}
+.band li{display:flex;align-items:center;gap:28px;padding-right:28px;font:400 24px/1 var(--sc);color:var(--t-dk);white-space:nowrap}
+.band li em{font:italic 400 1em/1 var(--it);color:var(--mari)}
+.band li::after{content:"";width:9px;height:9px;transform:rotate(45deg);border:1px solid var(--brass)}
+@media (prefers-reduced-motion:no-preference){.band-track{animation:marq 48s linear infinite}.band:hover .band-track{animation-play-state:paused}}
+@keyframes marq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.band-track{width:auto;justify-content:center}.band ul{flex-wrap:wrap;justify-content:center;row-gap:14px;padding:0 16px}.band ul+ul{display:none}}
+
+/* ---------- sections ---------- */
+.sec{position:relative;padding:clamp(76px,9vw,128px) 0;scroll-margin-top:70px}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:24px 56px;align-items:end;margin-bottom:clamp(36px,5vw,60px)}
+.sec-head .orn{margin-top:22px}
+.sec-head .h2{margin-top:16px}
+.aub{background:var(--aub-800);background-image:radial-gradient(70% 60% at 85% 0%,rgba(242,169,59,.09),transparent 60%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='96' viewBox='0 0 72 96'%3E%3Cpath d='M8 96V40a28 28 0 0 1 56 0v56' fill='none' stroke='%23E4C88A' stroke-opacity='.055' stroke-width='1'/%3E%3C/svg%3E")}
+.light{background:var(--ivory);color:var(--ink)}
+.em{background:var(--em-800)}
+
+/* celebrations */
+.cel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.cel{position:relative;display:flex;flex-direction:column;padding:40px 26px 24px;border-radius:50% 50% 18px 18px / 96px 96px 18px 18px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.015));border:1px solid rgba(228,200,138,.22);text-align:center;transition:transform var(--t2) var(--e-out),border-color var(--t2),background var(--t2),box-shadow var(--t2)}
+.cel:hover{transform:translateY(-6px);border-color:rgba(242,169,59,.6);background:linear-gradient(180deg,rgba(242,169,59,.1),rgba(255,255,255,.02));box-shadow:0 30px 60px -36px rgba(0,0,0,.8)}
+.cel .ico{width:64px;height:64px;margin:6px auto 16px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(228,200,138,.35);color:var(--mari);transition:transform var(--t2) var(--e-back),background var(--t2)}
+.cel:hover .ico{transform:scale(1.08) rotate(-4deg);background:rgba(242,169,59,.1)}
+.cel h3{font:400 28px/1.1 var(--sc)}
+.cel p{margin:10px auto 18px;font-size:15.5px;color:var(--t-dk-2);max-width:30ch}
+.cel button{margin-top:auto;align-self:center;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid rgba(228,200,138,.35);background:none;color:var(--brass-l);font:600 14.5px/1 var(--sans);cursor:pointer;transition:background var(--t2),color var(--t2),border-color var(--t2),transform var(--t1)}
+.cel button:hover{background:var(--mari);border-color:var(--mari);color:#1F1405}
+.cel button:active{transform:scale(.96)}
+.cel button .arr{transition:transform var(--t2) var(--e-back)}
+.cel button:hover .arr{transform:translateX(3px)}
+.cel-note{margin-top:22px;text-align:center;font-size:14px;color:var(--t-dk-3)}
+
+/* hall */
+.gal{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:auto auto;gap:18px}
+.ph{position:relative;margin:0;overflow:hidden;background:var(--ivory-2)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--e-out)}
+.ph:hover img{transform:scale(1.045)}
+.ph .tag{left:14px;bottom:14px}
+.ph-a{grid-column:1 / span 7;grid-row:1 / span 2;border-radius:999px 999px 16px 16px / 260px 260px 16px 16px;min-height:560px}
+.ph-b{grid-column:8 / span 5;border-radius:16px;aspect-ratio:5 / 4}
+.ph-c{grid-column:8 / span 5;border-radius:16px;aspect-ratio:5 / 3.4}
+.ph-b img{object-position:50% 30%}
+.gal-cap{grid-column:1 / -1;font-size:14px;color:var(--ink-2);display:flex;align-items:center;gap:10px}
+.gal-cap svg{color:var(--brass-d);flex:none}
+.specs{margin-top:clamp(48px,6vw,72px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--ivory-line)}
+.spec{padding:26px 24px 28px 0;border-bottom:1px solid var(--ivory-line);display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 14px;align-content:start}
+.spec:not(:nth-child(3n+1)){padding-left:24px;border-left:1px solid var(--ivory-line)}
+.spec svg{grid-row:span 2;color:var(--brass-d);margin-top:2px}
+.spec h3{font:400 23px/1.15 var(--sc);color:var(--ink)}
+.spec .slot{margin-top:8px;justify-self:start}
+.specs-note{margin-top:20px;font-size:14.5px;color:var(--ink-2)}
+
+/* how it works */
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;position:relative;margin-top:10px}
+.how::before{content:"";position:absolute;left:4%;right:4%;top:15px;height:1px;background:linear-gradient(90deg,transparent,var(--brass) 8%,var(--brass) 92%,transparent);transform-origin:0 50%}
+.how.armed:not(.shown)::before{transform:scaleX(0)}
+.how.armed::before{transition:transform 1.2s var(--e-out)}
+.how li{list-style:none;position:relative;padding-top:52px}
+.how .b{position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 50% 45%,#FFF4D6 0 22%,var(--mari) 46%,rgba(242,169,59,.0) 72%);box-shadow:0 0 22px 6px rgba(242,169,59,.35);transition:opacity .6s var(--e-out),transform .6s var(--e-back),box-shadow .6s;transition-delay:calc(.35s + var(--i,0) * 220ms)}
+.how.armed:not(.shown) .b{opacity:.25;transform:scale(.6);box-shadow:none}
+.how .n{font:italic 400 18px/1 var(--it);color:var(--mari)}
+.how h3{margin-top:8px;font:400 30px/1.1 var(--sc)}
+.how p{margin-top:10px;color:var(--t-dk-2);max-width:34ch}
+.how-cta{margin-top:clamp(40px,5vw,56px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.how-cta small{font-size:14.5px;color:var(--t-dk-2)}
+
+/* reviews */
+.rev{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:center}
+.rev .ph{border-radius:16px 16px 999px 999px / 16px 16px 220px 220px;aspect-ratio:4 / 4.4;background:var(--aub-700)}
+.big{display:flex;align-items:flex-end;gap:18px;margin:26px 0 30px}
+.big .num{font:400 clamp(96px,12vw,150px)/.8 var(--sc);color:var(--t-dk)}
+.big .stars{width:150px;height:26px;margin-bottom:10px}
+.big .stars svg{width:150px;height:26px}
+.big small{display:block;margin-top:8px;font-size:15px;color:var(--t-dk-2)}
+.rev .lede{margin-top:0}
+.rev .ph .tag{top:14px;bottom:auto}
+.quote-slot{margin-top:28px;display:grid;gap:10px}
+.quote-slot div{position:relative;padding:16px 18px 16px 46px;border:1px dashed rgba(228,200,138,.45);border-radius:14px;font-size:14.5px;color:var(--brass-l)}
+.quote-slot div::before{content:"\201C";position:absolute;left:14px;top:6px;font:400 40px/1 var(--it);color:var(--mari)}
+.quote-slot b{display:block;font:700 10.5px/1.6 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.rev .cta-row{margin-top:28px}
+
+/* visit */
+.visit{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,6vw,80px);align-items:center}
+.addr{margin:22px 0 4px;font:400 clamp(30px,3.4vw,44px)/1.12 var(--sc);color:var(--ink)}
+.addr small{display:block;margin-top:8px;font:500 17px/1.4 var(--sans);color:var(--ink-2)}
+.contact{margin-top:26px;display:grid;gap:10px;max-width:460px}
+.contact a{display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:14px;min-height:64px;padding:10px 16px 10px 10px;border-radius:14px;background:#fff;border:1px solid var(--ivory-line);text-decoration:none;color:var(--ink);transition:transform var(--t2) var(--e-out),border-color var(--t2),box-shadow var(--t2)}
+.contact a:hover{transform:translateY(-3px);border-color:var(--brass);box-shadow:0 18px 30px -22px rgba(22,48,42,.5)}
+.contact a:active{transform:scale(.98)}
+.contact .ci{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--em-800);color:var(--mari)}
+.contact b{display:block;font-weight:600;font-size:16.5px;word-break:break-word}
+.contact small{display:block;font-size:13px;color:var(--ink-2);letter-spacing:.04em}
+.contact .arr{color:var(--brass-d);transition:transform var(--t2) var(--e-back)}
+.contact a:hover .arr{transform:translateX(4px)}
+.vcard{position:relative;padding:clamp(40px,5vw,60px) clamp(24px,4vw,48px) 36px;border-radius:999px 999px 20px 20px / 240px 240px 20px 20px;background:var(--em-800);color:var(--t-dk);text-align:center;overflow:hidden}
+.vcard::before{content:"";position:absolute;inset:12px;border-radius:inherit;border:1px solid rgba(228,200,138,.35);pointer-events:none}
+.vcard .orn{margin:0 auto 18px}
+.vcard .street{font:400 clamp(44px,5vw,64px)/.95 var(--sc)}
+.vcard .street em{display:block;font:italic 400 .62em/1.3 var(--it);color:var(--mari)}
+.vcard .zip{margin-top:12px;font-size:15px;color:var(--t-dk-2);letter-spacing:.06em}
+.vgrid{margin-top:26px;display:grid;gap:10px;text-align:left;position:relative}
+.vgrid div{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(228,200,138,.16)}
+.vgrid span{font:600 11.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brass-l)}
+.vgrid .slot{color:var(--brass-l);font-size:13.5px;padding:5px 10px}
+
+/* final cta */
+.final{position:relative;isolation:isolate;overflow:hidden;padding:clamp(96px,12vw,160px) 0;text-align:center}
+.final>img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
+.final::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 70% at 50% 50%,rgba(10,31,26,.72),rgba(8,25,21,.94))}
+.final .tag{right:var(--gut);bottom:18px}
+.final .h2{font-size:clamp(42px,6vw,84px)}
+.final .lede{margin:18px auto 0;text-align:center}
+.final .cta-row{justify-content:center;margin-top:34px}
+.final .trust{animation:none;margin-top:28px}
+
+/* farman card + footer */
+.farman{background:#18181a;color:#e8e6e1;padding:clamp(56px,7vw,88px) 0}
+.fc{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:22px 28px;align-items:center;border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:clamp(22px,3vw,34px)}
+.fc .fb-mark{width:52px;height:52px;font-size:26px;border-radius:12px;grid-row:auto}
+.fc h2{font:400 clamp(28px,3vw,38px)/1.1 var(--sc);color:#fff}
+.fc p{margin-top:6px;color:#bdbbb5;font-size:16px;max-width:52ch}
+.fc .fb-act{margin:0}
+.ftr{background:var(--em-950);padding:44px 0 calc(44px + env(safe-area-inset-bottom));color:var(--t-dk-2);font-size:14.5px;border-top:1px solid rgba(228,200,138,.12)}
+.ftr-top{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between;padding-bottom:24px;border-bottom:1px solid rgba(228,200,138,.12)}
+.ftr-top a{text-decoration:none;color:var(--t-dk);display:inline-flex;align-items:center;min-height:44px}
+.ftr-top a:hover{color:var(--mari)}
+.ftr-links{display:flex;flex-wrap:wrap;gap:4px 22px}
+.credit{margin-top:22px;max-width:92ch;color:var(--t-dk-3);font-size:13.5px;line-height:1.6}
+
+/* mobile bar */
+.mbar{display:none}
+@media (max-width:900px){
+  body{padding-bottom:76px}
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:70;display:grid;grid-template-columns:1fr 1.5fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(8,25,21,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(228,200,138,.2);transition:transform .4s var(--e-out)}
+  .mbar.away{transform:translateY(110%)}
+  .mbar .btn{min-height:52px;padding:0 12px}
+}
+
+/* reveals (armed only from JS, just before an element enters view) */
+[data-rv].armed{transition:opacity .8s var(--e-out),transform .8s var(--e-out),clip-path 1s var(--e-out)}
+[data-rv].armed:not(.shown){opacity:0}
+[data-rv="up"].armed:not(.shown){transform:translateY(26px)}
+[data-rv="scale"].armed:not(.shown){transform:scale(.96)}
+[data-rv="wipe"].armed:not(.shown){opacity:1;clip-path:inset(0 0 100% 0)}
+[data-rv="kids"].armed:not(.shown){opacity:1}
+[data-rv="kids"].armed:not(.rv-done)>*{transition:opacity .7s var(--e-out),transform .7s var(--e-out);transition-delay:calc(var(--i,0) * 80ms)}
+[data-rv="kids"].armed:not(.shown)>*{opacity:0;transform:translateY(20px);transition:none}
+[data-rv].armed:not(.shown){transition:none}
+@media (prefers-reduced-motion:reduce){
+  [data-rv="up"].armed:not(.shown),[data-rv="kids"].armed:not(.shown)>*{transform:translateY(8px)}
+  [data-rv="scale"].armed:not(.shown){transform:none}
+  [data-rv="wipe"].armed:not(.shown){clip-path:none;opacity:0}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .cel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .hero{margin-top:-64px;padding:calc(64px + 78px) 0 56px}
+  .garland{top:52px;height:96px}
+  .hero-bg img{object-position:50% 30%}
+  .hero-bg::after{background:radial-gradient(70% 40% at 70% 10%,rgba(242,169,59,.14),transparent 70%),linear-gradient(180deg,rgba(8,25,21,.82) 0%,rgba(8,25,21,.9) 40%,rgba(8,25,21,.97) 70%)}
+  .hero-grid{grid-template-columns:minmax(0,1fr);gap:56px}
+  .hero .tag{bottom:auto;right:16px;top:calc(64px + 10px)}
+  .hero-copy{display:flex;flex-direction:column;align-items:flex-start}
+  .hero-copy .trust{order:2;margin:0 0 20px}
+  .hero-copy .lede{order:3}.hero-copy .cta-row{order:4;align-self:stretch}
+  .check-col{padding:0 4px}
+  .sec-head{grid-template-columns:minmax(0,1fr);gap:16px}
+  .gal{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+  .ph-a{grid-column:1 / -1;grid-row:auto;min-height:0;aspect-ratio:4 / 4.2;border-radius:999px 999px 14px 14px / 180px 180px 14px 14px}
+  .ph-b,.ph-c{grid-column:auto;aspect-ratio:1 / 1.05;border-radius:14px}
+  .specs{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .spec,.spec:not(:nth-child(3n+1)){padding:22px 16px 22px 0;border-left:0}
+  .spec:nth-child(2n){padding-left:16px;border-left:1px solid var(--ivory-line)}
+  .how{grid-template-columns:minmax(0,1fr);gap:30px}
+  .how::before{left:15px;right:auto;top:8px;bottom:8px;width:1px;height:auto;background:linear-gradient(180deg,var(--brass),var(--brass) 90%,transparent);transform-origin:50% 0}
+  .how.armed:not(.shown)::before{transform:scaleY(0)}
+  .how li{padding:0 0 0 56px}
+  .rev,.visit{grid-template-columns:minmax(0,1fr)}
+  .rev .ph{aspect-ratio:4 / 3;border-radius:14px 14px 999px 999px / 14px 14px 160px 160px;order:2}
+  .fc{grid-template-columns:minmax(0,1fr)}
+  .fc .fb-btn{flex:1 1 auto}
+  .final .tag{bottom:auto;top:16px}
+}
+@media (max-width:600px){
+  .cel-grid{grid-template-columns:minmax(0,1fr)}
+  .cel{padding:30px 22px 22px;border-radius:50% 50% 16px 16px / 64px 64px 16px 16px}
+  .specs{grid-template-columns:minmax(0,1fr)}
+  .spec,.spec:nth-child(2n),.spec:not(:nth-child(3n+1)){padding:20px 0;border-left:0}
+  .hero h1{font-size:clamp(54px,16vw,72px);margin:16px 0 18px}
+  .trust{margin-top:20px}
+  .hero .cta-row .btn{flex:1 1 auto}
+  .dc{--ar:120px;padding-top:50px}
+  .row2{grid-template-columns:minmax(0,1fr)}
+  .plate .md{font-size:30px}
+  .band li{font-size:20px;gap:22px;padding-right:22px}
+  .big .num{font-size:104px}
+  .big .stars,.big .stars svg{width:120px;height:21px}
+  .vgrid div{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<aside class="fb" id="fb" aria-label="About this concept preview">
+  <div class="fb-in">
+    <span class="fb-mark" aria-hidden="true">F</span>
+    <p><b>Concept preview</b> made for Gulshan Terrace by Farman, an independent web developer. Not Gulshan Terrace's official website; photos are samples.</p>
+    <div class="fb-act">
+      <a class="fb-btn pri" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="fb-btn" href="mailto:farman.builds@gmail.com?subject=Website%20for%20Gulshan%20Terrace">Email Farman</a>
+    </div>
+    <button class="fb-x" type="button" id="fbX" aria-label="Dismiss this notice"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+  </div>
+</aside>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#top" aria-label="Gulshan Terrace, back to top">
+      <svg width="40" height="46" viewBox="0 0 40 46" aria-hidden="true"><path d="M3 45V20a17 17 0 0 1 34 0v25" fill="none" stroke="#C9A35B" stroke-width="1.3"/><path d="M8 45V21a12 12 0 0 1 24 0v24" fill="none" stroke="#F2A93B" stroke-width="1" stroke-dasharray="1 3.2" stroke-linecap="round"/><text x="20" y="35" text-anchor="middle" font-family="Playfair Display SC, Georgia, serif" font-size="17" fill="#F4EBDD">G</text></svg>
+      <span><b>Gulshan Terrace</b><small>Banquet hall · Woodside</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#celebrate">Celebrations</a>
+      <a href="#hall">The hall</a>
+      <a href="#how">How booking works</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="hdr-cta">
+      <a class="hdr-tel" href="tel:+17184574577" aria-label="Call Gulshan Terrace at (718) 457-4577"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>(718) 457-4577</span></a>
+      <a class="btn pri sm" href="#check" data-go-check>Check your date</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top" aria-labelledby="hero-h">
+  <div class="hero-bg"><img src="../img/gulshan-terrace/hall.jpg" srcset="../img/gulshan-terrace/hall-s.jpg 900w, ../img/gulshan-terrace/hall.jpg 1800w" sizes="100vw" alt="" fetchpriority="high"></div>
+  <div class="garland" aria-hidden="true">
+    <svg id="garland" viewBox="0 0 1440 180" preserveAspectRatio="xMidYMin slice">
+      <defs>
+        <radialGradient id="gBulb" cx="50%" cy="42%" r="60%"><stop offset="0" stop-color="#FFF8E2"/><stop offset=".45" stop-color="#FFD58A"/><stop offset="1" stop-color="#F2A93B"/></radialGradient>
+        <radialGradient id="gHalo"><stop offset="0" stop-color="#FFC66B" stop-opacity=".75"/><stop offset=".4" stop-color="#F2A93B" stop-opacity=".25"/><stop offset="1" stop-color="#F2A93B" stop-opacity="0"/></radialGradient>
+      </defs>
+      <path class="wire back" pathLength="1" data-n="16" data-s=".62" d="M-20 6 Q 160 96 360 14 Q 540 104 720 16 Q 900 104 1080 14 Q 1280 96 1460 6"/>
+      <path class="wire" pathLength="1" data-n="22" data-s="1" d="M-20 10 Q 240 150 480 22 Q 720 160 960 22 Q 1200 150 1460 10"/>
+      <g id="bulbs"></g>
+    </svg>
+  </div>
+  <span class="tag">Sample photo</span>
+
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Banquet hall · Woodside, Queens</p>
+      <h1 id="hero-h"><span>Gulshan</span><span>Terrace</span></h1>
+      <p class="lede">A banquet hall on 37th Avenue in Woodside for the wedding, walima, mehndi, birthday or company dinner you're planning. Pick a date, add your guest count, and ask if the hall is free.</p>
+      <div class="cta-row">
+        <a class="btn pri ring" href="#check" data-go-check>Check your date <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn ghost" href="tel:+17184574577"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call (718) 457-4577</a>
+      </div>
+      <a class="trust" href="#reviews" aria-label="Rated 4.2 out of 5 on Google from 290 reviews">
+        <span class="score"><span class="count" data-to="4.2" data-dec="1">4.2</span></span>
+        <span><span class="stars" style="--w:84%"><svg viewBox="0 0 92 16" aria-hidden="true"><use href="#st5"/></svg><span class="fill"><svg viewBox="0 0 92 16" aria-hidden="true"><use href="#st5"/></svg></span></span><small><span class="count" data-to="290">290</span> Google reviews</small></span>
+      </a>
+    </div>
+
+    <div class="check-col" id="check">
+      <div class="dc-wrap">
+        <svg class="arch" id="arch" aria-hidden="true"><path class="a1" id="a1"/><path class="a2" id="a2"/></svg>
+        <svg class="keystone" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M11 1l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="currentColor"/></svg>
+        <div class="dc" id="dc">
+          <div class="dc-head">
+            <h2>Check your date</h2>
+            <p>Takes 30 seconds. Goes straight to the hall.</p>
+          </div>
+          <form id="dcForm" action="mailto:Monsur28@hotmail.com" method="post" enctype="text/plain" novalidate>
+            <div class="plate empty" id="plate" aria-live="polite"><span class="wd" id="pWd">Your date</span><span class="md" id="pMd">Pick a day below</span><span class="yr" id="pYr">Event · guests</span></div>
+            <div class="sum" id="sum"><span><b id="sumT">Wedding · Sat, Jun 13</b><br><span id="sumS">about 150 guests</span></span><button type="button" id="edit">Edit</button></div>
+            <div class="s1">
+              <label class="fld" id="f-type"><span>Event type</span>
+                <select class="in" id="ev" name="Event">
+                  <option value="">Choose an event</option>
+                  <option>Wedding</option><option>Walima</option><option>Mehndi</option><option>Birthday</option><option>Corporate event</option><option>Other</option>
+                </select>
+              </label>
+              <div class="row2">
+                <label class="fld" id="f-date"><span>Date</span><input class="in" type="date" id="dt" name="Date" required><span class="err">Pick the date you have in mind.</span></label>
+                <div class="fld" id="f-guests"><span class="fld-l" id="gl">Guests <i>(approx.)</i></span>
+                  <div class="step"><button type="button" id="gMinus" aria-label="Fewer guests">&minus;</button><input type="number" id="gs" name="Guests" value="150" min="10" max="2000" step="10" inputmode="numeric" aria-labelledby="gl"><button type="button" id="gPlus" aria-label="More guests">+</button></div>
+                </div>
+              </div>
+              <button type="button" class="btn pri js-only" id="next">Check this date <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </div>
+            <div class="s2">
+              <label class="fld" id="f-name"><span>Your name</span><input class="in" id="nm" name="Name" autocomplete="name" placeholder="First and last name"><span class="err">Please add your name.</span></label>
+              <label class="fld" id="f-contact"><span>Phone or email</span><input class="in" id="ct" name="Contact" autocomplete="tel" placeholder="So the hall can reply"><span class="err">Add a phone number or an email address.</span></label>
+              <label class="fld"><span>Anything else? <i>(optional)</i></span><textarea class="in" id="ms" name="Message" placeholder="Timings, menu questions, décor ideas…"></textarea></label>
+              <button type="submit" class="btn pri">Send to Gulshan Terrace <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </div>
+          </form>
+          <div class="done" id="done" role="status">
+            <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><circle class="c1" cx="32" cy="32" r="25" fill="none" stroke="#F2A93B" stroke-width="2"/><path class="c2" d="M21 33l7 7 15-16" fill="none" stroke="#F4EBDD" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Your request is ready</h3>
+            <p>This is what Gulshan Terrace receives:</p>
+            <pre id="donePre"></pre>
+            <div class="cta-row"><a class="btn ghost sm" href="tel:+17184574577">Prefer to call?</a><button class="btn ghost sm" type="button" id="again">Check another date</button></div>
+          </div>
+          <p class="dc-foot">Rather talk? <a href="tel:+17184574577">(718) 457-4577</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-label="Celebrations you can plan here">
+  <div class="band-track">
+    <ul><li>Weddings</li><li><em>Walimas</em></li><li>Mehndi nights</li><li><em>Birthdays</em></li><li>Company dinners</li><li><em>4.2 on Google</em></li><li>Woodside, Queens</li></ul>
+    <ul aria-hidden="true"><li>Weddings</li><li><em>Walimas</em></li><li>Mehndi nights</li><li><em>Birthdays</em></li><li>Company dinners</li><li><em>4.2 on Google</em></li><li>Woodside, Queens</li></ul>
+  </div>
+</div>
+
+<section class="sec aub" id="celebrate" aria-labelledby="cel-h">
+  <div class="wrap">
+    <div class="sec-head" data-rv="up">
+      <div>
+        <p class="eyebrow">Celebrations</p>
+        <h2 class="h2" id="cel-h">What are you <em>planning?</em></h2>
+        <div class="orn" aria-hidden="true"><i></i><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 0l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="currentColor"/></svg><i></i></div>
+      </div>
+      <p class="lede">Pick the occasion and we'll carry it into the date check, so the hall knows what you have in mind before they reply.</p>
+    </div>
+    <div class="cel-grid" data-rv="kids">
+      <article class="cel" style="--i:0"><span class="ico" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="19" r="8"/><circle cx="20" cy="19" r="8"/><path d="M16 4l2.5 3L16 10l-2.5-3z"/></svg></span><h3>Wedding</h3><p>Ceremony, reception, or both under one roof.</p><button type="button" data-ev="Wedding">Check a wedding date <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></article>
+      <article class="cel" style="--i:1"><span class="ico" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 3v4M11 7h10l2 5H9z"/><path d="M9 12h14v11a5 5 0 0 1-5 5h-4a5 5 0 0 1-5-5z"/><path d="M16 16v6"/></svg></span><h3>Walima</h3><p>The reception dinner for family and friends.</p><button type="button" data-ev="Walima">Check a walima date <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></article>
+      <article class="cel" style="--i:2"><span class="ico" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 4c-7 0-14 6-14 14 0 6 4 10 9 10 5 0 8-4 8-8 0-4-3-6-6-6-2.5 0-4 1.5-4 3.5S15.5 21 17 21"/><circle cx="25" cy="8" r="1"/><circle cx="27" cy="13" r=".9"/><circle cx="26" cy="18" r=".8"/></svg></span><h3>Mehndi</h3><p>Music, colour and a long night with the people you love.</p><button type="button" data-ev="Mehndi">Check a mehndi date <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></article>
+      <article class="cel" style="--i:3"><span class="ico" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 27h22M7 27V17h18v10M10 17v-4h12v4"/><path d="M16 13V9M16 6.5c-1-1-1-2 0-3.5 1 1.5 1 2.5 0 3.5z"/><path d="M7 21c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/></svg></span><h3>Birthday</h3><p>First birthdays, sweet sixteens, big round numbers.</p><button type="button" data-ev="Birthday">Check a birthday date <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></article>
+      <article class="cel" style="--i:4"><span class="ico" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4h4l-1 9a3 3 0 0 1-2 0zM18 4h4l-1 9a3 3 0 0 1-2 0z"/><path d="M12 13v12M20 13v12M9 26h6M17 26h6"/></svg></span><h3>Corporate</h3><p>Company dinners, award nights and team parties.</p><button type="button" data-ev="Corporate event">Check a corporate date <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></article>
+      <article class="cel" style="--i:5"><span class="ico" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 4l2.6 7.4L26 14l-7.4 2.6L16 24l-2.6-7.4L6 14l7.4-2.6z"/><path d="M25 22l1 2.5 2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1z"/></svg></span><h3>Something else</h3><p>Engagements, aqeeqahs, reunions, showers. Just ask.</p><button type="button" data-ev="Other">Check a date <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></article>
+    </div>
+    <p class="cel-note" data-rv="up">Occasions shown are suggestions. Gulshan Terrace confirms what the hall can host.</p>
+  </div>
+</section>
+
+<section class="sec light" id="hall" aria-labelledby="hall-h">
+  <div class="wrap">
+    <div class="sec-head" data-rv="up">
+      <div>
+        <p class="eyebrow">The hall</p>
+        <h2 class="h2" id="hall-h">An evening, <em>set and lit</em></h2>
+        <div class="orn" aria-hidden="true"><i></i><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 0l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="currentColor"/></svg><i></i></div>
+      </div>
+      <p class="lede">The photos here are samples to show the mood. On the live site, this is where the real hall goes: the stage, the tables, the lights, the room on a full night.</p>
+    </div>
+    <div class="gal">
+      <figure class="ph ph-a" data-rv="wipe"><img src="../img/gulshan-terrace/stage.jpg" srcset="../img/gulshan-terrace/stage-s.jpg 900w, ../img/gulshan-terrace/stage.jpg 1800w" sizes="(max-width:900px) 100vw, 58vw" alt="Sample photo: a decorated wedding stage with floral backdrop and a loveseat" loading="lazy"><span class="tag">Sample photo</span></figure>
+      <figure class="ph ph-b" data-rv="scale"><img src="../img/gulshan-terrace/lights-s.jpg" srcset="../img/gulshan-terrace/lights-s.jpg 900w, ../img/gulshan-terrace/lights.jpg 1800w" sizes="(max-width:900px) 50vw, 40vw" alt="Sample photo: candles and string lights over a reception table" loading="lazy"><span class="tag">Sample photo</span></figure>
+      <figure class="ph ph-c" data-rv="scale"><img src="../img/gulshan-terrace/table-s.jpg" srcset="../img/gulshan-terrace/table-s.jpg 900w, ../img/gulshan-terrace/table.jpg 1800w" sizes="(max-width:900px) 50vw, 40vw" alt="Sample photo: a table setting with glassware and white and peach flowers" loading="lazy"><span class="tag">Sample photo</span></figure>
+      <p class="gal-cap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M21 16l-5-5-8 8"/></svg>Owner adds: real photos of Gulshan Terrace, set up for different events.</p>
+    </div>
+
+    <div class="specs" data-rv="kids">
+      <div class="spec" style="--i:0"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="4"/><circle cx="22" cy="12" r="3"/><path d="M3 26c0-5 4-8 8-8s8 3 8 8M18 26c0-3 2-6 5-6s6 2 6 6"/></svg><h3>Capacity</h3><span class="slot"><b>Owner adds</b>Seated and standing guest numbers</span></div>
+      <div class="spec" style="--i:1"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6" y="3" width="20" height="26" rx="2"/><path d="M11 10h10M11 15h10M11 20h6"/></svg><h3>Packages &amp; menus</h3><span class="slot"><b>Owner adds</b>Packages, what each includes, menus</span></div>
+      <div class="spec" style="--i:2"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 22h24M6 22a10 10 0 0 1 20 0M16 12V9M13 9h6M3 26h26"/></svg><h3>Catering</h3><span class="slot"><b>Owner adds</b>Cuisine, in-house or outside catering, dietary details</span></div>
+      <div class="spec" style="--i:3"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 28V14a11 11 0 0 1 22 0v14"/><path d="M10 28V15a6 6 0 0 1 12 0v13"/><path d="M3 28h26"/></svg><h3>Décor</h3><span class="slot"><b>Owner adds</b>Stage, lighting and décor options</span></div>
+      <div class="spec" style="--i:4"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5" y="4" width="22" height="24" rx="3"/><path d="M12 22V10h5a4 4 0 0 1 0 8h-5"/></svg><h3>Parking</h3><span class="slot"><b>Owner adds</b>Parking or nearby options for guests</span></div>
+      <div class="spec" style="--i:5"><svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M16 9v7l5 3"/></svg><h3>Hours</h3><span class="slot"><b>Owner adds</b>Office hours for visits and calls</span></div>
+    </div>
+    <p class="specs-note" data-rv="up">These details are left blank on purpose. This preview only uses what's public; the hall fills in the rest.</p>
+  </div>
+</section>
+
+<section class="sec em" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="sec-head" data-rv="up">
+      <div>
+        <p class="eyebrow">How booking works</p>
+        <h2 class="h2" id="how-h">From a date to <em>a night out</em></h2>
+        <div class="orn" aria-hidden="true"><i></i><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 0l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="currentColor"/></svg><i></i></div>
+      </div>
+      <p class="lede">No forms to print, no waiting on hold to ask a simple question. Three steps, and the first one takes half a minute.</p>
+    </div>
+    <ol class="how" data-rv="kids">
+      <li style="--i:0"><span class="b" aria-hidden="true"></span><span class="n">One</span><h3>Send your date</h3><p>Choose the event, the date and roughly how many guests. It goes straight to the hall.</p></li>
+      <li style="--i:1"><span class="b" aria-hidden="true"></span><span class="n">Two</span><h3>Hear back</h3><p>Gulshan Terrace replies by phone or email to say whether the date is open.</p></li>
+      <li style="--i:2"><span class="b" aria-hidden="true"></span><span class="n">Three</span><h3>Visit &amp; plan</h3><p>See the hall in person, then settle the menu, décor and timings.</p></li>
+    </ol>
+    <div class="how-cta" data-rv="up">
+      <a class="btn pri" href="#check" data-go-check>Check your date <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn ghost" href="tel:+17184574577">Call (718) 457-4577</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec aub" id="reviews" aria-labelledby="rev-h">
+  <div class="wrap rev">
+    <figure class="ph" data-rv="wipe"><img src="../img/gulshan-terrace/long-table-s.jpg" srcset="../img/gulshan-terrace/long-table-s.jpg 900w, ../img/gulshan-terrace/long-table.jpg 1800w" sizes="(max-width:900px) 100vw, 50vw" alt="Sample photo: a long dinner table with glassware and bright flowers" loading="lazy"><span class="tag">Sample photo</span></figure>
+    <div data-rv="up">
+      <p class="eyebrow">On Google</p>
+      <h2 class="h2" id="rev-h">What guests <em>say</em></h2>
+      <div class="big">
+        <span class="num"><span class="count" data-to="4.2" data-dec="1">4.2</span></span>
+        <span><span class="stars" style="--w:84%"><svg viewBox="0 0 92 16" aria-hidden="true"><use href="#st5"/></svg><span class="fill"><svg viewBox="0 0 92 16" aria-hidden="true"><use href="#st5"/></svg></span></span><small>from <span class="count" data-to="290">290</span> Google reviews</small></span>
+      </div>
+      <p class="lede">Hundreds of people have rated their evening here. Read them in full on Google Maps before you book.</p>
+      <div class="quote-slot">
+        <div><b>Owner adds</b>A favourite real Google review, quoted with the reviewer's first name</div>
+        <div><b>Owner adds</b>A second real review, ideally from a wedding or walima</div>
+      </div>
+      <div class="cta-row">
+        <a class="btn pri" href="#check" data-go-check>Check your date</a>
+        <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Gulshan%20Terrace%2C%2059-15%2037th%20Ave%2C%20Woodside%2C%20NY%2011377" target="_blank" rel="noopener">Read the reviews <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec light" id="visit" aria-labelledby="visit-h">
+  <div class="wrap visit">
+    <div data-rv="up">
+      <p class="eyebrow">Visit</p>
+      <h2 class="h2" id="visit-h">Find us in <em>Woodside</em></h2>
+      <p class="addr">59-15 37th Ave<small>Woodside, NY 11377 · Queens</small></p>
+      <div class="contact">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=59-15%2037th%20Ave%2C%20Woodside%2C%20NY%2011377" target="_blank" rel="noopener"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><small>Directions</small><b>Open in Google Maps</b></span><svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="tel:+17184574577"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Call</small><b>+1 718-457-4577</b></span><svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="mailto:Monsur28@hotmail.com?subject=Event%20enquiry%20for%20Gulshan%20Terrace"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span><small>Email</small><b>Monsur28@hotmail.com</b></span><svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+    <div class="vcard" data-rv="scale">
+      <div class="orn" aria-hidden="true"><i></i><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 0l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="currentColor"/></svg><i></i></div>
+      <p class="street">59-15<em>37th Avenue</em></p>
+      <p class="zip">WOODSIDE · QUEENS · NY 11377</p>
+      <div class="vgrid">
+        <div><span>Hours</span><em class="slot"><b>Owner adds</b>Visiting hours</em></div>
+        <div><span>Parking</span><em class="slot"><b>Owner adds</b>Where guests park</em></div>
+        <div><span>Getting here</span><em class="slot"><b>Owner adds</b>Nearest subway &amp; bus</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="final-h">
+  <img src="../img/gulshan-terrace/bokeh-s.jpg" srcset="../img/gulshan-terrace/bokeh-s.jpg 900w, ../img/gulshan-terrace/bokeh.jpg 1800w" sizes="100vw" alt="" loading="lazy">
+  <span class="tag">Sample photo</span>
+  <div class="wrap" data-rv="up">
+    <p class="eyebrow">Your night</p>
+    <h2 class="h2" id="final-h" style="margin-top:16px">Is your date <em>still open?</em></h2>
+    <p class="lede">Ask in thirty seconds. The hall replies with what's free.</p>
+    <div class="cta-row">
+      <a class="btn pri ring" href="#check" data-go-check>Check your date <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn ghost" href="tel:+17184574577">Call (718) 457-4577</a>
+    </div>
+    <a class="trust" href="https://www.google.com/maps/search/?api=1&amp;query=Gulshan%20Terrace%2C%2059-15%2037th%20Ave%2C%20Woodside%2C%20NY%2011377" target="_blank" rel="noopener" aria-label="Rated 4.2 out of 5 on Google from 290 reviews, opens Google Maps">
+      <span class="score">4.2</span>
+      <span><span class="stars" style="--w:84%"><svg viewBox="0 0 92 16" aria-hidden="true"><use href="#st5"/></svg><span class="fill"><svg viewBox="0 0 92 16" aria-hidden="true"><use href="#st5"/></svg></span></span><small>290 Google reviews</small></span>
+    </a>
+  </div>
+</section>
+</main>
+
+<section class="farman" aria-labelledby="farman-h">
+  <div class="wrap">
+    <div class="fc" data-rv="up">
+      <span class="fb-mark" aria-hidden="true">F</span>
+      <div><h2 id="farman-h">Want this live?</h2><p>I can have it ready in about a week, with your real hall photos, packages and hours in place. Book a 15-min call.</p></div>
+      <div class="fb-act">
+        <a class="fb-btn pri" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="fb-btn" href="mailto:farman.builds@gmail.com?subject=Website%20for%20Gulshan%20Terrace">Email Farman</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-top">
+      <a class="logo" href="#top"><span><b>Gulshan Terrace</b><small>59-15 37th Ave, Woodside, NY 11377</small></span></a>
+      <div class="ftr-links"><a href="tel:+17184574577">+1 718-457-4577</a><a href="mailto:Monsur28@hotmail.com">Monsur28@hotmail.com</a><a href="#check" data-go-check>Check your date</a></div>
+    </div>
+    <p class="credit">Concept preview designed by Farman, an independent web developer, from public information (Google Maps). Not the official website of Gulshan Terrace. All photographs are free-licence Unsplash samples, not photos of Gulshan Terrace. Capacity, packages, menus, catering, décor, parking and hours are placeholders for the owner to fill in.</p>
+  </div>
+</footer>
+
+<nav class="mbar" id="mbar" aria-label="Quick actions">
+  <a class="btn ghost" href="tel:+17184574577">Call</a>
+  <a class="btn pri" href="#check" data-go-check>Check your date</a>
+</nav>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="st5" fill="currentColor"><path id="st1" d="M8 .8l2.1 4.6 5 .5-3.8 3.4 1.1 4.9L8 11.7l-4.4 2.5 1.1-4.9L.9 5.9l5-.5z"/><use href="#st1" x="19"/><use href="#st1" x="38"/><use href="#st1" x="57"/><use href="#st1" x="76"/></g></defs></svg>
+
+<script>
+(function(){
+  var d=document,root=d.documentElement,$=function(id){return d.getElementById(id)};
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  root.classList.add('js');
+
+  /* --- Farman bar --- */
+  var fb=$('fb');
+  try{if(sessionStorage.getItem('gtFbHide')==='1')fb.hidden=true}catch(e){}
+  root.classList.add('fbw');
+  setTimeout(function(){root.classList.add('fb-on')},1200);
+  $('fbX').addEventListener('click',function(){fb.classList.add('off');try{sessionStorage.setItem('gtFbHide','1')}catch(e){}setTimeout(function(){fb.hidden=true},260)});
+
+  /* --- progress + condensed header --- */
+  var prog=$('progress'),hdr=$('hdr'),tick=false;
+  function onScroll(){tick=false;var y=scrollY||root.scrollTop,h=root.scrollHeight-innerHeight;prog.style.transform='scaleX('+(h>0?Math.min(1,y/h):0)+')';hdr.classList.toggle('cond',y>24)}
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+
+  /* --- string lights: bulbs hung along each wire --- */
+  var svgNS='http://www.w3.org/2000/svg',bulbs=$('bulbs');
+  [].forEach.call(d.querySelectorAll('#garland .wire'),function(w,wi){
+    var n=+w.dataset.n,s=+w.dataset.s,L=w.getTotalLength();
+    for(var i=0;i<n;i++){
+      var p=w.getPointAtLength((i+.5)/n*L),o=d.createElementNS(svgNS,'g');
+      o.setAttribute('transform','translate('+p.x.toFixed(1)+' '+p.y.toFixed(1)+') scale('+s+')');
+      var b=d.createElementNS(svgNS,'g');b.setAttribute('class','bulb');
+      b.style.setProperty('--d',(wi?0:.12)+((i*7)%n)/n*.6+'s');
+      b.style.setProperty('--t',(((i*13+wi*5)%11)/11*3).toFixed(2)+'s');
+      b.style.setProperty('--tw',(2.8+((i*5)%7)*.35).toFixed(2)+'s');
+      b.innerHTML='<circle class="halo" cx="0" cy="17" r="17" fill="url(#gHalo)"/><line x1="0" y1="0" x2="0" y2="8" stroke="#3C3420" stroke-width="1.4"/><rect x="-2.6" y="7" width="5.2" height="4" rx="1" fill="#6B5A33"/><ellipse cx="0" cy="16" rx="5" ry="6.2" fill="url(#gBulb)"/>';
+      o.appendChild(b);bulbs.appendChild(o);
+    }
+  });
+
+  /* --- arch drawn around the date card --- */
+  var dc=$('dc'),arch=$('arch'),a1=$('a1'),a2=$('a2'),drawn=false;
+  function layArch(){
+    var w=dc.offsetWidth,h=dc.offsetHeight,ar=parseFloat(getComputedStyle(dc).getPropertyValue('--ar'))||150,o=16;
+    ar=Math.min(ar,h-30);
+    var W=w+2*o,H=h+2*o,cy=ar+o;
+    arch.setAttribute('viewBox','0 0 '+W+' '+H);
+    a1.setAttribute('d','M1 '+(H-1)+' V'+cy+' A'+(W/2-1)+' '+(ar+o-1)+' 0 0 1 '+(W-1)+' '+cy+' V'+(H-1));
+    a2.setAttribute('d','M8 '+(H-8)+' V'+cy+' A'+(W/2-8)+' '+(ar+o-8)+' 0 0 1 '+(W-8)+' '+cy+' V'+(H-8));
+    if(!drawn){drawn=true;var L=a1.getTotalLength();a1.style.strokeDasharray=L;a1.style.strokeDashoffset=L;a1.getBoundingClientRect();
+      a1.style.transition='stroke-dashoffset '+(reduce?'.9s':'1.8s')+' cubic-bezier(.16,1,.3,1) .5s';a1.style.strokeDashoffset=0;
+      a2.style.opacity=0;a2.style.transition='opacity 1s ease 1.4s';requestAnimationFrame(function(){a2.style.opacity=1});
+      setTimeout(function(){a1.style.strokeDasharray='';a1.style.strokeDashoffset='';a1.style.transition=''},2600)}
+  }
+  layArch();
+  if('ResizeObserver' in window)new ResizeObserver(layArch).observe(dc);else addEventListener('resize',layArch);
+  if(d.fonts&&d.fonts.ready)d.fonts.ready.then(layArch);
+
+  /* --- counters --- */
+  function countUp(el){if(el.dataset.done)return;el.dataset.done=1;var to=parseFloat(el.dataset.to),dec=+(el.dataset.dec||0),t0=null,dur=1100;
+    function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=(to*e).toFixed(dec);if(p<1)requestAnimationFrame(step);else el.textContent=to.toFixed(dec)}
+    requestAnimationFrame(step)}
+
+  /* --- reveals: hidden ("armed") only just before entering view; 1.5 s safety reveal --- */
+  var items=[].slice.call(d.querySelectorAll('[data-rv]'));
+  function show(el){el.classList.add('shown');[].forEach.call(el.querySelectorAll('.count'),countUp);setTimeout(function(){el.classList.add('rv-done')},1500)}
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;io.unobserve(el);if(el.classList.contains('armed')){void el.offsetWidth;requestAnimationFrame(function(){show(el)})}else show(el)}})},{rootMargin:'0px 0px -6% 0px',threshold:.08});
+    var arm=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;arm.unobserve(el);if(el.getBoundingClientRect().top>innerHeight*.94)el.classList.add('armed');io.observe(el)}})},{rootMargin:'0px 0px 35% 0px'});
+    items.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight*.94&&r.bottom>0){el.classList.add('armed');io.observe(el)}else arm.observe(el)});
+    setTimeout(function(){items.forEach(function(el){if(el.classList.contains('armed')&&!el.classList.contains('shown')&&el.getBoundingClientRect().top<innerHeight)show(el)})},1500);
+    var hc=[].slice.call(d.querySelectorAll('.hero .count'));
+    hc.forEach(function(el){el.textContent=(0).toFixed(+(el.dataset.dec||0))});
+    setTimeout(function(){hc.forEach(countUp)},450);
+  }else{items.forEach(function(el){el.classList.add('shown')})}
+
+  /* --- date-check card --- */
+  var form=$('dcForm'),ev=$('ev'),dt=$('dt'),gs=$('gs'),plate=$('plate'),nm=$('nm'),ct=$('ct'),ms=$('ms');
+  var now=new Date(),pad=function(n){return(n<10?'0':'')+n};
+  dt.min=now.getFullYear()+'-'+pad(now.getMonth()+1)+'-'+pad(now.getDate());
+  function dateObj(){if(!dt.value)return null;var p=dt.value.split('-');return new Date(+p[0],+p[1]-1,+p[2])}
+  function guests(){var g=parseInt(gs.value,10);return isNaN(g)?0:g}
+  function evName(){return ev.value||'Event'}
+  function longDate(o){return o.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'})}
+  function shortDate(o){return o.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'})}
+  var lastKey='';
+  function renderPlate(){
+    var o=dateObj(),g=guests(),key=dt.value+'|'+ev.value+'|'+g;
+    if(key===lastKey)return;var dateChanged=lastKey.split('|')[0]!==dt.value;lastKey=key;
+    plate.classList.toggle('empty',!o);
+    $('pWd').textContent=o?o.toLocaleDateString('en-US',{weekday:'long'}):(ev.value?ev.value:'Your date');
+    $('pMd').textContent=o?o.toLocaleDateString('en-US',{month:'long',day:'numeric'}):'Pick a day below';
+    $('pYr').textContent=(o?o.getFullYear()+' · ':'')+(ev.value||'Event')+' · '+(g?'about '+g+' guests':'guests');
+    if(dateChanged&&o){plate.classList.remove('flip');void plate.offsetWidth;plate.classList.add('flip')}
+  }
+  ev.addEventListener('change',renderPlate);dt.addEventListener('input',function(){renderPlate();if(dt.value)$('f-date').classList.remove('bad')});dt.addEventListener('change',renderPlate);
+  gs.addEventListener('input',renderPlate);
+  function bump(n){var g=guests()+n;g=Math.max(10,Math.min(2000,Math.round(g/10)*10));gs.value=g;renderPlate()}
+  $('gMinus').addEventListener('click',function(){bump(-10)});$('gPlus').addEventListener('click',function(){bump(10)});
+  renderPlate();
+  function shake(id,focusEl){var w=$(id);w.classList.add('bad');w.classList.remove('shake');void w.offsetWidth;w.classList.add('shake');if(focusEl)focusEl.focus()}
+  function toStep2(){
+    if(!dt.value){shake('f-date',dt);return}
+    var o=dateObj();$('sumT').textContent=evName()+' · '+shortDate(o);$('sumS').textContent=guests()?'about '+guests()+' guests':'guest count not set';
+    dc.classList.add('s2on');setTimeout(function(){nm.focus({preventScroll:true})},60);
+  }
+  $('next').addEventListener('click',toStep2);
+  $('edit').addEventListener('click',function(){dc.classList.remove('s2on');dt.focus()});
+  var okName=function(){return nm.value.trim().length>=2},okCt=function(){var v=ct.value.trim();return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)||v.replace(/\D/g,'').length>=10};
+  [[nm,'f-name',okName],[ct,'f-contact',okCt]].forEach(function(p){
+    p[0].addEventListener('blur',function(){if(p[0].value.trim()){var ok=p[2]();$(p[1]).classList.toggle('bad',!ok);$(p[1]).classList.toggle('good',ok)}});
+    p[0].addEventListener('input',function(){if(p[2]()){$(p[1]).classList.remove('bad');$(p[1]).classList.add('good')}else $(p[1]).classList.remove('good')});
+  });
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!dt.value){dc.classList.remove('s2on');shake('f-date',dt);return}
+    if(!okName()){shake('f-name',nm);return}
+    if(!okCt()){shake('f-contact',ct);return}
+    var o=dateObj(),g=guests(),msg=ms.value.trim();
+    var body=['Hello Gulshan Terrace,','','I would like to check if this date is available at the hall.','',
+      'Event: '+(ev.value||'Not specified'),'Date: '+longDate(o),'Guests: '+(g?'about '+g:'Not sure yet'),'',
+      'Name: '+nm.value.trim(),'Phone / email: '+ct.value.trim(),(msg?'\nMessage: '+msg:null),'','Thank you!','(Sent from the website date check)'].filter(function(x){return x!==null}).join('\n');
+    var subj='Date check: '+(ev.value||'Event')+' on '+shortDate(o)+(g?' (about '+g+' guests)':'');
+    var href='mailto:Monsur28@hotmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+    $('donePre').textContent='Subject: '+subj+'\n\n'+body;
+    dc.classList.add('sent');
+    window.__previewMail(href);
+  });
+  $('again').addEventListener('click',function(){dc.classList.remove('sent','s2on');ms.value='';dt.focus()});
+
+  /* --- every "Check your date" jumps to the card; occasion cards pre-fill the event --- */
+  function goCheck(evType){
+    if(evType){ev.value=evType;renderPlate();if(dc.classList.contains('sent'))dc.classList.remove('sent','s2on')}
+    var target=$('check'),y=target.getBoundingClientRect().top+scrollY-(innerWidth<=900?72:96);
+    scrollTo({top:Math.max(0,y),behavior:reduce?'auto':'smooth'});
+    dc.classList.remove('glow');
+    setTimeout(function(){(dc.classList.contains('s2on')?nm:(evType?dt:ev)).focus({preventScroll:true})},reduce?50:650);
+  }
+  [].forEach.call(d.querySelectorAll('[data-go-check]'),function(a){a.addEventListener('click',function(e){e.preventDefault();goCheck()})});
+  [].forEach.call(d.querySelectorAll('[data-ev]'),function(b){b.addEventListener('click',function(){goCheck(b.dataset.ev)})});
+
+  var tuckT;dc.addEventListener('focusin',function(){clearTimeout(tuckT);if(innerWidth>900)root.classList.add('fb-tuck')});
+  dc.addEventListener('focusout',function(){tuckT=setTimeout(function(){if(!dc.contains(d.activeElement))root.classList.remove('fb-tuck')},300)});
+
+  /* --- mobile bar hides while the card is on screen --- */
+  var mbar=$('mbar');
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){mbar.classList.toggle('away',es[0].isIntersecting)},{threshold:.25}).observe(dc)}
+})();
+</script>
+<script src="../preview-guard.js"></script>
+</body>
+</html>
