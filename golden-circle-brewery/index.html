@@ -1,0 +1,1023 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Golden Circle Brewery · Brewpub on Sarjapur Main Rd, Carmelaram, Bengaluru (concept preview)</title>
+<meta name="description" content="Concept homepage for The Golden Circle Brewery, a brewpub on Sarjapur Main Rd, Carmelaram, Bengaluru. Rated 4.5 on Google from 3,848 reviews. Reserve a table direct. Made by Farman as a preview, not the official website.">
+<meta name="theme-color" content="#15110e">
+<script>document.documentElement.classList.add('js','intro');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#15110e;--night-2:#1e1814;--night-3:#2a221c;--dusk:#2a1820;--plum:#43202b;
+  --ember:#e2602a;--amber:#f4a21c;--gold:#ffc84a;--sun:#ffdb7c;
+  --cream:#fff4e0;--cream-2:#f7e7c9;--paper:#fbf0dc;
+  --ink:#1b1511;--ink-2:#4a3a2e;--ink-3:#6b5444;
+  --on-dark:#fff4e0;--on-dark-2:#d9cab6;--on-dark-3:#b7a693;
+  --line-d:rgba(255,232,190,.14);--line-l:rgba(27,21,17,.14);
+  --display:"Unbounded",system-ui,sans-serif;--body:"Onest",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --e-out:cubic-bezier(.16,1,.3,1);--e-std:cubic-bezier(.2,0,0,1);--e-in:cubic-bezier(.3,0,1,1);--e-back:cubic-bezier(.34,1.56,.64,1);
+  --t1:.15s;--t2:.3s;--t3:.6s;
+  --r:18px;--wrap:1240px;--gut:clamp(16px,4vw,40px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--night);color:var(--on-dark);font:400 17px/1.6 var(--body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.02;letter-spacing:-.025em}
+p{margin:0}
+button{font:inherit;color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--gold);color:var(--ink);padding:12px 16px;border-radius:10px;font-weight:700;text-decoration:none;transition:top var(--t2) var(--e-out)}
+.skip:focus{top:12px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.lt :focus-visible{outline-color:var(--ember)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* progress */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:90;background:linear-gradient(90deg,var(--ember),var(--gold));transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+
+/* ---------- buttons ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;font:700 16px/1 var(--body);letter-spacing:.005em;white-space:nowrap;transition:transform var(--t1) var(--e-std),background var(--t2),color var(--t2),box-shadow var(--t2) var(--e-std),border-color var(--t2)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn .arr{transition:transform var(--t2) var(--e-back)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn.pri{background:linear-gradient(180deg,var(--sun),var(--gold) 55%,var(--amber));color:var(--ink);box-shadow:0 10px 30px -12px rgba(255,180,40,.75),inset 0 -2px 0 rgba(120,60,0,.25)}
+.btn.pri:hover{box-shadow:0 16px 38px -12px rgba(255,180,40,.9),inset 0 -2px 0 rgba(120,60,0,.25)}
+.btn.ghost{background:rgba(255,244,224,.06);color:var(--on-dark);border:1.5px solid rgba(255,232,190,.32)}
+.btn.ghost:hover{border-color:var(--gold);background:rgba(255,200,74,.1)}
+.btn.dark{background:var(--ink);color:var(--cream)}
+.btn.dark:hover{background:#2c231d}
+.btn.line-l{border:1.5px solid rgba(27,21,17,.3);color:var(--ink);background:transparent}
+.btn.line-l:hover{border-color:var(--ink);background:rgba(27,21,17,.05)}
+.btn.sm{min-height:44px;padding:0 18px;font-size:15px}
+.pulse::after{content:"";position:absolute;inset:0;border-radius:inherit;border:2px solid var(--gold);opacity:0;pointer-events:none}
+@media (prefers-reduced-motion:no-preference){.pulse::after{animation:pulse 2.8s var(--e-out) 2.4s infinite}}
+@keyframes pulse{0%{opacity:.85;transform:scale(1)}70%,100%{opacity:0;transform:scale(1.08,1.35)}}
+.tlink{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;text-decoration:none;color:var(--on-dark-2);border-bottom:1.5px solid transparent;transition:color var(--t2),border-color var(--t2)}
+.tlink:hover{color:var(--gold);border-color:var(--gold)}
+
+/* ---------- Farman bar ---------- */
+.fb{font-family:var(--body);color:#ece6dc;z-index:80;transition:opacity .55s var(--e-out),transform .55s var(--e-out)}
+.fb-in{position:relative;background:#141416;display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;align-items:start;border:1px solid rgba(255,255,255,.08)}
+.fb-mark{grid-row:span 2;width:34px;height:34px;border-radius:9px;background:#fff;color:#141416;display:grid;place-items:center;font:800 15px/1 var(--display)}
+.fb p{font-size:14px;line-height:1.45;color:#c9c6c0;padding-right:36px}
+.fb p b{color:#fff}
+.fb-act{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.fb-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 14px;border-radius:10px;font:600 15px/1 var(--body);text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.24);transition:transform var(--t1) var(--e-std),background var(--t2),border-color var(--t2)}
+.fb-btn:hover{border-color:#fff;transform:translateY(-2px)}
+.fb-btn:active{transform:scale(.97)}
+.fb-btn.pri{background:#fff;color:#141416;border-color:#fff;font-weight:700}
+.fb-btn.pri:hover{background:#f1ede6}
+.fb-btn .arr{transition:transform var(--t2) var(--e-back)}
+.fb-btn:hover .arr{transform:translateX(3px)}
+.fb-x{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;background:none;color:#a9a6a0;border-radius:10px;cursor:pointer;display:grid;place-items:center;transition:color var(--t1),background var(--t1)}
+.fb-x:hover{color:#fff;background:rgba(255,255,255,.08)}
+.fbw .fb{opacity:0;transform:translateY(-10px);pointer-events:none}
+.fbw.fb-on .fb{opacity:1;transform:none;pointer-events:auto}
+.fbw.fb-on .fb.off{opacity:0;transform:translateY(-10px);pointer-events:none;transition-duration:.24s;transition-timing-function:var(--e-in)}
+@media (min-width:861px){
+  .fb{position:fixed;right:16px;bottom:16px;width:520px}
+  .fb-in{border-radius:14px;padding:14px 16px;box-shadow:0 24px 60px -18px rgba(0,0,0,.7)}
+  .fbw .fb,.fbw.fb-on .fb.off{transform:translateY(12px)}
+}
+@media (max-width:860px){.fb{position:relative}.fb-in{padding:12px 16px}.fb-act{grid-column:1 / -1}.fb-btn{flex:1 1 auto}}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:60;border-bottom:1px solid transparent;transition:background var(--t2),border-color var(--t2),box-shadow var(--t2)}
+.hdr.cond{background:rgba(21,17,14,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:var(--line-d);box-shadow:0 14px 34px -26px #000}
+.hdr-in{display:flex;align-items:center;gap:18px;height:76px}
+.logo{transform-origin:0 50%;transition:transform var(--t2) var(--e-std)}
+.hdr.cond .logo{transform:scale(.94)}
+.logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none;min-height:48px;min-width:0}
+.logo svg{flex:none;transition:transform var(--t3) var(--e-out)}
+.logo:hover svg{transform:rotate(-30deg)}
+.logo b{display:block;font:700 15px/1.05 var(--display);letter-spacing:-.01em;white-space:nowrap}
+.logo small{display:block;margin-top:5px;font:500 10px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.nav{display:flex;gap:2px;margin-left:auto}
+.nav a{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 12px;text-decoration:none;font-weight:600;font-size:15px;color:var(--on-dark-2);transition:color var(--t2)}
+.nav a::after{content:"";position:absolute;left:50%;bottom:8px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--gold);transform:scale(0);transition:transform var(--t2) var(--e-back)}
+.nav a:hover{color:var(--cream)}
+.nav a:hover::after{transform:scale(1)}
+.hdr-cta{display:flex;align-items:center;gap:10px}
+.icon-btn{display:none;width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,232,190,.3);place-items:center;text-decoration:none;transition:border-color var(--t2),transform var(--t1)}
+.icon-btn:hover{border-color:var(--gold)}
+.icon-btn:active{transform:scale(.95)}
+@media (max-width:1080px){.nav{display:none}.hdr-cta{margin-left:auto}}
+@media (min-width:761px) and (max-width:1080px){.icon-btn{display:grid}}
+@media (max-width:620px){.hdr-cta .btn{padding:0 16px}.logo small{display:none}.logo b{font-size:13px}.hdr-in{gap:10px}}
+@media (max-width:370px){.logo b{font-size:12px}.hdr-cta .btn{font-size:14px;padding:0 13px}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;overflow:clip;isolation:isolate;margin-top:-76px;padding:calc(76px + clamp(28px,5vw,64px)) 0 0;
+  background:radial-gradient(70% 70% at 76% 64%,rgba(255,170,50,.42),rgba(226,96,42,.22) 38%,rgba(67,32,43,0) 70%),
+             linear-gradient(180deg,#140f10 0%,#24151b 40%,#3b1d24 72%,#5a2a22 100%)}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:70vw;height:70vw;border-radius:50%;background:radial-gradient(circle,rgba(255,200,74,.18),transparent 62%);z-index:-1;pointer-events:none}
+@media (prefers-reduced-motion:no-preference){.hero::before{animation:drift 16s ease-in-out infinite alternate}}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(-6vw,8vw) scale(1.12)}}
+.grain{position:absolute;inset:0;z-index:-1;opacity:.16;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;min-height:min(760px,calc(100vh - 76px))}
+.hero-copy{padding-bottom:clamp(40px,5vw,80px)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:600 12px/1.3 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.eyebrow::before{content:"";flex:none;width:12px;height:12px;border-radius:50%;border:2px solid currentColor;box-shadow:inset 0 0 0 2px transparent,inset 0 0 0 6px currentColor}
+.lt .eyebrow,.lt .sec-head .eyebrow{color:#a8441b}
+.sec-head .eyebrow{color:var(--gold)}
+.hero h1{margin:22px 0 0;font-size:clamp(42px,4.7vw,70px);font-weight:800;line-height:.94;letter-spacing:-.04em}
+.hero h1 .ln{display:block}
+.hero h1 .g{background:linear-gradient(180deg,var(--sun),var(--gold) 45%,var(--ember));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .o{font-weight:300;letter-spacing:-.03em}
+.hero-sub{margin-top:24px;max-width:31em;font-size:clamp(17px,1.5vw,19px);color:var(--on-dark-2)}
+.hero-sub b{color:var(--cream);font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;margin-top:30px}
+.proof{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:26px}
+.badge{display:inline-flex;align-items:center;gap:12px;padding:10px 16px 10px 12px;border-radius:999px;background:rgba(255,244,224,.07);border:1px solid var(--line-d);text-decoration:none}
+.stars{display:inline-flex;gap:2px;color:var(--gold)}
+.badge b{font:700 18px/1 var(--display);color:var(--cream)}
+.badge span{font-size:14px;color:var(--on-dark-2)}
+.proof .direct{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--on-dark-2)}
+.proof .direct svg{color:var(--gold)}
+
+/* the sun stage */
+.stage{position:relative;justify-self:center;width:min(540px,100%,68vh);aspect-ratio:1/1.08}
+.sun-clip{position:absolute;left:0;right:0;top:0;bottom:12%;overflow:hidden;border-radius:0 0 4px 4px}
+.sun{position:absolute;left:9%;right:9%;top:8%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 38%,var(--sun),var(--gold) 46%,var(--amber) 72%,var(--ember))}
+.stage::before{content:"";position:absolute;left:-6%;right:-6%;top:-4%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,180,50,.38) 30%,rgba(255,140,40,.12) 52%,transparent 68%);pointer-events:none}
+.sun-photo{position:absolute;inset:7%;border-radius:50%;overflow:hidden;background:#3a2414}
+.sun-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.sun-photo::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18),inset 0 -40px 80px rgba(110,40,10,.35)}
+.bubbles{position:absolute;inset:0;pointer-events:none}
+.bubbles i{position:absolute;bottom:18%;left:var(--x);width:var(--s);height:var(--s);border-radius:50%;border:1px solid rgba(255,250,235,.75);background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.9),rgba(255,255,255,.12) 60%);opacity:0}
+@media (prefers-reduced-motion:no-preference){.bubbles i{animation:bub var(--d) cubic-bezier(.4,0,.6,1) var(--w) infinite}}
+@keyframes bub{0%{opacity:0;transform:translate(0,0)}15%{opacity:.9}55%{transform:translate(6px,-140px)}90%{opacity:.6}100%{opacity:0;transform:translate(-4px,-260px)}}
+.horizon{position:absolute;left:-12%;right:-12%;bottom:12%;height:2px;background:linear-gradient(90deg,transparent,rgba(255,210,120,.9) 30%,rgba(255,230,170,1) 50%,rgba(255,210,120,.9) 70%,transparent)}
+.reflect{position:absolute;left:18%;right:18%;bottom:0;height:12%;display:grid;gap:6px;align-content:start;padding-top:10px}
+.reflect span{height:3px;border-radius:3px;background:linear-gradient(90deg,transparent,rgba(255,200,74,.65),transparent);margin:0 auto}
+.rings{position:absolute;left:0;right:0;top:0;aspect-ratio:1;pointer-events:none;overflow:visible}
+.rings .r1{fill:none;stroke:var(--gold);stroke-width:1.6}
+.rings .r2{fill:none;stroke:rgba(255,200,74,.45);stroke-width:1;stroke-dasharray:2 9}
+.rings text{font:600 13.5px var(--display);letter-spacing:.32em;fill:var(--sun);text-transform:uppercase}
+.orbit{transform-origin:300px 300px}
+@media (prefers-reduced-motion:no-preference){.orbit{animation:spin 60s linear infinite}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stage .tag{left:auto;right:9%;top:auto;bottom:16%}
+
+/* hero intro choreography (only with JS: html.intro set in head) */
+.intro .hero [data-in]{animation:fadeUp .8s var(--e-out) both;animation-delay:calc(var(--i,0) * 80ms + 120ms)}
+.intro .hero .stage::before{animation:fade 1.6s ease .3s both}
+.intro .hero .sun{animation:sunrise 1.5s var(--e-out) .15s both}
+.intro .hero .rings .r1{stroke-dasharray:1860;animation:draw 1.8s var(--e-out) 1s both}
+.intro .hero .rings .orbit-wrap{animation:fade 1s ease .9s both}
+.intro .hero .horizon{animation:grow 1.2s var(--e-out) .1s both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes sunrise{from{transform:translateY(62%);filter:saturate(1.4) brightness(.85)}to{transform:none;filter:none}}
+@keyframes draw{from{stroke-dashoffset:1860}to{stroke-dashoffset:0}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (prefers-reduced-motion:reduce){
+  .intro .hero [data-in]{animation-name:fadeUpS}
+  .intro .hero .sun{animation:fadeScale 1s var(--e-out) .1s both}
+}
+@keyframes fadeUpS{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes fadeScale{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+
+@media (max-width:900px){
+  .hero{padding-top:calc(76px + 24px)}
+  .hero-grid{grid-template-columns:1fr;gap:8px}
+  .hero-copy{padding-bottom:0}
+  .stage{width:min(440px,92%)}
+}
+@media (max-width:620px){
+  .hero{margin-top:-76px}
+  .hero h1{font-size:clamp(40px,12.4vw,60px);margin-top:16px}
+  .hero-sub{margin-top:16px;font-size:16.5px}
+  .hero-cta{margin-top:22px}
+  .hero-cta .btn.pri{flex:1 1 100%}
+  .hero-cta .btn.ghost{flex:1 1 auto}
+  .proof{margin-top:18px}
+}
+
+/* ---------- ticker ---------- */
+.ticker{background:linear-gradient(90deg,var(--amber),var(--gold) 50%,var(--amber));color:var(--ink);overflow:hidden;border-block:1px solid rgba(0,0,0,.2)}
+.tk-track{display:flex;width:max-content}
+.tk-set{display:flex;align-items:center;flex:none}
+.tk-set span{display:inline-flex;align-items:center;gap:22px;padding:16px 22px 16px 0;font:700 15px/1 var(--display);letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.tk-set span::after{content:"";width:14px;height:14px;border-radius:50%;border:2.5px solid var(--ink)}
+@media (prefers-reduced-motion:no-preference){.tk-track{animation:tick 38s linear infinite}.ticker:hover .tk-track{animation-play-state:paused}}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.tk-track{width:auto;justify-content:center}.tk-set{flex-wrap:wrap;justify-content:center;padding:0 16px}.tk-set[aria-hidden]{display:none}}
+
+/* ---------- sections ---------- */
+section{position:relative}
+.sec{padding:clamp(72px,9vw,128px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:20px 48px;align-items:end;margin-bottom:clamp(36px,5vw,60px)}
+.sec-head h2{margin-top:16px;font-size:clamp(34px,5.2vw,68px);font-weight:800}
+.sec-head p{color:var(--on-dark-2);max-width:34em}
+.lt{background:var(--paper);color:var(--ink)}
+.lt .sec-head p{color:var(--ink-2)}
+@media (max-width:820px){.sec-head{grid-template-columns:1fr}}
+.tag{position:absolute;left:12px;top:12px;z-index:2;display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:rgba(21,17,14,.78);color:#fff4e0;font:600 10.5px/1.2 var(--display);letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);pointer-events:none}
+.tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.own{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:999px;border:1px dashed currentColor;font:600 10px/1.2 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+.lt .own{color:#9a3f17}
+.blank{color:var(--on-dark-3);font-style:italic;border-bottom:1.5px dashed rgba(255,200,74,.5);padding-bottom:1px}
+.lt .blank{color:var(--ink-3);border-color:rgba(154,63,23,.45)}
+.ph{position:relative;overflow:hidden;border-radius:var(--r);background:var(--night-3)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--e-out)}
+.ph:hover img{transform:scale(1.045)}
+
+/* reveal system (armed only by JS once IO is confirmed) */
+.rv-on [data-rv].armed:not(.in){opacity:0}
+.rv-on [data-rv].armed:not(.in)[data-rv="up"],.rv-on [data-rv].armed:not(.in) .rv-c{transform:translateY(28px)}
+.rv-on [data-rv].armed:not(.in)[data-rv="scale"]{transform:scale(.94)}
+.rv-on [data-rv].armed:not(.in)[data-rv="wipe"]{clip-path:inset(0 100% 0 0);opacity:1}
+.rv-on [data-rv].armed:not(.in) .rv-c{opacity:0}
+.rv-on [data-rv].armed{transition:opacity .7s var(--e-out),transform .8s var(--e-out),clip-path 1s var(--e-out)}
+.rv-on [data-rv].armed .rv-c{transition:opacity .6s var(--e-out),transform .7s var(--e-out);transition-delay:calc(var(--k,0) * 70ms + 80ms)}
+.rv-on [data-rv].rv-done,.rv-on [data-rv].rv-done .rv-c{transition:none}
+@media (prefers-reduced-motion:reduce){
+  .rv-on [data-rv].armed:not(.in)[data-rv="up"],.rv-on [data-rv].armed:not(.in) .rv-c{transform:translateY(10px)}
+  .rv-on [data-rv].armed:not(.in)[data-rv="scale"]{transform:scale(.985)}
+  .rv-on [data-rv].armed:not(.in)[data-rv="wipe"]{clip-path:none;opacity:0}
+}
+
+/* ---------- on tap ---------- */
+.taps{background:radial-gradient(60% 50% at 100% 0%,rgba(244,162,28,.12),transparent 70%),var(--night)}
+.taps-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,2fr);gap:clamp(20px,3vw,36px);align-items:stretch}
+.taps-photo{min-height:100%}
+.taps-photo img{position:absolute;inset:0}
+.taps-photo .cap{position:absolute;left:0;right:0;bottom:0;padding:60px 20px 20px;background:linear-gradient(transparent,rgba(21,17,14,.92));font-size:15px;color:var(--on-dark-2)}
+.taps-photo .cap b{display:block;font:700 22px/1.15 var(--display);color:var(--cream);margin-bottom:6px;letter-spacing:-.02em}
+.tap-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.tap{position:relative;display:grid;grid-template-columns:52px minmax(0,1fr);gap:14px;padding:18px;border-radius:var(--r);background:linear-gradient(180deg,var(--night-2),#1a1511);border:1px solid var(--line-d);transition:transform var(--t2) var(--e-std),border-color var(--t2),box-shadow var(--t2)}
+.tap:hover{transform:translateY(-4px);border-color:rgba(255,200,74,.45);box-shadow:0 22px 40px -24px rgba(255,160,30,.5)}
+.tap .no{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;font:600 11px/1 var(--display);letter-spacing:.16em;color:var(--on-dark-3)}
+.pint{width:52px;height:72px;overflow:visible}
+.pint .glass{fill:rgba(255,255,255,.05);stroke:rgba(255,244,224,.55);stroke-width:1.5}
+.pint .beer{transform-box:fill-box;transform-origin:50% 100%;transition:transform .9s var(--e-out)}
+.pint .foam{transition:transform .9s var(--e-out)}
+.rv-on .tap-cards.armed:not(.in) .beer{transform:scaleY(.08)}
+.rv-on .tap-cards.armed:not(.in) .foam{transform:translateY(46px)}
+.tap:hover .beer{transform:scaleY(1.04)}
+.tap dl{margin:0;display:grid;gap:6px;font-size:14.5px}
+.tap dt{font:600 10px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--on-dark-3)}
+.tap dd{margin:0 0 4px;color:var(--cream)}
+.tap .name{font:700 17px/1.2 var(--display);letter-spacing:-.01em}
+.taps-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:22px;padding:18px 20px;border-radius:var(--r);border:1px dashed rgba(255,200,74,.35);color:var(--on-dark-2);font-size:15px}
+@media (max-width:1080px){.tap-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){.taps-grid{grid-template-columns:1fr}.taps-photo{min-height:300px}}
+@media (max-width:520px){.tap .no{flex-direction:column;align-items:flex-start;gap:8px}.tap-cards{grid-template-columns:1fr 1fr;gap:10px}.tap{grid-template-columns:1fr;padding:14px}.pint{width:40px;height:56px}.tap .name{font-size:15px}}
+
+/* ---------- food ---------- */
+.food-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,4vw,56px);align-items:center}
+.food-photo{aspect-ratio:4/4.3;border-radius:50% 50% var(--r) var(--r)/36% 36% var(--r) var(--r)}
+.menu{background:#fffaf0;border:1px solid var(--line-l);border-radius:24px;padding:clamp(20px,3vw,32px);box-shadow:0 30px 60px -40px rgba(80,40,10,.45)}
+.mtabs{position:relative;display:flex;gap:4px;padding:5px;border-radius:999px;background:var(--cream-2);margin-bottom:20px;overflow-x:auto;scrollbar-width:none}
+.mtabs::-webkit-scrollbar{display:none}
+.mtab{position:relative;z-index:1;flex:1 0 auto;min-height:44px;padding:0 16px;border:0;border-radius:999px;background:none;cursor:pointer;font:600 14px/1 var(--body);color:var(--ink-2);transition:color var(--t2)}
+.mtab[aria-selected="true"]{color:var(--cream)}
+.mthumb{position:absolute;z-index:0;left:0;top:5px;bottom:5px;width:100px;border-radius:999px;background:var(--ink);transform-origin:0 50%;transition:transform .45s var(--e-out)}
+.mpanel{display:none}
+.mpanel.on{display:block;animation:fadeUpS .45s var(--e-out)}
+.no-js-menu .mpanel{display:block;margin-bottom:18px}
+.mrow{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:baseline;padding:14px 0;border-bottom:1px dashed var(--line-l)}
+.mrow:last-child{border-bottom:0}
+.vg{width:14px;height:14px;border:1.5px solid #2f7d32;display:grid;place-items:center;align-self:center}
+.vg::after{content:"";width:6px;height:6px;border-radius:50%;background:#2f7d32}
+.vg.nv{border-color:#a33a1a}.vg.nv::after{background:#a33a1a}
+.mrow .d b{display:block;font-weight:600}
+.mrow .d small{display:block;font-size:14px;color:var(--ink-3)}
+.mrow .p{font:700 15px/1 var(--display);color:var(--ink-2)}
+.menu-note{display:flex;gap:10px;align-items:center;margin-top:18px;font-size:14px;color:var(--ink-3)}
+.food-photo .tag{top:auto;bottom:14px;left:14px}
+@media (max-width:860px){.food-grid{grid-template-columns:1fr}.food-photo{aspect-ratio:4/3.2}}
+
+/* ---------- nights ---------- */
+.nights{background:radial-gradient(70% 60% at 0% 100%,rgba(226,96,42,.28),transparent 70%),linear-gradient(180deg,var(--dusk),#1b1216)}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+.day{position:relative;min-height:96px;border-radius:999px 999px var(--r) var(--r);border:1.5px solid var(--line-d);background:rgba(255,244,224,.04);cursor:pointer;display:grid;place-items:center;align-content:center;gap:8px;padding:14px 4px;transition:transform var(--t1) var(--e-std),background var(--t2),border-color var(--t2),color var(--t2)}
+.day:hover{border-color:rgba(255,200,74,.6);transform:translateY(-3px)}
+.day:active{transform:scale(.97)}
+.day b{font:700 15px/1 var(--display);letter-spacing:.04em;text-transform:uppercase}
+.day small{font-size:12px;color:var(--on-dark-3)}
+.day .dot{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--gold);transition:transform var(--t2) var(--e-back),background var(--t2)}
+.day[aria-pressed="true"]{background:linear-gradient(180deg,var(--sun),var(--gold) 60%,var(--amber));color:var(--ink);border-color:transparent}
+.day[aria-pressed="true"] small{color:var(--ink-2)}
+.day[aria-pressed="true"] .dot{background:var(--ink);border-color:var(--ink);transform:scale(1.3)}
+.night-panel{margin-top:18px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(18px,3vw,40px);align-items:center;padding:clamp(20px,3vw,32px);border-radius:24px;background:rgba(21,17,14,.55);border:1px solid var(--line-d)}
+.night-panel h3{font-size:clamp(24px,3vw,36px);font-weight:700}
+.night-panel h3 span{color:var(--gold)}
+.nslots{display:grid;gap:10px;margin-top:18px}
+.nslot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:14px;border:1px dashed rgba(255,200,74,.35);font-size:15px;color:var(--on-dark-2)}
+.nslot .k{font:600 11px/1.2 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-3);min-width:6.5em}
+.nslot .v{flex:1}
+.night-photo{aspect-ratio:16/11}
+.np-anim{animation:fadeUpS .45s var(--e-out)}
+.night-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+@media (max-width:860px){.night-panel{grid-template-columns:1fr}.night-photo{order:-1}}
+@media (max-width:620px){.days{grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}.day{min-height:78px;padding:10px 0;border-radius:999px 999px 12px 12px}.day b{font-size:11px;letter-spacing:0}.day small{font-size:10.5px}.nslot{flex-wrap:wrap}.nslot .k{min-width:0;width:100%}}
+
+/* ---------- parties ---------- */
+.party{background:var(--night);overflow:hidden;overflow:clip}
+.party-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.party-photo{aspect-ratio:5/4}
+.party-photo .ring-deco{position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;border:2px solid var(--gold);opacity:.8;pointer-events:none}
+.party h2{font-size:clamp(32px,4.6vw,60px);font-weight:800;margin-top:16px}
+.party .lead{margin-top:18px;color:var(--on-dark-2);max-width:32em}
+.ptypes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:26px}
+.ptype{display:flex;align-items:center;gap:12px;min-height:60px;padding:12px 16px;border-radius:16px;background:var(--night-2);border:1px solid var(--line-d);cursor:pointer;text-align:left;font-weight:600;transition:transform var(--t1) var(--e-std),border-color var(--t2),background var(--t2)}
+.ptype:hover{border-color:var(--gold);transform:translateY(-2px);background:#251e19}
+.ptype:active{transform:scale(.97)}
+.ptype svg{flex:none;color:var(--gold)}
+.party .ask{margin-top:22px;font-size:15px;color:var(--on-dark-3)}
+@media (max-width:860px){.party-grid{grid-template-columns:1fr}.party-photo .ring-deco{display:none}}
+@media (max-width:400px){.ptypes{grid-template-columns:1fr}}
+
+/* ---------- reserve ---------- */
+.reserve{background:radial-gradient(80% 70% at 85% 0%,rgba(255,219,124,.55),transparent 60%),linear-gradient(160deg,#f6b84a 0%,#ef8f2c 45%,#d4562a 100%);color:var(--ink);overflow:hidden;overflow:clip}
+.reserve .big-ring{position:absolute;width:780px;height:780px;border-radius:50%;border:2px solid rgba(27,21,17,.18);left:-260px;top:-200px;pointer-events:none}
+.reserve .big-ring.b{width:520px;height:520px;left:auto;right:-180px;top:auto;bottom:-220px;border-color:rgba(255,244,224,.35)}
+.res-grid{position:relative;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:start}
+.res-copy h2{font-size:clamp(36px,5.4vw,72px);font-weight:800;margin-top:16px}
+.res-copy .eyebrow{color:#5b1d08}
+.res-copy p{margin-top:18px;font-size:18px;color:#3a2516;max-width:28em}
+.res-trust{display:grid;gap:12px;margin-top:28px}
+.res-trust li{display:flex;align-items:center;gap:12px;font-weight:600;color:#2a1a10}
+.res-trust li span.i{flex:none;width:40px;height:40px;border-radius:50%;background:rgba(27,21,17,.88);color:var(--gold);display:grid;place-items:center}
+.res-trust{list-style:none;padding:0;margin-bottom:0}
+.res-call{margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;font-size:15px;color:#3a2516}
+.res-call a{display:inline-flex;align-items:flex-end;min-height:44px;font:700 18px/1 var(--display);color:var(--ink);text-decoration:none;border-bottom:2px solid rgba(27,21,17,.35);padding:0 0 6px;transition:border-color var(--t2)}
+.res-call a:hover{border-color:var(--ink)}
+.fcard{position:relative;background:var(--night);color:var(--on-dark);border-radius:28px;padding:clamp(20px,3vw,34px);box-shadow:0 40px 80px -40px rgba(60,15,0,.8)}
+.seg{position:relative;display:grid;grid-template-columns:1fr 1fr;padding:5px;border-radius:999px;background:var(--night-3);margin-bottom:22px}
+.seg button{position:relative;z-index:1;min-height:46px;border:0;background:none;border-radius:999px;cursor:pointer;font:600 14.5px/1.15 var(--body);color:var(--on-dark-2);padding:0 10px;transition:color var(--t2)}
+.seg button[aria-pressed="true"]{color:var(--ink)}
+.seg .thumb{position:absolute;z-index:0;top:5px;bottom:5px;left:5px;width:calc(50% - 5px);border-radius:999px;background:linear-gradient(180deg,var(--sun),var(--gold));transition:transform .45s var(--e-out)}
+.seg.party-on .thumb{transform:translateX(100%)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{position:relative;margin-bottom:14px}
+.fld label,.fld .lbl{display:block;margin-bottom:7px;font:600 11px/1.2 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-3)}
+.fld label i{font-style:normal;text-transform:none;letter-spacing:0;font-family:var(--body);font-weight:500;color:var(--on-dark-3)}
+.inp{width:100%;min-height:52px;padding:12px 14px;border-radius:14px;border:1.5px solid rgba(255,232,190,.18);background:var(--night-2);color:var(--cream);font:500 16px/1.3 var(--body);transition:border-color var(--t2),box-shadow var(--t2),background var(--t2);color-scheme:dark}
+.inp::placeholder{color:#8e7f70}
+.inp:hover{border-color:rgba(255,232,190,.32)}
+.inp:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(255,200,74,.18);background:#221b16}
+textarea.inp{min-height:88px;resize:vertical}
+.fld .hint{display:block;margin-top:6px;font-size:13px;color:var(--on-dark-3)}
+.fld .err{display:none;margin-top:6px;font-size:13.5px;color:#ff9b7a;font-weight:500}
+.fld.bad .inp{border-color:#ff8a65}
+.fld.bad .err{display:block}
+.fld.good .inp{border-color:rgba(140,210,120,.55)}
+.fld .ok{position:absolute;right:12px;top:40px;width:22px;height:22px;border-radius:50%;background:#5aa04a;color:#fff;display:grid;place-items:center;transform:scale(0);transition:transform var(--t2) var(--e-back)}
+.fld.good .ok{transform:scale(1)}
+.stepper{display:flex;align-items:center;gap:6px;min-height:52px;padding:4px;border-radius:14px;border:1.5px solid rgba(255,232,190,.18);background:var(--night-2)}
+.stepper button{width:44px;height:44px;border-radius:10px;border:0;background:var(--night-3);cursor:pointer;display:grid;place-items:center;transition:background var(--t2),transform var(--t1)}
+.stepper button:hover{background:#3a2f27}
+.stepper button:active{transform:scale(.92)}
+.stepper output{flex:1;text-align:center;font:700 20px/1 var(--display);color:var(--cream)}
+.stepper output.bump{animation:bump .3s var(--e-back)}
+@keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.18)}100%{transform:scale(1)}}
+.nudge{display:none;margin-top:8px;padding:10px 12px;border-radius:12px;background:rgba(255,200,74,.1);font-size:13.5px;color:var(--sun)}
+.nudge button{border:0;background:none;color:var(--gold);font-weight:700;text-decoration:underline;cursor:pointer;padding:0;min-height:0}
+.nudge.on{display:block;animation:fadeUpS .3s var(--e-out)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:0 15px;border-radius:999px;border:1.5px solid rgba(255,232,190,.22);background:transparent;cursor:pointer;font:500 14.5px/1 var(--body);color:var(--on-dark-2);transition:background var(--t2),color var(--t2),border-color var(--t2),transform var(--t1)}
+.chip:hover{border-color:var(--gold);color:var(--cream)}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:600}
+.chip.pop{animation:pop .35s var(--e-back)}
+@keyframes pop{0%{transform:scale(1)}35%{transform:scale(.92)}100%{transform:scale(1)}}
+.party-only{display:none}
+.fcard.party .party-only{display:block;animation:fadeUpS .35s var(--e-out)}
+.fsub{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:8px}
+.fsub .btn{flex:1 1 auto}
+.ftrust{display:flex;align-items:center;gap:8px;margin-top:14px;font-size:13.5px;color:var(--on-dark-3)}
+.ftrust b{color:var(--cream)}
+.shake{animation:shake .38s ease-in-out}
+@keyframes shake{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+@media (prefers-reduced-motion:reduce){@keyframes shake{20%,60%{transform:translateX(-4px)}40%,80%{transform:translateX(4px)}}}
+.done{display:none;text-align:center;padding:12px 0 4px}
+.fcard.sent form{display:none}
+.fcard.sent .done{display:block;animation:fadeUpS .5s var(--e-out)}
+.check{width:92px;height:92px;margin:0 auto 18px}
+.check circle{fill:none;stroke:var(--gold);stroke-width:3;stroke-dasharray:252;stroke-dashoffset:252}
+.check path{fill:none;stroke:var(--gold);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:60;stroke-dashoffset:60}
+.fcard.sent .check circle{animation:dash .7s var(--e-out) .1s forwards}
+.fcard.sent .check path{animation:dash .45s var(--e-out) .6s forwards}
+.fcard.sent .check{animation:popc .6s var(--e-back) .5s both}
+@keyframes dash{to{stroke-dashoffset:0}}
+@keyframes popc{0%{transform:scale(.9)}60%{transform:scale(1.08)}100%{transform:scale(1)}}
+.done h3{font-size:clamp(22px,2.6vw,30px);font-weight:700}
+.done p{margin:10px auto 0;max-width:30em;color:var(--on-dark-2)}
+.done pre{margin:18px 0 0;text-align:left;white-space:pre-wrap;max-height:220px;overflow:auto;padding:14px 16px;border-radius:14px;background:var(--night-2);border:1px solid var(--line-d);font:13px/1.55 ui-monospace,Consolas,monospace;color:var(--on-dark-2)}
+.done .acts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
+@media (max-width:900px){.res-grid{grid-template-columns:1fr}}
+@media (max-width:420px){.frow{grid-template-columns:1fr 1fr;gap:10px}.inp{padding:12px 10px;font-size:15.5px}}
+
+/* ---------- know before you go ---------- */
+.know-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.kcard{position:relative;padding:24px;border-radius:var(--r);background:var(--night-2);border:1px solid var(--line-d);transition:transform var(--t2) var(--e-std),border-color var(--t2)}
+.kcard:hover{transform:translateY(-3px);border-color:rgba(255,200,74,.4)}
+.kcard .ic{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:rgba(255,200,74,.12);color:var(--gold);margin-bottom:18px;transition:transform var(--t3) var(--e-back)}
+.kcard:hover .ic{transform:rotate(-12deg) scale(1.06)}
+.kcard h3{font-size:19px;font-weight:700;letter-spacing:-.01em}
+.kcard p{margin-top:10px;font-size:15.5px;color:var(--on-dark-2)}
+.kcard .own{margin-top:16px}
+.kcard.fact{background:linear-gradient(160deg,#2a1d12,#1e1814);border-color:rgba(255,200,74,.35)}
+@media (max-width:980px){.know-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.know-grid{grid-template-columns:1fr;gap:10px}.kcard{display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:16px;padding:18px}.kcard .ic{grid-row:span 3;width:48px;height:48px;margin:0}.kcard p{margin-top:6px}.kcard .own{justify-self:start;margin-top:12px}}
+
+/* ---------- banner ---------- */
+.banner{margin:clamp(40px,6vw,72px) 0 0;aspect-ratio:21/8;border-radius:28px}
+.banner img{object-position:50% 62%}
+.banner figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;flex-wrap:wrap;align-items:flex-end;gap:6px 24px;padding:80px clamp(18px,3vw,36px) clamp(18px,3vw,30px);background:linear-gradient(transparent,rgba(21,17,14,.88))}
+.banner figcaption b{font:800 clamp(24px,3.4vw,44px)/1 var(--display);letter-spacing:-.03em;color:var(--cream)}
+.banner figcaption span{max-width:30em;font-size:15px;color:var(--on-dark-2)}
+@media (max-width:760px){.banner{aspect-ratio:4/3.4}}
+
+/* ---------- visit ---------- */
+.visit-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.visit h2{font-size:clamp(34px,5vw,64px);font-weight:800;margin-top:16px}
+.addr{margin-top:22px;font-size:18px;line-height:1.55;color:var(--ink-2);font-style:normal}
+.addr b{color:var(--ink)}
+.vlist{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:4px}
+.vlist li{display:flex;align-items:center;gap:14px;padding:6px 0;border-bottom:1px solid var(--line-l)}
+.vlist li span{min-width:5.5em;font:600 11px/1.2 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.vlist a{display:inline-flex;align-items:center;min-height:44px;font-weight:600;text-decoration:none;color:var(--ink);word-break:break-all;transition:color var(--t2)}
+.vlist a:hover{color:#a8441b}
+.v-acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.mapart{position:relative;aspect-ratio:1;border-radius:28px;overflow:hidden;background:radial-gradient(circle at 60% 46%,#ffe4a6,#f6c169 40%,#ec9a3e 75%,#d4652b);box-shadow:0 30px 70px -40px rgba(120,50,10,.7)}
+.mapart svg{position:absolute;inset:0;width:100%;height:100%}
+.mapart .road{fill:none;stroke:#1b1511;stroke-width:22;stroke-linecap:round}
+.mapart .road-c{fill:none;stroke:#ffd977;stroke-width:2;stroke-dasharray:10 12}
+.mapart .grid{stroke:rgba(27,21,17,.12);stroke-width:1}
+.mapart .pin-r{fill:none;stroke:#1b1511;stroke-width:2}
+.mapart .pulse-r{fill:none;stroke:#1b1511;stroke-width:2;transform-origin:300px 270px;opacity:0}
+@media (prefers-reduced-motion:no-preference){.mapart .pulse-r{animation:mp 2.6s var(--e-out) infinite}}
+@keyframes mp{0%{opacity:.7;transform:scale(.6)}100%{opacity:0;transform:scale(1.8)}}
+.mapart .lbl{font:700 15px var(--display);fill:#1b1511;letter-spacing:.08em}
+.mapart .lbl-s{font:600 11px var(--display);fill:#ffd977;letter-spacing:.24em}
+.mapart .note{position:absolute;left:14px;bottom:14px;max-width:calc(100% - 28px);padding:6px 12px;border-radius:999px;background:rgba(255,244,224,.88);font-size:12.5px;line-height:1.35;color:#3a2516;font-weight:500}
+@media (max-width:860px){.visit-grid{grid-template-columns:1fr}.mapart{aspect-ratio:4/3}}
+
+/* ---------- final CTA ---------- */
+.final{position:relative;overflow:hidden;overflow:clip;text-align:center;padding:clamp(88px,11vw,150px) 0 calc(24vmin + 90px);background:linear-gradient(180deg,#140f10,#3b1d24 55%,#a34424 85%,#f0a23a)}
+.final .sunset{position:absolute;left:50%;bottom:-48vmin;width:70vmin;height:70vmin;margin-left:-35vmin;border-radius:50%;background:radial-gradient(circle at 50% 40%,var(--sun),var(--gold) 50%,var(--amber));box-shadow:0 0 140px 30px rgba(255,170,40,.45);pointer-events:none}
+.final .wrap{position:relative}
+.final .eyebrow::before{display:none}
+.final h2{font-size:clamp(40px,7vw,96px);font-weight:800;letter-spacing:-.04em}
+.final p{margin:18px auto 0;max-width:30em;font-size:18px;color:var(--on-dark-2)}
+.final .acts{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px}
+.final .btn.ghost{background:rgba(21,17,14,.5)}
+@media (max-width:620px){.final .acts .btn{flex:1 1 100%}}
+
+/* ---------- farman card + footer ---------- */
+.farman{background:#141416;color:#ece6dc;padding:clamp(56px,7vw,88px) 0}
+.fm-card{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px 28px;align-items:center;padding:clamp(22px,3vw,32px);border-radius:22px;border:1px solid rgba(255,255,255,.1);background:#1b1b1e}
+.fm-card .fb-mark{width:52px;height:52px;font-size:22px;border-radius:14px;grid-row:auto}
+.fm-card h2{font:700 clamp(24px,3vw,32px)/1.1 var(--display);letter-spacing:-.02em;color:#fff}
+.fm-card p{margin-top:10px;color:#bdb9b2;font-size:16px;max-width:44em}
+.fm-card p code{font:600 14px ui-monospace,Consolas,monospace;padding:2px 6px;border-radius:6px;background:#2a2a2e;color:#ffb199}
+.fm-card .fb-act{margin:0;flex-wrap:wrap;justify-content:flex-end}
+@media (max-width:900px){.fm-card{grid-template-columns:1fr}.fm-card .fb-act{justify-content:flex-start}}
+.foot{background:#0f0c0a;color:var(--on-dark-3);padding:40px 0 calc(40px + env(safe-area-inset-bottom));font-size:14px}
+.foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px;align-items:flex-start;padding-bottom:22px;border-bottom:1px solid var(--line-d)}
+.foot-top b{font:700 16px/1.2 var(--display);color:var(--cream)}
+.foot-top p{margin-top:8px;max-width:40em;line-height:1.6}
+.foot-top a{color:var(--on-dark-2)}
+.foot .credit{margin-top:20px;line-height:1.6}
+
+/* ---------- mobile action bar ---------- */
+.mbar{display:none}
+@media (max-width:760px){
+  .mbar{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:70;display:grid;grid-template-columns:auto 1fr;gap:8px;padding:8px;border-radius:999px;background:rgba(21,17,14,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line-d);box-shadow:0 18px 40px -16px #000;transition:transform .4s var(--e-out),opacity .3s}
+  .mbar.away{transform:translateY(140%);opacity:0;pointer-events:none}
+  .mbar .btn{min-height:48px}
+  .mbar .call{width:auto;padding:0 18px}
+  .foot{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<aside class="fb" id="fb" aria-label="About this concept preview">
+  <div class="fb-in">
+    <span class="fb-mark" aria-hidden="true">F</span>
+    <p><b>Concept preview</b> made for The Golden Circle Brewery by Farman, an independent web developer. Not The Golden Circle Brewery's official website; photos are samples.</p>
+    <div class="fb-act">
+      <a class="fb-btn pri" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="fb-btn" href="mailto:farman.builds@gmail.com?subject=Website%20for%20The%20Golden%20Circle%20Brewery">Email Farman</a>
+    </div>
+    <button class="fb-x" type="button" id="fbX" aria-label="Dismiss this notice"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+  </div>
+</aside>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#top" aria-label="The Golden Circle Brewery, back to top">
+      <svg width="42" height="42" viewBox="0 0 42 42" aria-hidden="true"><circle cx="21" cy="21" r="19.5" fill="none" stroke="#ffc84a" stroke-width="1.5" stroke-dasharray="3 3.4"/><circle cx="21" cy="21" r="13" fill="url(#lg)"/><path d="M8 25.5h26" stroke="#15110e" stroke-width="2"/><defs><radialGradient id="lg" cx=".5" cy=".35" r=".7"><stop offset="0" stop-color="#ffdb7c"/><stop offset=".6" stop-color="#ffc84a"/><stop offset="1" stop-color="#e2602a"/></radialGradient></defs></svg>
+      <span><b>The Golden Circle</b><small>Brewery · Bengaluru</small></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#taps">On tap</a><a href="#food">Food</a><a href="#nights">Nights</a><a href="#parties">Parties</a><a href="#visit">Visit</a>
+    </nav>
+    <div class="hdr-cta">
+      <a class="icon-btn" href="tel:+919035294949" aria-label="Call The Golden Circle Brewery on 090352 94949"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+      <a class="btn pri sm" href="#reserve" data-book="table">Reserve a table</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" aria-labelledby="h1">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow" data-in style="--i:0">The Golden Circle Brewery · Brewpub, Carmelaram</p>
+      <h1 id="h1"><span class="ln" data-in style="--i:1">Golden hour</span><span class="ln o" data-in style="--i:2">starts at</span><span class="ln g" data-in style="--i:3">the Circle.</span></h1>
+      <p class="hero-sub" data-in style="--i:4">A brewpub on <b>Sarjapur Main Rd, Carmelaram</b>. Pick a night, tell us how many of you are coming, and your request lands straight with the brewery. <b>Book direct</b>, no app in between.</p>
+      <div class="hero-cta" data-in style="--i:5">
+        <a class="btn pri pulse" href="#reserve" data-book="table">Reserve a table <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn ghost" href="#reserve" data-book="party">Private party / corporate</a>
+      </div>
+      <div class="proof" data-in style="--i:6">
+        <a class="badge" href="https://www.google.com/maps/search/?api=1&amp;query=The+Golden+Circle+Brewery+Carmelaram+Bengaluru" target="_blank" rel="noopener" aria-label="Rated 4.5 out of 5 on Google from 3,848 reviews (opens Google Maps)">
+          <span class="stars" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7.3L12 17.8 5.7 21.5l1.7-7.3L2 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7.3L12 17.8 5.7 21.5l1.7-7.3L2 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7.3L12 17.8 5.7 21.5l1.7-7.3L2 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7.3L12 17.8 5.7 21.5l1.7-7.3L2 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24"><defs><linearGradient id="half"><stop offset=".5" stop-color="currentColor"/><stop offset=".5" stop-color="currentColor" stop-opacity=".28"/></linearGradient></defs><path fill="url(#half)" d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7.3L12 17.8 5.7 21.5l1.7-7.3L2 9.5l7.1-.6z"/></svg></span>
+          <b><span class="count" data-to="4.5" data-dec="1">4.5</span></b>
+          <span><span class="count" data-to="3848" data-sep="1">3,848</span> Google reviews</span>
+        </a>
+        <span class="direct"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Sarjapur Main Rd</span>
+      </div>
+    </div>
+
+    <div class="stage" aria-hidden="false">
+      <div class="sun-clip">
+        <div class="sun">
+          <div class="sun-photo">
+            <img src="../img/golden-circle-brewery/hero-pint-s.jpg" srcset="../img/golden-circle-brewery/hero-pint-s.jpg 900w, ../img/golden-circle-brewery/hero-pint.jpg 1800w" sizes="(max-width:900px) 80vw, 460px" alt="A tall glass of golden beer with a foam head on a wooden table in warm evening sun" width="900" height="1350" fetchpriority="high">
+            <div class="bubbles" aria-hidden="true">
+              <i style="--x:44%;--s:7px;--d:4.2s;--w:1.6s"></i><i style="--x:49%;--s:5px;--d:3.6s;--w:2.1s"></i><i style="--x:53%;--s:8px;--d:4.8s;--w:2.6s"></i><i style="--x:47%;--s:4px;--d:3.2s;--w:3.1s"></i><i style="--x:56%;--s:6px;--d:4.4s;--w:3.6s"></i><i style="--x:41%;--s:5px;--d:5s;--w:4s"></i><i style="--x:51%;--s:4px;--d:3.8s;--w:4.6s"></i><i style="--x:58%;--s:5px;--d:4.6s;--w:5.1s"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg class="rings" viewBox="0 0 600 600" aria-hidden="true">
+        <defs><path id="orb" d="M300,300 m-262,0 a262,262 0 1,1 524,0 a262,262 0 1,1 -524,0"/></defs>
+        <g transform="translate(0,26)">
+          <circle class="r1" cx="300" cy="300" r="296" transform="rotate(-90 300 300)"/>
+          <g class="orbit-wrap"><g class="orbit">
+            <circle class="r2" cx="300" cy="300" r="282"/>
+            <text><textPath href="#orb" startOffset="0">The Golden Circle Brewery · Sarjapur Main Rd · Carmelaram · Bengaluru ·</textPath></text>
+          </g></g>
+        </g>
+      </svg>
+      <div class="horizon" aria-hidden="true"></div>
+      <div class="reflect" aria-hidden="true"><span style="width:70%"></span><span style="width:52%"></span><span style="width:36%"></span><span style="width:22%"></span></div>
+      <span class="tag">Sample photo</span>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-label="Highlights">
+  <div class="tk-track">
+    <div class="tk-set"><span>Book direct</span><span>4.5★ on Google</span><span>3,848 reviews</span><span>Brewpub</span><span>Sarjapur Main Rd · Carmelaram</span><span>Private parties &amp; corporate</span></div>
+    <div class="tk-set" aria-hidden="true"><span>Book direct</span><span>4.5★ on Google</span><span>3,848 reviews</span><span>Brewpub</span><span>Sarjapur Main Rd · Carmelaram</span><span>Private parties &amp; corporate</span></div>
+  </div>
+</div>
+
+<!-- ============ ON TAP ============ -->
+<section class="sec taps" id="taps" aria-labelledby="taps-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div data-rv="wipe"><p class="eyebrow">On tap right now</p><h2 id="taps-h">Brewed here,<br>poured cold.</h2></div>
+      <p data-rv="up">The tap list changes with the brewhouse, so this board is built to be updated in seconds. Each card is a slot for the brewery's own beer: name, style and ABV, straight from the people who brew it.</p>
+    </div>
+    <div class="taps-grid">
+      <figure class="ph taps-photo" data-rv="scale" style="margin:0">
+        <span class="tag">Sample photo</span>
+        <img src="../img/golden-circle-brewery/flight-s.jpg" srcset="../img/golden-circle-brewery/flight-s.jpg 900w, ../img/golden-circle-brewery/flight.jpg 1800w" sizes="(max-width:860px) 100vw, 400px" alt="Three glasses of amber beer on a serving stand" loading="lazy" width="900" height="1125">
+        <figcaption class="cap"><b>Can't pick one?</b>Room for a tasting-flight note here, if the brewery offers one.</figcaption>
+      </figure>
+      <div>
+        <div class="tap-cards" data-rv="up">
+          <article class="tap rv-c" style="--k:0"><div class="no"><span>Tap 01</span><span class="own">Owner fills</span></div><svg class="pint" viewBox="0 0 52 72" aria-hidden="true"><defs><linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffdb7c"/><stop offset="1" stop-color="#e98a1c"/></linearGradient><clipPath id="gc"><path d="M7 4h38l-4 64H11z"/></clipPath></defs><g clip-path="url(#gc)"><rect class="beer" x="0" y="16" width="52" height="56" fill="url(#bg1)"/><rect class="foam" x="0" y="8" width="52" height="9" fill="#fff6e4"/></g><path class="glass" d="M7 4h38l-4 64H11z"/></svg><dl><dt>Beer</dt><dd class="name"><span class="blank">Beer name</span></dd><dt>Style · ABV</dt><dd><span class="blank">Style</span> · <span class="blank">__ %</span></dd></dl></article>
+          <article class="tap rv-c" style="--k:1"><div class="no"><span>Tap 02</span><span class="own">Owner fills</span></div><svg class="pint" viewBox="0 0 52 72" aria-hidden="true"><g clip-path="url(#gc)"><rect class="beer" x="0" y="22" width="52" height="50" fill="#c96a1b"/><rect class="foam" x="0" y="14" width="52" height="9" fill="#fff1d6"/></g><path class="glass" d="M7 4h38l-4 64H11z"/></svg><dl><dt>Beer</dt><dd class="name"><span class="blank">Beer name</span></dd><dt>Style · ABV</dt><dd><span class="blank">Style</span> · <span class="blank">__ %</span></dd></dl></article>
+          <article class="tap rv-c" style="--k:2"><div class="no"><span>Tap 03</span><span class="own">Owner fills</span></div><svg class="pint" viewBox="0 0 52 72" aria-hidden="true"><g clip-path="url(#gc)"><rect class="beer" x="0" y="18" width="52" height="54" fill="#f7cf6a"/><rect class="foam" x="0" y="10" width="52" height="9" fill="#fffaf0"/></g><path class="glass" d="M7 4h38l-4 64H11z"/></svg><dl><dt>Beer</dt><dd class="name"><span class="blank">Beer name</span></dd><dt>Style · ABV</dt><dd><span class="blank">Style</span> · <span class="blank">__ %</span></dd></dl></article>
+          <article class="tap rv-c" style="--k:3"><div class="no"><span>Tap 04</span><span class="own">Owner fills</span></div><svg class="pint" viewBox="0 0 52 72" aria-hidden="true"><g clip-path="url(#gc)"><rect class="beer" x="0" y="20" width="52" height="52" fill="#8a3d16"/><rect class="foam" x="0" y="12" width="52" height="9" fill="#f3e2c4"/></g><path class="glass" d="M7 4h38l-4 64H11z"/></svg><dl><dt>Beer</dt><dd class="name"><span class="blank">Beer name</span></dd><dt>Style · ABV</dt><dd><span class="blank">Style</span> · <span class="blank">__ %</span></dd></dl></article>
+          <article class="tap rv-c" style="--k:4"><div class="no"><span>Tap 05</span><span class="own">Owner fills</span></div><svg class="pint" viewBox="0 0 52 72" aria-hidden="true"><g clip-path="url(#gc)"><rect class="beer" x="0" y="17" width="52" height="55" fill="#eaa535"/><rect class="foam" x="0" y="9" width="52" height="9" fill="#fff6e4"/></g><path class="glass" d="M7 4h38l-4 64H11z"/></svg><dl><dt>Beer</dt><dd class="name"><span class="blank">Beer name</span></dd><dt>Style · ABV</dt><dd><span class="blank">Style</span> · <span class="blank">__ %</span></dd></dl></article>
+          <article class="tap rv-c" style="--k:5"><div class="no"><span>Tap 06</span><span class="own">Owner fills</span></div><svg class="pint" viewBox="0 0 52 72" aria-hidden="true"><g clip-path="url(#gc)"><rect class="beer" x="0" y="21" width="52" height="51" fill="#3a1d10"/><rect class="foam" x="0" y="13" width="52" height="9" fill="#e9d3ad"/></g><path class="glass" d="M7 4h38l-4 64H11z"/></svg><dl><dt>Beer</dt><dd class="name"><span class="blank">Beer name</span></dd><dt>Style · ABV</dt><dd><span class="blank">Style</span> · <span class="blank">__ %</span></dd></dl></article>
+        </div>
+        <div class="taps-foot" data-rv="up">
+          <span>Want to try them all? Grab a table and ask what's pouring tonight.</span>
+          <a class="btn pri sm" href="#reserve" data-book="table">Reserve a table <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOD ============ -->
+<section class="sec lt food" id="food" aria-labelledby="food-h">
+  <div class="wrap food-grid">
+    <figure class="ph food-photo" data-rv="scale" style="margin:0">
+      <span class="tag">Sample photo</span>
+      <img src="../img/golden-circle-brewery/spread-s.jpg" srcset="../img/golden-circle-brewery/spread-s.jpg 900w, ../img/golden-circle-brewery/spread.jpg 1800w" sizes="(max-width:860px) 100vw, 560px" alt="A wooden table spread with bar plates, salad and drinks, seen from above" loading="lazy" width="900" height="600">
+    </figure>
+    <div>
+      <div data-rv="wipe"><p class="eyebrow">From the kitchen</p><h2 id="food-h" style="font-size:clamp(34px,5vw,64px);font-weight:800;margin-top:16px">Plates built<br>for pints.</h2></div>
+      <p data-rv="up" style="margin:18px 0 26px;color:var(--ink-2);max-width:32em">A menu the kitchen can update itself: dish names, veg / non-veg marks and prices in ₹, sorted into tabs that are quick to scan on a phone at the table.</p>
+      <div class="menu no-js-menu" id="menu" data-rv="up">
+        <div class="mtabs" role="tablist" aria-label="Menu sections">
+          <span class="mthumb" id="mThumb" aria-hidden="true"></span>
+          <button class="mtab" role="tab" id="t-small" aria-controls="m-small" aria-selected="true">Small plates</button>
+          <button class="mtab" role="tab" id="t-mains" aria-controls="m-mains" aria-selected="false" tabindex="-1">Mains</button>
+          <button class="mtab" role="tab" id="t-pick" aria-controls="m-pick" aria-selected="false" tabindex="-1">Kitchen's picks</button>
+        </div>
+        <div class="mpanel on" id="m-small" role="tabpanel" aria-labelledby="t-small">
+          <div class="mrow"><span class="vg" title="Veg"></span><span class="d"><b><span class="blank">Dish name</span></b><small>One-line description</small></span><span class="p">₹ <span class="blank">___</span></span></div>
+          <div class="mrow"><span class="vg nv" title="Non-veg"></span><span class="d"><b><span class="blank">Dish name</span></b><small>One-line description</small></span><span class="p">₹ <span class="blank">___</span></span></div>
+          <div class="mrow"><span class="vg" title="Veg"></span><span class="d"><b><span class="blank">Dish name</span></b><small>One-line description</small></span><span class="p">₹ <span class="blank">___</span></span></div>
+          <div class="mrow"><span class="vg nv" title="Non-veg"></span><span class="d"><b><span class="blank">Dish name</span></b><small>One-line description</small></span><span class="p">₹ <span class="blank">___</span></span></div>
+        </div>
+        <div class="mpanel" id="m-mains" role="tabpanel" aria-labelledby="t-mains">
+          <div class="mrow"><span class="vg nv" title="Non-veg"></span><span class="d"><b><span class="blank">Dish name</span></b><small>One-line description</small></span><span class="p">₹ <span class="blank">___</span></span></div>
+          <div class="mrow"><span class="vg" title="Veg"></span><span class="d"><b><span class="blank">Dish name</span></b><small>One-line description</small></span><span class="p">₹ <span class="blank">___</span></span></div>
+          <div class="mrow"><span class="vg nv" title="Non-veg"></span><span class="d"><b><span class="blank">Dish name</span></b><small>One-line description</small></span><span class="p">₹ <span class="blank">___</span></span></div>
+        </div>
+        <div class="mpanel" id="m-pick" role="tabpanel" aria-labelledby="t-pick">
+          <div class="mrow"><span class="vg" title="Veg"></span><span class="d"><b><span class="blank">Dish name</span></b><small>Why it goes with which beer</small></span><span class="p">₹ <span class="blank">___</span></span></div>
+          <div class="mrow"><span class="vg nv" title="Non-veg"></span><span class="d"><b><span class="blank">Dish name</span></b><small>Why it goes with which beer</small></span><span class="p">₹ <span class="blank">___</span></span></div>
+        </div>
+        <p class="menu-note"><span class="own">Owner fills</span> Sections, dishes and prices are placeholders for the kitchen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NIGHTS ============ -->
+<section class="sec nights" id="nights" aria-labelledby="nights-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div data-rv="wipe"><p class="eyebrow">This week at the Circle</p><h2 id="nights-h">Pick your night.</h2></div>
+      <p data-rv="up">Tap a day to see what's on. The brewery fills in live music, DJ nights, match screenings or offers for each day, and you can reserve for that exact night in one tap.</p>
+    </div>
+    <div class="days" id="days" role="group" aria-label="Choose a day" data-rv="up">
+      <button class="day rv-c" style="--k:0" type="button" data-dow="1" aria-pressed="false"><span class="dot"></span><b>Mon</b><small></small></button>
+      <button class="day rv-c" style="--k:1" type="button" data-dow="2" aria-pressed="false"><span class="dot"></span><b>Tue</b><small></small></button>
+      <button class="day rv-c" style="--k:2" type="button" data-dow="3" aria-pressed="false"><span class="dot"></span><b>Wed</b><small></small></button>
+      <button class="day rv-c" style="--k:3" type="button" data-dow="4" aria-pressed="false"><span class="dot"></span><b>Thu</b><small></small></button>
+      <button class="day rv-c" style="--k:4" type="button" data-dow="5" aria-pressed="true"><span class="dot"></span><b>Fri</b><small></small></button>
+      <button class="day rv-c" style="--k:5" type="button" data-dow="6" aria-pressed="false"><span class="dot"></span><b>Sat</b><small></small></button>
+      <button class="day rv-c" style="--k:6" type="button" data-dow="0" aria-pressed="false"><span class="dot"></span><b>Sun</b><small></small></button>
+    </div>
+    <div class="night-panel" data-rv="up">
+      <div id="nightBody" aria-live="polite">
+        <h3><span id="nDay">Friday</span> at the Circle</h3>
+        <div class="nslots">
+          <div class="nslot"><span class="k">On stage</span><span class="v"><span class="blank">Live music / DJ / screening</span></span><span class="own">Owner fills</span></div>
+          <div class="nslot"><span class="k">Offer</span><span class="v"><span class="blank">Tonight's offer, if any</span></span><span class="own">Owner fills</span></div>
+          <div class="nslot"><span class="k">Cover</span><span class="v"><span class="blank">Cover charge, if any (₹)</span></span><span class="own">Owner fills</span></div>
+        </div>
+        <div class="night-cta">
+          <a class="btn pri" href="#reserve" id="nightBook" data-book="table">Reserve for <span id="nDate">Friday</span> <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn ghost" href="tel:+919035294949">Call to ask</a>
+        </div>
+      </div>
+      <figure class="ph night-photo" style="margin:0">
+        <span class="tag">Sample photo</span>
+        <img src="../img/golden-circle-brewery/terrace-night-s.jpg" srcset="../img/golden-circle-brewery/terrace-night-s.jpg 900w, ../img/golden-circle-brewery/terrace-night.jpg 1800w" sizes="(max-width:860px) 100vw, 520px" alt="An open-air lounge at night with warm lanterns and low sofas" loading="lazy" width="900" height="598">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTIES ============ -->
+<section class="sec party" id="parties" aria-labelledby="party-h">
+  <div class="wrap party-grid">
+    <figure class="ph party-photo" data-rv="scale" style="margin:0;overflow:visible;background:none">
+      <div class="ph" style="position:absolute;inset:0"><span class="tag">Sample photo</span><img src="../img/golden-circle-brewery/lounge-s.jpg" srcset="../img/golden-circle-brewery/lounge-s.jpg 900w, ../img/golden-circle-brewery/lounge.jpg 1800w" sizes="(max-width:860px) 100vw, 620px" alt="A warmly lit bar room with wooden tables and pendant lamps" loading="lazy" width="900" height="603"></div>
+      <span class="ring-deco" aria-hidden="true"></span>
+    </figure>
+    <div>
+      <div data-rv="wipe"><p class="eyebrow">Private parties &amp; corporate</p><h2 id="party-h">Bring the whole crew.</h2></div>
+      <p class="lead" data-rv="up">Birthdays, team outings, farewells, launch nights. Tell the brewery the date, the headcount and the plan, and they'll come back with what's possible. Packages and capacity go here once the brewery shares them.</p>
+      <div class="ptypes" data-rv="up">
+        <button class="ptype rv-c" style="--k:0" type="button" data-party="Birthday"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21h16M5 21v-8h14v8M12 13V9M12 6.5c-1-1-1-2.5 0-3.5 1 1 1 2.5 0 3.5z"/></svg>Birthday</button>
+        <button class="ptype rv-c" style="--k:1" type="button" data-party="Team / corporate"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Team / corporate</button>
+        <button class="ptype rv-c" style="--k:2" type="button" data-party="Farewell"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10l-1 7a4 4 0 0 1-8 0zM12 14v7M8 21h8"/></svg>Farewell</button>
+        <button class="ptype rv-c" style="--k:3" type="button" data-party="Something else"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>Something else</button>
+      </div>
+      <p class="ask" data-rv="up">Pick one to start an enquiry, or call <a class="tlink" href="tel:+919035294949">090352 94949</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESERVE ============ -->
+<section class="sec reserve" id="reserve" aria-labelledby="res-h">
+  <span class="big-ring" aria-hidden="true"></span><span class="big-ring b" aria-hidden="true"></span>
+  <div class="wrap res-grid">
+    <div class="res-copy">
+      <div data-rv="wipe"><p class="eyebrow">Book direct</p><h2 id="res-h">Save your spot in the sun.</h2></div>
+      <p data-rv="up">Takes under a minute. Your request goes straight to the brewery's inbox with the date, time and headcount, and they confirm with you.</p>
+      <ul class="res-trust" data-rv="up">
+        <li class="rv-c" style="--k:0"><span class="i"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7.3L12 17.8 5.7 21.5l1.7-7.3L2 9.5l7.1-.6z"/></svg></span>4.5 on Google from 3,848 reviews</li>
+        <li class="rv-c" style="--k:1"><span class="i"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>Booking direct: no app or middleman in between</li>
+        <li class="rv-c" style="--k:2"><span class="i"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>Sarjapur Main Rd, Carmelaram</li>
+      </ul>
+      <p class="res-call" data-rv="up">Rather talk? <a href="tel:+919035294949">090352 94949</a></p>
+    </div>
+
+    <div class="fcard" id="fcard" data-rv="scale">
+      <form id="rForm" novalidate action="mailto:tgcbrewery@gmail.com" method="post" enctype="text/plain">
+        <div class="seg" id="seg" role="group" aria-label="Booking type">
+          <span class="thumb" aria-hidden="true"></span>
+          <button type="button" data-mode="table" aria-pressed="true">Reserve a table</button>
+          <button type="button" data-mode="party" aria-pressed="false">Private party / corporate</button>
+        </div>
+        <div class="frow">
+          <div class="fld" id="f-date"><label for="rd">Date <i id="rdDay"></i></label><input class="inp" id="rd" name="date" type="date" required><span class="err">Pick today or a later date.</span></div>
+          <div class="fld" id="f-time"><label for="rt">Time</label><input class="inp" id="rt" name="time" type="time" value="19:30" required><span class="err">Pick a time.</span></div>
+        </div>
+        <div class="fld">
+          <span class="lbl" id="gl">Number of guests</span>
+          <div class="stepper" role="group" aria-labelledby="gl">
+            <button type="button" id="gMinus" aria-label="One guest fewer"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+            <output id="gOut" aria-live="polite">2</output>
+            <button type="button" id="gPlus" aria-label="One guest more"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M8 3v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          </div>
+          <p class="nudge" id="nudge">Coming with a big group? <button type="button" id="toParty">Switch to a private party enquiry</button> so the team can plan the space.</p>
+        </div>
+        <div class="frow">
+          <div class="fld" id="f-name"><label for="rn">Your name</label><input class="inp" id="rn" name="name" type="text" autocomplete="name" placeholder="Full name" required><span class="ok" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="err">Please add your name.</span></div>
+          <div class="fld" id="f-phone"><label for="rp">Phone</label><input class="inp" id="rp" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="10-digit mobile" required><span class="ok" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><span class="err">Add a number they can call back.</span></div>
+        </div>
+        <div class="fld party-only"><label for="rc">Company / group name <i>(optional)</i></label><input class="inp" id="rc" name="company" type="text" autocomplete="organization" placeholder="e.g. your team or company"></div>
+        <div class="fld">
+          <span class="lbl" id="occl">Occasion <i style="font-style:normal;text-transform:none;letter-spacing:0;font-family:var(--body);font-weight:500">(optional)</i></span>
+          <div class="chips" id="occ" role="group" aria-labelledby="occl">
+            <button type="button" class="chip" aria-pressed="false">Birthday</button><button type="button" class="chip" aria-pressed="false">Anniversary</button><button type="button" class="chip" aria-pressed="false">Date night</button><button type="button" class="chip" aria-pressed="false">Team / corporate</button><button type="button" class="chip" aria-pressed="false">Farewell</button><button type="button" class="chip" aria-pressed="false">Just because</button>
+          </div>
+        </div>
+        <div class="fld"><label for="rm">Message <i>(optional)</i></label><textarea class="inp" id="rm" name="message" placeholder="Seating preference, anything the team should know"></textarea></div>
+        <div class="fsub"><button class="btn pri" type="submit" id="rSubmit"><span id="subTxt">Send reservation request</span> <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+        <p class="ftrust"><svg width="14" height="14" viewBox="0 0 24 24" fill="#ffc84a" aria-hidden="true"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7.3L12 17.8 5.7 21.5l1.7-7.3L2 9.5l7.1-.6z"/></svg><span><b>4.5</b> from 3,848 Google reviews · goes to tgcbrewery@gmail.com</span></p>
+      </form>
+      <div class="done" id="done" role="status" aria-live="polite">
+        <svg class="check" viewBox="0 0 92 92" aria-hidden="true"><circle cx="46" cy="46" r="40"/><path d="M29 47l11 11 23-24"/></svg>
+        <h3 id="doneH">Request ready for the brewery</h3>
+        <p id="doneP">On the live site this goes straight to the Golden Circle team, who confirm your table with you. Here's what they'll receive:</p>
+        <pre id="donePre"></pre>
+        <div class="acts"><button class="btn ghost sm" type="button" id="again">Edit request</button><a class="btn ghost sm" href="tel:+919035294949">Call 090352 94949</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KNOW BEFORE YOU GO ============ -->
+<section class="sec know" id="know" aria-labelledby="know-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div data-rv="wipe"><p class="eyebrow">Know before you go</p><h2 id="know-h">The small print, up front.</h2></div>
+      <p data-rv="up">The questions people ask before they head out, answered on the page so nobody has to call to find out.</p>
+    </div>
+    <div class="know-grid" data-rv="up">
+      <article class="kcard rv-c" style="--k:0"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Timings</h3><p><span class="blank">Open days and hours, kitchen last order</span></p><span class="own">Owner fills</span></article>
+      <article class="kcard rv-c" style="--k:1"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18v10H3zM3 9l3-5h12l3 5M12 13v2"/></svg></div><h3>Cover charge</h3><p><span class="blank">Cover in ₹ and which nights it applies</span></p><span class="own">Owner fills</span></article>
+      <article class="kcard rv-c" style="--k:2"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg></div><h3>Parking</h3><p><span class="blank">Parking availability, valet if any</span></p><span class="own">Owner fills</span></article>
+      <article class="kcard rv-c" style="--k:3"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2.5"/><path d="M14 10h4M14 14h3"/></svg></div><h3>Age policy</h3><p><span class="blank">Entry age and ID rules, as confirmed by the brewery</span></p><span class="own">Owner confirms</span></article>
+      <article class="kcard rv-c" style="--k:4"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div><h3>Offers</h3><p><span class="blank">Happy hours, weekday deals, group offers</span></p><span class="own">Owner fills</span></article>
+      <article class="kcard fact rv-c" style="--k:5"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></div><h3>Book direct</h3><p>Requests from this page go straight to the brewery at <a class="tlink" href="mailto:tgcbrewery@gmail.com" style="min-height:0;display:inline;color:var(--gold)">tgcbrewery@gmail.com</a>. Prefer the phone? <a class="tlink" href="tel:+919035294949" style="min-height:0;display:inline;color:var(--gold)">090352 94949</a>.</p></article>
+    </div>
+    <figure class="ph banner" data-rv="wipe"><span class="tag">Sample photo</span><img src="../img/golden-circle-brewery/brewhouse-s.jpg" srcset="../img/golden-circle-brewery/brewhouse-s.jpg 900w, ../img/golden-circle-brewery/brewhouse.jpg 1800w" sizes="(max-width:1240px) 100vw, 1160px" alt="A brewpub dining room with steel brewing tanks behind glass" loading="lazy" width="900" height="600"><figcaption><b>Tanks to table.</b><span>A brewpub is the brewhouse and the bar in one room. The brewery's own photos go here.</span></figcaption></figure>
+  </div>
+  </div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section class="sec lt visit" id="visit" aria-labelledby="visit-h">
+  <div class="wrap visit-grid">
+    <div>
+      <div data-rv="wipe"><p class="eyebrow">Find us</p><h2 id="visit-h">On Sarjapur Main Rd, Carmelaram.</h2></div>
+      <address class="addr" data-rv="up"><b>The Golden Circle Brewery</b><br>Sy. No. 41/9, BBMP No. 154/41/9, Doddakanneli, Sarjapur Main Rd, Carmelaram, Bengaluru, Karnataka 560035</address>
+      <ul class="vlist" data-rv="up">
+        <li><span>Call</span><a href="tel:+919035294949">090352 94949</a></li>
+        <li><span>Email</span><a href="mailto:tgcbrewery@gmail.com">tgcbrewery@gmail.com</a></li>
+        <li><span>Hours</span><em class="blank" style="padding:12px 0">Owner fills timings</em></li>
+      </ul>
+      <div class="v-acts" data-rv="up">
+        <a class="btn dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Golden+Circle+Brewery%2C+Sarjapur+Main+Rd%2C+Carmelaram%2C+Bengaluru+560035" target="_blank" rel="noopener">Get directions <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn line-l" href="#reserve" data-book="table">Reserve a table</a>
+      </div>
+    </div>
+    <div class="mapart" data-rv="scale" role="img" aria-label="Simple illustration: The Golden Circle Brewery on Sarjapur Main Rd in Carmelaram">
+      <svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g class="grid"><path d="M0 100H600M0 200H600M0 300H600M0 400H600M0 500H600M100 0V600M200 0V600M300 0V600M400 0V600M500 0V600"/></g>
+        <path class="road" d="M-40 470 C 140 420, 220 330, 330 300 S 520 210, 660 120"/>
+        <path class="road-c" d="M-40 470 C 140 420, 220 330, 330 300 S 520 210, 660 120"/>
+        <text class="lbl-s" transform="translate(86 446) rotate(-17)">SARJAPUR MAIN RD</text>
+        <circle class="pulse-r" cx="300" cy="270" r="44"/>
+        <circle class="pin-r" cx="300" cy="270" r="44"/>
+        <circle cx="300" cy="270" r="30" fill="#1b1511"/>
+        <circle cx="300" cy="270" r="18" fill="#ffc84a"/>
+        <text class="lbl" x="300" y="200" text-anchor="middle">THE GOLDEN CIRCLE</text>
+        <text class="lbl" x="300" y="222" text-anchor="middle" style="font-size:11px;letter-spacing:.24em;font-weight:600">CARMELARAM</text>
+      </svg>
+      <p class="note">Illustration, not to scale. Tap “Get directions” for the live map.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final" aria-labelledby="final-h">
+  <div class="sunset" aria-hidden="true"></div>
+  <div class="wrap" data-rv="up">
+    <p class="eyebrow" style="justify-content:center">4.5★ · 3,848 reviews on Google</p>
+    <h2 id="final-h" style="margin-top:18px">See you at<br>golden hour.</h2>
+    <p>Pick a night, bring your people, and book direct with the brewery.</p>
+    <div class="acts">
+      <a class="btn pri pulse" href="#reserve" data-book="table">Reserve a table <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn ghost" href="#reserve" data-book="party">Plan a party</a>
+      <a class="btn ghost" href="tel:+919035294949">Call 090352 94949</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="farman" aria-labelledby="farman-h">
+  <div class="wrap">
+    <div class="fm-card">
+      <span class="fb-mark" aria-hidden="true">F</span>
+      <div><h2 id="farman-h">Want this live?</h2><p>Right now, thegoldencirclebrewery.com shows a bare <code>403 Forbidden</code> error to people who look you up after reading 3,848 reviews. I can have this ready in about a week, with your own beers, menu, nights and photos in place. Book a 15-min call.</p></div>
+      <div class="fb-act">
+        <a class="fb-btn pri" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0POw_WaovhwagaBFPYjRURP_BtOKr3DxjcovgK02zUlRl2CetGY28PABH332CS0Fls-xUWdvQn" target="_blank" rel="noopener">Book a free 15-min call <svg class="arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="fb-btn" href="mailto:farman.builds@gmail.com?subject=Website%20for%20The%20Golden%20Circle%20Brewery">Email Farman</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div><b>The Golden Circle Brewery</b><p>Sy. No. 41/9, BBMP No. 154/41/9, Doddakanneli, Sarjapur Main Rd, Carmelaram, Bengaluru, Karnataka 560035 · <a href="tel:+919035294949">090352 94949</a> · <a href="mailto:tgcbrewery@gmail.com">tgcbrewery@gmail.com</a></p></div>
+      <a class="tlink" href="#top">Back to top ↑</a>
+    </div>
+    <p class="credit">Concept preview designed by Farman, an independent web developer in Bengaluru, from public information (Google Maps listing). Not the official website of The Golden Circle Brewery. All photographs are free-licence Unsplash samples, not the brewery's own. Beers, menu, events, timings, cover charge, parking, age policy and offers are placeholders for the owner to fill in.</p>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a class="btn ghost call" href="tel:+919035294949" aria-label="Call The Golden Circle Brewery"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="btn pri" href="#reserve" data-book="table">Reserve a table</a>
+</div>
+
+<script>
+(function(){
+  var d=document,root=d.documentElement,$=function(id){return d.getElementById(id)};
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  setTimeout(function(){root.classList.remove('intro')},4200);
+
+  /* --- Farman bar --- */
+  var fb=$('fb');
+  try{if(sessionStorage.getItem('gcbFbHide')==='1')fb.hidden=true}catch(e){}
+  root.classList.add('fbw');
+  setTimeout(function(){root.classList.add('fb-on')},1200);
+  $('fbX').addEventListener('click',function(){fb.classList.add('off');try{sessionStorage.setItem('gcbFbHide','1')}catch(e){}setTimeout(function(){fb.hidden=true},260)});
+
+  /* --- progress + condensed header --- */
+  var prog=$('progress'),hdr=$('hdr'),tick=false;
+  function onScroll(){tick=false;var y=scrollY||root.scrollTop,h=root.scrollHeight-innerHeight;prog.style.transform='scaleX('+(h>0?Math.min(1,y/h):0)+')';hdr.classList.toggle('cond',y>20)}
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+
+  /* --- counters --- */
+  function fmt(n,dec,sep){var s=n.toFixed(dec);return sep?Number(s).toLocaleString('en-IN'):s}
+  function countUp(el){if(el.dataset.done)return;el.dataset.done=1;var to=parseFloat(el.dataset.to),dec=+(el.dataset.dec||0),sep=!!el.dataset.sep,t0=null,dur=1400;
+    function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=fmt(to*e,dec,sep);if(p<1)requestAnimationFrame(step);else el.textContent=fmt(to,dec,sep)}
+    requestAnimationFrame(step)}
+
+  /* --- reveals: armed only right before an element scrolls in; 1.5 s safety reveal --- */
+  var items=[].slice.call(d.querySelectorAll('[data-rv]'));
+  function show(el){el.classList.add('in');[].forEach.call(el.querySelectorAll('.count'),countUp);setTimeout(function(){el.classList.add('rv-done')},1500)}
+  if('IntersectionObserver' in window){
+    root.classList.add('rv-on');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;io.unobserve(el);if(el.classList.contains('armed')){void el.offsetWidth;requestAnimationFrame(function(){requestAnimationFrame(function(){show(el)})})}else show(el)}})},{rootMargin:'0px 0px -6% 0px',threshold:.06});
+    var arm=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;arm.unobserve(el);if(el.getBoundingClientRect().top>innerHeight*.94)el.classList.add('armed');io.observe(el)}})},{rootMargin:'0px 0px 40% 0px'});
+    items.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight*.94&&r.bottom>0){el.classList.add('armed');io.observe(el)}else arm.observe(el)});
+    setTimeout(function(){items.forEach(function(el){if(el.classList.contains('armed')&&!el.classList.contains('in')&&el.getBoundingClientRect().top<innerHeight)show(el)})},1500);
+    addEventListener('scroll',function sf(){clearTimeout(sf.t);sf.t=setTimeout(function(){items.forEach(function(el){if(el.classList.contains('armed')&&!el.classList.contains('in')&&el.getBoundingClientRect().top<innerHeight)show(el)})},1500)},{passive:true});
+  }else{items.forEach(function(el){el.classList.add('in')})}
+  /* hero counters */
+  var hc=[].slice.call(d.querySelectorAll('.hero .count'));
+  hc.forEach(function(el){el.textContent=fmt(0,+(el.dataset.dec||0),!!el.dataset.sep)});
+  setTimeout(function(){hc.forEach(countUp)},800);
+
+  /* --- menu tabs --- */
+  var menu=$('menu'),mtabs=[].slice.call(d.querySelectorAll('.mtab')),mthumb=$('mThumb');
+  menu.classList.remove('no-js-menu');
+  function mMove(){var t=d.querySelector('.mtab[aria-selected="true"]');if(t)mthumb.style.transform='translateX('+(t.offsetLeft-0)+'px) scaleX('+(t.offsetWidth/100)+')'}
+  function mSel(t,focus){mtabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;$(x.getAttribute('aria-controls')).classList.toggle('on',on)});if(focus)t.focus();mMove()}
+  mtabs.forEach(function(t,i){t.addEventListener('click',function(){mSel(t)});t.addEventListener('keydown',function(e){var n=null;if(e.key==='ArrowRight')n=(i+1)%mtabs.length;else if(e.key==='ArrowLeft')n=(i-1+mtabs.length)%mtabs.length;if(n!==null){e.preventDefault();mSel(mtabs[n],true)}})});
+  mMove();addEventListener('resize',mMove);if(d.fonts&&d.fonts.ready)d.fonts.ready.then(function(){mMove();segMove&&segMove()});
+
+  /* --- dates --- */
+  var DN=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function iso(dt){return dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0')}
+  function nextDow(dow){var t=new Date();t.setHours(0,0,0,0);var diff=(dow-t.getDay()+7)%7;t.setDate(t.getDate()+diff);return t}
+  function pretty(dt){return DN[dt.getDay()].slice(0,3)+' '+dt.getDate()+' '+MN[dt.getMonth()]}
+  var today=new Date();today.setHours(0,0,0,0);
+
+  /* --- nights --- */
+  var days=[].slice.call(d.querySelectorAll('.day')),nightDate=null,daysWrap=$('days');
+  /* order the week from today onwards; default to the coming Friday */
+  days.sort(function(a,b){return nextDow(+a.dataset.dow)-nextDow(+b.dataset.dow)});
+  days.forEach(function(b,k){daysWrap.appendChild(b);b.style.setProperty('--k',k);b.setAttribute('aria-pressed',b.dataset.dow==='5')});
+  days.forEach(function(b){var dt=nextDow(+b.dataset.dow);b.querySelector('small').textContent=(+dt===+today?'Today':dt.getDate()+' '+MN[dt.getMonth()]);b.setAttribute('aria-label',DN[dt.getDay()]+' '+dt.getDate()+' '+MN[dt.getMonth()])});
+  function pickDay(b,anim){days.forEach(function(x){x.setAttribute('aria-pressed',x===b)});var dt=nextDow(+b.dataset.dow);nightDate=dt;
+    $('nDay').textContent=DN[dt.getDay()];$('nDate').textContent=(+dt===+today?'tonight':pretty(dt));
+    if(anim){var nb=$('nightBody');nb.classList.remove('np-anim');void nb.offsetWidth;nb.classList.add('np-anim')}}
+  days.forEach(function(b){b.addEventListener('click',function(){pickDay(b,true)})});
+  pickDay(d.querySelector('.day[aria-pressed="true"]'),false);
+
+  /* --- form --- */
+  var fcard=$('fcard'),form=$('rForm'),seg=$('seg'),segBtns=[].slice.call(seg.querySelectorAll('button')),mode='table';
+  var rd=$('rd'),rt=$('rt'),rn=$('rn'),rp=$('rp'),gOut=$('gOut'),guests=2,nudge=$('nudge');
+  rd.min=iso(today);rd.value=iso(today);
+  function dayLbl(){var v=rd.value;if(!v){$('rdDay').textContent='';return}var p=v.split('-'),dt=new Date(+p[0],+p[1]-1,+p[2]);$('rdDay').textContent='· '+(+dt===+today?'Today':DN[dt.getDay()])}
+  rd.addEventListener('change',function(){dayLbl();check('f-date',true)});dayLbl();
+  var segMove=function(){};
+  function setMode(m){mode=m;segBtns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.mode===m)});seg.classList.toggle('party-on',m==='party');fcard.classList.toggle('party',m==='party');
+    $('subTxt').textContent=m==='party'?'Send party enquiry':'Send reservation request';
+    if(m==='party'&&guests<15)setGuests(20,true);if(m==='table'&&guests>14)setGuests(4,true);
+    $('rm').placeholder=m==='party'?'The plan: food, drinks, music, timings, budget per head':'Seating preference, anything the team should know';updNudge()}
+  segBtns.forEach(function(b){b.addEventListener('click',function(){setMode(b.dataset.mode)})});
+  function setGuests(n,anim){guests=Math.max(1,Math.min(300,n));gOut.textContent=guests;if(anim){gOut.classList.remove('bump');void gOut.offsetWidth;gOut.classList.add('bump')}$('gMinus').disabled=guests<=1;updNudge()}
+  function updNudge(){nudge.classList.toggle('on',mode==='table'&&guests>=15)}
+  $('gMinus').addEventListener('click',function(){setGuests(guests-1,true)});
+  $('gPlus').addEventListener('click',function(){setGuests(guests+1,true)});
+  $('toParty').addEventListener('click',function(){setMode('party')});
+  setGuests(2,false);
+  var occ=[].slice.call(d.querySelectorAll('#occ .chip'));
+  function popc(b){b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop')}
+  function setOcc(label){occ.forEach(function(b){var on=b.textContent===label;if(on!==(b.getAttribute('aria-pressed')==='true')){b.setAttribute('aria-pressed',on);if(on)popc(b)}})}
+  occ.forEach(function(b){b.addEventListener('click',function(){var was=b.getAttribute('aria-pressed')==='true';setOcc(was?null:b.textContent)})});
+
+  /* entry points that open the form in a mode */
+  [].forEach.call(d.querySelectorAll('[data-book]'),function(a){a.addEventListener('click',function(){
+    if(fcard.classList.contains('sent'))fcard.classList.remove('sent');
+    setMode(a.dataset.book);
+    if(a.id==='nightBook'&&nightDate){rd.value=iso(nightDate);dayLbl();check('f-date',false)}
+  })});
+  [].forEach.call(d.querySelectorAll('[data-party]'),function(b){b.addEventListener('click',function(){
+    if(fcard.classList.contains('sent'))fcard.classList.remove('sent');
+    setMode('party');var map={'Birthday':'Birthday','Team / corporate':'Team / corporate','Farewell':'Farewell'};setOcc(map[b.dataset.party]||null);
+    $('reserve').scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+    setTimeout(function(){rn.focus({preventScroll:true})},reduce?0:700);
+  })});
+
+  var rules={'f-name':function(){return rn.value.trim().length>=2},'f-phone':function(){return rp.value.replace(/\D/g,'').length>=10},
+    'f-date':function(){return !!rd.value&&rd.value>=iso(today)},'f-time':function(){return !!rt.value}};
+  function check(id,showErr){var ok=rules[id](),w=$(id);if(showErr)w.classList.toggle('bad',!ok);else if(ok)w.classList.remove('bad');if(id==='f-name'||id==='f-phone')w.classList.toggle('good',ok);return ok}
+  [['rn','f-name'],['rp','f-phone']].forEach(function(p){var el=$(p[0]);el.addEventListener('blur',function(){if(el.value.trim())check(p[1],true)});el.addEventListener('input',function(){check(p[1],false)})});
+  rt.addEventListener('change',function(){check('f-time',true)});
+
+  function t12(v){var p=v.split(':'),h=+p[0],m=p[1];var ap=h>=12?'pm':'am';h=h%12||12;return h+':'+m+' '+ap}
+  form.addEventListener('submit',function(e){e.preventDefault();
+    var first=null;['f-date','f-time','f-name','f-phone'].forEach(function(id){if(!check(id,true)&&!first)first=id});
+    if(first){var w=$(first);w.classList.remove('shake');void w.offsetWidth;w.classList.add('shake');w.querySelector('input').focus();return}
+    var p=rd.value.split('-'),dt=new Date(+p[0],+p[1]-1,+p[2]),when=DN[dt.getDay()]+', '+dt.getDate()+' '+MN[dt.getMonth()]+' '+dt.getFullYear();
+    var o=occ.filter(function(b){return b.getAttribute('aria-pressed')==='true'}).map(function(b){return b.textContent})[0];
+    var msg=$('rm').value.trim(),co=$('rc').value.trim(),party=mode==='party';
+    var body=['Hello Golden Circle team,','',
+      party?'I would like to enquire about a private party / corporate booking.':'I would like to reserve a table.','',
+      'Date: '+when,'Time: '+t12(rt.value),(party?'Approx. guests: ':'Guests: ')+guests,
+      (party&&co?'Company / group: '+co:null),
+      'Occasion: '+(o||'Not specified'),
+      (msg?'Message: '+msg:null),'',
+      'Name: '+rn.value.trim(),'Phone: '+rp.value.trim(),'',
+      'Please confirm by phone.','(Sent from the website booking form)'].filter(function(x){return x!==null}).join('\n');
+    var subj=(party?'Private party enquiry: ':'Table reservation: ')+pretty(dt)+', '+t12(rt.value)+', '+guests+' guests ('+rn.value.trim()+')';
+    var href='mailto:tgcbrewery@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+    $('doneH').textContent=party?'Party enquiry ready for the brewery':'Table request ready for the brewery';
+    $('doneP').textContent='On the live site this goes straight to the Golden Circle team, who '+(party?'get back to you about your party':'confirm your table with you')+'. This is what they will receive:';
+    $('donePre').textContent='Subject: '+subj+'\n\n'+body;
+    fcard.classList.add('sent');
+    fcard.scrollIntoView({block:'nearest',behavior:reduce?'auto':'smooth'});
+    window.__previewMail(href);
+  });
+  $('again').addEventListener('click',function(){fcard.classList.remove('sent');rn.focus()});
+
+  /* --- mobile bar hides while the form is on screen --- */
+  var mbar=$('mbar');
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){mbar.classList.toggle('away',es[0].isIntersecting)},{threshold:.15}).observe(fcard)}
+})();
+</script>
+<script src="../preview-guard.js"></script>
+</body>
+</html>
